@@ -29,9 +29,8 @@ jobs:
       - name: Sync Capacitor
         run: npx cap sync android
 
-      - name: Decode Keystore
-        run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > android/app/kipole.keystore
-
+       - name: Decode Keystore
+        run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d | gunzip > android/app/kipole.keystore
       - name: Verify Keystore
         working-directory: ./android
         run: |
