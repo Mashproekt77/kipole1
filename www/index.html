@@ -313,19 +313,6 @@ textarea{min-height:96px}
 </style>
 </head>
 <body>
-<div style="background:lime;color:black;font-size:32px;padding:20px;text-align:center;">TEST OK</div>
-<div id="debugOverlay" style="position:fixed;top:0;left:0;right:0;z-index:99999;background:#dc2626;color:#fff;padding:12px;font-family:monospace;font-size:13px;max-height:70vh;overflow:auto;white-space:pre-wrap;"></div>
-<script>
-window.onerror = function(msg, url, line, col, err) {
-  var el = document.getElementById('debugOverlay');
-  if (el) el.textContent = '❌ JS ERROR: ' + msg + '\nLine: ' + line + '\nStack: ' + (err && err.stack ? err.stack : '—');
-  return false;
-};
-window.addEventListener('unhandledrejection', function(e) {
-  var el = document.getElementById('debugOverlay');
-  if (el) el.textContent = '❌ PROMISE REJECTION: ' + (e.reason && e.reason.message ? e.reason.message : e.reason);
-});
-</script>
 <div class="app">
   <aside class="sidebar no-print" id="sidebar">
     <div class="sidebar__brand">
