@@ -32,6 +32,13 @@ jobs:
       - name: Decode Keystore
         run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > android/app/kipole.keystore
 
+      - name: Verify Keystore
+        working-directory: ./android
+        run: |
+          ls -la app/kipole.keystore
+          echo "--- alias check ---"
+          keytool -list -keystore app/kipole.keystore -storepass "${{ secrets.KEYSTORE_PASSWORD }}"
+
       - name: Build AAB (Release)
         working-directory: ./android
         run: ./gradlew bundleRelease
