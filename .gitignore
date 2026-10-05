@@ -4,3 +4,5 @@ android/app/build/
 android/build/
 .gradle/
 local.properties
+kipole.keystore
+kipole.keystore.base64
