@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+signingConfigs {
+    release {
+        storeFile file(System.getenv("KEYSTORE_PATH") ?: "kipole.keystore")
+        storePassword System.getenv("KEYSTORE_PASSWORD")
+        keyAlias System.getenv("KEY_ALIAS")
+        keyPassword System.getenv("KEY_PASSWORD")
+    }
+}
     namespace = "ru.kotohod.kipole"
     compileSdk = rootProject.ext.compileSdkVersion
     defaultConfig {
@@ -17,7 +25,7 @@ android {
         }
     }
     buildTypes {
-        release {
+        release {signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
