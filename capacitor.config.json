@@ -1,0 +1,10 @@
+{
+  "appId": "ru.kotohod.kipole",
+  "appName": "kipole",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false
+    }
+  }
+}

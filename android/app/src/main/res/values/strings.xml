@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">kipole</string>
+    <string name="title_activity_main">kipole</string>
+    <string name="package_name">ru.kotohod.kipole</string>
+    <string name="custom_url_scheme">ru.kotohod.kipole</string>
+</resources>
