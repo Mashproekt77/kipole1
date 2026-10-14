@@ -870,6 +870,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 
 // Публичный API
+window.t = t;
 window.i18n = { t, setLang, getLang, applyI18n, showLanguageMenu, showLanguagePicker, LANGS };
 
 })();
