@@ -688,7 +688,7 @@ textarea{min-height:96px}
       <div class="tab-content" id="tab-crs">
         <div class="card">
           <h3 data-i18n="crs.title">🌐 Пересчёт координат (proj4js)</h3>
-          <div class="warning-box"><strong>⚠️ Внимание:</strong> Параметры МСК отличаются по регионам и должны уточняться у местного органа регистрации прав. Пресеты справочные.</div>
+          <div class="warning-box">${t("crs.warn")}</div>
           <div id="proj4Status" class="info-box">Загрузка proj4js…</div>
           <div class="grid-2">
             <div class="form-group"><label for="crsFrom" data-i18n="crs.src">Исходная СК</label><select id="crsFrom"></select></div>
@@ -1542,7 +1542,7 @@ const STEPS = [
   ], notesId:'notes3' },
   {
     id:4, key:'step.4', subKey:'step.4.sub', icon:'📋', title:'Абрис и контроль', subtitle:'Чистовой абрис, площадь, подпись', items:[
-    ['Чистовой абрис',''],['Контрольный расчёт площади',''],['Акт выезда, подпись заказчика','']
+    ['Чистовой абрис',''],['Контрольный расчёт площади',''],['${t("common.actSign") || "Акт выезда, подпись заказчика"}','']
   ], notesId:'notes4' },
   {
     id:5, key:'step.5', subKey:'step.5.sub', icon:'🛰️', title:'Геодезические работы', subtitle:'RTK/PPK, каталог точек', items:[
@@ -1653,16 +1653,16 @@ function renderSteps() {
           ${(s.warnings||[]).map(w=>`<div class="warning-box"><strong>⚠️</strong> ${escapeHtml(w)}</div>`).join('')}
           ${s.notesId ? `
             <div class="form-group mt-3">
-              <label for="${s.notesId}">📝 Заметки</label>
+              <label for="${s.notesId}">📝 ${t("common.notes")}</label>
               <textarea id="${s.notesId}" rows="3" oninput="State.${s.notesId}=this.value; saveDebounced()">${escapeHtml(State[s.notesId]||'')}</textarea>
             </div>
             ${hasPhotos ? `
             <div class="form-group">
-              <label>📸 Фото шага ${num}</label>
+              <label>📸 ${t("common.photoStep")} ${num}</label>
               <div class="photo-grid" id="photos_${photoKey}"></div>
               <label class="photo-add mt-3">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-                <span>Добавить фото</span>
+                <span>${t("common.addPhoto")}</span>
                 <input type="file" accept="image/*" capture="environment" multiple onchange="handlePhotoUpload(event, '${photoKey}')">
               </label>
             </div>` : ''}` : ''}
@@ -4109,7 +4109,7 @@ function onWorkTypeChange(silent) {
   State.workType = t;
   const sub = document.getElementById('topSubtitle');
   if (sub) {
-    const names = { techplan:'Технический план', survey:'Межевой план', act:'Акт обследования', combined:'Комплексные' };
+    const names = { techplan:t('workType.techplan'), survey:t('workType.survey'), act:t('workType.act'), combined:t('workType.combined') };
     sub.textContent = names[t] || 'Новый объект';
   }
   const visible = STEP_VISIBILITY[t] || STEP_VISIBILITY.combined;

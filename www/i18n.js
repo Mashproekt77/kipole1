@@ -419,7 +419,16 @@ const T = {
     'удвоенное значение СКП':'удвоенное значение СКП',
     '(например, 0,20 м для земель населённых пунктов при СКП 0,10 м).':'(например, 0,20 м для земель населённых пунктов при СКП 0,10 м).',
     'Коэффициент конфигурации k':'Коэффициент конфигурации k',
-    '1.0 — компактный участок; > 1 — вытянутый / сложной формы (П/0393)':'1.0 — компактный участок; > 1 — вытянутый / сложной формы (П/0393)'
+    '1.0 — компактный участок; > 1 — вытянутый / сложной формы (П/0393)':'1.0 — компактный участок; > 1 — вытянутый / сложной формы (П/0393)',
+    'workType.techplan':'Технический план',
+    'workType.survey':'Межевой план',
+    'workType.act':'Акт обследования',
+    'workType.combined':'Комплексные',
+    'common.notes':'Заметки',
+    'common.photoStep':'Фото шага',
+    'common.addPhoto':'Добавить фото',
+    'common.actSign':'Акт выезда, подпись заказчика',
+    'crs.warn':'⚠️ Внимание: Параметры МСК отличаются по регионам и должны уточняться у местного органа регистрации прав. Престы справочные.'
   },
   // ───────────────────────── ENGLISH ─────────────────────────
   en: {
@@ -837,7 +846,16 @@ const T = {
     'удвоенное значение СКП':'doubled SKP value',
     '(например, 0,20 м для земель населённых пунктов при СКП 0,10 м).':'(e.g. 0.20 m for settlement lands at SKP 0.10 m).',
     'Коэффициент конфигурации k':'Configuration coefficient k',
-    '1.0 — компактный участок; > 1 — вытянутый / сложной формы (П/0393)':'1.0 — compact plot; > 1 — elongated / complex shape (P/0393)'
+    '1.0 — компактный участок; > 1 — вытянутый / сложной формы (П/0393)':'1.0 — compact plot; > 1 — elongated / complex shape (P/0393)',
+    'workType.techplan':'Technical plan',
+    'workType.survey':'Land survey plan',
+    'workType.act':'Inspection act',
+    'workType.combined':'Combined',
+    'common.notes':'Notes',
+    'common.photoStep':'Step photos',
+    'common.addPhoto':'Add photo',
+    'common.actSign':'Visit act, customer signature',
+    'crs.warn':'⚠️ Warning: MSC parameters vary by region and must be verified with the local registration authority. Presets are for reference only.'
   },
   // ───────────────────────── УЗБЕКСКИЙ ─────────────────────────
   uz: {
@@ -1118,7 +1136,16 @@ const T = {
     'dv.emailHint':'Pochta mijozi orqali tez yuborish.',
     'dv.emailFill':'📄 Hisobot bilan to‘ldirish',
     'dv.emailSend':'📧 Mijozni ochish',
-    'dv.emailShare':'📎 Fayllarni ulashish'
+    'dv.emailShare':'📎 Fayllarni ulashish',
+    'workType.techplan':'Texnik reja',
+    'workType.survey':'Yer o‘lchov rejasi',
+    'workType.act':'Tekshiruv dalolatnomasi',
+    'workType.combined':'Kompleks',
+    'common.notes':'Eslatmalar',
+    'common.photoStep':'Qadam foto',
+    'common.addPhoto':'Foto qo‘shish',
+    'common.actSign':'Tashrif dalolatnomasi va buyurtmachi imzosi',
+    'crs.warn':'⚠️ Diqqat: MSK parametrlari mintaqaga qarab farq qiladi va mahalliy ro‘yxatga olish organi bilan aniqlanishi kerak.'
   },
   // ───────────────────────── ТАДЖИКСКИЙ ─────────────────────────
   tg: {
@@ -1399,7 +1426,16 @@ const T = {
     'dv.emailHint':'Фиристодани зуд тавассути почта.',
     'dv.emailFill':'📄 Бо ҳисобот пур кунед',
     'dv.emailSend':'📧 Мизоҷро кушоед',
-    'dv.emailShare':'📎 Файлҳоро мубодила'
+    'dv.emailShare':'📎 Файлҳоро мубодила',
+    'workType.techplan':'Нақшаи техникӣ',
+    'workType.survey':'Нақшаи ченкунии замин',
+    'workType.act':'Санади тафтиш',
+    'workType.combined':'Комплексӣ',
+    'common.notes':'Қайдҳо',
+    'common.photoStep':'Аксҳои қадам',
+    'common.addPhoto':'Илова кардани акс',
+    'common.actSign':'Санади сафар ва имзои фармоишгар',
+    'crs.warn':'⚠️ Диққат: Параметрҳои МСК вобаста ба минтақа фарқ мекунанд ва бояд бо мақоми сабти маҳаллӣ муайян карда шаванд.'
   },
   // ───────────────────────── КИРГИЗСКИЙ ─────────────────────────
   ky: {
@@ -1680,7 +1716,16 @@ const T = {
     'dv.emailHint':'Почта кардары аркылуу тез жөнөтүү.',
     'dv.emailFill':'📄 Отчёт менен толтуруу',
     'dv.emailSend':'📧 Кардарды ачуу',
-    'dv.emailShare':'📎 Файлдарды бөлүшүү'
+    'dv.emailShare':'📎 Файлдарды бөлүшүү',
+    'workType.techplan':'Техникалык план',
+    'workType.survey':'Жер өлчөө планы',
+    'workType.act':'Текшерүү актысы',
+    'workType.combined':'Комплекстүү',
+    'common.notes':'Эскертүүлөр',
+    'common.photoStep':'Кадам сүрөттөрү',
+    'common.addPhoto':'Сүрөт кошуу',
+    'common.actSign':'Баруу актысы жана заказчынын колу',
+    'crs.warn':'⚠️ Көңүл буруңуз: МСК параметрлери регионго жараша өзгөрөт жана жергиликтүү каттоо органы менен такталышы керек.'
   },
   // ───────────────────────── КАЗАХСКИЙ ─────────────────────────
   kk: {
@@ -1961,7 +2006,16 @@ const T = {
     'dv.emailHint':'Пошта клиенті арқылы жылдам жіберу.',
     'dv.emailFill':'📄 Есеппен толтыру',
     'dv.emailSend':'📧 Клиентті ашу',
-    'dv.emailShare':'📎 Файлдармен бөлісу'
+    'dv.emailShare':'📎 Файлдармен бөлісу',
+    'workType.techplan':'Техникалық жоспар',
+    'workType.survey':'Жер өлшеу жоспары',
+    'workType.act':'Тексеру актісі',
+    'workType.combined':'Кешенді',
+    'common.notes':'Жазбалар',
+    'common.photoStep':'Қадам фотосуреттері',
+    'common.addPhoto':'Фотосурет қосу',
+    'common.actSign':'Бару актісі мен тапсырыс берушінің қолы',
+    'crs.warn':'⚠️ Назар аударыңыз: МСК параметрлері аймаққа байланысты өзгереді, жергілікті тіркеу органымен нақтылау қажет.'
   },
   // ───────────────────────── ТУРКМЕНСКИЙ ─────────────────────────
   tk: {
@@ -2242,7 +2296,16 @@ const T = {
     'dv.emailHint':'Poçta müşderisi arkaly çalt iber.',
     'dv.emailFill':'📄 Hasabat bilen doldur',
     'dv.emailSend':'📧 Müşderini aç',
-    'dv.emailShare':'📎 Faýllary paýlaş'
+    'dv.emailShare':'📎 Faýllary paýlaş',
+    'workType.techplan':'Tehniki meýilnama',
+    'workType.survey':'Ýer ölçeg meýilnamasy',
+    'workType.act':'Barlag namasy',
+    'workType.combined':'Kompleks',
+    'common.notes':'Bellikler',
+    'common.photoStep':'Ädim suratlary',
+    'common.addPhoto':'Surat goşmak',
+    'common.actSign':'Gidiş namasy we müşderiniň goly',
+    'crs.warn':'⚠️ Üns beriň: MSK parametrleri sebitlere görä tapawutlanýar we ýerli hasaba alyş edarasy bilen anyklanmalydyr.'
   },
   // ───────────────────────── АЗЕРБАЙДЖАНСКИЙ ─────────────────────────
   az: {
@@ -2523,7 +2586,16 @@ const T = {
     'dv.emailHint':'Poçt müştərisi ilə sürətli göndərmə.',
     'dv.emailFill':'📄 Hesabatla doldur',
     'dv.emailSend':'📧 Müştərini aç',
-    'dv.emailShare':'📎 Faylları paylaş'
+    'dv.emailShare':'📎 Faylları paylaş',
+    'workType.techplan':'Texniki plan',
+    'workType.survey':'Torpaq ölçmə planı',
+    'workType.act':'Yoxlama aktı',
+    'workType.combined':'Kompleks',
+    'common.notes':'Qeydlər',
+    'common.photoStep':'Addım fotoşəkilləri',
+    'common.addPhoto':'Foto əlavə et',
+    'common.actSign':'Səfər aktı və sifarişçinin imzası',
+    'crs.warn':'⚠️ Diqqət: MSK parametrləri bölgəyə görə fərqlənir və yerli qeydiyyat orqanı ilə dəqiqləşdirilməlidir.'
   },
   // ───────────────────────── АРМЯНСКИЙ ─────────────────────────
   hy: {
@@ -2804,7 +2876,16 @@ const T = {
     'dv.emailHint':'Փոստային հաճախորդի միջոցով արագ ուղարկում:',
     'dv.emailFill':'📄 Լրացնել հաշվետվությամբ',
     'dv.emailSend':'📧 Բացել հաճախորդը',
-    'dv.emailShare':'📎 Կիսվել ֆայլերով'
+    'dv.emailShare':'📎 Կիսվել ֆայլերով',
+    'workType.techplan':'Տեխնիկական պլան',
+    'workType.survey':'Հողաչափական պլան',
+    'workType.act':'Զննության ակտ',
+    'workType.combined':'Համալիր',
+    'common.notes':'Նշումներ',
+    'common.photoStep':'Քայլի լուսանկարներ',
+    'common.addPhoto':'Ավելացնել լուսանկար',
+    'common.actSign':'Այցի ակտ և պատվիրատուի ստորագրություն',
+    'crs.warn':'⚠️ Ուշադրություն. MSK պարամետրերը տարբերվում են ըստ տարածաշրջանի և պետք է ճշտվեն տեղական գրանցման մարմնի հետ:'
   },
   // ───────────────────────── ГРУЗИНСКИЙ ─────────────────────────
   ka: {
@@ -3085,7 +3166,16 @@ const T = {
     'dv.emailHint':'სწრაფი გაგზავნა საფოსტო კლიენტით.',
     'dv.emailFill':'📄 ანგარიშით შევსება',
     'dv.emailSend':'📧 კლიენტის გახსნა',
-    'dv.emailShare':'📎 ფაილების გაზიარება'
+    'dv.emailShare':'📎 ფაილების გაზიარება',
+    'workType.techplan':'ტექნიკური გეგმა',
+    'workType.survey':'მიწის გეგმა',
+    'workType.act':'შემოწმების აქტი',
+    'workType.combined':'კომპლექსური',
+    'common.notes':'შენიშვნები',
+    'common.photoStep':'ნაბიჯის ფოტოები',
+    'common.addPhoto':'ფოტოს დამატება',
+    'common.actSign':'ვიზიტის აქტი და დამკვეთის ხელმოწერა',
+    'crs.warn':'⚠️ ყურადღება: MSK პარამეტრები რეგიონის მიხედვით განსხვავდება და უნდა დაზუსტდეს ადგილობრივ რეგისტრაციის ორგანოსთან.'
   },
   // ───────────────────────── БЕЛОРУССКИЙ ─────────────────────────
   be: {
@@ -3366,7 +3456,16 @@ const T = {
     'dv.emailHint':'Хуткая адпраўка праз паштовы кліент.',
     'dv.emailFill':'📄 Запоўніць справаздачай',
     'dv.emailSend':'📧 Адкрыць кліент',
-    'dv.emailShare':'📎 Падзяліцца файламі'
+    'dv.emailShare':'📎 Падзяліцца файламі',
+    'workType.techplan':'Тэхнічны план',
+    'workType.survey':'Зямельны план',
+    'workType.act':'Акт абследавання',
+    'workType.combined':'Комплексныя',
+    'common.notes':'Нататкі',
+    'common.photoStep':'Фота кроку',
+    'common.addPhoto':'Дадаць фота',
+    'common.actSign':'Акт выезду і подпіс заказчыка',
+    'crs.warn':'⚠️ Увага: Параметры МСК адрозніваюцца па рэгіёнах і павінны ўдакладняцца ў мясцовага органа рэгістрацыі правоў.'
   },
   // ───────────────────────── МОЛДАВСКИЙ (румынский) ─────────────────────────
   mo: {
@@ -3647,7 +3746,16 @@ const T = {
     'dv.emailHint':'Trimitere rapidă prin client de poștă.',
     'dv.emailFill':'📄 Completează cu raport',
     'dv.emailSend':'📧 Deschide client',
-    'dv.emailShare':'📎 Partajează fișiere'
+    'dv.emailShare':'📎 Partajează fișiere',
+    'workType.techplan':'Plan tehnic',
+    'workType.survey':'Plan de măsurare a terenului',
+    'workType.act':'Act de inspecție',
+    'workType.combined':'Complex',
+    'common.notes':'Note',
+    'common.photoStep':'Foto pasului',
+    'common.addPhoto':'Adaugă foto',
+    'common.actSign':'Act de deplasare și semnătura clientului',
+    'crs.warn':'⚠️ Atenție: Parametrii MSC diferă în funcție de regiune și trebuie verificați cu autoritatea locală de înregistrare.'
   },
   // ───────────────────────── КИТАЙСКИЙ ─────────────────────────
   zh: {
@@ -3928,7 +4036,16 @@ const T = {
     'dv.emailHint':'通过邮件客户端快速发送。',
     'dv.emailFill':'📄 填入报告',
     'dv.emailSend':'📧 打开客户端',
-    'dv.emailShare':'📎 分享文件'
+    'dv.emailShare':'📎 分享文件',
+    'workType.techplan':'技术方案',
+    'workType.survey':'地块测量方案',
+    'workType.act':'检查报告',
+    'workType.combined':'综合',
+    'common.notes':'备注',
+    'common.photoStep':'步骤照片',
+    'common.addPhoto':'添加照片',
+    'common.actSign':'外业记录、委托方签字',
+    'crs.warn':'⚠️ 注意：MSC 参数因地区而异，请与当地登记机关核实。预设仅供参考。'
   },
   // ───────────────────────── ВЬЕТНАМСКИЙ ─────────────────────────
   vi: {
@@ -4209,7 +4326,16 @@ const T = {
     'dv.emailHint':'Gửi nhanh qua ứng dụng thư.',
     'dv.emailFill':'📄 Điền báo cáo',
     'dv.emailSend':'📧 Mở ứng dụng',
-    'dv.emailShare':'📎 Chia sẻ tệp'
+    'dv.emailShare':'📎 Chia sẻ tệp',
+    'workType.techplan':'Phương án kỹ thuật',
+    'workType.survey':'Phương án đo đạc',
+    'workType.act':'Biên bản kiểm tra',
+    'workType.combined':'Tổng hợp',
+    'common.notes':'Ghi chú',
+    'common.photoStep':'Ảnh bước',
+    'common.addPhoto':'Thêm ảnh',
+    'common.actSign':'Biên bản khảo sát và chữ ký khách hàng',
+    'crs.warn':'⚠️ Lưu ý: Tham số MSK khác nhau theo vùng và cần xác nhận với cơ quan đăng ký địa phương.'
   },
   // ───────────────────────── АРАБСКИЙ (RTL) ─────────────────────────
   ar: {
@@ -4265,7 +4391,16 @@ const T = {
     'dv.pc':'☁️ سحابة نقاط','dv.pcHint':'XYZ، CSV، PLY','dv.pcLoad':'📂 تحميل','dv.pcClear':'🗑 مسح','dv.pcFit':'🔍 ملاءمة',
     'dv.ortho':'🗺️ صورة جوية','dv.orthoHint':'PNG/JPG + WGS-84','dv.orthoLoad':'🖼 تحميل','dv.orthoOnMap':'👁 الخريطة','dv.orthoDel':'🗑 حذف',
     'dv.trace':'🛣️ كاشف','dv.serial':'🔌 Web Serial','dv.serialHint':'USB-RS232','dv.serialConnect':'🔌 اتصال','dv.serialDisconnect':'⏏ فصل',
-    'dv.email':'📧 البريد','dv.emailHint':'إرسال سريع','dv.emailFill':'📄 ملء','dv.emailSend':'📧 فتح','dv.emailShare':'📎 مشاركة'
+    'dv.email':'📧 البريد','dv.emailHint':'إرسال سريع','dv.emailFill':'📄 ملء','dv.emailSend':'📧 فتح','dv.emailShare':'📎 مشاركة',
+    'workType.techplan':'مخطط فني',
+    'workType.survey':'مخطط مسح الأرض',
+    'workType.act':'محضر الفحص',
+    'workType.combined':'مجتمع',
+    'common.notes':'ملاحظات',
+    'common.photoStep':'صور الخطوة',
+    'common.addPhoto':'إضافة صورة',
+    'common.actSign':'محضر الزيارة وتوقيع العميل',
+    'crs.warn':'⚠️ تحذير: تختلف معاملات MSC حسب المنطقة ويجب التحقق منها مع سلطة التسجيل المحلية.'
   },
 };
 
