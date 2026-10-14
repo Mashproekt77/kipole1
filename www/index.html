@@ -2007,7 +2007,7 @@ function updateSidebar() {
     const num = s.id + 1;
     return `<button class="sidebar__nav-item ${isDone?'done':''}" data-step="${s.id}" onclick="goToStep(${s.id})">
         <span class="num">${isDone?'✓':num}</span>
-        <span class="label">${escapeHtml(s.title)}</span>
+        <span class="label">${t(s.key) || s.title}</span>
         <span class="count">${done}/${total}</span>
       </button>`;
   }).join('');
