@@ -1650,7 +1650,7 @@ function renderSteps() {
                 ${it[1]?`<small>${escapeHtml(t(it[1]) || it[1])}</small>`:''}
               </label>
             </div>`).join('')}
-          ${(s.warnings||[]).map(w=>`<div class="warning-box"><strong>⚠️</strong> ${escapeHtml(w)}</div>`).join('')}
+          ${(s.warnings||[]).map(w=>`<div class="warning-box"><strong>⚠️</strong> ${escapeHtml(t(w))}</div>`).join('')}
           ${s.notesId ? `
             <div class="form-group mt-3">
               <label for="${s.notesId}">📝 ${t("common.notes")}</label>
