@@ -1646,8 +1646,8 @@ function renderSteps() {
                 ${State.checkboxes[`check${s.id}_${i+1}`]?'checked':''}
                 onchange="onCheckbox('check${s.id}_${i+1}', this.checked)">
               <label for="check${s.id}_${i+1}">
-                <strong>${escapeHtml(it[0])}</strong>
-                ${it[1]?`<small>${escapeHtml(it[1])}</small>`:''}
+                <strong>${escapeHtml(t(it[0]) || it[0])}</strong>
+                ${it[1]?`<small>${escapeHtml(t(it[1]) || it[1])}</small>`:''}
               </label>
             </div>`).join('')}
           ${(s.warnings||[]).map(w=>`<div class="warning-box"><strong>⚠️</strong> ${escapeHtml(w)}</div>`).join('')}
