@@ -331,10 +331,10 @@ textarea{min-height:96px}
     </div>
     <div class="sidebar__section">Разделы</div>
     <nav class="sidebar__view-nav" id="sidebarViewNav">
-      <button class="sidebar__nav-item active" data-view="overview" onclick="switchView('overview')">📋 <span class="label">Обзор</span></button>
-      <button class="sidebar__nav-item" data-view="steps" onclick="switchView('steps')">📝 <span class="label">Шаги</span></button>
-      <button class="sidebar__nav-item" data-view="tools" onclick="switchView('tools')">🔧 <span class="label">Инструменты</span></button>
-      <button class="sidebar__nav-item" data-view="export" onclick="switchView('export')">📤 <span class="label">Экспорт</span></button>
+      <button class="sidebar__nav-item active" data-view="overview" onclick="switchView('overview')">📋 <span class="label" data-i18n="nav.overview">Обзор</span></button>
+      <button class="sidebar__nav-item" data-view="steps" onclick="switchView('steps')">📝 <span class="label" data-i18n="nav.steps">Шаги</span></button>
+      <button class="sidebar__nav-item" data-view="tools" onclick="switchView('tools')">🔧 <span class="label" data-i18n="nav.tools">Инструменты</span></button>
+      <button class="sidebar__nav-item" data-view="export" onclick="switchView('export')">📤 <span class="label" data-i18n="nav.export">Экспорт</span></button>
     </nav>
     <div class="sidebar__section">Этапы работ</div>
     <nav class="sidebar__nav" id="sidebarNav"></nav>
@@ -382,9 +382,9 @@ textarea{min-height:96px}
 
     <section class="view active" id="view-overview">
       <div class="card">
-        <h2>📌 Общие сведения об объекте</h2>
+        <h2><span>📌</span> <span data-i18n="overview.title">Общие сведения об объекте</span></h2>
         <div class="form-group">
-          <label for="workType">Тип работ</label>
+          <label for="workType" data-i18n="overview.workType">Тип работ</label>
           <select id="workType" onchange="onWorkTypeChange()">
             <option value="techplan">Технический план (ОКС/помещение)</option>
             <option value="survey">Межевой план (ЗУ)</option>
@@ -393,21 +393,21 @@ textarea{min-height:96px}
           </select>
         </div>
         <div class="form-group">
-          <label for="objectAddress">Объект (адрес / описание)</label>
+          <label for="objectAddress" data-i18n="overview.object">Объект (адрес / описание)</label>
           <input type="text" id="objectAddress" placeholder="г. Москва, ул. Примерная, д. 1" autocomplete="street-address">
         </div>
         <div class="grid-2">
-          <div class="form-group"><label for="visitDate">Дата выезда</label><input type="date" id="visitDate"></div>
+          <div class="form-group"><label for="visitDate" data-i18n="overview.date">Дата выезда</label><input type="date" id="visitDate"></div>
           <div class="form-group">
-            <label for="cadastralNumber">Кадастровый номер</label>
+            <label for="cadastralNumber" data-i18n="overview.cadnum">Кадастровый номер</label>
             <input type="text" id="cadastralNumber" placeholder="77:01:0001234:567" inputmode="numeric" autocomplete="off">
             <div class="field-error">Формат: XX:XX:XXXXXXX:XX</div>
           </div>
         </div>
-        <div class="form-group"><label for="engineerName">Инженер (ФИО, аттестат, СРО)</label><input type="text" id="engineerName" placeholder="Иванов И.И., аттестат №12345" autocomplete="name"></div>
-        <div class="form-group"><label for="customerInfo">Заказчик</label><textarea id="customerInfo" rows="3"></textarea></div>
+        <div class="form-group"><label for="engineerName" data-i18n="overview.engineer">Инженер (ФИО, аттестат, СРО)</label><input type="text" id="engineerName" placeholder="Иванов И.И., аттестат №12345" autocomplete="name"></div>
+        <div class="form-group"><label for="customerInfo" data-i18n="overview.customer">Заказчик</label><textarea id="customerInfo" rows="3"></textarea></div>
         <div class="form-group">
-          <label>📍 Геолокация</label>
+          <label data-i18n="overview.geo">📍 Геолокация</label>
           <div class="btn-row">
             <button class="small ghost" onclick="getLocation()">📍 GPS</button>
             <button class="small ghost" onclick="openOnPKK()">🗺️ ПКК</button>
@@ -433,9 +433,9 @@ textarea{min-height:96px}
         <div class="card-head"><h2>⏱ Таймер выезда</h2></div>
         <div class="timer-display" id="timerDisplay">00:00:00</div>
         <div class="timer-controls">
-          <button onclick="startTimer()" id="startBtn">▶ Старт</button>
-          <button onclick="pauseTimer()" id="pauseBtn" class="warning hidden">⏸ Пауза</button>
-          <button onclick="resetTimer()" class="ghost">↺ Сброс</button>
+          <button onclick="startTimer()" id="startBtn" data-i18n="timer.start">▶ Старт</button>
+          <button onclick="pauseTimer()" id="pauseBtn" class="warning hidden" data-i18n="timer.pause">⏸ Пауза</button>
+          <button onclick="resetTimer()" class="ghost" data-i18n="timer.reset">↺ Сброс</button>
         </div>
       </div>
 
@@ -466,18 +466,18 @@ textarea{min-height:96px}
     <section class="view" id="view-tools">
       <div class="tabs-wrap">
         <div class="tabs" id="toolsTabs">
-          <div class="tab active" data-tab="area" onclick="switchTab('area')">📐 Площадь</div>
-          <div class="tab" data-tab="mansard" onclick="switchTab('mansard')">🏠 Мансарда</div>
-          <div class="tab" data-tab="check" onclick="switchTab('check')">✅ Контроль</div>
-          <div class="tab" data-tab="tools2" onclick="switchTab('tools2')">🔧 Доп.</div>
-          <div class="tab" data-tab="geo" onclick="switchTab('geo')">🛰️ Геодезия</div>
-          <div class="tab" data-tab="crs" onclick="switchTab('crs')">🌐 CRS / МСК</div>
-          <div class="tab" data-tab="zu" onclick="switchTab('zu')">🌍 ЗУ</div>
-          <div class="tab" data-tab="nspd" onclick="switchTab('nspd')">🌐 НСПД</div>
-          <div class="tab" data-tab="cad" onclick="switchTab('cad')">📐 CAD/GIS</div>
-          <div class="tab" data-tab="quality" onclick="switchTab('quality')">📡 GNSS</div>
-          <div class="tab" data-tab="voice" onclick="switchTab('voice')">🎤 Заметки</div>
-          <div class="tab" data-tab="devices" onclick="switchTab('devices')">📡 Приборы</div>
+          <div class="tab active" data-tab="area" onclick="switchTab('area')" data-i18n="tools.area">📐 Площадь</div>
+          <div class="tab" data-tab="mansard" onclick="switchTab('mansard')" data-i18n="tools.mansard">🏠 Мансарда</div>
+          <div class="tab" data-tab="check" onclick="switchTab('check')" data-i18n="tools.check">✅ Контроль</div>
+          <div class="tab" data-tab="tools2" onclick="switchTab('tools2')" data-i18n="tools.extra">🔧 Доп.</div>
+          <div class="tab" data-tab="geo" onclick="switchTab('geo')" data-i18n="tools.geo">🛰️ Геодезия</div>
+          <div class="tab" data-tab="crs" onclick="switchTab('crs')" data-i18n="tools.crs">🌐 CRS / МСК</div>
+          <div class="tab" data-tab="zu" onclick="switchTab('zu')" data-i18n="tools.zu">🌍 ЗУ</div>
+          <div class="tab" data-tab="nspd" onclick="switchTab('nspd')" data-i18n="tools.nspd">🌐 НСПД</div>
+          <div class="tab" data-tab="cad" onclick="switchTab('cad')" data-i18n="tools.cad">📐 CAD/GIS</div>
+          <div class="tab" data-tab="quality" onclick="switchTab('quality')" data-i18n="tools.gnss">📡 GNSS</div>
+          <div class="tab" data-tab="voice" onclick="switchTab('voice')" data-i18n="tools.voice">🎤 Заметки</div>
+          <div class="tab" data-tab="devices" onclick="switchTab('devices')" data-i18n="tools.devices">📡 Приборы</div>
         </div>
       </div>
 
@@ -1097,19 +1097,19 @@ textarea{min-height:96px}
   <nav class="bottom-nav no-print">
     <button class="bottom-nav__btn active" data-view="overview" onclick="switchView('overview')">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-      <span>Обзор</span>
+      <span data-i18n="nav.overview">Обзор</span>
     </button>
     <button class="bottom-nav__btn" data-view="steps" onclick="switchView('steps')">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
-      <span>Шаги</span>
+      <span data-i18n="nav.steps">Шаги</span>
     </button>
     <button class="bottom-nav__btn" data-view="tools" onclick="switchView('tools')">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-      <span>Инструменты</span>
+      <span data-i18n="nav.tools">Инструменты</span>
     </button>
     <button class="bottom-nav__btn" data-view="export" onclick="switchView('export')">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      <span>Экспорт</span>
+      <span data-i18n="nav.export">Экспорт</span>
     </button>
   </nav>
 </div>
