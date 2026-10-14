@@ -849,7 +849,7 @@ textarea{min-height:96px}
           <div class="dev-card">
             <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
               <span class="dev-status" id="laserStatus">⭕ не подключён</span>
-              <button class="small" onclick="connectLaserBLE()" data-requires-ble>🔗 Подключить</button>
+              <button class="small" onclick="connectLaserBLE()" data-requires-ble>🔗<span data-i18n="Подключить">Подключить</span></button>
               <button class="small ghost" onclick="disconnectLaserBLE()">⏏ Отключить</button>
             </div>
             <div class="hint" style="margin-top:10px;" data-i18n="dv.laserMeasure">Принятое измерение (м):</div>
@@ -860,7 +860,7 @@ textarea{min-height:96px}
               <button class="small ghost" onclick="laserToGeo()">→ в гео-точку</button>
               <button class="small ghost" onclick="clearLaserLog()">🗑 Лог</button>
             </div>
-            <div class="dev-log" id="laserLog">Ожидание данных…</div>
+            <div class="dev-log" id="laserLog"><span data-i18n="Ожидание данных…">Ожидание данных…</span></div>
           </div>
         </div>
 
@@ -872,7 +872,7 @@ textarea{min-height:96px}
           <div class="dev-card">
             <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
               <span class="dev-status" id="gnssStatus">⭕ не подключён</span>
-              <button class="small" onclick="connectGnssBLE()" data-requires-ble>🔗 Подключить</button>
+              <button class="small" onclick="connectGnssBLE()" data-requires-ble>🔗<span data-i18n="Подключить">Подключить</span></button>
               <button class="small ghost" onclick="disconnectGnssBLE()">⏏ Отключить</button>
             </div>
             <div class="hint" style="margin-top:10px;" data-i18n="dv.gnssCoords">Текущие координаты (WGS-84):</div>
@@ -994,7 +994,7 @@ textarea{min-height:96px}
             </div>
           </div>
           <div class="btn-row">
-            <button onclick="serialConnect()" data-requires-serial>🔌 Подключить</button>
+            <button onclick="serialConnect()" data-requires-serial>🔌<span data-i18n="Подключить">Подключить</span></button>
             <button class="ghost" onclick="serialDisconnect()">⏏ Отключить</button>
           </div>
           <div style="display:flex;align-items:center;gap:10px;margin-top:8px;">
@@ -1073,7 +1073,7 @@ textarea{min-height:96px}
           <button onclick="downloadSW()">📥 sw.js</button>
           <button class="ghost" onclick="downloadManifest()">📥 manifest.json</button>
           <button class="success" id="installPwaBtn" onclick="installPwa()" style="display:none;">📲 Установить</button>
-          <button class="ghost" onclick="checkSwStatus()">🔄 Проверить SW</button>
+          <button class="ghost" onclick="checkSwStatus()">🔄<span data-i18n="Проверить SW">Проверить SW</span></button>
         </div>
         <div id="pwaStatus" class="info-box mt-3" style="font-size:.85rem;">Service Worker: <strong>не зарегистрирован</strong></div>
       </div>
@@ -4463,7 +4463,7 @@ function laserToGeo() {
   switchTab('geo');
   toast('Длина ' + v.toFixed(3) + ' м — используйте в полях расстояния', 'success');
 }
-function clearLaserLog() { Devices.laser.log = []; const el = document.getElementById('laserLog'); if (el) { el.textContent = 'Ожидание данных…'; el.dataset.initialized = ''; } }
+function clearLaserLog() { Devices.laser.log = []; const el = document.getElementById('laserLog'); if (el) { el.textContent = (typeof t === 'function' ? t('Ожидание данных…') : 'Ожидание данных…'); el.dataset.initialized = ''; } }
 
 async function connectGnssBLE() {
   if (!navigator.bluetooth) { toast('Web Bluetooth не поддерживается на этом устройстве', 'error', 4000); return; }
