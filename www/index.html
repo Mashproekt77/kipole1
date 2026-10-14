@@ -419,18 +419,18 @@ textarea{min-height:96px}
       </div>
 
       <div class="card">
-        <h2>📱 QR-код кадастрового номера</h2>
-        <button class="ghost" onclick="generateQR()">Сформировать QR</button>
+        <h2 data-i18n="qr.title">📱 QR-код кадастрового номера</h2>
+        <button class="ghost" onclick="generateQR()" data-i18n="qr.btn">Сформировать QR</button>
         <div class="qr-container" id="qrContainer">—</div>
       </div>
 
       <div class="card">
-        <h2>📋 История выездов</h2>
+        <h2 data-i18n="hist.title">📋 История выездов</h2>
         <div id="historyList"><p class="text-muted" style="font-size:0.9rem;">История пуста.</p></div>
       </div>
 
       <div class="card">
-        <div class="card-head"><h2>⏱ Таймер выезда</h2></div>
+        <div class="card-head"><h2 data-i18n="tmr.title">⏱ Таймер выезда</h2></div>
         <div class="timer-display" id="timerDisplay">00:00:00</div>
         <div class="timer-controls">
           <button onclick="startTimer()" id="startBtn" data-i18n="timer.start">▶ Старт</button>
@@ -440,11 +440,11 @@ textarea{min-height:96px}
       </div>
 
       <div class="card">
-        <h2>🧮 Быстрые действия</h2>
+        <h2 data-i18n="qa.title">🧮 Быстрые действия</h2>
         <div class="btn-row">
-          <button class="ghost" onclick="saveToHistory()">💾 Сохранить</button>
+          <button class="ghost" onclick="saveToHistory()" data-i18n="qa.save">💾 Сохранить</button>
           <button class="ghost" onclick="exportJSON()" data-i18n="exp.json">📤 JSON</button>
-          <button class="ghost" onclick="shareProject()">🔗 Поделиться</button>
+          <button class="ghost" onclick="shareProject()" data-i18n="qa.share">🔗 Поделиться</button>
           <button class="ghost" onclick="generateReport()" data-i18n="exp.report">📄 Отчёт</button>
           <button class="ghost" onclick="printReport()">🖨️ Печать отчёта</button>
           <button class="ghost" onclick="exportZip()" data-i18n="exp.zip">🗜 ZIP-архив</button>
@@ -1061,9 +1061,9 @@ textarea{min-height:96px}
         </div>
         <div id="localhostStatusBox" class="info-box" style="font-size:.85rem;">Проверка окружения…</div>
         <div class="btn-row">
-          <button class="success" onclick="downloadLocalhostKit()">📦 Скачать набор для localhost (ZIP)</button>
-          <button class="ghost" onclick="copyLocalhostCommand()">📋 Копировать команду запуска</button>
-          <button class="ghost" onclick="openLocalhostModal()">📖 Инструкция</button>
+          <button class="success" onclick="downloadLocalhostKit()" data-i18n="lhs.dl">📦 Скачать набор для localhost (ZIP)</button>
+          <button class="ghost" onclick="copyLocalhostCommand()" data-i18n="lhs.cmd">📋 Копировать команду запуска</button>
+          <button class="ghost" onclick="openLocalhostModal()" data-i18n="lhs.instr">📖 Инструкция</button>
         </div>
       </div>
       <div class="card">
