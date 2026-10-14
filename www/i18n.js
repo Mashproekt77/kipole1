@@ -1395,6 +1395,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }, true);
 })();
 
+
+// Перерисовка динамических элементов при смене языка
+function refreshDynamicUI(){
+  try { if (typeof window.renderSteps === 'function') window.renderSteps(); } catch(_){}
+  try { if (typeof window.updateSidebar === 'function') window.updateSidebar(); } catch(_){}
+}
+window.addEventListener('languageChanged', refreshDynamicUI);
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(refreshDynamicUI, 200);
+});
+
 // Публичный API
 window.t = t;
 window.i18n = { t, setLang, getLang, applyI18n, showLanguageMenu, showLanguagePicker, LANGS };
