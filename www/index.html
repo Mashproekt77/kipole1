@@ -443,11 +443,11 @@ textarea{min-height:96px}
         <h2>🧮 Быстрые действия</h2>
         <div class="btn-row">
           <button class="ghost" onclick="saveToHistory()">💾 Сохранить</button>
-          <button class="ghost" onclick="exportJSON()">📤 JSON</button>
+          <button class="ghost" onclick="exportJSON()" data-i18n="exp.json">📤 JSON</button>
           <button class="ghost" onclick="shareProject()">🔗 Поделиться</button>
-          <button class="ghost" onclick="generateReport()">📄 Отчёт</button>
+          <button class="ghost" onclick="generateReport()" data-i18n="exp.report">📄 Отчёт</button>
           <button class="ghost" onclick="printReport()">🖨️ Печать отчёта</button>
-          <button class="ghost" onclick="exportZip()">🗜 ZIP-архив</button>
+          <button class="ghost" onclick="exportZip()" data-i18n="exp.zip">🗜 ZIP-архив</button>
         </div>
       </div>
     </section>
@@ -1031,31 +1031,31 @@ textarea{min-height:96px}
 
     <section class="view" id="view-export">
       <div class="card">
-        <h2>📤 Экспорт</h2>
+        <h2 data-i18n="exp.title">📤 Экспорт</h2>
         <div class="btn-row">
           <button onclick="exportJSON()">📤 JSON</button>
-          <button class="ghost" onclick="exportExcel()">📊 Excel (CSV)</button>
+          <button class="ghost" onclick="exportExcel()" data-i18n="exp.excel">📊 Excel (CSV)</button>
           <button class="ghost" onclick="generateReport()">📄 Отчёт</button>
-          <button class="ghost" onclick="exportGeoCSV()">🛰️ Точки CSV</button>
-          <button class="ghost" onclick="downloadXMLTemplate()">📥 Шаблон XML</button>
+          <button class="ghost" onclick="exportGeoCSV()" data-i18n="exp.geoCSV">🛰️ Точки CSV</button>
+          <button class="ghost" onclick="downloadXMLTemplate()" data-i18n="exp.xml">📥 Шаблон XML</button>
           <button class="ghost" onclick="exportZip()">🗜 ZIP-архив</button>
         </div>
       </div>
       <div class="card">
-        <h2>📥 Импорт</h2>
-        <button class="ghost" onclick="document.getElementById('importFile').click()">📥 Загрузить JSON</button>
+        <h2 data-i18n="imp.title">📥 Импорт</h2>
+        <button class="ghost" onclick="document.getElementById('importFile').click()" data-i18n="imp.json">📥 Загрузить JSON</button>
         <input type="file" id="importFile" accept=".json" style="display:none;" onchange="importJSON(event)">
       </div>
       <div class="card">
-        <h2>📄 Печать / PDF</h2>
+        <h2 data-i18n="prn.title">📄 Печать / PDF</h2>
         <div class="info-box">Используйте системную печать → «Сохранить как PDF».</div>
         <div class="btn-row">
-          <button onclick="window.print()">🖨️ Печать / PDF</button>
-          <button class="ghost" onclick="printReport()">📋 Печать отчёта</button>
+          <button onclick="window.print()" data-i18n="prn.btn">🖨️ Печать / PDF</button>
+          <button class="ghost" onclick="printReport()" data-i18n="prn.report">📋 Печать отчёта</button>
         </div>
       </div>
       <div class="card">
-        <h2>🌐 Запуск через localhost</h2>
+        <h2 data-i18n="lhs.title">🌐 Запуск через localhost</h2>
         <div class="info-box" style="font-size:.85rem;">
           Полноценная работа <strong>Web Bluetooth</strong>, <strong>Web Serial</strong>, <strong>Service Worker</strong> и <strong>PWA</strong> возможна только на <code>localhost</code> или <code>HTTPS</code>. Кнопка ниже скачает готовый набор для запуска.
         </div>
@@ -1067,7 +1067,7 @@ textarea{min-height:96px}
         </div>
       </div>
       <div class="card">
-        <h2>📲 Установка как приложение (PWA)</h2>
+        <h2 data-i18n="pwa.title">📲 Установка как приложение (PWA)</h2>
         <div class="info-box">Для офлайн-режима скачайте <code>sw.js</code> и положите рядом с HTML, разместите на HTTPS или localhost.</div>
         <div class="btn-row">
           <button onclick="downloadSW()">📥 sw.js</button>
@@ -1078,7 +1078,7 @@ textarea{min-height:96px}
         <div id="pwaStatus" class="info-box mt-3" style="font-size:.85rem;">Service Worker: <strong>не зарегистрирован</strong></div>
       </div>
       <div class="card">
-        <h2>⚙️ Система</h2>
+        <h2 data-i18n="sys.title">⚙️ Система</h2>
         <div class="btn-row">
           <button class="ghost" onclick="openProjects()">📁 Проекты</button>
           <button class="danger" onclick="resetAll()">🗑️ Сброс текущего</button>

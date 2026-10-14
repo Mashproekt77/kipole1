@@ -48,7 +48,23 @@ const T = {
     'step.10':'Безопасность и организация',
     'step.10.sub':'ТБ, СИЗ, опасные факторы',
     'step.11':'Нормативы и XML-схемы',
-    'step.11.sub':'П/0393, TP_v07_R03, MP_v09_R04'
+    'step.11.sub':'П/0393, TP_v07_R03, MP_v09_R04',
+    'exp.title':'Экспорт',
+    'exp.json':'JSON',
+    'exp.excel':'Excel (CSV)',
+    'exp.report':'Отчёт',
+    'exp.geoCSV':'Точки CSV',
+    'exp.xml':'Шаблон XML',
+    'exp.zip':'ZIP-архив',
+    'imp.title':'Импорт',
+    'imp.json':'Загрузить JSON',
+    'prn.title':'Печать / PDF',
+    'prn.hint':'Используйте системную печать → «Сохранить как PDF».',
+    'prn.btn':'Печать / PDF',
+    'prn.report':'Печать отчёта',
+    'lhs.title':'Запуск через localhost',
+    'pwa.title':'Установка как приложение (PWA)',
+    'sys.title':'Система'
   },
   // ───────────────────────── ENGLISH ─────────────────────────
   en: {
@@ -95,7 +111,23 @@ const T = {
     'step.10':'Safety & organization',
     'step.10.sub':'HSE, PPE, hazards',
     'step.11':'Standards & XML schemas',
-    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04'
+    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04',
+    'exp.title':'Export',
+    'exp.json':'JSON',
+    'exp.excel':'Excel (CSV)',
+    'exp.report':'Report',
+    'exp.geoCSV':'Points CSV',
+    'exp.xml':'XML template',
+    'exp.zip':'ZIP archive',
+    'imp.title':'Import',
+    'imp.json':'Upload JSON',
+    'prn.title':'Print / PDF',
+    'prn.hint':'Use system print → "Save as PDF".',
+    'prn.btn':'Print / PDF',
+    'prn.report':'Print report',
+    'lhs.title':'Run via localhost',
+    'pwa.title':'Install as app (PWA)',
+    'sys.title':'System'
   },
   // ───────────────────────── УЗБЕКСКИЙ ─────────────────────────
   uz: {
@@ -142,7 +174,23 @@ const T = {
     'step.10':'Xavfsizlik va tashkil etish',
     'step.10.sub':'TB, SHV, xavfli omillar',
     'step.11':'Normativlar va XML',
-    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04'
+    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04',
+    'exp.title':'Eksport',
+    'exp.json':'JSON',
+    'exp.excel':'Excel (CSV)',
+    'exp.report':'Hisobot',
+    'exp.geoCSV':'Nuqtalar CSV',
+    'exp.xml':'XML shablon',
+    'exp.zip':'ZIP arxiv',
+    'imp.title':'Import',
+    'imp.json':'JSON yuklash',
+    'prn.title':'Chop / PDF',
+    'prn.hint':'Tizim chop etishdan foydalaning → «PDF sifatida saqlash».',
+    'prn.btn':'Chop / PDF',
+    'prn.report':'Hisobotni chop etish',
+    'lhs.title':'Localhost orqali ishga tushirish',
+    'pwa.title':'Ilova sifatida o‘rnatish (PWA)',
+    'sys.title':'Tizim'
   },
   // ───────────────────────── ТАДЖИКСКИЙ ─────────────────────────
   tg: {
@@ -189,7 +237,23 @@ const T = {
     'step.10':'Бехатарӣ ва ташкил',
     'step.10.sub':'Бехатарӣ, ВҶШ, омилҳои хавфнок',
     'step.11':'Меъёрҳо ва XML',
-    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04'
+    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04',
+    'exp.title':'Содирот',
+    'exp.json':'JSON',
+    'exp.excel':'Excel (CSV)',
+    'exp.report':'Ҳисобот',
+    'exp.geoCSV':'Нуқтаҳо CSV',
+    'exp.xml':'Қолаби XML',
+    'exp.zip':'ZIP архив',
+    'imp.title':'Воридот',
+    'imp.json':'Боргирии JSON',
+    'prn.title':'Чоп / PDF',
+    'prn.hint':'Чопи системаро истифода баред → «Ҳамчун PDF нигоҳ доштан».',
+    'prn.btn':'Чоп / PDF',
+    'prn.report':'Чопи ҳисобот',
+    'lhs.title':'Оғоз тавассути localhost',
+    'pwa.title':'Насб ҳамчун барнома (PWA)',
+    'sys.title':'Система'
   },
   // ───────────────────────── КИРГИЗСКИЙ ─────────────────────────
   ky: {
@@ -236,7 +300,23 @@ const T = {
     'step.10':'Коопсуздук жана уюштуруу',
     'step.10.sub':'КБ, ЖКК, коркунучтуу факторлор',
     'step.11':'Ченемдер жана XML',
-    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04'
+    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04',
+    'exp.title':'Экспорт',
+    'exp.json':'JSON',
+    'exp.excel':'Excel (CSV)',
+    'exp.report':'Отчёт',
+    'exp.geoCSV':'Чекиттер CSV',
+    'exp.xml':'XML калыбы',
+    'exp.zip':'ZIP архив',
+    'imp.title':'Импорт',
+    'imp.json':'JSON жүктөө',
+    'prn.title':'Басып чыгаруу / PDF',
+    'prn.hint':'Системалык басып чыгарууну колдонуңуз → «PDF катары сактоо».',
+    'prn.btn':'Басып чыгаруу / PDF',
+    'prn.report':'Отчётту басып чыгаруу',
+    'lhs.title':'Localhost аркылуу иштетүү',
+    'pwa.title':'Колдонмо катары орнотуу (PWA)',
+    'sys.title':'Система'
   },
   // ───────────────────────── КАЗАХСКИЙ ─────────────────────────
   kk: {
@@ -283,7 +363,23 @@ const T = {
     'step.10':'Қауіпсіздік және ұйымдастыру',
     'step.10.sub':'ҚТ, ЖҚҚ, қауіпті факторлар',
     'step.11':'Нормативтер және XML',
-    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04'
+    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04',
+    'exp.title':'Экспорт',
+    'exp.json':'JSON',
+    'exp.excel':'Excel (CSV)',
+    'exp.report':'Есеп',
+    'exp.geoCSV':'Нүктелер CSV',
+    'exp.xml':'XML үлгісі',
+    'exp.zip':'ZIP мұрағат',
+    'imp.title':'Импорт',
+    'imp.json':'JSON жүктеу',
+    'prn.title':'Басып шығару / PDF',
+    'prn.hint':'Жүйелік басып шығаруды қолданыңыз → «PDF ретінде сақтау».',
+    'prn.btn':'Басып шығару / PDF',
+    'prn.report':'Есепті басып шығару',
+    'lhs.title':'Localhost арқылы іске қосу',
+    'pwa.title':'Қолданба ретінде орнату (PWA)',
+    'sys.title':'Жүйе'
   },
   // ───────────────────────── ТУРКМЕНСКИЙ ─────────────────────────
   tk: {
@@ -330,7 +426,23 @@ const T = {
     'step.10':'Howpsuzlyk we gurama',
     'step.10.sub':'HB, ŞHÝ, howply faktorlar',
     'step.11':'Normatiwler we XML',
-    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04'
+    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04',
+    'exp.title':'Eksport',
+    'exp.json':'JSON',
+    'exp.excel':'Excel (CSV)',
+    'exp.report':'Hasabat',
+    'exp.geoCSV':'Nokatlar CSV',
+    'exp.xml':'XML şablon',
+    'exp.zip':'ZIP arhiw',
+    'imp.title':'Import',
+    'imp.json':'JSON ýüklemek',
+    'prn.title':'Çap / PDF',
+    'prn.hint':'Ulgam çapyny ulanyň → «PDF hökmünde saklamak».',
+    'prn.btn':'Çap / PDF',
+    'prn.report':'Hasabaty çap etmek',
+    'lhs.title':'Localhost arkaly işletmek',
+    'pwa.title':'Programma hökmünde gurmak (PWA)',
+    'sys.title':'Ulgam'
   },
   // ───────────────────────── АЗЕРБАЙДЖАНСКИЙ ─────────────────────────
   az: {
@@ -377,7 +489,23 @@ const T = {
     'step.10':'Təhlükəsizlik və təşkilat',
     'step.10.sub':'TH, FMQ, təhlükəli amillər',
     'step.11':'Normativlər və XML',
-    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04'
+    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04',
+    'exp.title':'İxrac',
+    'exp.json':'JSON',
+    'exp.excel':'Excel (CSV)',
+    'exp.report':'Hesabat',
+    'exp.geoCSV':'Nöqtələr CSV',
+    'exp.xml':'XML şablon',
+    'exp.zip':'ZIP arxiv',
+    'imp.title':'İdxal',
+    'imp.json':'JSON yüklə',
+    'prn.title':'Çap / PDF',
+    'prn.hint':'Sistem çapından istifadə edin → «PDF kimi saxla».',
+    'prn.btn':'Çap / PDF',
+    'prn.report':'Hesabatı çap et',
+    'lhs.title':'Localhost vasitəsilə işə sal',
+    'pwa.title':'Tətbiq kimi quraşdır (PWA)',
+    'sys.title':'Sistem'
   },
   // ───────────────────────── АРМЯНСКИЙ ─────────────────────────
   hy: {
@@ -424,7 +552,23 @@ const T = {
     'step.10':'Անվտանգություն և կազմակերպում',
     'step.10.sub':'ԱՀ, ԱՊՄ, վտանգավոր գործոններ',
     'step.11':'Նորմատիվներ և XML',
-    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04'
+    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04',
+    'exp.title':'Արտահանում',
+    'exp.json':'JSON',
+    'exp.excel':'Excel (CSV)',
+    'exp.report':'Հաշվետվություն',
+    'exp.geoCSV':'Կետեր CSV',
+    'exp.xml':'XML ձևանմուշ',
+    'exp.zip':'ZIP արխիվ',
+    'imp.title':'Ներմուծում',
+    'imp.json':'Վերբեռնել JSON',
+    'prn.title':'Տպում / PDF',
+    'prn.hint':'Օգտագործեք համակարգային տպումը → «Պահել որպես PDF»։',
+    'prn.btn':'Տպում / PDF',
+    'prn.report':'Տպել հաշվետվությունը',
+    'lhs.title':'Գործարկել localhost-ով',
+    'pwa.title':'Տեղադրել որպես հավելված (PWA)',
+    'sys.title':'Համակարգ'
   },
   // ───────────────────────── ГРУЗИНСКИЙ ─────────────────────────
   ka: {
@@ -471,7 +615,23 @@ const T = {
     'step.10':'უსაფრთხოება და ორგანიზაცია',
     'step.10.sub':'უსაფრთხოება, დაცვა, რისკები',
     'step.11':'ნორმატივები და XML',
-    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04'
+    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04',
+    'exp.title':'ექსპორტი',
+    'exp.json':'JSON',
+    'exp.excel':'Excel (CSV)',
+    'exp.report':'ანგარიში',
+    'exp.geoCSV':'წერტილები CSV',
+    'exp.xml':'XML შაბლონი',
+    'exp.zip':'ZIP არქივი',
+    'imp.title':'იმპორტი',
+    'imp.json':'ატვირთე JSON',
+    'prn.title':'ბეჭდვა / PDF',
+    'prn.hint':'გამოიყენეთ სისტემური ბეჭდვა → „შენახვა PDF-ად“.',
+    'prn.btn':'ბეჭდვა / PDF',
+    'prn.report':'ანგარიშის ბეჭდვა',
+    'lhs.title':'გაშვება localhost-ით',
+    'pwa.title':'დაყენება აპად (PWA)',
+    'sys.title':'სისტემა'
   },
   // ───────────────────────── БЕЛОРУССКИЙ ─────────────────────────
   be: {
@@ -518,7 +678,23 @@ const T = {
     'step.10':'Бяспека і арганізацыя',
     'step.10.sub':'ТБ, СІЗ, небяспечныя фактары',
     'step.11':'Нарматывы і XML',
-    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04'
+    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04',
+    'exp.title':'Экспарт',
+    'exp.json':'JSON',
+    'exp.excel':'Excel (CSV)',
+    'exp.report':'Справаздача',
+    'exp.geoCSV':'Кропкі CSV',
+    'exp.xml':'Шаблон XML',
+    'exp.zip':'ZIP-архіў',
+    'imp.title':'Імпарт',
+    'imp.json':'Загрузіць JSON',
+    'prn.title':'Друк / PDF',
+    'prn.hint':'Выкарыстоўвайце сістэмны друк → «Захаваць як PDF».',
+    'prn.btn':'Друк / PDF',
+    'prn.report':'Друк справаздачы',
+    'lhs.title':'Запуск праз localhost',
+    'pwa.title':'Усталяваць як праграму (PWA)',
+    'sys.title':'Сістэма'
   },
   // ───────────────────────── МОЛДАВСКИЙ (румынский) ─────────────────────────
   mo: {
@@ -565,7 +741,23 @@ const T = {
     'step.10':'Siguranță și organizare',
     'step.10.sub':'SSM, EPI, factori de risc',
     'step.11':'Normative și XML',
-    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04'
+    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04',
+    'exp.title':'Export',
+    'exp.json':'JSON',
+    'exp.excel':'Excel (CSV)',
+    'exp.report':'Raport',
+    'exp.geoCSV':'Puncte CSV',
+    'exp.xml':'Șablon XML',
+    'exp.zip':'Arhivă ZIP',
+    'imp.title':'Import',
+    'imp.json':'Încarcă JSON',
+    'prn.title':'Printare / PDF',
+    'prn.hint':'Folosiți printarea de sistem → „Salvează ca PDF”.',
+    'prn.btn':'Printare / PDF',
+    'prn.report':'Tipărește raportul',
+    'lhs.title':'Rulare prin localhost',
+    'pwa.title':'Instalare ca aplicație (PWA)',
+    'sys.title':'Sistem'
   },
   // ───────────────────────── КИТАЙСКИЙ ─────────────────────────
   zh: {
@@ -612,7 +804,23 @@ const T = {
     'step.10':'安全与组织',
     'step.10.sub':'安全、防护、危险因素',
     'step.11':'规范与 XML 模式',
-    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04'
+    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04',
+    'exp.title':'导出',
+    'exp.json':'JSON',
+    'exp.excel':'Excel (CSV)',
+    'exp.report':'报告',
+    'exp.geoCSV':'点 CSV',
+    'exp.xml':'XML 模板',
+    'exp.zip':'ZIP 压缩包',
+    'imp.title':'导入',
+    'imp.json':'上传 JSON',
+    'prn.title':'打印 / PDF',
+    'prn.hint':'使用系统打印 → “另存为 PDF”。',
+    'prn.btn':'打印 / PDF',
+    'prn.report':'打印报告',
+    'lhs.title':'通过 localhost 运行',
+    'pwa.title':'安装为应用 (PWA)',
+    'sys.title':'系统'
   },
   // ───────────────────────── ВЬЕТНАМСКИЙ ─────────────────────────
   vi: {
@@ -659,7 +867,23 @@ const T = {
     'step.10':'An toàn và tổ chức',
     'step.10.sub':'ATLĐ, BHLĐ, yếu tố nguy hiểm',
     'step.11':'Tiêu chuẩn và XML',
-    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04'
+    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04',
+    'exp.title':'Xuất',
+    'exp.json':'JSON',
+    'exp.excel':'Excel (CSV)',
+    'exp.report':'Báo cáo',
+    'exp.geoCSV':'Điểm CSV',
+    'exp.xml':'Mẫu XML',
+    'exp.zip':'Tệp ZIP',
+    'imp.title':'Nhập',
+    'imp.json':'Tải JSON',
+    'prn.title':'In / PDF',
+    'prn.hint':'Dùng in hệ thống → "Lưu dưới dạng PDF".',
+    'prn.btn':'In / PDF',
+    'prn.report':'In báo cáo',
+    'lhs.title':'Chạy qua localhost',
+    'pwa.title':'Cài đặt như ứng dụng (PWA)',
+    'sys.title':'Hệ thống'
   },
   // ───────────────────────── АРАБСКИЙ (RTL) ─────────────────────────
   ar: {
@@ -706,7 +930,23 @@ const T = {
     'step.10':'السلامة والتنظيم',
     'step.10.sub':'السلامة ومعدات الوقاية والمخاطر',
     'step.11':'المعايير ومخططات XML',
-    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04'
+    'step.11.sub':'P/0393, TP_v07_R03, MP_v09_R04',
+    'exp.title':'تصدير',
+    'exp.json':'JSON',
+    'exp.excel':'Excel (CSV)',
+    'exp.report':'تقرير',
+    'exp.geoCSV':'نقاط CSV',
+    'exp.xml':'قالب XML',
+    'exp.zip':'أرشيف ZIP',
+    'imp.title':'استيراد',
+    'imp.json':'تحميل JSON',
+    'prn.title':'طباعة / PDF',
+    'prn.hint':'استخدم الطباعة → "حفظ كـ PDF".',
+    'prn.btn':'طباعة / PDF',
+    'prn.report':'طباعة التقرير',
+    'lhs.title':'التشغيل عبر localhost',
+    'pwa.title':'التثبيت كتطبيق (PWA)',
+    'sys.title':'النظام'
   }
 };
 
@@ -737,7 +977,8 @@ function getLang(){
 
 function t(key){
   const lang = getLang() || 'ru';
-  return (T[lang] && T[lang][key]) || (T.ru[key]) || key;
+  const L = T[lang] || {};
+  return L[key] || (T.en && T.en[key]) || (T.ru && T.ru[key]) || key;
 }
 
 function applyI18n(root){
