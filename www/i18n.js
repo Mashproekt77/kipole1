@@ -469,36 +469,34 @@ function showLanguageMenu(){
 // Инициализация
 document.addEventListener('DOMContentLoaded', () => {
   const saved = getLang();
-  if (saved) {
-    setLang(saved);
-  } else {
-    // Применяем русский как базовый, потом покажем выбор языка
-    setLang('ru');
+  if (saved) setLang(saved); else setLang('ru');
+  const pickerShown = localStorage.getItem('kipole_picker_shown_v2');
+  if (!pickerShown) {
+    localStorage.setItem('kipole_picker_shown_v2', '1');
     setTimeout(() => showLanguagePicker(true), 400);
   }
 });
 
-// Автоматическое внедрение пункта «Язык» в меню «Ещё»
-(function injectLanguageMenuItem(){
-  const origOpenMoreMenu = window.openMoreMenu;
-  if (typeof origOpenMoreMenu === 'function') {
-    window.openMoreMenu = function(){
-      const r = origOpenMoreMenu.apply(this, arguments);
-      setTimeout(() => {
-        document.querySelectorAll('.more-menu-list').forEach(list => {
-          if (list.querySelector('[data-act="language"]')) return;
-          const btn = document.createElement('button');
-          btn.className = 'more-menu-item';
-          btn.setAttribute('data-act', 'language');
-          btn.innerHTML = '<span class="more-menu-icon">🌐</span><span class="more-menu-label">' + t('menu.language') + '</span>';
-          const firstBtn = list.querySelector('.more-menu-item');
-          if (firstBtn) list.insertBefore(btn, firstBtn.nextSibling);
-          else list.appendChild(btn);
-        });
-      }, 10);
-      return r;
-    };
+// Автоматическое внедрение пункта «Язык» в меню
+(function setupLanguageAutoInject(){
+  function injectBtn(){
+    document.querySelectorAll('.more-menu-list').forEach(list => {
+      if (list.querySelector('[data-act="language"]')) return;
+      const btn = document.createElement('button');
+      btn.className = 'more-menu-item';
+      btn.setAttribute('data-act', 'language');
+      btn.innerHTML = '<span class="more-menu-icon">🌐</span><span class="more-menu-label">' + t('menu.language') + '</span>';
+      const firstBtn = list.querySelector('.more-menu-item');
+      if (firstBtn) list.insertBefore(btn, firstBtn.nextSibling);
+      else list.appendChild(btn);
+    });
   }
+  const observer = new MutationObserver(() => {
+    if (document.querySelector('.more-menu-list')) injectBtn();
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', injectBtn);
+  else setTimeout(injectBtn, 100);
   document.addEventListener('click', (e) => {
     const btn = e.target.closest('[data-act="language"]');
     if (!btn) return;
