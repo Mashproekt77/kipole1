@@ -755,9 +755,9 @@ textarea{min-height:96px}
 
       <div class="tab-content" id="tab-nspd">
         <div class="card">
-          <h3>🌐 Сервисы НСПД</h3>
+          <h3 data-i18n="nspd.title">🌐 Сервисы НСПД</h3>
           <div class="info-box"><strong>Национальная система пространственных данных</strong> — единая цифровая платформа Росреестра.</div>
-          <div class="form-group"><label for="nspdQuery">Кадастровый номер / адрес</label><input type="text" id="nspdQuery" placeholder="77:01:0001234:567"></div>
+          <div class="form-group"><label for="nspdQuery" data-i18n="nspd.query">Кадастровый номер / адрес</label><input type="text" id="nspdQuery" placeholder="77:01:0001234:567"></div>
           <div class="btn-row">
             <button onclick="openNSPD('earth')">🗺️ Земля просто</button>
             <button class="ghost" onclick="openNSPD('surveyor')">📡 Помощник изыскателя</button>
@@ -769,11 +769,11 @@ textarea{min-height:96px}
 
       <div class="tab-content" id="tab-cad">
         <div class="card">
-          <h3>📐 Экспорт в CAD/GIS</h3>
+          <h3 data-i18n="cad.title">📐 Экспорт в CAD/GIS</h3>
           <div class="info-box">DXF · GeoJSON · KML · MIF/MID</div>
-          <div class="form-group"><label for="cadSrcCRS">Система координат источника</label><input type="text" id="cadSrcCRS" value="МСК-77"></div>
+          <div class="form-group"><label for="cadSrcCRS" data-i18n="cad.src">Система координат источника</label><input type="text" id="cadSrcCRS" value="МСК-77"></div>
           <div class="form-group">
-            <label for="cadSource">Источник координат</label>
+            <label for="cadSource" data-i18n="cad.source">Источник координат</label>
             <select id="cadSource"><option value="geoPoints">Геодезические точки</option><option value="rooms">Помещения</option></select>
           </div>
           <div class="btn-row">
@@ -787,51 +787,51 @@ textarea{min-height:96px}
 
       <div class="tab-content" id="tab-quality">
         <div class="card">
-          <h3>📡 Оценка качества GNSS</h3>
-          <div class="form-group"><label for="gnssFixType">Тип решения</label>
+          <h3 data-i18n="gnss.title">📡 Оценка качества GNSS</h3>
+          <div class="form-group"><label for="gnssFixType" data-i18n="gnss.fix">Тип решения</label>
             <select id="gnssFixType"><option value="FIX">FIX (фиксированное)</option><option value="Float">Float (плавающее)</option></select>
           </div>
           <div class="grid-2">
-            <div class="form-group"><label for="gnssHDOP">HDOP</label><input type="number" id="gnssHDOP" step="0.1" min="0" value="1.0" inputmode="decimal"></div>
-            <div class="form-group"><label for="gnssPDOP">PDOP</label><input type="number" id="gnssPDOP" step="0.1" min="0" value="1.5" inputmode="decimal"></div>
+            <div class="form-group"><label for="gnssHDOP" data-i18n="gnss.hdop">HDOP</label><input type="number" id="gnssHDOP" step="0.1" min="0" value="1.0" inputmode="decimal"></div>
+            <div class="form-group"><label for="gnssPDOP" data-i18n="gnss.pdop">PDOP</label><input type="number" id="gnssPDOP" step="0.1" min="0" value="1.5" inputmode="decimal"></div>
           </div>
           <div class="grid-2">
-            <div class="form-group"><label for="gnssSats">Спутников</label><input type="number" id="gnssSats" min="0" value="12" inputmode="numeric"></div>
-            <div class="form-group"><label for="gnssRtcm">Формат поправок</label>
+            <div class="form-group"><label for="gnssSats" data-i18n="gnss.sats">Спутников</label><input type="number" id="gnssSats" min="0" value="12" inputmode="numeric"></div>
+            <div class="form-group"><label for="gnssRtcm" data-i18n="gnss.rtcm">Формат поправок</label>
               <select id="gnssRtcm"><option>RTCM3.2</option><option>RTCM3.1</option><option>CMR</option></select>
             </div>
           </div>
-          <button onclick="checkGNSSQuality()">Оценить</button>
+          <button onclick="checkGNSSQuality()" data-i18n="gnss.check">Оценить</button>
           <div class="calc-result hidden" id="gnssQualityResult"></div>
         </div>
         <div class="card">
-          <h3>📋 Повторные измерения</h3>
+          <h3 data-i18n="gnss.rep">📋 Повторные измерения</h3>
           <div class="info-box">Допуск согласно П/0393 — <strong>удвоенное значение СКП</strong> (например, 0,20 м для земель населённых пунктов при СКП 0,10 м).</div>
           <div class="form-group">
-            <label for="repeatCategory">Категория земель (допуск СКП)</label>
+            <label for="repeatCategory" data-i18n="gnss.repCat">Категория земель (допуск СКП)</label>
             <select id="repeatCategory">
               <option value="0.10">Населённые пункты (СКП 0,10 м → контроль 0,20 м)</option>
               <option value="0.20">СХ / ЛПХ (СКП 0,20 м → контроль 0,40 м)</option>
               <option value="0.50">Промышленность (СКП 0,50 м → контроль 1,00 м)</option>
             </select>
           </div>
-          <button class="small" onclick="addRepeatMeasure()">+ Набор</button>
+          <button class="small" onclick="addRepeatMeasure()" data-i18n="gnss.repAdd">+ Набор</button>
           <div id="repeatMeasuresList" class="mt-3"></div>
-          <button class="ghost mt-3" onclick="checkRepeatMeasures()">Проверить расхождения</button>
+          <button class="ghost mt-3" onclick="checkRepeatMeasures()" data-i18n="gnss.repCheck">Проверить расхождения</button>
           <div class="calc-result hidden" id="repeatResult"></div>
         </div>
       </div>
 
       <div class="tab-content" id="tab-voice">
         <div class="card">
-          <h3>🎤 Голосовые заметки</h3>
-          <p class="text-muted" style="font-size:0.9rem;margin-bottom:12px;">Chrome/Edge, HTTPS или localhost.</p>
+          <h3 data-i18n="vc.title">🎤 Голосовые заметки</h3>
+          <p class="text-muted" style="font-size:0.9rem;margin-bottom:12px;" data-i18n="vc.hint">Chrome/Edge, HTTPS или localhost.</p>
           <div class="btn-row" style="justify-content:center;">
             <button class="voice-btn" id="voiceBtn" onclick="toggleVoiceRecording()" title="Распознавание речи" aria-label="Запись голоса">🎙</button>
           </div>
-          <div id="voiceStatus" class="text-center" style="margin-bottom:10px;" role="status" aria-live="polite">Готов к записи</div>
+          <div id="voiceStatus" class="text-center" style="margin-bottom:10px;" role="status" aria-live="polite" data-i18n="vc.ready">Готов к записи</div>
           <div class="btn-row" style="justify-content:center;">
-            <button class="ghost small" id="audioBtn" onclick="toggleAudioRecording()">🎵 Записать аудио</button>
+            <button class="ghost small" id="audioBtn" onclick="toggleAudioRecording()" data-i18n="vc.record">🎵 Записать аудио</button>
           </div>
           <div id="voiceNotes" style="background:var(--bg);padding:12px;border-radius:var(--radius-sm);min-height:60px;margin-bottom:10px;"></div>
           <div id="audioNotes" style="background:var(--bg);padding:12px;border-radius:var(--radius-sm);min-height:60px;"></div>
@@ -842,7 +842,7 @@ textarea{min-height:96px}
         <div id="iosNoticeDevices" class="ios-notice hidden">⚠️ Web Bluetooth и Web Serial недоступны в iOS/iPadOS Safari. Для работы с приборами используйте Android или Windows с Chrome/Edge.</div>
 
         <div class="card">
-          <h3>📶 Лазерный дальномер (Bluetooth LE)</h3>
+          <h3 data-i18n="dv.laser">📶 Лазерный дальномер (Bluetooth LE)</h3>
           <div class="info-box" style="font-size:.85rem;">
             Поддерживаются: <strong>Leica DISTO</strong>, <strong>Bosch GLM</strong>, <strong>ADA</strong>, <strong>Stanley</strong> и другие BLE-дальномеры (UART-сервисы 0xFFE0 / 0xFFF0 / 0x18F0). Нужен <strong>HTTPS</strong> или <strong>localhost</strong>, браузер Chrome / Edge / Opera.
           </div>
@@ -852,7 +852,7 @@ textarea{min-height:96px}
               <button class="small" onclick="connectLaserBLE()" data-requires-ble>🔗 Подключить</button>
               <button class="small ghost" onclick="disconnectLaserBLE()">⏏ Отключить</button>
             </div>
-            <div class="hint" style="margin-top:10px;">Принятое измерение (м):</div>
+            <div class="hint" style="margin-top:10px;" data-i18n="dv.laserMeasure">Принятое измерение (м):</div>
             <input type="number" id="laserValue" step="0.001" min="0" placeholder="0.000" inputmode="decimal">
             <div class="btn-row" style="margin-top:8px;">
               <button class="small ghost" onclick="laserToArea()">→ в площадь</button>
@@ -865,7 +865,7 @@ textarea{min-height:96px}
         </div>
 
         <div class="card">
-          <h3>🛰️ GNSS-приёмник (Bluetooth LE, NMEA)</h3>
+          <h3 data-i18n="dv.gnssT">🛰️ GNSS-приёмник (Bluetooth LE, NMEA)</h3>
           <div class="info-box" style="font-size:.85rem;">
             Приёмники и контроллеры с NMEA 0183 по BLE: <strong>Trimble</strong>, <strong>Leica</strong>, <strong>Topcon</strong>, <strong>South</strong>, <strong>PrinCe</strong>, <strong>EFT</strong>, <strong>ComNav</strong>.
           </div>
@@ -875,7 +875,7 @@ textarea{min-height:96px}
               <button class="small" onclick="connectGnssBLE()" data-requires-ble>🔗 Подключить</button>
               <button class="small ghost" onclick="disconnectGnssBLE()">⏏ Отключить</button>
             </div>
-            <div class="hint" style="margin-top:10px;">Текущие координаты (WGS-84):</div>
+            <div class="hint" style="margin-top:10px;" data-i18n="dv.gnssCoords">Текущие координаты (WGS-84):</div>
             <div class="crs-output" id="gnssCoords" style="min-height:60px;">—</div>
             <div class="btn-row" style="margin-top:8px;">
               <button class="small ghost" onclick="gnssToLocation()">📍 В координаты</button>
@@ -884,7 +884,7 @@ textarea{min-height:96px}
             </div>
             <div class="dev-log" id="gnssLog">Ожидание NMEA…</div>
           </div>
-          <h3 class="mt-3">📋 Вставить NMEA из буфера</h3>
+          <h3 class="mt-3" data-i18n="dv.nmeaPaste">📋 Вставить NMEA из буфера</h3>
           <div class="form-group">
             <textarea id="nmeaPaste" class="nmea-input" rows="4" placeholder="$GPGGA,123519,4807.038,N,01131.000,E,1,08,0.9,545.4,M,46.9,M,,*47&#10;$GPRMC,123519,A,4807.038,N,01131.000,E,022.4,084.4,230394,003.1,W*6A"></textarea>
           </div>
@@ -896,7 +896,7 @@ textarea{min-height:96px}
         </div>
 
         <div class="card">
-          <h3>📥 Универсальный импорт измерений</h3>
+          <h3 data-i18n="dv.import">📥 Универсальный импорт измерений</h3>
           <div class="info-box" style="font-size:.85rem;">
             Форматы: <strong>CSV</strong>, <strong>TXT</strong>, <strong>GSI</strong> (Leica), <strong>DAT/T00</strong> (Trimble), <strong>M5</strong> (Topcon), <strong>XYZ</strong>.
           </div>
@@ -913,11 +913,11 @@ textarea{min-height:96px}
         </div>
 
         <div class="card">
-          <h3>📊 Нивелирный ход</h3>
+          <h3 data-i18n="dv.level">📊 Нивелирный ход</h3>
           <div class="info-box" style="font-size:.85rem;">Импорт GSI / DAT / M5 / CSV. Расчёт превышений, высот, невязки.</div>
           <div class="grid-2">
-            <div class="form-group"><label for="levelHstart">H нач., м</label><input type="number" id="levelHstart" step="0.0001" inputmode="decimal"></div>
-            <div class="form-group"><label for="levelHend">H кон., м</label><input type="number" id="levelHend" step="0.0001" inputmode="decimal"></div>
+            <div class="form-group"><label for="levelHstart" data-i18n="dv.levelH1">H нач., м</label><input type="number" id="levelHstart" step="0.0001" inputmode="decimal"></div>
+            <div class="form-group"><label for="levelHend" data-i18n="dv.levelH2">H кон., м</label><input type="number" id="levelHend" step="0.0001" inputmode="decimal"></div>
           </div>
           <div class="form-group">
             <label for="levelClass">Класс / допуск невязки</label>
@@ -938,7 +938,7 @@ textarea{min-height:96px}
         </div>
 
         <div class="card">
-          <h3>☁️ Облако точек (сканер / БПЛА)</h3>
+          <h3 data-i18n="dv.pc">☁️ Облако точек (сканер / БПЛА)</h3>
           <div class="info-box" style="font-size:.85rem;">Форматы XYZ, CSV, PLY (ASCII). До 50 МБ. Для LAS/LAZ используйте конвертер.</div>
           <div class="btn-row">
             <button onclick="document.getElementById('pcFileInput').click()">📂 Загрузить</button>
@@ -951,7 +951,7 @@ textarea{min-height:96px}
         </div>
 
         <div class="card">
-          <h3>🗺️ Ортофотоплан (БПЛА)</h3>
+          <h3 data-i18n="dv.ortho">🗺️ Ортофотоплан (БПЛА)</h3>
           <div class="info-box" style="font-size:.85rem;">PNG/JPG + границы WGS-84 → слой на карте Leaflet.</div>
           <div class="btn-row">
             <button onclick="document.getElementById('orthoFileInput').click()">🖼 Загрузить</button>
@@ -981,7 +981,7 @@ textarea{min-height:96px}
         </div>
 
         <div class="card">
-          <h3>🔌 Web Serial (COM-порт)</h3>
+          <h3 data-i18n="dv.serial">🔌 Web Serial (COM-порт)</h3>
           <div class="info-box" style="font-size:.85rem;">Для старых тахеометров / нивелиров / GNSS через USB-RS232. Chrome/Edge, HTTPS или localhost.</div>
           <div class="grid-2">
             <div class="form-group">
@@ -1004,7 +1004,7 @@ textarea{min-height:96px}
         </div>
 
         <div class="card">
-          <h3>📧 Отправить данные на e-mail</h3>
+          <h3 data-i18n="dv.email">📧 Отправить данные на e-mail</h3>
           <div class="info-box" style="font-size:.85rem;">Быстрая отправка через почтовый клиент. Вложения — через системное «Поделиться» на мобильных.</div>
           <div class="email-form">
             <div class="row-email"><label style="min-width:80px;">Кому:</label><input type="email" id="emailTo" placeholder="engineer@example.com"></div>
@@ -1048,7 +1048,7 @@ textarea{min-height:96px}
       </div>
       <div class="card">
         <h2 data-i18n="prn.title">📄 Печать / PDF</h2>
-        <div class="info-box">Используйте системную печать → «Сохранить как PDF».</div>
+        <div class="info-box"><span data-i18n="prn.hint">Используйте системную печать → «Сохранить как PDF».</span></div>
         <div class="btn-row">
           <button onclick="window.print()" data-i18n="prn.btn">🖨️ Печать / PDF</button>
           <button class="ghost" onclick="printReport()" data-i18n="prn.report">📋 Печать отчёта</button>
@@ -1068,7 +1068,7 @@ textarea{min-height:96px}
       </div>
       <div class="card">
         <h2 data-i18n="pwa.title">📲 Установка как приложение (PWA)</h2>
-        <div class="info-box">Для офлайн-режима скачайте <code>sw.js</code> и положите рядом с HTML, разместите на HTTPS или localhost.</div>
+        <div class="info-box"><span data-i18n="pwa.hint">Для офлайн-режима скачайте sw.js и положите рядом с HTML, разместите на HTTPS или localhost.</span></div>
         <div class="btn-row">
           <button onclick="downloadSW()">📥 sw.js</button>
           <button class="ghost" onclick="downloadManifest()">📥 manifest.json</button>
