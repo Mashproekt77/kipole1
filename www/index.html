@@ -505,51 +505,51 @@ textarea{min-height:96px}
 
       <div class="tab-content" id="tab-mansard">
         <div class="card">
-          <h3>🏠 Мансарда</h3>
+          <h3 data-i18n="mans.title">🏠 Мансарда</h3>
           <div class="form-group">
-            <label for="roofType">Тип крыши</label>
+            <label for="roofType" data-i18n="mans.roof">Тип крыши</label>
             <select id="roofType"><option value="gable">Двускатная</option><option value="single">Односкатная</option></select>
           </div>
           <div class="grid-2">
-            <div class="form-group"><label for="mansardWidth">Ширина, м</label><input type="number" id="mansardWidth" step="0.01" min="0" value="0" inputmode="decimal"></div>
-            <div class="form-group"><label for="mansardLength">Длина, м</label><input type="number" id="mansardLength" step="0.01" min="0" value="0" inputmode="decimal"></div>
+            <div class="form-group"><label for="mansardWidth" data-i18n="mans.w">Ширина, м</label><input type="number" id="mansardWidth" step="0.01" min="0" value="0" inputmode="decimal"></div>
+            <div class="form-group"><label for="mansardLength" data-i18n="mans.l">Длина, м</label><input type="number" id="mansardLength" step="0.01" min="0" value="0" inputmode="decimal"></div>
           </div>
           <div class="grid-2">
-            <div class="form-group"><label for="mansardWallHeight">Высота стены, м</label><input type="number" id="mansardWallHeight" step="0.01" min="0" value="0" inputmode="decimal"></div>
-            <div class="form-group"><label for="mansardAngle">Угол, °</label><input type="number" id="mansardAngle" step="0.1" min="0" value="0" inputmode="decimal"></div>
+            <div class="form-group"><label for="mansardWallHeight" data-i18n="mans.h">Высота стены, м</label><input type="number" id="mansardWallHeight" step="0.01" min="0" value="0" inputmode="decimal"></div>
+            <div class="form-group"><label for="mansardAngle" data-i18n="mans.angle">Угол, °</label><input type="number" id="mansardAngle" step="0.1" min="0" value="0" inputmode="decimal"></div>
           </div>
-          <button onclick="calculateMansard()">Рассчитать</button>
+          <button onclick="calculateMansard()" data-i18n="mans.calc">Рассчитать</button>
           <div class="calc-result hidden" id="mansardResult"></div>
         </div>
       </div>
 
       <div class="tab-content" id="tab-check">
         <div class="card">
-          <h3>⚖️ Расхождение площадей</h3>
+          <h3 data-i18n="chk.diff">⚖️ Расхождение площадей</h3>
           <div class="grid-2">
-            <div class="form-group"><label for="actualArea">Фактическая, м²</label><input type="number" id="actualArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
-            <div class="form-group"><label for="docArea">По документам, м²</label><input type="number" id="docArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
+            <div class="form-group"><label for="actualArea" data-i18n="chk.actual">Фактическая, м²</label><input type="number" id="actualArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
+            <div class="form-group"><label for="docArea" data-i18n="chk.doc">По документам, м²</label><input type="number" id="docArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
           </div>
-          <button onclick="checkAreaDifference()">Проверить</button>
+          <button onclick="checkAreaDifference()" data-i18n="chk.check">Проверить</button>
           <div class="calc-result hidden" id="areaCheckResult"></div>
         </div>
         <div class="card">
-          <h3>🔄 Замкнутый контур</h3>
-          <div class="form-group"><label for="wallTotal">Контрольная длина, м</label><input type="number" id="wallTotal" step="0.01" min="0" value="0" inputmode="decimal"></div>
+          <h3 data-i18n="chk.contour">🔄 Замкнутый контур</h3>
+          <div class="form-group"><label for="wallTotal" data-i18n="chk.wallTotal">Контрольная длина, м</label><input type="number" id="wallTotal" step="0.01" min="0" value="0" inputmode="decimal"></div>
           <div id="wallSegments"></div>
           <div class="btn-row">
-            <button onclick="addWallSegment()">+ Отрезок</button>
+            <button onclick="addWallSegment()" data-i18n="chk.addSeg">+ Отрезок</button>
             <button class="ghost" onclick="checkWallContour()">Проверить</button>
           </div>
           <div class="calc-result hidden" id="wallCheckResult"></div>
         </div>
         <div class="card">
-          <h3>🎯 Погрешность измерений</h3>
+          <h3 data-i18n="chk.err">🎯 Погрешность измерений</h3>
           <div class="info-box" style="font-size:.82rem;">
             Согласно п.18 П/0393, допустимое расхождение первоначальных и контрольных определений не должно превышать <strong>удвоенного значения СКП</strong>.
           </div>
           <div class="form-group">
-            <label for="deviceType">Прибор</label>
+            <label for="deviceType" data-i18n="chk.device">Прибор</label>
             <select id="deviceType">
               <option value="laser">Дальномер ±1.5 мм</option>
               <option value="tape">Рулетка ±2 мм</option>
@@ -558,42 +558,42 @@ textarea{min-height:96px}
             </select>
           </div>
           <div class="grid-2">
-            <div class="form-group"><label for="deviceError">Погрешность, мм</label><input type="number" id="deviceError" step="0.1" min="0" value="1.5" inputmode="decimal"></div>
-            <div class="form-group"><label for="measureCount">Кол-во измерений</label><input type="number" id="measureCount" min="1" value="2" inputmode="numeric"></div>
+            <div class="form-group"><label for="deviceError" data-i18n="chk.devErr">Погрешность, мм</label><input type="number" id="deviceError" step="0.1" min="0" value="1.5" inputmode="decimal"></div>
+            <div class="form-group"><label for="measureCount" data-i18n="chk.nMeas">Кол-во измерений</label><input type="number" id="measureCount" min="1" value="2" inputmode="numeric"></div>
           </div>
           <div class="form-group">
-            <label for="landCategory">Категория земель</label>
+            <label for="landCategory" data-i18n="chk.cat">Категория земель</label>
             <select id="landCategory">
               <option value="0.10">Населённые пункты (0,10 м)</option>
               <option value="0.20">СХ / ЛПХ (0,20 м)</option>
               <option value="0.50">Промышленность (0,50 м)</option>
             </select>
           </div>
-          <button onclick="calculateError()">Рассчитать</button>
+          <button onclick="calculateError()" data-i18n="chk.calc">Рассчитать</button>
           <div class="calc-result hidden" id="errorResult"></div>
         </div>
       </div>
 
       <div class="tab-content" id="tab-tools2">
         <div class="card">
-          <h3>🏠 Помещения</h3>
+          <h3 data-i18n="ext.rooms">🏠 Помещения</h3>
           <div class="grid-3">
-            <div class="form-group"><label for="roomName">Название</label><input type="text" id="roomName" placeholder="Гостиная"></div>
-            <div class="form-group"><label for="roomWidth">Ширина, м</label><input type="number" id="roomWidth" step="0.01" min="0" value="0" inputmode="decimal"></div>
-            <div class="form-group"><label for="roomLength">Длина, м</label><input type="number" id="roomLength" step="0.01" min="0" value="0" inputmode="decimal"></div>
+            <div class="form-group"><label for="roomName" data-i18n="ext.roomName">Название</label><input type="text" id="roomName" placeholder="Гостиная"></div>
+            <div class="form-group"><label for="roomWidth" data-i18n="ext.w">Ширина, м</label><input type="number" id="roomWidth" step="0.01" min="0" value="0" inputmode="decimal"></div>
+            <div class="form-group"><label for="roomLength" data-i18n="ext.l">Длина, м</label><input type="number" id="roomLength" step="0.01" min="0" value="0" inputmode="decimal"></div>
           </div>
-          <button onclick="addRoom()">+ Комната</button>
+          <button onclick="addRoom()" data-i18n="ext.addRoom">+ Комната</button>
           <div class="room-plan" id="roomPlan"></div>
           <div class="calc-result">Итого: <span id="roomTotalArea">0.00</span> м²</div>
         </div>
         <div class="card">
-          <h3>📏 Высота потолков</h3>
+          <h3 data-i18n="ext.ceil">📏 Высота потолков</h3>
           <div class="info-box" style="font-size:.82rem;">
             ⚠️ Нормативы могут отличаться в зависимости от региона и типа объекта. Уточняйте действующие СП 54.13330.2022, СП 55.13330.2016 и региональные нормативы градостроительного проектирования.
           </div>
-          <div class="form-group"><label for="ceilingHeight">Высота, м</label><input type="number" id="ceilingHeight" step="0.01" min="0" value="0" inputmode="decimal"></div>
+          <div class="form-group"><label for="ceilingHeight" data-i18n="ext.h">Высота, м</label><input type="number" id="ceilingHeight" step="0.01" min="0" value="0" inputmode="decimal"></div>
           <div class="form-group">
-            <label for="roomType">Тип помещения</label>
+            <label for="roomType" data-i18n="ext.roomType">Тип помещения</label>
             <select id="roomType">
               <option value="living">Жилая</option><option value="kitchen">Кухня</option>
               <option value="corridor">Коридор</option><option value="bathroom">Санузел</option>
@@ -601,50 +601,50 @@ textarea{min-height:96px}
             </select>
           </div>
           <div class="form-group">
-            <label for="region">Регион</label>
+            <label for="region" data-i18n="ext.region">Регион</label>
             <select id="region"><option value="normal">Обычный</option><option value="north">Северный</option></select>
           </div>
-          <button onclick="checkCeilingHeight()">Проверить</button>
+          <button onclick="checkCeilingHeight()" data-i18n="chk.check">Проверить</button>
           <div class="calc-result hidden" id="ceilingResult"></div>
         </div>
         <div class="card">
-          <h3>🛏️ Минимальные площади</h3>
+          <h3 data-i18n="ext.minArea">🛏️ Минимальные площади</h3>
           <div class="info-box" style="font-size:.82rem;">
             ⚠️ Нормативы могут отличаться в зависимости от региона и типа объекта. Уточняйте действующие СП 54.13330.2022, СП 55.13330.2016 и региональные нормативы.
           </div>
-          <div class="form-group"><label for="minArea">Площадь, м²</label><input type="number" id="minArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
+          <div class="form-group"><label for="minArea" data-i18n="ext.areaL">Площадь, м²</label><input type="number" id="minArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
           <div class="form-group">
-            <label for="minRoomType">Тип</label>
+            <label for="minRoomType" data-i18n="ext.type">Тип</label>
             <select id="minRoomType">
               <option value="living_apt">Жилая (кв.)</option><option value="bedroom_apt">Спальня</option>
               <option value="living_house">Жилая (дом)</option><option value="kitchen">Кухня</option>
               <option value="bathroom">Ванная</option><option value="toilet">Туалет</option>
             </select>
           </div>
-          <button onclick="checkMinArea()">Проверить</button>
+          <button onclick="checkMinArea()" data-i18n="chk.check">Проверить</button>
           <div class="calc-result hidden" id="minAreaResult"></div>
         </div>
         <div class="card">
-          <h3>📦 Объём помещения</h3>
+          <h3 data-i18n="ext.volume">📦 Объём помещения</h3>
           <div class="grid-2">
-            <div class="form-group"><label for="volumeArea">Площадь, м²</label><input type="number" id="volumeArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
-            <div class="form-group"><label for="volumeHeight">Высота, м</label><input type="number" id="volumeHeight" step="0.01" min="0" value="0" inputmode="decimal"></div>
+            <div class="form-group"><label for="volumeArea" data-i18n="ext.volArea">Площадь, м²</label><input type="number" id="volumeArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
+            <div class="form-group"><label for="volumeHeight" data-i18n="ext.volH">Высота, м</label><input type="number" id="volumeHeight" step="0.01" min="0" value="0" inputmode="decimal"></div>
           </div>
-          <button onclick="calculateVolume()">Рассчитать</button>
+          <button onclick="calculateVolume()" data-i18n="ext.volCalc">Рассчитать</button>
           <div class="calc-result hidden" id="volumeResult"></div>
         </div>
         <div class="card">
-          <h3>🔄 Конвертер</h3>
-          <div class="form-group"><label for="convertValue">Значение</label><input type="number" id="convertValue" step="0.01" value="0" inputmode="decimal"></div>
+          <h3 data-i18n="ext.conv">🔄 Конвертер</h3>
+          <div class="form-group"><label for="convertValue" data-i18n="ext.val">Значение</label><input type="number" id="convertValue" step="0.01" value="0" inputmode="decimal"></div>
           <div class="grid-2">
-            <div class="form-group"><label for="convertFrom">Из</label>
+            <div class="form-group"><label for="convertFrom" data-i18n="ext.from">Из</label>
               <select id="convertFrom"><option value="m">м</option><option value="cm">см</option><option value="mm">мм</option><option value="m2">м²</option><option value="cm2">см²</option><option value="ha">га</option></select>
             </div>
-            <div class="form-group"><label for="convertTo">В</label>
+            <div class="form-group"><label for="convertTo" data-i18n="ext.to">В</label>
               <select id="convertTo"><option value="cm">см</option><option value="m">м</option><option value="mm">мм</option><option value="m2">м²</option><option value="cm2">см²</option><option value="ha">га</option></select>
             </div>
           </div>
-          <button onclick="convertUnits()">Перевести</button>
+          <button onclick="convertUnits()" data-i18n="ext.convert">Перевести</button>
           <div class="calc-result hidden" id="convertResult"></div>
         </div>
       </div>
@@ -687,28 +687,28 @@ textarea{min-height:96px}
 
       <div class="tab-content" id="tab-crs">
         <div class="card">
-          <h3>🌐 Пересчёт координат (proj4js)</h3>
+          <h3 data-i18n="crs.title">🌐 Пересчёт координат (proj4js)</h3>
           <div class="warning-box"><strong>⚠️ Внимание:</strong> Параметры МСК отличаются по регионам и должны уточняться у местного органа регистрации прав. Пресеты справочные.</div>
           <div id="proj4Status" class="info-box">Загрузка proj4js…</div>
           <div class="grid-2">
-            <div class="form-group"><label for="crsFrom">Исходная СК</label><select id="crsFrom"></select></div>
-            <div class="form-group"><label for="crsTo">Целевая СК</label><select id="crsTo"></select></div>
+            <div class="form-group"><label for="crsFrom" data-i18n="crs.src">Исходная СК</label><select id="crsFrom"></select></div>
+            <div class="form-group"><label for="crsTo" data-i18n="crs.dst">Целевая СК</label><select id="crsTo"></select></div>
           </div>
           <div class="form-group">
-            <label for="crsInput">Входные координаты (по одной точке в строке, разделитель — пробел или ;)</label>
+            <label for="crsInput" data-i18n="crs.input">Входные координаты (по одной точке в строке)</label>
             <textarea id="crsInput" rows="4" placeholder="55.7558 37.6173"></textarea>
           </div>
           <div class="btn-row">
-            <button onclick="convertBatch()">🔄 Пересчитать</button>
-            <button class="ghost" onclick="useCurrentLocation()">📍 Из GPS</button>
-            <button class="ghost" onclick="useGeoPoints()">🛰️ Из точек</button>
-            <button class="ghost" onclick="swapCrs()">⇄ Поменять</button>
+            <button onclick="convertBatch()" data-i18n="crs.recalc">🔄 Пересчитать</button>
+            <button class="ghost" onclick="useCurrentLocation()" data-i18n="crs.fromGps">📍 Из GPS</button>
+            <button class="ghost" onclick="useGeoPoints()" data-i18n="crs.fromPts">🛰️ Из точек</button>
+            <button class="ghost" onclick="swapCrs()" data-i18n="crs.swap">⇄ Поменять</button>
           </div>
           <div class="form-group"><label>Результат</label><div class="crs-output" id="crsOutput">—</div></div>
           <div class="btn-row">
-            <button class="small ghost" onclick="copyCrsOutput()">📋 Копировать</button>
-            <button class="small ghost" onclick="downloadCrsOutput()">💾 CSV</button>
-            <button class="small ghost" onclick="crsToGeoPoints()">🛰️ В точки</button>
+            <button class="small ghost" onclick="copyCrsOutput()" data-i18n="crs.copy">📋 Копировать</button>
+            <button class="small ghost" onclick="downloadCrsOutput()" data-i18n="crs.csv">💾 CSV</button>
+            <button class="small ghost" onclick="crsToGeoPoints()" data-i18n="crs.toPts">🛰️ В точки</button>
           </div>
           <details class="mt-3"><summary style="cursor:pointer;font-weight:600;">📖 Параметры выбранных СК</summary><div id="crsDetails" class="crs-output mt-2" style="font-size:.75rem;">—</div></details>
         </div>
@@ -716,39 +716,39 @@ textarea{min-height:96px}
 
       <div class="tab-content" id="tab-zu">
         <div class="card">
-          <h3>🌍 Проверка площади ЗУ</h3>
+          <h3 data-i18n="zu.areaTitle">🌍 Проверка площади ЗУ</h3>
           <div class="info-box">
             Допустимое расхождение — по Приказу Росреестра № П/0393 (ред. от 13.10.2025).<br>
             Формула: <strong>ΔP = 2 · mₜ · √P · √((1 + k²) / (2k))</strong>
           </div>
           <div class="grid-2">
-            <div class="form-group"><label for="zuCalcDoc">По документам, м²</label><input type="number" id="zuCalcDoc" step="0.01" min="0" value="0" inputmode="decimal"></div>
-            <div class="form-group"><label for="zuCalcFact">Фактическая, м²</label><input type="number" id="zuCalcFact" step="0.01" min="0" value="0" inputmode="decimal"></div>
+            <div class="form-group"><label for="zuCalcDoc" data-i18n="zu.docArea">По документам, м²</label><input type="number" id="zuCalcDoc" step="0.01" min="0" value="0" inputmode="decimal"></div>
+            <div class="form-group"><label for="zuCalcFact" data-i18n="zu.factArea">Фактическая, м²</label><input type="number" id="zuCalcFact" step="0.01" min="0" value="0" inputmode="decimal"></div>
           </div>
           <div class="form-group">
-            <label for="zuCalcCat">Категория</label>
+            <label for="zuCalcCat" data-i18n="zu.cat">Категория</label>
             <select id="zuCalcCat"><option value="0.10">Населённые пункты (0,10 м)</option><option value="0.20">СХ (0,20 м)</option><option value="0.50">Промышленность (0,50 м)</option></select>
           </div>
           <div class="form-group">
-            <label for="zuCalcK">Коэффициент конфигурации k</label>
+            <label for="zuCalcK" data-i18n="zu.k">Коэффициент конфигурации k</label>
             <input type="number" id="zuCalcK" step="0.1" min="0.1" value="1.0" inputmode="decimal">
             <small class="text-muted">1.0 — компактный участок; &gt; 1 — вытянутый / сложной формы (П/0393)</small>
           </div>
-          <button onclick="calcZuDelta()">Рассчитать</button>
+          <button onclick="calcZuDelta()" data-i18n="zu.calc">Рассчитать</button>
           <div class="calc-result hidden" id="zuCalcResult"></div>
         </div>
         <div class="card">
-          <h3>📏 Допуск площади по П/0393</h3>
-          <div class="form-group"><label for="zuTolArea">Площадь, м²</label><input type="number" id="zuTolArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
+          <h3 data-i18n="zu.tolTitle">📏 Допуск площади по П/0393</h3>
+          <div class="form-group"><label for="zuTolArea" data-i18n="zu.tolArea">Площадь, м²</label><input type="number" id="zuTolArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
           <div class="form-group">
-            <label for="zuTolCat">Категория</label>
+            <label for="zuTolCat" data-i18n="zu.tolCat">Категория</label>
             <select id="zuTolCat"><option value="0.10">Населённые пункты</option><option value="0.20">СХ</option><option value="0.50">Промышленность</option></select>
           </div>
           <div class="form-group">
-            <label for="zuTolK">Коэффициент конфигурации k</label>
+            <label for="zuTolK" data-i18n="zu.tolK">Коэффициент конфигурации k</label>
             <input type="number" id="zuTolK" step="0.1" min="0.1" value="1.0" inputmode="decimal">
           </div>
-          <button onclick="calcZuTolerance()">Рассчитать</button>
+          <button onclick="calcZuTolerance()" data-i18n="zu.calc">Рассчитать</button>
           <div class="calc-result hidden" id="zuTolResult"></div>
         </div>
       </div>
