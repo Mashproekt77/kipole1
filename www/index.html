@@ -483,9 +483,9 @@ textarea{min-height:96px}
 
       <div class="tab-content active" id="tab-area">
         <div class="card">
-          <h3>📐 Калькулятор площади</h3>
+          <h3 data-i18n="area.title">📐 Калькулятор площади</h3>
           <div class="form-group">
-            <label for="figureType">Фигура</label>
+            <label for="figureType" data-i18n="area.figure">Фигура</label>
             <select id="figureType" onchange="updateFigureInputs()">
               <option value="rectangle">Прямоугольник</option>
               <option value="triangle">Треугольник</option>
@@ -493,13 +493,13 @@ textarea{min-height:96px}
             </select>
           </div>
           <div id="figureInputs"></div>
-          <div class="form-group"><label for="figName">Название</label><input type="text" id="figName" placeholder="Гостиная"></div>
+          <div class="form-group"><label for="figName" data-i18n="area.name">Название</label><input type="text" id="figName" data-i18n-placeholder="area.ph" placeholder="Гостиная"></div>
           <div class="btn-row">
-            <button onclick="addFigure()">+ Фигура</button>
-            <button class="ghost" onclick="insertAreaToNotes()">📋 В заметки</button>
+            <button onclick="addFigure()" data-i18n="area.add">+ Фигура</button>
+            <button class="ghost" onclick="insertAreaToNotes()" data-i18n="area.toNotes">📋 В заметки</button>
           </div>
           <div id="figureList"></div>
-          <div class="calc-result">Итого: <span id="totalArea">0.00</span> м²</div>
+          <div class="calc-result"><span data-i18n="area.total">Итого</span>: <span id="totalArea">0.00</span> м²</div>
         </div>
       </div>
 
@@ -659,28 +659,28 @@ textarea{min-height:96px}
             <div class="form-group"><label for="p2y">Y2</label><input type="number" id="p2y" step="0.001" inputmode="decimal"></div>
           </div>
           <div class="btn-row">
-            <button onclick="calcDistance()">Расстояние</button>
-            <button class="ghost" onclick="calcBearing()">Дирекционный угол</button>
+            <button onclick="calcDistance()" data-i18n="geo.dist">Расстояние</button>
+            <button class="ghost" onclick="calcBearing()" data-i18n="geo.bearing">Дирекционный угол</button>
           </div>
           <div class="calc-result hidden" id="distResult"></div>
           <div class="calc-result hidden" id="bearingResult"></div>
         </div>
         <div class="card">
-          <h3>📐 Площадь по координатам</h3>
+          <h3 data-i18n="geo.areaCoord">📐 Площадь по координатам</h3>
           <div class="form-group">
-            <label for="polygonCoords">Точки (X Y, по одной в строке)</label>
+            <label for="polygonCoords" data-i18n="geo.points">Точки (X Y, по одной в строке)</label>
             <textarea id="polygonCoords" rows="6" placeholder="1000.000 2000.000&#10;1010.000 2000.000&#10;1010.000 2010.000&#10;1000.000 2010.000"></textarea>
           </div>
-          <button onclick="calcPolygonArea()">Рассчитать</button>
+          <button onclick="calcPolygonArea()" data-i18n="geo.calc">Рассчитать</button>
           <div class="calc-result hidden" id="polyResult"></div>
         </div>
         <div class="card">
-          <h3>📊 Оценка СКП</h3>
+          <h3 data-i18n="geo.skp">📊 Оценка СКП</h3>
           <div class="form-group">
-            <label for="skpList">СКП точек (по одной в строке)</label>
+            <label for="skpList" data-i18n="geo.skpPoints">СКП точек (по одной в строке)</label>
             <textarea id="skpList" rows="4" placeholder="0.008&#10;0.011&#10;0.009"></textarea>
           </div>
-          <button onclick="calcSKP()">Рассчитать</button>
+          <button onclick="calcSKP()" data-i18n="geo.calc">Рассчитать</button>
           <div class="calc-result hidden" id="skpResult"></div>
         </div>
       </div>
