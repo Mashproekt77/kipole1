@@ -329,14 +329,14 @@ textarea{min-height:96px}
       </div>
       <div><strong id="sidebarProgressText" style="font-size:0.88rem;">0 из 0</strong><small style="display:block;">задач выполнено</small></div>
     </div>
-    <div class="sidebar__section" data-i18n="Разделы">Разделы</div>
+    <div class="sidebar__section">Разделы</div>
     <nav class="sidebar__view-nav" id="sidebarViewNav">
       <button class="sidebar__nav-item active" data-view="overview" onclick="switchView('overview')">📋 <span class="label" data-i18n="nav.overview">Обзор</span></button>
       <button class="sidebar__nav-item" data-view="steps" onclick="switchView('steps')">📝 <span class="label" data-i18n="nav.steps">Шаги</span></button>
       <button class="sidebar__nav-item" data-view="tools" onclick="switchView('tools')">🔧 <span class="label" data-i18n="nav.tools">Инструменты</span></button>
       <button class="sidebar__nav-item" data-view="export" onclick="switchView('export')">📤 <span class="label" data-i18n="nav.export">Экспорт</span></button>
     </nav>
-    <div class="sidebar__section" data-i18n="Этапы работ">Этапы работ</div>
+    <div class="sidebar__section">Этапы работ</div>
     <nav class="sidebar__nav" id="sidebarNav"></nav>
   </aside>
 
@@ -348,7 +348,7 @@ textarea{min-height:96px}
       </div>
       <div class="topbar__title">
         <strong id="topTitle">КИ-Поле</strong>
-        <small id="topSubtitle" data-i18n="Новый объект">Новый объект</small>
+        <small id="topSubtitle">Новый объект</small>
       </div>
       <span class="topbar__timer" id="topTimer">00:00</span>
       <span class="topbar__save" id="saveIndicator" aria-live="polite" title="Сохранено">✓</span>
@@ -386,10 +386,10 @@ textarea{min-height:96px}
         <div class="form-group">
           <label for="workType" data-i18n="overview.workType">Тип работ</label>
           <select id="workType" onchange="onWorkTypeChange()">
-            <option value="techplan" data-i18n="Технический план (ОКС/помещение)">Технический план (ОКС/помещение)</option>
-            <option value="survey" data-i18n="Межевой план (ЗУ)">Межевой план (ЗУ)</option>
-            <option value="act" data-i18n="Акт обследования (снос/прекращение)">Акт обследования (снос/прекращение)</option>
-            <option value="combined" data-i18n="Комплексные (ЗУ + ОКС)">Комплексные (ЗУ + ОКС)</option>
+            <option value="techplan">Технический план (ОКС/помещение)</option>
+            <option value="survey">Межевой план (ЗУ)</option>
+            <option value="act">Акт обследования (снос/прекращение)</option>
+            <option value="combined">Комплексные (ЗУ + ОКС)</option>
           </select>
         </div>
         <div class="form-group">
@@ -487,9 +487,9 @@ textarea{min-height:96px}
           <div class="form-group">
             <label for="figureType" data-i18n="area.figure">Фигура</label>
             <select id="figureType" onchange="updateFigureInputs()">
-              <option value="rectangle" data-i18n="Прямоугольник">Прямоугольник</option>
-              <option value="triangle" data-i18n="Треугольник">Треугольник</option>
-              <option value="trapezoid" data-i18n="Трапеция">Трапеция</option>
+              <option value="rectangle">Прямоугольник</option>
+              <option value="triangle">Треугольник</option>
+              <option value="trapezoid">Трапеция</option>
             </select>
           </div>
           <div id="figureInputs"></div>
@@ -508,7 +508,7 @@ textarea{min-height:96px}
           <h3 data-i18n="mans.title">🏠 Мансарда</h3>
           <div class="form-group">
             <label for="roofType" data-i18n="mans.roof">Тип крыши</label>
-            <select id="roofType"><option value="gable" data-i18n="Двускатная">Двускатная</option><option value="single" data-i18n="Односкатная">Односкатная</option></select>
+            <select id="roofType"><option value="gable">Двускатная</option><option value="single">Односкатная</option></select>
           </div>
           <div class="grid-2">
             <div class="form-group"><label for="mansardWidth" data-i18n="mans.w">Ширина, м</label><input type="number" id="mansardWidth" step="0.01" min="0" value="0" inputmode="decimal"></div>
@@ -539,7 +539,7 @@ textarea{min-height:96px}
           <div id="wallSegments"></div>
           <div class="btn-row">
             <button onclick="addWallSegment()" data-i18n="chk.addSeg">+ Отрезок</button>
-            <button class="ghost" onclick="checkWallContour()" data-i18n="Проверить">Проверить</button>
+            <button class="ghost" onclick="checkWallContour()">Проверить</button>
           </div>
           <div class="calc-result hidden" id="wallCheckResult"></div>
         </div>
@@ -551,9 +551,9 @@ textarea{min-height:96px}
           <div class="form-group">
             <label for="deviceType" data-i18n="chk.device">Прибор</label>
             <select id="deviceType">
-              <option value="laser" data-i18n="Дальномер ±1.5 мм">Дальномер ±1.5 мм</option>
-              <option value="tape" data-i18n="Рулетка ±2 мм">Рулетка ±2 мм</option>
-              <option value="tachymeter" data-i18n="Тахеометр ±3 мм">Тахеометр ±3 мм</option>
+              <option value="laser">Дальномер ±1.5 мм</option>
+              <option value="tape">Рулетка ±2 мм</option>
+              <option value="tachymeter">Тахеометр ±3 мм</option>
               <option value="gnss">GNSS RTK ±15 мм</option>
             </select>
           </div>
@@ -564,9 +564,9 @@ textarea{min-height:96px}
           <div class="form-group">
             <label for="landCategory" data-i18n="chk.cat">Категория земель</label>
             <select id="landCategory">
-              <option value="0.10" data-i18n="Населённые пункты (0,10 м)">Населённые пункты (0,10 м)</option>
-              <option value="0.20" data-i18n="СХ / ЛПХ (0,20 м)">СХ / ЛПХ (0,20 м)</option>
-              <option value="0.50" data-i18n="Промышленность (0,50 м)">Промышленность (0,50 м)</option>
+              <option value="0.10">Населённые пункты (0,10 м)</option>
+              <option value="0.20">СХ / ЛПХ (0,20 м)</option>
+              <option value="0.50">Промышленность (0,50 м)</option>
             </select>
           </div>
           <button onclick="calculateError()" data-i18n="chk.calc">Рассчитать</button>
@@ -595,14 +595,14 @@ textarea{min-height:96px}
           <div class="form-group">
             <label for="roomType" data-i18n="ext.roomType">Тип помещения</label>
             <select id="roomType">
-              <option value="living" data-i18n="Жилая">Жилая</option><option value="kitchen" data-i18n="Кухня">Кухня</option>
-              <option value="corridor" data-i18n="Коридор">Коридор</option><option value="bathroom" data-i18n="Санузел">Санузел</option>
-              <option value="mansard" data-i18n="Мансарда">Мансарда</option><option value="nonresidential" data-i18n="Нежилое">Нежилое</option>
+              <option value="living">Жилая</option><option value="kitchen">Кухня</option>
+              <option value="corridor">Коридор</option><option value="bathroom">Санузел</option>
+              <option value="mansard">Мансарда</option><option value="nonresidential">Нежилое</option>
             </select>
           </div>
           <div class="form-group">
             <label for="region" data-i18n="ext.region">Регион</label>
-            <select id="region"><option value="normal" data-i18n="Обычный">Обычный</option><option value="north" data-i18n="Северный">Северный</option></select>
+            <select id="region"><option value="normal">Обычный</option><option value="north">Северный</option></select>
           </div>
           <button onclick="checkCeilingHeight()" data-i18n="chk.check">Проверить</button>
           <div class="calc-result hidden" id="ceilingResult"></div>
@@ -616,9 +616,9 @@ textarea{min-height:96px}
           <div class="form-group">
             <label for="minRoomType" data-i18n="ext.type">Тип</label>
             <select id="minRoomType">
-              <option value="living_apt" data-i18n="Жилая (кв.)">Жилая (кв.)</option><option value="bedroom_apt" data-i18n="Спальня">Спальня</option>
-              <option value="living_house" data-i18n="Жилая (дом)">Жилая (дом)</option><option value="kitchen" data-i18n="Кухня">Кухня</option>
-              <option value="bathroom" data-i18n="Ванная">Ванная</option><option value="toilet" data-i18n="Туалет">Туалет</option>
+              <option value="living_apt">Жилая (кв.)</option><option value="bedroom_apt">Спальня</option>
+              <option value="living_house">Жилая (дом)</option><option value="kitchen">Кухня</option>
+              <option value="bathroom">Ванная</option><option value="toilet">Туалет</option>
             </select>
           </div>
           <button onclick="checkMinArea()" data-i18n="chk.check">Проверить</button>
@@ -688,7 +688,7 @@ textarea{min-height:96px}
       <div class="tab-content" id="tab-crs">
         <div class="card">
           <h3 data-i18n="crs.title">🌐 Пересчёт координат (proj4js)</h3>
-                <div class="warning-box" data-i18n="crs.warn"></div>
+          <div class="warning-box">${t("crs.warn")}</div>
           <div id="proj4Status" class="info-box">Загрузка proj4js…</div>
           <div class="grid-2">
             <div class="form-group"><label for="crsFrom" data-i18n="crs.src">Исходная СК</label><select id="crsFrom"></select></div>
@@ -727,7 +727,7 @@ textarea{min-height:96px}
           </div>
           <div class="form-group">
             <label for="zuCalcCat" data-i18n="zu.cat">Категория</label>
-            <select id="zuCalcCat"><option value="0.10" data-i18n="Населённые пункты (0,10 м)">Населённые пункты (0,10 м)</option><option value="0.20" data-i18n="СХ (0,20 м)">СХ (0,20 м)</option><option value="0.50" data-i18n="Промышленность (0,50 м)">Промышленность (0,50 м)</option></select>
+            <select id="zuCalcCat"><option value="0.10">Населённые пункты (0,10 м)</option><option value="0.20">СХ (0,20 м)</option><option value="0.50">Промышленность (0,50 м)</option></select>
           </div>
           <div class="form-group">
             <label for="zuCalcK" data-i18n="zu.k">Коэффициент конфигурации k</label>
@@ -742,7 +742,7 @@ textarea{min-height:96px}
           <div class="form-group"><label for="zuTolArea" data-i18n="zu.tolArea">Площадь, м²</label><input type="number" id="zuTolArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
           <div class="form-group">
             <label for="zuTolCat" data-i18n="zu.tolCat">Категория</label>
-            <select id="zuTolCat"><option value="0.10" data-i18n="Населённые пункты">Населённые пункты</option><option value="0.20" data-i18n="СХ">СХ</option><option value="0.50" data-i18n="Промышленность">Промышленность</option></select>
+            <select id="zuTolCat"><option value="0.10">Населённые пункты</option><option value="0.20">СХ</option><option value="0.50">Промышленность</option></select>
           </div>
           <div class="form-group">
             <label for="zuTolK" data-i18n="zu.tolK">Коэффициент конфигурации k</label>
@@ -774,7 +774,7 @@ textarea{min-height:96px}
           <div class="form-group"><label for="cadSrcCRS" data-i18n="cad.src">Система координат источника</label><input type="text" id="cadSrcCRS" value="МСК-77"></div>
           <div class="form-group">
             <label for="cadSource" data-i18n="cad.source">Источник координат</label>
-            <select id="cadSource"><option value="geoPoints" data-i18n="Геодезические точки">Геодезические точки</option><option value="rooms" data-i18n="Помещения">Помещения</option></select>
+            <select id="cadSource"><option value="geoPoints">Геодезические точки</option><option value="rooms">Помещения</option></select>
           </div>
           <div class="btn-row">
             <button onclick="exportDXF()">💾 DXF</button>
@@ -810,9 +810,9 @@ textarea{min-height:96px}
           <div class="form-group">
             <label for="repeatCategory" data-i18n="gnss.repCat">Категория земель (допуск СКП)</label>
             <select id="repeatCategory">
-              <option value="0.10" data-i18n="Населённые пункты (СКП 0,10 м → контроль 0,20 м)">Населённые пункты (СКП 0,10 м → контроль 0,20 м)</option>
-              <option value="0.20" data-i18n="СХ / ЛПХ (СКП 0,20 м → контроль 0,40 м)">СХ / ЛПХ (СКП 0,20 м → контроль 0,40 м)</option>
-              <option value="0.50" data-i18n="Промышленность (СКП 0,50 м → контроль 1,00 м)">Промышленность (СКП 0,50 м → контроль 1,00 м)</option>
+              <option value="0.10">Населённые пункты (СКП 0,10 м → контроль 0,20 м)</option>
+              <option value="0.20">СХ / ЛПХ (СКП 0,20 м → контроль 0,40 м)</option>
+              <option value="0.50">Промышленность (СКП 0,50 м → контроль 1,00 м)</option>
             </select>
           </div>
           <button class="small" onclick="addRepeatMeasure()" data-i18n="gnss.repAdd">+ Набор</button>
@@ -923,8 +923,8 @@ textarea{min-height:96px}
             <label for="levelClass">Класс / допуск невязки</label>
             <select id="levelClass">
               <option value="3">IV класс (3 мм·√n)</option>
-              <option value="5" selected data-i18n="Техническое (5 мм·√n)">Техническое (5 мм·√n)</option>
-              <option value="10" data-i18n="Топографическое (10 мм·√n)">Топографическое (10 мм·√n)</option>
+              <option value="5" selected>Техническое (5 мм·√n)</option>
+              <option value="10">Топографическое (10 мм·√n)</option>
             </select>
           </div>
           <div class="btn-row">
@@ -990,7 +990,7 @@ textarea{min-height:96px}
             </div>
             <div class="form-group">
               <label for="serialProto">Протокол</label>
-              <select id="serialProto"><option value="nmea">NMEA 0183</option><option value="gsi">GSI (Leica)</option><option value="raw" data-i18n="Сырой текст">Сырой текст</option></select>
+              <select id="serialProto"><option value="nmea">NMEA 0183</option><option value="gsi">GSI (Leica)</option><option value="raw">Сырой текст</option></select>
             </div>
           </div>
           <div class="btn-row">
@@ -2520,7 +2520,7 @@ function renderServitudes() {
       <select onchange="State.servitudes[${i}].type=this.value; saveDebounced()">
         <option ${s.type==='сервитут'?'selected':''}>сервитут</option>
         <option ${s.type==='аренда'?'selected':''}>аренда</option>
-        <option ${s.type==='ЗОУИТ'?'selected':''} data-i18n="ЗОУИТ">ЗОУИТ</option>
+        <option ${s.type==='ЗОУИТ'?'selected':''}>ЗОУИТ</option>
         <option ${s.type==='иное'?'selected':''}>иное</option>
       </select>
       <input placeholder="КН" value="${escapeHtml(s.cadnum)}" oninput="State.servitudes[${i}].cadnum=this.value; saveDebounced()">
@@ -2550,7 +2550,7 @@ function printAgreementAct() {
   const src = document.getElementById('agreementAct');
   if (!src || !src.innerHTML.trim()) return toast('Сначала сформируйте акт', 'warn');
   const w = window.open('', '_blank');
-</body></html>`);
+  w.document.write(`<html><head><title>Акт согласования</title><meta charset="UTF-8"></head><body style="font-family:sans-serif;">${src.innerHTML}</body></html>`);
   w.document.close(); w.print();
 }
 /* A3: генератор согласия на ПДн */
@@ -2573,7 +2573,7 @@ function printPdConsent() {
   const src = document.getElementById('pdConsentBlock');
   if (!src || !src.innerHTML.trim()) return toast('Сначала сформируйте согласие', 'warn');
   const w = window.open('', '_blank');
-</body></html>`);
+  w.document.write(`<html><head><meta charset="UTF-8"><title>Согласие на обработку ПДн</title></head><body style="font-family:sans-serif;">${src.innerHTML}</body></html>`);
   w.document.close(); w.print();
 }
 function addOpening() { State.openings.push({ type:'окно', width:'', height:'', count:1, material:'', fillType:'глухое' }); renderOpenings(); }
@@ -3124,7 +3124,7 @@ function printReport() {
     <b>Дата:</b> ${escapeHtml(d.visitDate||'—')}</p>
     ${d.geoPoints?.length ? `<h3>Геодезические точки</h3><table><tr><th>№</th><th>Имя</th><th>X</th><th>Y</th><th>H</th><th>СКП</th></tr>${d.geoPoints.map((p,i)=>`<tr><td>${i+1}</td><td>${escapeHtml(p.name||'')}</td><td>${escapeHtml(String(p.x))}</td><td>${escapeHtml(String(p.y))}</td><td>${escapeHtml(String(p.h))}</td><td>${escapeHtml(String(p.skp))}</td></tr>`).join('')}</table>` : ''}
     <p style="margin-top:24px;color:#666;font-size:11px;">Сформировано в КИ-Поле · PRO MAX 3.4.9 · @Kotohod</p>
-</body></html>`);
+    </body></html>`);
   w.document.close();
   setTimeout(() => w.print(), 300);
 }
