@@ -2550,7 +2550,8 @@ function printAgreementAct() {
   const src = document.getElementById('agreementAct');
   if (!src || !src.innerHTML.trim()) return toast('Сначала сформируйте акт', 'warn');
   const w = window.open('', '_blank');
-  w.document.write(`<html><head><title>Акт согласования</title><meta charset="UTF-8"></head><body style="font-family:sans-serif;">${src.innerHTML}</body></html>`);
+  w.document.write(`<html><head><title>Акт согласования</title><meta charset="UTF-8"></head><body style="font-family:sans-serif;">${src.innerHTML}<script src="auto-i18n.js"></script>
+</body></html>`);
   w.document.close(); w.print();
 }
 /* A3: генератор согласия на ПДн */
@@ -2573,7 +2574,8 @@ function printPdConsent() {
   const src = document.getElementById('pdConsentBlock');
   if (!src || !src.innerHTML.trim()) return toast('Сначала сформируйте согласие', 'warn');
   const w = window.open('', '_blank');
-  w.document.write(`<html><head><meta charset="UTF-8"><title>Согласие на обработку ПДн</title></head><body style="font-family:sans-serif;">${src.innerHTML}</body></html>`);
+  w.document.write(`<html><head><meta charset="UTF-8"><title>Согласие на обработку ПДн</title></head><body style="font-family:sans-serif;">${src.innerHTML}<script src="auto-i18n.js"></script>
+</body></html>`);
   w.document.close(); w.print();
 }
 function addOpening() { State.openings.push({ type:'окно', width:'', height:'', count:1, material:'', fillType:'глухое' }); renderOpenings(); }
@@ -3124,7 +3126,8 @@ function printReport() {
     <b>Дата:</b> ${escapeHtml(d.visitDate||'—')}</p>
     ${d.geoPoints?.length ? `<h3>Геодезические точки</h3><table><tr><th>№</th><th>Имя</th><th>X</th><th>Y</th><th>H</th><th>СКП</th></tr>${d.geoPoints.map((p,i)=>`<tr><td>${i+1}</td><td>${escapeHtml(p.name||'')}</td><td>${escapeHtml(String(p.x))}</td><td>${escapeHtml(String(p.y))}</td><td>${escapeHtml(String(p.h))}</td><td>${escapeHtml(String(p.skp))}</td></tr>`).join('')}</table>` : ''}
     <p style="margin-top:24px;color:#666;font-size:11px;">Сформировано в КИ-Поле · PRO MAX 3.4.9 · @Kotohod</p>
-    </body></html>`);
+    <script src="auto-i18n.js"></script>
+</body></html>`);
   w.document.close();
   setTimeout(() => w.print(), 300);
 }
@@ -5415,5 +5418,6 @@ Object.assign(window, {
 });
 </script>
 <script src="i18n.js"></script>
+<script src="auto-i18n.js"></script>
 </body>
 </html>
