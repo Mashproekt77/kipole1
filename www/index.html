@@ -2889,7 +2889,7 @@ async function openProjects() {
     <div class="modal" role="dialog" aria-modal="true">
       <h3>📁 Сохранённые проекты</h3>
       <div class="more-menu-list" style="max-height:60vh;overflow-y:auto;">${items}</div>
-      <div class="modal-actions"><button class="ghost" data-act="close">Закрыть</button></div>
+      <div class="modal-actions"><button class="ghost" data-act="close" data-i18n="Закрыть">Закрыть</button></div>
     </div>`;
   document.body.appendChild(bd); lockScroll();
   const onKey = e => { if (e.key === 'Escape') close(); };
@@ -3681,12 +3681,12 @@ npx --yes http-server -p 8080 -c-1</pre>
       <button class="ghost" data-act="copy-cmd">📋 Копировать команду</button>
       <button class="ghost" data-act="check-sw">🔄 Статус SW</button>
       <button class="success" data-act="install">📲 Установить приложение</button>
-      <button data-act="close">Закрыть</button>`;
+      <button data-act="close">${t('Закрыть')}</button>`;
   } else {
     actionsHtml = `
       <button class="ghost" data-act="copy-cmd">📋 Копировать команду</button>
       <button class="success" data-act="download-kit">📦 Скачать набор для localhost</button>
-      <button data-act="close">Закрыть</button>`;
+      <button data-act="close">${t('Закрыть')}</button>`;
   }
 
   const cmd = localhostManualCommand();
@@ -3739,28 +3739,28 @@ function openMoreMenu() {
       <div class="more-menu-list">
         <button class="more-menu-item" data-act="theme">
           <span class="more-menu-icon">${isCurrentlyDark() ? '☀️' : '🌙'}</span>
-          <span class="more-menu-label">${isCurrentlyDark() ? 'Светлая тема' : 'Тёмная тема'}</span>
+          <span class="more-menu-label">${isCurrentlyDark() ? t('Светлая тема') : t('Тёмная тема')}</span>
         </button>
         <button class="more-menu-item" data-act="contrast">
           <span class="more-menu-icon">◐</span>
-          <span class="more-menu-label">Высокий контраст</span>
+          <span class="more-menu-label">${t('Высокий контраст')}</span>
         </button>
         <button class="more-menu-item" data-act="map">
           <span class="more-menu-icon">📍</span>
-          <span class="more-menu-label">Карта объекта</span>
+          <span class="more-menu-label">${t('Карта объекта')}</span>
         </button>
         <button class="more-menu-item" data-act="localhost">
           <span class="more-menu-icon">🌐</span>
-          <span class="more-menu-label">Запуск через localhost</span>
+          <span class="more-menu-label">${t('Запуск через localhost')}</span>
           <span class="more-menu-status ${statusCls}">${statusText}</span>
         </button>
         <button class="more-menu-item" data-act="projects">
           <span class="more-menu-icon">📁</span>
-          <span class="more-menu-label">Мои проекты</span>
+          <span class="more-menu-label">${t('Мои проекты')}</span>
         </button>
       </div>
       <div class="modal-actions">
-        <button class="ghost" data-act="close">Закрыть</button>
+        <button class="ghost" data-act="close" data-i18n="Закрыть">Закрыть</button>
       </div>
     </div>`;
   document.body.appendChild(bd);
@@ -4129,7 +4129,7 @@ let leafletMap = null;
 async function openMapModal() {
   const bd = document.createElement('div');
   bd.className = 'modal-backdrop';
-  bd.innerHTML = `<div class="modal wide" role="dialog" aria-modal="true"><h3>🗺️ Карта объекта</h3><div id="leafletMap"><div class="skeleton" style="height:60vh;min-height:320px;"></div></div><div class="map-info" id="mapInfo">—</div><div class="modal-actions mt-3"><button class="ghost" id="mapCenterBtn">📍 К GPS</button><button class="ghost" id="mapPointsBtn">🛰️ Точки</button><button class="ghost" id="mapFitBtn">🔍 Вписать</button><button data-act="close">Закрыть</button></div></div>`;
+  bd.innerHTML = `<div class="modal wide" role="dialog" aria-modal="true"><h3>🗺️ Карта объекта</h3><div id="leafletMap"><div class="skeleton" style="height:60vh;min-height:320px;"></div></div><div class="map-info" id="mapInfo">—</div><div class="modal-actions mt-3"><button class="ghost" id="mapCenterBtn">📍 К GPS</button><button class="ghost" id="mapPointsBtn">🛰️ Точки</button><button class="ghost" id="mapFitBtn">🔍 Вписать</button><button data-act="close">${t('Закрыть')}</button></div></div>`;
   document.body.appendChild(bd);
   lockScroll();
   const onKey = (e) => { if (e.key === 'Escape') close(); };
@@ -4987,7 +4987,7 @@ async function toggleOrthoOnMap() {
   if ([swLat, swLon, neLat, neLon].some(isNaN)) return toast('Заполните 4 границы WGS-84', 'warn');
   const bd = document.createElement('div');
   bd.className = 'modal-backdrop';
-  bd.innerHTML = `<div class="modal wide"><h3>🗺️ Ортофотоплан</h3><div id="orthoMap" style="height:420px;border-radius:10px;"><div class="skeleton" style="height:100%;"></div></div><div class="modal-actions mt-3"><button data-act="close">Закрыть</button></div></div>`;
+  bd.innerHTML = `<div class="modal wide"><h3>🗺️ Ортофотоплан</h3><div id="orthoMap" style="height:420px;border-radius:10px;"><div class="skeleton" style="height:100%;"></div></div><div class="modal-actions mt-3"><button data-act="close">${t('Закрыть')}</button></div></div>`;
   document.body.appendChild(bd); lockScroll();
   let orthoMapInstance = null;
   let timer = null;
@@ -5043,7 +5043,7 @@ async function showTraceOnMap() {
   if (!Trace.points.length || Trace.points[0].lat == null) return;
   const bd = document.createElement('div');
   bd.className = 'modal-backdrop';
-  bd.innerHTML = `<div class="modal wide"><h3>🛣️ Трасса</h3><div id="traceMap" style="height:420px;border-radius:10px;"><div class="skeleton" style="height:100%;"></div></div><div class="modal-actions mt-3"><button data-act="close">Закрыть</button></div></div>`;
+  bd.innerHTML = `<div class="modal wide"><h3>🛣️ Трасса</h3><div id="traceMap" style="height:420px;border-radius:10px;"><div class="skeleton" style="height:100%;"></div></div><div class="modal-actions mt-3"><button data-act="close">${t('Закрыть')}</button></div></div>`;
   document.body.appendChild(bd); lockScroll();
   let traceMapInstance = null;
   let timer = null;
