@@ -458,7 +458,7 @@ input[type="checkbox"]:checked + label {
       <button class="sidebar__nav-item active" data-view="overview" onclick="switchView('overview')">📋 <span class="label" data-i18n="nav.overview">Обзор</span></button>
       <button class="sidebar__nav-item" data-view="steps" onclick="switchView('steps')">📝 <span class="label" data-i18n="nav.steps">Шаги</span></button>
       <button class="sidebar__nav-item" data-view="tools" onclick="switchView('tools')">🔧 <span class="label" data-i18n="nav.tools">Инструменты</span></button>
-      <button class="sidebar__nav-item" data-view="export" onclick="switchView('export')">📤 <span class="label" data-i18n="nav.export">Экспорт</span></button>
+      <button class="sidebar__nav-item" data-view="export" onclick="switchView('export')">📤 <span class="label" data-i18n="nav.export"><span data-i18n="Экспорт">Экспорт</span></span></button>
     </nav>
     <div class="sidebar__section">Этапы работ</div>
     <nav class="sidebar__nav" id="sidebarNav"></nav>
@@ -528,7 +528,7 @@ input[type="checkbox"]:checked + label {
             <div class="field-error">Формат: XX:XX:XXXXXXX:XX</div>
           </div>
         </div>
-        <div class="form-group"><label for="engineerName" data-i18n="overview.engineer">Инженер (ФИО, аттестат, СРО)</label><input type="text" id="engineerName"  data-i18n-placeholder="Иванов И.И., аттестат №12345" placeholder="Иванов И.И., аттестат №12345" autocomplete="name"></div>
+        <div class="form-group"><label for="engineerName" data-i18n="overview.engineer">Инженер (ФИО, аттестат, СРО)</label><input type="text" id="engineerName"  data-i18n-data-i18n-placeholder="Иванов И.И., аттестат №12345" placeholder="Иванов И.И., аттестат №12345" data-i18n-placeholder="Иванов И.И., аттестат №12345" placeholder="Иванов И.И., аттестат №12345" autocomplete="name"></div>
         <div class="form-group"><label for="customerInfo" data-i18n="overview.customer">Заказчик</label><textarea id="customerInfo" rows="3"></textarea></div>
         <div class="form-group">
           <label data-i18n="overview.geo">📍 Геолокация</label>
@@ -734,7 +734,7 @@ input[type="checkbox"]:checked + label {
         <div class="card">
           <h3 data-i18n="ext.minArea">🛏️ Минимальные площади</h3>
           <div class="info-box" style="font-size:.82rem;">
-            ⚠️ Нормативы могут отличаться в зависимости от региона и типа объекта. Уточняйте действующие СП 54.13330.2022, СП 55.13330.2016 и региональные нормативы.
+            ⚠️ <span data-i18n="Нормативы могут отличаться в зависимости от региона и типа объекта. Уточняйте действующие СП 54.13330.2022, СП 55.13330.2016 и региональные нормативы.">Нормативы могут отличаться в зависимости от региона и типа объекта. Уточняйте действующие СП 54.13330.2022, СП 55.13330.2016 и региональные нормативы.</span>
           </div>
           <div class="form-group"><label for="minArea" data-i18n="ext.areaL">Площадь, м²</label><input type="number" id="minArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
           <div class="form-group">
@@ -1233,7 +1233,7 @@ input[type="checkbox"]:checked + label {
     </button>
     <button class="bottom-nav__btn" data-view="export" onclick="switchView('export')">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      <span data-i18n="nav.export">Экспорт</span>
+      <span data-i18n="nav.export"><span data-i18n="Экспорт">Экспорт</span></span>
     </button>
   </nav>
 </div>
@@ -1873,7 +1873,7 @@ function renderGeoCustom() {
     </div>
     <h3>Каталог точек</h3>
     <div class="btn-row">
-      <button class="small" onclick="addGeoPoint()">+ Точка</button>
+      <button class="small" onclick="addGeoPoint()"><span data-i18n="+ Точка">+ Точка</span></button>
       <button class="small ghost" onclick="clearGeoPoints()" data-i18n="Очистить">Очистить</button>
       <button class="small ghost" onclick="exportGeoCSV()">💾 CSV</button>
       <button class="small ghost" onclick="exportGeoTXT()">💾 TXT</button>
@@ -1885,7 +1885,7 @@ function renderGeoCustom() {
       </tr></thead><tbody id="geoTableBody"></tbody></table>
     </div>
     <div class="geo-cards" id="geoCardList"></div>
-    <div class="info-box"><strong>СКП по точкам:</strong><div id="geoStats">нет точек</div></div>`;
+    <div class="info-box"><strong><span data-i18n="СКП по точкам:">СКП по точкам:</span></strong><div id="geoStats"><span data-i18n="нет точек">нет точек</span></div></div>`;
 }
 function renderZuCustom() {
   return `
@@ -1960,14 +1960,14 @@ function renderActCustom() {
   return `
     <div class="info-box mt-3">Акт обследования оформляется при <strong>прекращении существования</strong> ОКС, сносе, гибели, а также при <strong>незавершённом строительстве</strong>.</div>
     <div class="form-group">
-      <label for="actReason">Причина прекращения / обследования</label>
+      <label for="actReason"><span data-i18n="Причина прекращения / обследования">Причина прекращения / обследования</span></label>
       <select id="actReason" onchange="State.actReason=this.value; saveDebounced()">
         ${['Снос / демонтаж','Гибель / уничтожение','Прекращение существования','Незавершённое строительство','Иное']
           .map(o=>`<option ${State.actReason===o?'selected':''}>${o}</option>`).join('')}
       </select>
     </div>
     <div class="form-group">
-      <label for="actDescription">Описание состояния / заключение</label>
+      <label for="actDescription"><span data-i18n="Описание состояния / заключение">Описание состояния / заключение</span></label>
       <textarea id="actDescription" rows="4" oninput="State.actDescription=this.value; saveDebounced()">${escapeHtml(State.actDescription)}</textarea>
     </div>`;
 }
@@ -1984,7 +1984,7 @@ function renderSignatureCustom() {
         <canvas id="sigCustomer" class="sig-canvas"></canvas>
         <button type="button" class="sig-clear ghost" onclick="clearSig('sigCustomer')" data-i18n="Очистить">Очистить</button>
       </div>
-      <small class="text-muted">Распишитесь пальцем или стилусом</small>
+      <small class="text-muted"><span data-i18n="Распишитесь пальцем или стилусом">Распишитесь пальцем или стилусом</span></small>
     </div>
     <div class="form-group mt-3">
       <label data-i18n="Согласие на обработку персональных данных">Согласие на обработку персональных данных</label>
@@ -3240,7 +3240,7 @@ function generateReport() {
 function printReport() {
   const d = collectAllData();
   const w = window.open('', '_blank');
-  w.document.write(`<html><head><meta charset="UTF-8"><title>Отчёт</title><style>body{font-family:sans-serif;padding:20px;max-width:800px;margin:auto;}table{width:100%;border-collapse:collapse;margin:10px 0;}th,td{border:1px solid #ccc;padding:6px;text-align:left;font-size:12px;}
+  w.document.write(`<html><head><meta charset="UTF-8"><title><span data-i18n="Отчёт">Отчёт</span></title><style>body{font-family:sans-serif;padding:20px;max-width:800px;margin:auto;}table{width:100%;border-collapse:collapse;margin:10px 0;}th,td{border:1px solid #ccc;padding:6px;text-align:left;font-size:12px;}
 /* === АКТИВНОЕ ВЫДЕЛЕНИЕ ЭЛЕМЕНТОВ === */
 .nav-btn.active, .tab.active {
   background: #e0f2fe !important;
@@ -5541,7 +5541,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (exportCard) {
         const hint = document.createElement('div');
         hint.className = 'ios-notice';
-        hint.innerHTML = '📲 <strong>Установите как приложение:</strong> нажмите <b>Поделиться</b> → <b>На экран «Домой»</b>';
+        hint.innerHTML = '📲 <strong>Установите как приложение:</strong> нажмите <b><span data-i18n="Поделиться">Поделиться</span></b> → <b>На экран «Домой»</b>';
         exportCard.prepend(hint);
       }
     }
