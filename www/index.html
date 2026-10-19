@@ -378,6 +378,62 @@ input:focus, select:focus, textarea:focus {
   outline: none !important;
 }
 
+
+/* === СУПЕР-ВЫДЕЛЕНИЕ ЧЕКБОКСОВ === */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 26px;
+  height: 26px;
+  border: 2px solid #94a3b8;
+  border-radius: 6px;
+  background-color: #fff;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-right: 12px;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #0284c7 !important;
+  border-color: #0284c7 !important;
+}
+
+input[type="checkbox"]:checked::after {
+  content: '✔';
+  position: absolute;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1;
+}
+
+input[type="checkbox"]:checked + label {
+  background-color: #e0f2fe !important;
+  color: #0369a1 !important;
+  font-weight: 700 !important;
+  border-radius: 6px;
+  padding: 8px 12px !important;
+  display: inline-block;
+  width: calc(100% - 40px);
+  box-shadow: inset 0 0 0 1px #bae6fd;
+}
+
+/* Подсветка выбранных вкладок */
+.nav-btn.active, .tab.active, .chip.active {
+  background: #0284c7 !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4) !important;
+  border-radius: 20px;
+}
+
 </style>
 </head>
 <body>
@@ -1931,7 +1987,7 @@ function renderSignatureCustom() {
       <small class="text-muted">Распишитесь пальцем или стилусом</small>
     </div>
     <div class="form-group mt-3">
-      <label>Согласие на обработку персональных данных</label>
+      <label data-i18n="Согласие на обработку персональных данных">Согласие на обработку персональных данных</label>
       <div class="info-box" style="font-size:.82rem;">
         Согласие заказчика-физлица <strong>обязательно включается в Приложение</strong> межевого плана / техплана (152-ФЗ от 27.07.2006, ст. 9).
       </div>
@@ -3250,6 +3306,62 @@ input:focus, select:focus, textarea:focus {
   border-color: #0284c7 !important;
   box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.25) !important;
   outline: none !important;
+}
+
+
+/* === СУПЕР-ВЫДЕЛЕНИЕ ЧЕКБОКСОВ === */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 26px;
+  height: 26px;
+  border: 2px solid #94a3b8;
+  border-radius: 6px;
+  background-color: #fff;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-right: 12px;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #0284c7 !important;
+  border-color: #0284c7 !important;
+}
+
+input[type="checkbox"]:checked::after {
+  content: '✔';
+  position: absolute;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1;
+}
+
+input[type="checkbox"]:checked + label {
+  background-color: #e0f2fe !important;
+  color: #0369a1 !important;
+  font-weight: 700 !important;
+  border-radius: 6px;
+  padding: 8px 12px !important;
+  display: inline-block;
+  width: calc(100% - 40px);
+  box-shadow: inset 0 0 0 1px #bae6fd;
+}
+
+/* Подсветка выбранных вкладок */
+.nav-btn.active, .tab.active, .chip.active {
+  background: #0284c7 !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4) !important;
+  border-radius: 20px;
 }
 
 </style></head><body>
