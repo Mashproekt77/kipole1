@@ -686,7 +686,7 @@ input[type="checkbox"]:checked + label {
             <div class="form-group"><label for="measureCount" data-i18n="chk.nMeas">Кол-во измерений</label><input type="number" id="measureCount" min="1" value="2" inputmode="numeric"></div>
           </div>
           <div class="form-group">
-            <label for="landCategory" data-i18n="chk.cat">Категория земель</label>
+            <label for="landCategory" data-i18n="chk.cat"><span data-i18n="Категория земель">Категория земель</span></label>
             <select id="landCategory">
               <option value="0.10">Населённые пункты (0,10 м)</option>
               <option value="0.20">СХ / ЛПХ (0,20 м)</option>
@@ -854,7 +854,7 @@ input[type="checkbox"]:checked + label {
             <select id="zuCalcCat"><option value="0.10">Населённые пункты (0,10 м)</option><option value="0.20">СХ (0,20 м)</option><option value="0.50">Промышленность (0,50 м)</option></select>
           </div>
           <div class="form-group">
-            <label for="zuCalcK" data-i18n="zu.k">Коэффициент конфигурации k</label>
+            <label for="zuCalcK" data-i18n="zu.k"><span data-i18n="Коэффициент конфигурации k">Коэффициент конфигурации k</span></label>
             <input type="number" id="zuCalcK" step="0.1" min="0.1" value="1.0" inputmode="decimal">
             <small class="text-muted">1.0 — компактный участок; &gt; 1 — вытянутый / сложной формы (П/0393)</small>
           </div>
@@ -869,7 +869,7 @@ input[type="checkbox"]:checked + label {
             <select id="zuTolCat"><option value="0.10">Населённые пункты</option><option value="0.20">СХ</option><option value="0.50">Промышленность</option></select>
           </div>
           <div class="form-group">
-            <label for="zuTolK" data-i18n="zu.tolK">Коэффициент конфигурации k</label>
+            <label for="zuTolK" data-i18n="zu.tolK"><span data-i18n="Коэффициент конфигурации k">Коэффициент конфигурации k</span></label>
             <input type="number" id="zuTolK" step="0.1" min="0.1" value="1.0" inputmode="decimal">
           </div>
           <button onclick="calcZuTolerance()" data-i18n="zu.calc">Рассчитать</button>
@@ -1890,33 +1890,33 @@ function renderGeoCustom() {
 function renderZuCustom() {
   return `
     <div class="grid-2 mt-3">
-      <div class="form-group"><label for="zuDocArea">Площадь ЗУ по документам, м²</label>
+      <div class="form-group"><label for="zuDocArea"><span data-i18n="Площадь ЗУ по документам, м²">Площадь ЗУ по документам, м²</span></label>
         <input type="number" id="zuDocArea" step="0.01" min="0" inputmode="decimal" value="${State.zuDocArea||0}" oninput="State.zuDocArea=parseFloat(this.value)||0; saveDebounced()"></div>
-      <div class="form-group"><label for="zuFactArea">Площадь фактическая, м²</label>
+      <div class="form-group"><label for="zuFactArea"><span data-i18n="Площадь фактическая, м²">Площадь фактическая, м²</span></label>
         <input type="number" id="zuFactArea" step="0.01" min="0" inputmode="decimal" value="${State.zuFactArea||0}" oninput="State.zuFactArea=parseFloat(this.value)||0; saveDebounced()"></div>
     </div>
     <div class="form-group">
-      <label for="zuCategory">Категория земель</label>
+      <label for="zuCategory"><span data-i18n="Категория земель">Категория земель</span></label>
       <select id="zuCategory" onchange="State.zuCategory=this.value; saveDebounced()">
-        <option value="">— выберите —</option>
+        <option value=""><span data-i18n="— выберите —">— выберите —</span></option>
         ${['Земли населённых пунктов','Земли сельхозназначения','Земли промышленности','Земли лесного фонда','Земли водного фонда','Земли особо охраняемых территорий','Земли запаса']
           .map(o=>`<option ${State.zuCategory===o?'selected':''}>${o}</option>`).join('')}
       </select>
     </div>
-    <div class="form-group"><label for="zuVRI">ВРИ</label>
+    <div class="form-group"><label for="zuVRI"><span data-i18n="ВРИ">ВРИ</span></label>
       <input type="text" id="zuVRI" placeholder="ИЖС / ЛПХ / садоводство" value="${escapeHtml(State.zuVRI)}" oninput="State.zuVRI=this.value; saveDebounced()"></div>
     <div class="form-group">
-      <label for="zuAreaK">Коэффициент конфигурации k</label>
+      <label for="zuAreaK"><span data-i18n="Коэффициент конфигурации k">Коэффициент конфигурации k</span></label>
       <input type="number" id="zuAreaK" step="0.1" min="0.1" value="1.0" inputmode="decimal">
       <small class="text-muted">1.0 — компактный; &gt; 1 — вытянутый / сложной формы (П/0393)</small>
     </div>
     <button class="small ghost" onclick="checkZuArea()">⚖️ Проверить расхождение</button>
     <div class="calc-result hidden" id="zuAreaResult"></div>
     <h3 class="mt-3">Смежники / правообладатели</h3>
-    <button class="small" onclick="addNeighbor()">+ Смежник</button>
+    <button class="small" onclick="addNeighbor()"><span data-i18n="+ Смежник">+ Смежник</span></button>
     <div id="neighborList" class="mt-2"></div>
     <h3 class="mt-3">Сервитуты / обременения / ЗОУИТ</h3>
-    <button class="small" onclick="addServitude()">+ Запись</button>
+    <button class="small" onclick="addServitude()"><span data-i18n="+ Запись">+ Запись</span></button>
     <div id="servitudeList" class="mt-2"></div>
     <h3 class="mt-3">Акт согласования</h3>
     <div class="btn-row">
