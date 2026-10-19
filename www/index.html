@@ -528,7 +528,7 @@ input[type="checkbox"]:checked + label {
             <div class="field-error">Формат: XX:XX:XXXXXXX:XX</div>
           </div>
         </div>
-        <div class="form-group"><label for="engineerName" data-i18n="overview.engineer">Инженер (ФИО, аттестат, СРО)</label><input type="text" id="engineerName" placeholder="Иванов И.И., аттестат №12345" autocomplete="name"></div>
+        <div class="form-group"><label for="engineerName" data-i18n="overview.engineer">Инженер (ФИО, аттестат, СРО)</label><input type="text" id="engineerName"  data-i18n-placeholder="Иванов И.И., аттестат №12345" placeholder="Иванов И.И., аттестат №12345" autocomplete="name"></div>
         <div class="form-group"><label for="customerInfo" data-i18n="overview.customer">Заказчик</label><textarea id="customerInfo" rows="3"></textarea></div>
         <div class="form-group">
           <label data-i18n="overview.geo">📍 Геолокация</label>
@@ -1199,7 +1199,7 @@ input[type="checkbox"]:checked + label {
           <button class="success" id="installPwaBtn" onclick="installPwa()" style="display:none;">📲 Установить</button>
           <button class="ghost" onclick="checkSwStatus()">🔄<span data-i18n="Проверить SW">Проверить SW</span></button>
         </div>
-        <div id="pwaStatus" class="info-box mt-3" style="font-size:.85rem;">Service Worker: <strong>не зарегистрирован</strong></div>
+        <div id="pwaStatus" class="info-box mt-3" style="font-size:.85rem;"><span data-i18n="Service Worker: не зарегистрирован">Service Worker: не зарегистрирован</span></div>
       </div>
       <div class="card">
         <h2 data-i18n="sys.title">⚙️ Система</h2>
@@ -4588,7 +4588,7 @@ async function checkSwStatus() {
   const el = document.getElementById('pwaStatus');
   if (!('serviceWorker' in navigator)) { el.innerHTML = 'Service Worker: <strong>не поддерживается</strong>'; return; }
   const regs = await navigator.serviceWorker.getRegistrations();
-  if (!regs.length) { el.innerHTML = 'Service Worker: <strong>не зарегистрирован</strong>'; return; }
+  if (!regs.length) { el.innerHTML = '<span data-i18n="Service Worker: не зарегистрирован">Service Worker: не зарегистрирован</span>'; return; }
   el.innerHTML = `Service Worker: <strong style="color:var(--success);">активен</strong> · scope: ${escapeHtml(regs[0].scope)}`;
   toast('SW активен', 'success');
 }
