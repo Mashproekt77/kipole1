@@ -310,6 +310,38 @@ textarea{min-height:96px}
   .topbar__more{position:relative}
   .topbar__more .localhost-dot{position:absolute;top:3px;right:3px}
 }
+
+/* === АКТИВНОЕ ВЫДЕЛЕНИЕ ЭЛЕМЕНТОВ === */
+.nav-btn.active, .tab.active {
+  background: #e0f2fe !important;
+  color: #0284c7 !important;
+  font-weight: 700 !important;
+  border-bottom: 3px solid #0284c7 !important;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.2) !important;
+}
+
+.step__head[aria-expanded="true"] {
+  background: #f0f9ff !important;
+  border-left: 4px solid #0284c7 !important;
+}
+
+input[type="checkbox"]:checked {
+  accent-color: #0284c7 !important;
+  transform: scale(1.15);
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #0284c7 !important;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.25) !important;
+  outline: none !important;
+}
+
+.chip.active, .btn.active {
+  background: #0284c7 !important;
+  color: #fff !important;
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.4) !important;
+}
+
 </style>
 </head>
 <body>
@@ -1804,7 +1836,7 @@ function renderZuCustom() {
 function renderTechplanCustom() {
   return `
     <h3 class="mt-3">Проёмы</h3>
-    <button class="small" onclick="addOpening()">+ Проём</button>
+    <button class="small" onclick="addOpening()" data-i18n="+ Проём">+ Проём</button>
     <div id="openingList" class="mt-2"></div>
     <h3 class="mt-3">Инженерные системы</h3>
     ${[['eng1','Холодное водоснабжение'],['eng2','Горячее водоснабжение'],['eng3','Водоотведение'],
@@ -1817,18 +1849,18 @@ function renderTechplanCustom() {
           <label for="${id}">${label}</label>
         </div>`).join('')}
     <h3 class="mt-3">Балконы / лоджии</h3>
-    <button class="small" onclick="addBalcony()">+ Балкон/лоджия</button>
+    <button class="small" onclick="addBalcony()" data-i18n="+ Балкон/лоджия">+ Балкон/лоджия</button>
     <div id="balconyList" class="mt-2"></div>
     <h3 class="mt-3">🚗 Машино-места</h3>
-    <button class="small" onclick="addParking()">+ Машино-место</button>
+    <button class="small" onclick="addParking()" data-i18n="+ Машино-место">+ Машино-место</button>
     <div id="parkingList" class="mt-2"></div>
     <h3 class="mt-3">Годы</h3>
     <div class="grid-3">
-      <div class="form-group"><label for="yearBuilt">Постройки</label>
+      <div class="form-group"><label for="yearBuilt" data-i18n="Постройки">Постройки</label>
         <input type="number" id="yearBuilt" min="1800" max="2100" inputmode="numeric" value="${escapeHtml(State.yearBuilt)}" oninput="State.yearBuilt=this.value; saveDebounced()"></div>
-      <div class="form-group"><label for="yearRecon">Реконструкции</label>
+      <div class="form-group"><label for="yearRecon" data-i18n="Реконструкции">Реконструкции</label>
         <input type="number" id="yearRecon" min="1800" max="2100" inputmode="numeric" value="${escapeHtml(State.yearRecon)}" oninput="State.yearRecon=this.value; saveDebounced()"></div>
-      <div class="form-group"><label for="yearComplete">Завершения</label>
+      <div class="form-group"><label for="yearComplete" data-i18n="Завершения">Завершения</label>
         <input type="number" id="yearComplete" min="1800" max="2100" inputmode="numeric" value="${escapeHtml(State.yearComplete)}" oninput="State.yearComplete=this.value; saveDebounced()"></div>
     </div>`;
 }
@@ -1851,11 +1883,11 @@ function renderActCustom() {
 function renderSignatureCustom() {
   return `
     <div class="form-group mt-3">
-      <label for="docsList">Перечень полученных документов</label>
+      <label for="docsList" data-i18n="Перечень полученных документов">Перечень полученных документов</label>
       <textarea id="docsList" rows="3" oninput="State.docsList=this.value; saveDebounced()">${escapeHtml(State.docsList)}</textarea>
     </div>
     <div class="form-group">
-      <label>Подпись заказчика</label>
+      <label data-i18n="Подпись заказчика">Подпись заказчика</label>
       <div class="sig-wrap">
         <canvas id="sigCustomer" class="sig-canvas"></canvas>
         <button type="button" class="sig-clear ghost" onclick="clearSig('sigCustomer')">Очистить</button>
@@ -3116,7 +3148,39 @@ function generateReport() {
 function printReport() {
   const d = collectAllData();
   const w = window.open('', '_blank');
-  w.document.write(`<html><head><meta charset="UTF-8"><title>Отчёт</title><style>body{font-family:sans-serif;padding:20px;max-width:800px;margin:auto;}table{width:100%;border-collapse:collapse;margin:10px 0;}th,td{border:1px solid #ccc;padding:6px;text-align:left;font-size:12px;}</style></head><body>
+  w.document.write(`<html><head><meta charset="UTF-8"><title>Отчёт</title><style>body{font-family:sans-serif;padding:20px;max-width:800px;margin:auto;}table{width:100%;border-collapse:collapse;margin:10px 0;}th,td{border:1px solid #ccc;padding:6px;text-align:left;font-size:12px;}
+/* === АКТИВНОЕ ВЫДЕЛЕНИЕ ЭЛЕМЕНТОВ === */
+.nav-btn.active, .tab.active {
+  background: #e0f2fe !important;
+  color: #0284c7 !important;
+  font-weight: 700 !important;
+  border-bottom: 3px solid #0284c7 !important;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.2) !important;
+}
+
+.step__head[aria-expanded="true"] {
+  background: #f0f9ff !important;
+  border-left: 4px solid #0284c7 !important;
+}
+
+input[type="checkbox"]:checked {
+  accent-color: #0284c7 !important;
+  transform: scale(1.15);
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #0284c7 !important;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.25) !important;
+  outline: none !important;
+}
+
+.chip.active, .btn.active {
+  background: #0284c7 !important;
+  color: #fff !important;
+  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.4) !important;
+}
+
+</style></head><body>
     <h1>Отчёт о полевых работах</h1>
     <p><b>Объект:</b> ${escapeHtml(d.objectAddress||'—')}<br>
     <b>КН:</b> ${escapeHtml(d.cadastralNumber||'—')}<br>
