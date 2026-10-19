@@ -599,6 +599,9 @@ const T = {
     'Смежники / Правообладатели':'Смежники / Правообладатели',
     'Сервитуты / Обременения / ЗОУИТ':'Сервитуты / Обременения / ЗОУИТ',
     'Мусоропровод':'Мусоропровод',
+    'Garbage chute':'Мусоропровод',
+    'Firefighting':'Пожаротушение',
+    'Точка +':'Точка +',
   },
   // ───────────────────────── ENGLISH ─────────────────────────
   en: {
@@ -1170,6 +1173,8 @@ const T = {
     'Сервитуты / Обременения / ЗОУИТ':'Servitudes / Encumbrances / ZOUIT',
     'Нормативы могут отличаться в зависимости от региона и типа объекта. Уточняйте действующие СП 54.13330.2022, СП 55.13330.2016 и региональные нормативы градостроительного проектирования.':'Standards may vary by region and object type. Check current SP 54.13330.2022, SP 55.13330.2016 and regional standards.',
     'Мусоропровод':'Garbage chute',
+    'Firefighting':'Firefighting',
+    'Точка +':'Point +',
   },
   // ───────────────────────── УЗБЕКСКИЙ ─────────────────────────
   uz: {
@@ -1739,6 +1744,8 @@ const T = {
     'СМЕЖНИКИ / ПРАВООБЛАДАТЕЛИ':'NEIGHBORS / RIGHT HOLDERS',
     'СЕРВИТУТЫ / ОБРЕМЕНЕНИЯ / ЗОУИТ':'SERVITUDES / ENCUMBRANCES / ZOUIT',
     'Геолокация':'Geolocation',
+    'Firefighting':'Firefighting',
+    'Точка +':'Point +',
   },
   // ───────────────────────── ТАДЖИКСКИЙ ─────────────────────────
   tg: {
@@ -2308,6 +2315,9 @@ const T = {
     'Coordinates not determined':'Coordinates not determined',
     'History is empty.':'History is empty.',
     'Мусоропровод':'Партовгоҳ',
+    'Garbage chute':'Garbage chute',
+    'Firefighting':'Firefighting',
+    'Точка +':'Point +',
   },
   // ───────────────────────── КИРГИЗСКИЙ ─────────────────────────
   ky: {
@@ -2866,6 +2876,8 @@ const T = {
     'Проверить расхождение':'Check discrepancy',
     'СМЕЖНИКИ / ПРАВООБЛАДАТЕЛИ':'NEIGHBORS / RIGHT HOLDERS',
     'СЕРВИТУТЫ / ОБРЕМЕНЕНИЯ / ЗОУИТ':'SERVITUDES / ENCUMBRANCES / ZOUIT',
+    'Firefighting':'Firefighting',
+    'Точка +':'Point +',
   },
   tk: {
     'app.title':'Kİ-Meýdan',
@@ -3175,6 +3187,8 @@ const T = {
     'СМЕЖНИКИ / ПРАВООБЛАДАТЕЛИ':'NEIGHBORS / RIGHT HOLDERS',
     'СЕРВИТУТЫ / ОБРЕМЕНЕНИЯ / ЗОУИТ':'SERVITUDES / ENCUMBRANCES / ZOUIT',
     'Геолокация':'Geolocation',
+    'Firefighting':'Firefighting',
+    'Точка +':'Point +',
   },
   az: {
     'app.title':'Kİ-Sahə',
@@ -3484,6 +3498,9 @@ const T = {
     'СМЕЖНИКИ / ПРАВООБЛАДАТЕЛИ':'QONŞULAR / HÜQUQ SAHİBLƏRİ',
     'СЕРВИТУТЫ / ОБРЕМЕНЕНИЯ / ЗОУИТ':'SERVİTUTLAR / YÜKLƏR / ZOUIT',
     'Геолокация':'Geolokasiya',
+    'Garbage chute':'Garbage chute',
+    'Firefighting':'Firefighting',
+    'Точка +':'Point +',
   },
   hy: {
     'app.title':'KI-Dաշտ',
@@ -3793,6 +3810,8 @@ const T = {
     'СМЕЖНИКИ / ПРАВООБЛАДАТЕЛИ':'NEIGHBORS / RIGHT HOLDERS',
     'СЕРВИТУТЫ / ОБРЕМЕНЕНИЯ / ЗОУИТ':'SERVITUDES / ENCUMBRANCES / ZOUIT',
     'Геолокация':'Geolocation',
+    'Firefighting':'Firefighting',
+    'Точка +':'Point +',
   },
   ka: {
     'app.title':'KI-ველი',
@@ -4102,6 +4121,8 @@ const T = {
     'СМЕЖНИКИ / ПРАВООБЛАДАТЕЛИ':'NEIGHBORS / RIGHT HOLDERS',
     'СЕРВИТУТЫ / ОБРЕМЕНЕНИЯ / ЗОУИТ':'SERVITUDES / ENCUMBRANCES / ZOUIT',
     'Геолокация':'Geolocation',
+    'Firefighting':'Firefighting',
+    'Точка +':'Point +',
   },
   be: {
     'app.title':'КІ-Поле',
@@ -4411,6 +4432,8 @@ const T = {
     'СМЕЖНИКИ / ПРАВООБЛАДАТЕЛИ':'NEIGHBORS / RIGHT HOLDERS',
     'СЕРВИТУТЫ / ОБРЕМЕНЕНИЯ / ЗОУИТ':'SERVITUDES / ENCUMBRANCES / ZOUIT',
     'Геолокация':'Geolocation',
+    'Firefighting':'Firefighting',
+    'Точка +':'Point +',
   },
   mo: {
     'app.title':'KI-Câmp',
@@ -4735,6 +4758,8 @@ const T = {
     'СМЕЖНИКИ / ПРАВООБЛАДАТЕЛИ':'NEIGHBORS / RIGHT HOLDERS',
     'СЕРВИТУТЫ / ОБРЕМЕНЕНИЯ / ЗОУИТ':'SERVITUDES / ENCUMBRANCES / ZOUIT',
     'Геолокация':'Geolocation',
+    'Firefighting':'Firefighting',
+    'Точка +':'Point +',
   },
   vi: {
     'app.title':'KI-Cánh đồng',
@@ -5044,6 +5069,8 @@ const T = {
     'СМЕЖНИКИ / ПРАВООБЛАДАТЕЛИ':'NEIGHBORS / RIGHT HOLDERS',
     'СЕРВИТУТЫ / ОБРЕМЕНЕНИЯ / ЗОУИТ':'SERVITUDES / ENCUMBRANCES / ZOUIT',
     'Геолокация':'Geolocation',
+    'Firefighting':'Firefighting',
+    'Точка +':'Point +',
   },
 
 
@@ -5616,6 +5643,8 @@ const T = {
     'Coordinates not determined':'Coordinates not determined',
     'History is empty.':'History is empty.',
     'Мусоропровод':'Garbage chute',
+    'Firefighting':'Firefighting',
+    'Точка +':'Point +',
   },
   // ───────────────────────── ТУРКМЕНСКИЙ ─────────────────────────
   tk: {
@@ -7925,6 +7954,8 @@ const T = {
     'СМЕЖНИКИ / ПРАВООБЛАДАТЕЛИ':'NEIGHBORS / RIGHT HOLDERS',
     'СЕРВИТУТЫ / ОБРЕМЕНЕНИЯ / ЗОУИТ':'SERVITUDES / ENCUMBRANCES / ZOUIT',
     'Геолокация':'Geolocation',
+    'Firefighting':'Firefighting',
+    'Точка +':'Point +',
   },
   // ───────────────────────── ВЬЕТНАМСКИЙ ─────────────────────────
   vi: {
@@ -8559,6 +8590,8 @@ const T = {
     'СМЕЖНИКИ / ПРАВООБЛАДАТЕЛИ':'NEIGHBORS / RIGHT HOLDERS',
     'СЕРВИТУТЫ / ОБРЕМЕНЕНИЯ / ЗОУИТ':'SERVITUDES / ENCUMBRANCES / ZOUIT',
     'Геолокация':'Geolocation',
+    'Firefighting':'مكافحة الحرائق',
+    'Точка +':'نقطة +',
   },
 };
 
