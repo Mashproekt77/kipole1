@@ -619,6 +619,9 @@ const T = {
     'CSV':'CSV',
     'TXT':'TXT',
     'Ivanov I.I., attestat №12345':'Иванов И.И., аттестат №12345',
+    'ОКНО':'ОКНО',
+    'Ш':'Ш',
+    'Материал':'Материал',
   },
   // ───────────────────────── ENGLISH ─────────────────────────
   en: {
@@ -1214,6 +1217,10 @@ const T = {
     'CSV':'CSV',
     'TXT':'TXT',
     'Ivanov I.I., attestat №12345':'Ivanov I.I., cert. No.12345',
+    'ОКНО':'WINDOW',
+    'Ш':'W',
+    'В':'H',
+    'Материал':'Material',
   },
   // ───────────────────────── УЗБЕКСКИЙ ─────────────────────────
   uz: {
@@ -1826,6 +1833,10 @@ const T = {
     'сервитут':'servitut',
     'CSV':'CSV',
     'TXT':'TXT',
+    'ОКНО':'DERAZA',
+    'Ш':'Sh',
+    'В':'B',
+    'Материал':'Material',
   },
   // ───────────────────────── ТАДЖИКСКИЙ ─────────────────────────
   tg: {
@@ -2437,6 +2448,10 @@ const T = {
     'CSV':'CSV',
     'TXT':'TXT',
     'Ivanov I.I., attestat №12345':'Ivanov I.I., cert. No.12345',
+    'ОКНО':'WINDOW',
+    'Ш':'W',
+    'В':'H',
+    'Материал':'Material',
   },
   // ───────────────────────── КИРГИЗСКИЙ ─────────────────────────
   ky: {
@@ -3038,6 +3053,10 @@ const T = {
     'CSV':'CSV',
     'TXT':'TXT',
     'Ivanov I.I., attestat №12345':'Ivanov I.I., cert. No.12345',
+    'ОКНО':'WINDOW',
+    'Ш':'W',
+    'В':'H',
+    'Материал':'Material',
   },
   tk: {
     'app.title':'Kİ-Meýdan',
@@ -3390,6 +3409,10 @@ const T = {
     'CSV':'CSV',
     'TXT':'TXT',
     'Ivanov I.I., attestat №12345':'Ivanov I.I., cert. No.12345',
+    'ОКНО':'WINDOW',
+    'Ш':'W',
+    'В':'H',
+    'Материал':'Material',
   },
   az: {
     'app.title':'Kİ-Sahə',
@@ -3743,6 +3766,10 @@ const T = {
     'CSV':'CSV',
     'TXT':'TXT',
     'Ivanov I.I., attestat №12345':'Ivanov I.I., cert. No.12345',
+    'ОКНО':'WINDOW',
+    'Ш':'W',
+    'В':'H',
+    'Материал':'Material',
   },
   hy: {
     'app.title':'KI-Dաշտ',
@@ -4095,6 +4122,10 @@ const T = {
     'CSV':'CSV',
     'TXT':'TXT',
     'Ivanov I.I., attestat №12345':'Ivanov I.I., cert. No.12345',
+    'ОКНО':'WINDOW',
+    'Ш':'W',
+    'В':'H',
+    'Материал':'Material',
   },
   ka: {
     'app.title':'KI-ველი',
@@ -4447,6 +4478,10 @@ const T = {
     'CSV':'CSV',
     'TXT':'TXT',
     'Ivanov I.I., attestat №12345':'Ivanov I.I., cert. No.12345',
+    'ОКНО':'WINDOW',
+    'Ш':'W',
+    'В':'H',
+    'Материал':'Material',
   },
   be: {
     'app.title':'КІ-Поле',
@@ -4799,6 +4834,10 @@ const T = {
     'CSV':'CSV',
     'TXT':'TXT',
     'Ivanov I.I., attestat №12345':'Ivanov I.I., cert. No.12345',
+    'ОКНО':'WINDOW',
+    'Ш':'W',
+    'В':'H',
+    'Материал':'Material',
   },
   mo: {
     'app.title':'KI-Câmp',
@@ -5152,6 +5191,10 @@ const T = {
     'CSV':'CSV',
     'TXT':'TXT',
     'Ivanov I.I., attestat №12345':'Ivanov I.I., cert. No.12345',
+    'ОКНО':'WINDOW',
+    'Ш':'W',
+    'В':'H',
+    'Материал':'Material',
   },
   vi: {
     'app.title':'KI-Cánh đồng',
@@ -5504,6 +5547,10 @@ const T = {
     'CSV':'CSV',
     'TXT':'TXT',
     'Ivanov I.I., attestat №12345':'Ivanov I.I., cert. No.12345',
+    'ОКНО':'WINDOW',
+    'Ш':'W',
+    'В':'H',
+    'Материал':'Material',
   },
 
 
@@ -6118,6 +6165,10 @@ const T = {
     'CSV':'CSV',
     'TXT':'TXT',
     'Ivanov I.I., attestat №12345':'Ivanov I.I., cert. No.12345',
+    'ОКНО':'WINDOW',
+    'Ш':'W',
+    'В':'H',
+    'Материал':'Material',
   },
   // ───────────────────────── ТУРКМЕНСКИЙ ─────────────────────────
   tk: {
@@ -8470,6 +8521,10 @@ const T = {
     'CSV':'CSV',
     'TXT':'TXT',
     'Ivanov I.I., attestat №12345':'Ivanov I.I., cert. No.12345',
+    'ОКНО':'WINDOW',
+    'Ш':'W',
+    'В':'H',
+    'Материал':'Material',
   },
   // ───────────────────────── ВЬЕТНАМСКИЙ ─────────────────────────
   vi: {
@@ -9130,6 +9185,10 @@ const T = {
     'CSV':'CSV',
     'TXT':'TXT',
     'Ivanov I.I., attestat №12345':'Ivanov I.I., cert. No.12345',
+    'ОКНО':'WINDOW',
+    'Ш':'W',
+    'В':'H',
+    'Материал':'Material',
   },
 };
 
