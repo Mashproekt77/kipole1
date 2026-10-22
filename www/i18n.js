@@ -1221,6 +1221,8 @@ const T = {
     'Ш':'W',
     'В':'H',
     'Материал':'Material',
+    'QR-код кадастрового номера':'Cadastral number QR code',
+    'Сформировать QR':'Generate QR',
   },
   // ───────────────────────── УЗБЕКСКИЙ ─────────────────────────
   uz: {
@@ -1837,6 +1839,8 @@ const T = {
     'Ш':'Sh',
     'В':'B',
     'Материал':'Material',
+    'QR-код кадастрового номера':'Kadastr raqami QR kodi',
+    'Сформировать QR':'QR yaratish',
   },
   // ───────────────────────── ТАДЖИКСКИЙ ─────────────────────────
   tg: {
@@ -2452,6 +2456,8 @@ const T = {
     'Ш':'W',
     'В':'H',
     'Материал':'Material',
+    'QR-код кадастрового номера':'Cadastral number QR code',
+    'Сформировать QR':'Generate QR',
   },
   // ───────────────────────── КИРГИЗСКИЙ ─────────────────────────
   ky: {
@@ -3057,6 +3063,8 @@ const T = {
     'Ш':'W',
     'В':'H',
     'Материал':'Material',
+    'QR-код кадастрового номера':'Cadastral number QR code',
+    'Сформировать QR':'Generate QR',
   },
   tk: {
     'app.title':'Kİ-Meýdan',
@@ -3413,6 +3421,8 @@ const T = {
     'Ш':'W',
     'В':'H',
     'Материал':'Material',
+    'QR-код кадастрового номера':'Cadastral number QR code',
+    'Сформировать QR':'Generate QR',
   },
   az: {
     'app.title':'Kİ-Sahə',
@@ -3770,6 +3780,8 @@ const T = {
     'Ш':'W',
     'В':'H',
     'Материал':'Material',
+    'QR-код кадастрового номера':'Cadastral number QR code',
+    'Сформировать QR':'Generate QR',
   },
   hy: {
     'app.title':'KI-Dաշտ',
@@ -4126,6 +4138,8 @@ const T = {
     'Ш':'W',
     'В':'H',
     'Материал':'Material',
+    'QR-код кадастрового номера':'Cadastral number QR code',
+    'Сформировать QR':'Generate QR',
   },
   ka: {
     'app.title':'KI-ველი',
@@ -4482,6 +4496,8 @@ const T = {
     'Ш':'W',
     'В':'H',
     'Материал':'Material',
+    'QR-код кадастрового номера':'Cadastral number QR code',
+    'Сформировать QR':'Generate QR',
   },
   be: {
     'app.title':'КІ-Поле',
@@ -4838,6 +4854,8 @@ const T = {
     'Ш':'W',
     'В':'H',
     'Материал':'Material',
+    'QR-код кадастрового номера':'Cadastral number QR code',
+    'Сформировать QR':'Generate QR',
   },
   mo: {
     'app.title':'KI-Câmp',
@@ -5195,6 +5213,8 @@ const T = {
     'Ш':'W',
     'В':'H',
     'Материал':'Material',
+    'QR-код кадастрового номера':'Cadastral number QR code',
+    'Сформировать QR':'Generate QR',
   },
   vi: {
     'app.title':'KI-Cánh đồng',
@@ -5551,6 +5571,8 @@ const T = {
     'Ш':'W',
     'В':'H',
     'Материал':'Material',
+    'QR-код кадастрового номера':'Cadastral number QR code',
+    'Сформировать QR':'Generate QR',
   },
 
 
@@ -6169,6 +6191,8 @@ const T = {
     'Ш':'W',
     'В':'H',
     'Материал':'Material',
+    'QR-код кадастрового номера':'Cadastral number QR code',
+    'Сформировать QR':'Generate QR',
   },
   // ───────────────────────── ТУРКМЕНСКИЙ ─────────────────────────
   tk: {
@@ -8525,6 +8549,8 @@ const T = {
     'Ш':'W',
     'В':'H',
     'Материал':'Material',
+    'QR-код кадастрового номера':'Cadastral number QR code',
+    'Сформировать QR':'Generate QR',
   },
   // ───────────────────────── ВЬЕТНАМСКИЙ ─────────────────────────
   vi: {
@@ -9189,6 +9215,8 @@ const T = {
     'Ш':'W',
     'В':'H',
     'Материал':'Material',
+    'QR-код кадастрового номера':'Cadastral number QR code',
+    'Сформировать QR':'Generate QR',
   },
 };
 
