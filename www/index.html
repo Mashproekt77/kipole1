@@ -544,7 +544,7 @@ input[type="checkbox"]:checked + label {
 
       <div class="card">
         <h2 data-i18n="qr.title">📱 QR-код кадастрового номера</h2>
-        <button class="ghost" onclick="generateQR()" data-i18n="qr.btn"><span data-i18n=t("Сформировать QR")>Сформировать QR</span></button>
+        <button class="ghost" onclick="generateQR()" data-i18n="qr.btn"><span data-i18n="Сформировать QR">Сформировать QR</span></button>
         <div class="qr-container" id="qrContainer">—</div>
       </div>
 
@@ -654,7 +654,7 @@ input[type="checkbox"]:checked + label {
             <div class="form-group"><label for="actualArea" data-i18n="chk.actual">Фактическая, м²</label><input type="number" id="actualArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
             <div class="form-group"><label for="docArea" data-i18n="chk.doc">По документам, м²</label><input type="number" id="docArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
           </div>
-          <button onclick="checkAreaDifference()" data-i18n="chk.check" data-i18n=t(t(t(t(t("Проверить")))))><span data-i18n=t(t(t(t("Проверить"))))><span data-i18n=t(t(t("Проверить")))><span data-i18n=t(t("Проверить"))><span data-i18n=t("Проверить")>Проверить</span></span></span></span></button>
+          <button onclick="checkAreaDifference()" data-i18n="chk.check" data-i18n="Проверить"><span data-i18n="Проверить"><span data-i18n="Проверить"><span data-i18n="Проверить"><span data-i18n="Проверить">Проверить</span></span></span></span></button>
           <div class="calc-result hidden" id="areaCheckResult"></div>
         </div>
         <div class="card">
@@ -663,7 +663,7 @@ input[type="checkbox"]:checked + label {
           <div id="wallSegments"></div>
           <div class="btn-row">
             <button onclick="addWallSegment()" data-i18n="chk.addSeg">+ Отрезок</button>
-            <button class="ghost" onclick="checkWallContour()" data-i18n=t(t(t(t(t("Проверить"))))) data-i18n=t(t(t(t(t("Проверить")))))><span data-i18n=t(t(t(t("Проверить"))))><span data-i18n=t(t(t("Проверить")))><span data-i18n=t(t("Проверить"))><span data-i18n=t("Проверить")>Проверить</span></span></span></span></button>
+            <button class="ghost" onclick="checkWallContour()" data-i18n="Проверить" data-i18n="Проверить"><span data-i18n="Проверить"><span data-i18n="Проверить"><span data-i18n="Проверить"><span data-i18n="Проверить">Проверить</span></span></span></span></button>
           </div>
           <div class="calc-result hidden" id="wallCheckResult"></div>
         </div>
@@ -686,7 +686,7 @@ input[type="checkbox"]:checked + label {
             <div class="form-group"><label for="measureCount" data-i18n="chk.nMeas">Кол-во измерений</label><input type="number" id="measureCount" min="1" value="2" inputmode="numeric"></div>
           </div>
           <div class="form-group">
-            <label for="landCategory" data-i18n="chk.cat"><span data-i18n=t(t(t(t(t("Категория земель"))))) data-i18n=t(t(t(t(t("Категория земель"))))) data-i18n=t(t(t(t(t("Категория земель")))))><span data-i18n=t(t(t(t("Категория земель"))))><span data-i18n=t(t(t("Категория земель")))><span data-i18n=t(t("Категория земель"))><span data-i18n=t("Категория земель")>Категория земель</span></span></span></span></span></label>
+            <label for="landCategory" data-i18n="chk.cat"><span data-i18n="Категория земель" data-i18n="Категория земель" data-i18n="Категория земель"><span data-i18n="Категория земель"><span data-i18n="Категория земель"><span data-i18n="Категория земель"><span data-i18n="Категория земель">Категория земель</span></span></span></span></span></label>
             <select id="landCategory">
               <option value="0.10">Населённые пункты (0,10 м)</option>
               <option value="0.20">СХ / ЛПХ (0,20 м)</option>
@@ -728,7 +728,7 @@ input[type="checkbox"]:checked + label {
             <label for="region" data-i18n="ext.region">Регион</label>
             <select id="region"><option value="normal">Обычный</option><option value="north">Северный</option></select>
           </div>
-          <button onclick="checkCeilingHeight()" data-i18n="chk.check" data-i18n=t(t(t(t(t("Проверить")))))><span data-i18n=t(t(t(t("Проверить"))))><span data-i18n=t(t(t("Проверить")))><span data-i18n=t(t("Проверить"))><span data-i18n=t("Проверить")>Проверить</span></span></span></span></button>
+          <button onclick="checkCeilingHeight()" data-i18n="chk.check" data-i18n="Проверить"><span data-i18n="Проверить"><span data-i18n="Проверить"><span data-i18n="Проверить"><span data-i18n="Проверить">Проверить</span></span></span></span></button>
           <div class="calc-result hidden" id="ceilingResult"></div>
         </div>
         <div class="card">
@@ -736,7 +736,7 @@ input[type="checkbox"]:checked + label {
           <div class="info-box" style="font-size:.82rem;">
             ⚠️ <span data-i18n="Нормативы могут отличаться в зависимости от региона и типа объекта. Уточняйте действующие СП 54.13330.2022, СП 55.13330.2016 и региональные нормативы.">Нормативы могут отличаться в зависимости от региона и типа объекта. Уточняйте действующие СП 54.13330.2022, СП 55.13330.2016 и региональные нормативы.</span>
           </div>
-          <div class="form-group"><label for="minArea" data-i18n="ext.areaL" data-i18n=Площадь, м²><span data-i18n=Площадь, м²")><span data-i18n=t(t("Площадь, м²"))><span data-i18n=t("Площадь, м²")><span data-i18n="Площадь, м²">Площадь, м²</span></span></span></span></label><input type="number" id="minArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
+          <div class="form-group"><label for="minArea" data-i18n="ext.areaL" data-i18n=Площадь, м²><span data-i18n=Площадь, м²")><span data-i18n="Площадь, м²"><span data-i18n="Площадь, м²"><span data-i18n="Площадь, м²">Площадь, м²</span></span></span></span></label><input type="number" id="minArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
           <div class="form-group">
             <label for="minRoomType" data-i18n="ext.type">Тип</label>
             <select id="minRoomType">
@@ -745,13 +745,13 @@ input[type="checkbox"]:checked + label {
               <option value="bathroom">Ванная</option><option value="toilet">Туалет</option>
             </select>
           </div>
-          <button onclick="checkMinArea()" data-i18n="chk.check" data-i18n=t(t(t(t(t("Проверить")))))><span data-i18n=t(t(t(t("Проверить"))))><span data-i18n=t(t(t("Проверить")))><span data-i18n=t(t("Проверить"))><span data-i18n=t("Проверить")>Проверить</span></span></span></span></button>
+          <button onclick="checkMinArea()" data-i18n="chk.check" data-i18n="Проверить"><span data-i18n="Проверить"><span data-i18n="Проверить"><span data-i18n="Проверить"><span data-i18n="Проверить">Проверить</span></span></span></span></button>
           <div class="calc-result hidden" id="minAreaResult"></div>
         </div>
         <div class="card">
           <h3 data-i18n="ext.volume">📦 Объём помещения</h3>
           <div class="grid-2">
-            <div class="form-group"><label for="volumeArea" data-i18n="ext.volArea" data-i18n=Площадь, м²><span data-i18n=Площадь, м²")><span data-i18n=t(t("Площадь, м²"))><span data-i18n=t("Площадь, м²")><span data-i18n="Площадь, м²">Площадь, м²</span></span></span></span></label><input type="number" id="volumeArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
+            <div class="form-group"><label for="volumeArea" data-i18n="ext.volArea" data-i18n=Площадь, м²><span data-i18n=Площадь, м²")><span data-i18n="Площадь, м²"><span data-i18n="Площадь, м²"><span data-i18n="Площадь, м²">Площадь, м²</span></span></span></span></label><input type="number" id="volumeArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
             <div class="form-group"><label for="volumeHeight" data-i18n="ext.volH">Высота, м</label><input type="number" id="volumeHeight" step="0.01" min="0" value="0" inputmode="decimal"></div>
           </div>
           <button onclick="calculateVolume()" data-i18n="ext.volCalc">Рассчитать</button>
@@ -764,7 +764,7 @@ input[type="checkbox"]:checked + label {
             <div class="form-group"><label for="convertFrom" data-i18n="ext.from">Из</label>
               <select id="convertFrom"><option value="m">м</option><option value="cm">см</option><option value="mm">мм</option><option value="m2">м²</option><option value="cm2">см²</option><option value="ha">га</option></select>
             </div>
-            <div class="form-group"><label for="convertTo" data-i18n="ext.to"><span data-i18n=t(t(t(t("В"))))><span data-i18n=t(t(t("В")))><span data-i18n=t(t("В"))><span data-i18n=t("В")>В</span></span></span></span></label>
+            <div class="form-group"><label for="convertTo" data-i18n="ext.to"><span data-i18n="В"><span data-i18n="В"><span data-i18n="В"><span data-i18n="В">В</span></span></span></span></label>
               <select id="convertTo"><option value="cm">см</option><option value="m">м</option><option value="mm">мм</option><option value="m2">м²</option><option value="cm2">см²</option><option value="ha">га</option></select>
             </div>
           </div>
@@ -854,7 +854,7 @@ input[type="checkbox"]:checked + label {
             <select id="zuCalcCat"><option value="0.10">Населённые пункты (0,10 м)</option><option value="0.20">СХ (0,20 м)</option><option value="0.50">Промышленность (0,50 м)</option></select>
           </div>
           <div class="form-group">
-            <label for="zuCalcK" data-i18n="zu.k"><span data-i18n=t(t(t(t(t("Коэффициент конфигурации k"))))) data-i18n=t(t(t(t(t("Коэффициент конфигурации k"))))) data-i18n=t(t(t(t(t("Коэффициент конфигурации k")))))><span data-i18n=t(t(t(t("Коэффициент конфигурации k"))))><span data-i18n=t(t(t("Коэффициент конфигурации k")))><span data-i18n=t(t("Коэффициент конфигурации k"))><span data-i18n=t("Коэффициент конфигурации k")>Коэффициент конфигурации k</span></span></span></span></span></label>
+            <label for="zuCalcK" data-i18n="zu.k"><span data-i18n="Коэффициент конфигурации k" data-i18n="Коэффициент конфигурации k" data-i18n="Коэффициент конфигурации k"><span data-i18n="Коэффициент конфигурации k"><span data-i18n="Коэффициент конфигурации k"><span data-i18n="Коэффициент конфигурации k"><span data-i18n="Коэффициент конфигурации k">Коэффициент конфигурации k</span></span></span></span></span></label>
             <input type="number" id="zuCalcK" step="0.1" min="0.1" value="1.0" inputmode="decimal">
             <small class="text-muted">1.0 — компактный участок; &gt; 1 — вытянутый / сложной формы (П/0393)</small>
           </div>
@@ -863,13 +863,13 @@ input[type="checkbox"]:checked + label {
         </div>
         <div class="card">
           <h3 data-i18n="zu.tolTitle">📏 Допуск площади по П/0393</h3>
-          <div class="form-group"><label for="zuTolArea" data-i18n="zu.tolArea" data-i18n=Площадь, м²><span data-i18n=Площадь, м²")><span data-i18n=t(t("Площадь, м²"))><span data-i18n=t("Площадь, м²")><span data-i18n="Площадь, м²">Площадь, м²</span></span></span></span></label><input type="number" id="zuTolArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
+          <div class="form-group"><label for="zuTolArea" data-i18n="zu.tolArea" data-i18n=Площадь, м²><span data-i18n=Площадь, м²")><span data-i18n="Площадь, м²"><span data-i18n="Площадь, м²"><span data-i18n="Площадь, м²">Площадь, м²</span></span></span></span></label><input type="number" id="zuTolArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
           <div class="form-group">
             <label for="zuTolCat" data-i18n="zu.tolCat">Категория</label>
             <select id="zuTolCat"><option value="0.10">Населённые пункты</option><option value="0.20">СХ</option><option value="0.50">Промышленность</option></select>
           </div>
           <div class="form-group">
-            <label for="zuTolK" data-i18n="zu.tolK"><span data-i18n=t(t(t(t(t("Коэффициент конфигурации k"))))) data-i18n=t(t(t(t(t("Коэффициент конфигурации k"))))) data-i18n=t(t(t(t(t("Коэффициент конфигурации k")))))><span data-i18n=t(t(t(t("Коэффициент конфигурации k"))))><span data-i18n=t(t(t("Коэффициент конфигурации k")))><span data-i18n=t(t("Коэффициент конфигурации k"))><span data-i18n=t("Коэффициент конфигурации k")>Коэффициент конфигурации k</span></span></span></span></span></label>
+            <label for="zuTolK" data-i18n="zu.tolK"><span data-i18n="Коэффициент конфигурации k" data-i18n="Коэффициент конфигурации k" data-i18n="Коэффициент конфигурации k"><span data-i18n="Коэффициент конфигурации k"><span data-i18n="Коэффициент конфигурации k"><span data-i18n="Коэффициент конфигурации k"><span data-i18n="Коэффициент конфигурации k">Коэффициент конфигурации k</span></span></span></span></span></label>
             <input type="number" id="zuTolK" step="0.1" min="0.1" value="1.0" inputmode="decimal">
           </div>
           <button onclick="calcZuTolerance()" data-i18n="zu.calc">Рассчитать</button>
@@ -1022,7 +1022,7 @@ input[type="checkbox"]:checked + label {
         <div class="card">
           <h3 data-i18n="dv.import">📥 Универсальный импорт измерений</h3>
           <div class="info-box" style="font-size:.85rem;">
-            Форматы: <strong data-i18n=t(t(t(t("CSV"))))><span data-i18n=t(t(t("CSV")))><span data-i18n=t(t("CSV"))><span data-i18n=t("CSV")><span data-i18n="CSV">CSV</span></span></span></span></strong>, <strong data-i18n=t(t(t(t("TXT"))))><span data-i18n=t(t(t("TXT")))><span data-i18n=t(t("TXT"))><span data-i18n=t("TXT")><span data-i18n="TXT">TXT</span></span></span></span></strong>, <strong>GSI</strong> (Leica), <strong>DAT/T00</strong> (Trimble), <strong>M5</strong> (Topcon), <strong>XYZ</strong>.
+            Форматы: <strong data-i18n="CSV"><span data-i18n="CSV"><span data-i18n="CSV"><span data-i18n="CSV"><span data-i18n="CSV">CSV</span></span></span></span></strong>, <strong data-i18n="TXT"><span data-i18n="TXT"><span data-i18n="TXT"><span data-i18n="TXT"><span data-i18n="TXT">TXT</span></span></span></span></strong>, <strong>GSI</strong> (Leica), <strong>DAT/T00</strong> (Trimble), <strong>M5</strong> (Topcon), <strong>XYZ</strong>.
           </div>
           <div class="btn-row">
             <button onclick="document.getElementById('measFileInput').click()">📂 Выбрать файл</button>
@@ -1860,63 +1860,63 @@ function toggleStep(n) {
 function renderGeoCustom() {
   return `
     <div class="form-group mt-3">
-      <label for="geoMethod" data-i18n=t(t(t(t(t("Метод измерений"))))) data-i18n=t(t(t(t(t("Метод измерений"))))) data-i18n=t(t(t(t(t("Метод измерений")))))><span data-i18n=t(t(t(t("Метод измерений"))))><span data-i18n=t(t(t("Метод измерений")))><span data-i18n=t(t("Метод измерений"))><span data-i18n=t("Метод измерений")>Метод измерений</span></span></span></span></label>
+      <label for="geoMethod" data-i18n="Метод измерений" data-i18n="Метод измерений" data-i18n="Метод измерений"><span data-i18n="Метод измерений"><span data-i18n="Метод измерений"><span data-i18n="Метод измерений"><span data-i18n="Метод измерений">Метод измерений</span></span></span></span></label>
       <select id="geoMethod" onchange="State.geoMethod=this.value; saveDebounced()">
         ${['RTK','PPK','Static','Total'].map(v=>`<option value="${v}" ${State.geoMethod===v?'selected':''}>${v}</option>`).join('')}
       </select>
     </div>
     <div class="grid-2">
-      <div class="form-group"><label for="geoCRS" data-i18n=t(t(t(t(t("Система координат / зона МСК"))))) data-i18n=t(t(t(t(t("Система координат / зона МСК"))))) data-i18n=t(t(t(t(t("Система координат / зона МСК")))))><span data-i18n=t(t(t(t("Система координат / зона МСК"))))><span data-i18n=t(t(t("Система координат / зона МСК")))><span data-i18n=t(t("Система координат / зона МСК"))><span data-i18n=t("Система координат / зона МСК")>Система координат / зона МСК</span></span></span></span></label>
+      <div class="form-group"><label for="geoCRS" data-i18n="Система координат / зона МСК" data-i18n="Система координат / зона МСК" data-i18n="Система координат / зона МСК"><span data-i18n="Система координат / зона МСК"><span data-i18n="Система координат / зона МСК"><span data-i18n="Система координат / зона МСК"><span data-i18n="Система координат / зона МСК">Система координат / зона МСК</span></span></span></span></label>
         <input type="text" id="geoCRS" placeholder="МСК-77, зона 1" value="${escapeHtml(State.geoCRS)}" oninput="State.geoCRS=this.value; saveDebounced()"></div>
-      <div class="form-group"><label for="geoBase" data-i18n=t(t(t(t(t("Базовая станция / сеть"))))) data-i18n=t(t(t(t(t("Базовая станция / сеть"))))) data-i18n=t(t(t(t(t("Базовая станция / сеть")))))><span data-i18n=t(t(t(t("Базовая станция / сеть"))))><span data-i18n=t(t(t("Базовая станция / сеть")))><span data-i18n=t(t("Базовая станция / сеть"))><span data-i18n=t("Базовая станция / сеть")>Базовая станция / сеть</span></span></span></span></label>
+      <div class="form-group"><label for="geoBase" data-i18n="Базовая станция / сеть" data-i18n="Базовая станция / сеть" data-i18n="Базовая станция / сеть"><span data-i18n="Базовая станция / сеть"><span data-i18n="Базовая станция / сеть"><span data-i18n="Базовая станция / сеть"><span data-i18n="Базовая станция / сеть">Базовая станция / сеть</span></span></span></span></label>
         <input type="text" id="geoBase" placeholder="BASE1 / RTK-сеть" value="${escapeHtml(State.geoBase)}" oninput="State.geoBase=this.value; saveDebounced()"></div>
     </div>
     <h3>Каталог точек</h3>
     <div class="btn-row">
-      <button class="small" onclick="addGeoPoint()"><span data-i18n=t(t(t(t(t("+ Точка"))))) data-i18n=t(t(t(t(t("+ Точка"))))) data-i18n=t(t(t(t(t("+ Точка")))))><span data-i18n=t(t(t(t("+ Точка"))))><span data-i18n=t(t(t("+ Точка")))><span data-i18n=t(t("+ Точка"))><span data-i18n=t("+ Точка")>+ Точка</span></span></span></span></span></button>
-      <button class="small ghost" onclick="clearGeoPoints()" data-i18n=t(t(t(t(t(t(t(t(t("Очистить"))))))))) data-i18n=t(t(t(t(t(t(t(t(t("Очистить"))))))))) data-i18n=t(t(t(t(t(t(t(t(t("Очистить"))))))))) data-i18n=t(t(t(t(t(t(t(t("Очистить"))))))))><span data-i18n=t(t(t(t(t(t(t("Очистить")))))))><span data-i18n=t(t(t(t(t(t("Очистить"))))))><span data-i18n=t(t(t(t(t("Очистить")))))><span data-i18n=t(t(t(t("Очистить"))))><span data-i18n=t(t(t("Очистить")))><span data-i18n=t(t("Очистить"))><span data-i18n=t("Очистить")>Очистить</span></span></span></span></span></span></span></button>
+      <button class="small" onclick="addGeoPoint()"><span data-i18n="+ Точка" data-i18n="+ Точка" data-i18n="+ Точка"><span data-i18n="+ Точка"><span data-i18n="+ Точка"><span data-i18n="+ Точка"><span data-i18n="+ Точка">+ Точка</span></span></span></span></span></button>
+      <button class="small ghost" onclick="clearGeoPoints()" data-i18n="Очистить" data-i18n="Очистить" data-i18n="Очистить" data-i18n="Очистить"><span data-i18n="Очистить"><span data-i18n="Очистить"><span data-i18n="Очистить"><span data-i18n="Очистить"><span data-i18n="Очистить"><span data-i18n="Очистить"><span data-i18n="Очистить">Очистить</span></span></span></span></span></span></span></button>
       <button class="small ghost" onclick="exportGeoCSV()">💾 CSV</button>
       <button class="small ghost" onclick="exportGeoTXT()">💾 TXT</button>
       <button class="small ghost" onclick="openMapModal()">🗺️ Карта</button>
     </div>
     <div class="geo-table-wrap table-scroll">
       <table class="data-table"><thead><tr>
-        <th data-i18n=№><span data-i18n=№><span data-i18n=t(t("№"))><span data-i18n=t("№")><span data-i18n="№">№</span></span></span></span></th><th>Имя</th><th>X, м</th><th>Y, м</th><th>H, м</th><th>СКП, м</th><th>Метод</th><th></th>
+        <th data-i18n=№><span data-i18n=№><span data-i18n="№"><span data-i18n="№"><span data-i18n="№">№</span></span></span></span></th><th>Имя</th><th>X, м</th><th>Y, м</th><th>H, м</th><th>СКП, м</th><th>Метод</th><th></th>
       </tr></thead><tbody id="geoTableBody"></tbody></table>
     </div>
     <div class="geo-cards" id="geoCardList"></div>
-    <div class="info-box"><strong><span data-i18n=t(t(t(t(t("СКП по точкам:"))))) data-i18n=t(t(t(t(t("СКП по точкам:"))))) data-i18n=t(t(t(t(t("СКП по точкам:")))))><span data-i18n=t(t(t(t("СКП по точкам:"))))><span data-i18n=t(t(t("СКП по точкам:")))><span data-i18n=t(t("СКП по точкам:"))><span data-i18n=t("СКП по точкам:")>СКП по точкам:</span></span></span></span></span></strong><div id="geoStats"><span data-i18n=t(t(t(t(t("нет точек"))))) data-i18n=t(t(t(t(t("нет точек"))))) data-i18n=t(t(t(t(t("нет точек")))))><span data-i18n=t(t(t(t("нет точек"))))><span data-i18n=t(t(t("нет точек")))><span data-i18n=t(t("нет точек"))><span data-i18n=t("нет точек")>нет точек</span></span></span></span></span></div></div>`;
+    <div class="info-box"><strong><span data-i18n="СКП по точкам:" data-i18n="СКП по точкам:" data-i18n="СКП по точкам:"><span data-i18n="СКП по точкам:"><span data-i18n="СКП по точкам:"><span data-i18n="СКП по точкам:"><span data-i18n="СКП по точкам:">СКП по точкам:</span></span></span></span></span></strong><div id="geoStats"><span data-i18n="нет точек" data-i18n="нет точек" data-i18n="нет точек"><span data-i18n="нет точек"><span data-i18n="нет точек"><span data-i18n="нет точек"><span data-i18n="нет точек">нет точек</span></span></span></span></span></div></div>`;
 }
 function renderZuCustom() {
   return `
     <div class="grid-2 mt-3">
-      <div class="form-group"><label for="zuDocArea"><span data-i18n=t(t(t(t(t("Площадь ЗУ по документам, м²"))))) data-i18n=t(t(t(t(t("Площадь ЗУ по документам, м²"))))) data-i18n=t(t(t(t(t("Площадь ЗУ по документам, м²")))))><span data-i18n=t(t(t(t("Площадь ЗУ по документам, м²"))))><span data-i18n=t(t(t("Площадь ЗУ по документам, м²")))><span data-i18n=t(t("Площадь ЗУ по документам, м²"))><span data-i18n=t("Площадь ЗУ по документам, м²")>Площадь ЗУ по документам, м²</span></span></span></span></span></label>
+      <div class="form-group"><label for="zuDocArea"><span data-i18n="Площадь ЗУ по документам, м²" data-i18n="Площадь ЗУ по документам, м²" data-i18n="Площадь ЗУ по документам, м²"><span data-i18n="Площадь ЗУ по документам, м²"><span data-i18n="Площадь ЗУ по документам, м²"><span data-i18n="Площадь ЗУ по документам, м²"><span data-i18n="Площадь ЗУ по документам, м²">Площадь ЗУ по документам, м²</span></span></span></span></span></label>
         <input type="number" id="zuDocArea" step="0.01" min="0" inputmode="decimal" value="${State.zuDocArea||0}" oninput="State.zuDocArea=parseFloat(this.value)||0; saveDebounced()"></div>
-      <div class="form-group"><label for="zuFactArea"><span data-i18n=t(t(t(t(t("Площадь фактическая, м²"))))) data-i18n=t(t(t(t(t("Площадь фактическая, м²"))))) data-i18n=t(t(t(t(t("Площадь фактическая, м²")))))><span data-i18n=t(t(t(t("Площадь фактическая, м²"))))><span data-i18n=t(t(t("Площадь фактическая, м²")))><span data-i18n=t(t("Площадь фактическая, м²"))><span data-i18n=t("Площадь фактическая, м²")>Площадь фактическая, м²</span></span></span></span></span></label>
+      <div class="form-group"><label for="zuFactArea"><span data-i18n="Площадь фактическая, м²" data-i18n="Площадь фактическая, м²" data-i18n="Площадь фактическая, м²"><span data-i18n="Площадь фактическая, м²"><span data-i18n="Площадь фактическая, м²"><span data-i18n="Площадь фактическая, м²"><span data-i18n="Площадь фактическая, м²">Площадь фактическая, м²</span></span></span></span></span></label>
         <input type="number" id="zuFactArea" step="0.01" min="0" inputmode="decimal" value="${State.zuFactArea||0}" oninput="State.zuFactArea=parseFloat(this.value)||0; saveDebounced()"></div>
     </div>
     <div class="form-group">
-      <label for="zuCategory"><span data-i18n=t(t(t(t(t("Категория земель"))))) data-i18n=t(t(t(t(t("Категория земель"))))) data-i18n=t(t(t(t(t("Категория земель")))))><span data-i18n=t(t(t(t("Категория земель"))))><span data-i18n=t(t(t("Категория земель")))><span data-i18n=t(t("Категория земель"))><span data-i18n=t("Категория земель")>Категория земель</span></span></span></span></span></label>
+      <label for="zuCategory"><span data-i18n="Категория земель" data-i18n="Категория земель" data-i18n="Категория земель"><span data-i18n="Категория земель"><span data-i18n="Категория земель"><span data-i18n="Категория земель"><span data-i18n="Категория земель">Категория земель</span></span></span></span></span></label>
       <select id="zuCategory" onchange="State.zuCategory=this.value; saveDebounced()">
-        <option value=""><span data-i18n=t(t(t(t(t("— выберите —"))))) data-i18n=t(t(t(t(t("— выберите —"))))) data-i18n=t(t(t(t(t("— выберите —")))))><span data-i18n=t(t(t(t("— выберите —"))))><span data-i18n=t(t(t("— выберите —")))><span data-i18n=t(t("— выберите —"))><span data-i18n=t("— выберите —")>— выберите —</span></span></span></span></span></option>
+        <option value=""><span data-i18n="— выберите —" data-i18n="— выберите —" data-i18n="— выберите —"><span data-i18n="— выберите —"><span data-i18n="— выберите —"><span data-i18n="— выберите —"><span data-i18n="— выберите —">— выберите —</span></span></span></span></span></option>
         ${['Земли населённых пунктов','Земли сельхозназначения','Земли промышленности','Земли лесного фонда','Земли водного фонда','Земли особо охраняемых территорий','Земли запаса']
           .map(o=>`<option ${State.zuCategory===o?'selected':''}>${o}</option>`).join('')}
       </select>
     </div>
-    <div class="form-group"><label for="zuVRI"><span data-i18n=t(t(t(t(t("ВРИ"))))) data-i18n=t(t(t(t(t("ВРИ"))))) data-i18n=t(t(t(t(t("ВРИ")))))><span data-i18n=t(t(t(t("ВРИ"))))><span data-i18n=t(t(t("ВРИ")))><span data-i18n=t(t("ВРИ"))><span data-i18n=t("ВРИ")>ВРИ</span></span></span></span></span></label>
-      <input type="text" id="zuVRI" placeholder=ИЖС / ЛПХ / садоводство value="${escapeHtml(State.zuVRI)}" oninput="State.zuVRI=this.value; saveDebounced()"></div>
+    <div class="form-group"><label for="zuVRI"><span data-i18n="ВРИ" data-i18n="ВРИ" data-i18n="ВРИ"><span data-i18n="ВРИ"><span data-i18n="ВРИ"><span data-i18n="ВРИ"><span data-i18n="ВРИ">ВРИ</span></span></span></span></span></label>
+      <input type="text" id="zuVRI" placeholder="ИЖС" / ЛПХ / садоводство value="${escapeHtml(State.zuVRI)}" oninput="State.zuVRI=this.value; saveDebounced()"></div>
     <div class="form-group">
-      <label for="zuAreaK"><span data-i18n=t(t(t(t(t("Коэффициент конфигурации k"))))) data-i18n=t(t(t(t(t("Коэффициент конфигурации k"))))) data-i18n=t(t(t(t(t("Коэффициент конфигурации k")))))><span data-i18n=t(t(t(t("Коэффициент конфигурации k"))))><span data-i18n=t(t(t("Коэффициент конфигурации k")))><span data-i18n=t(t("Коэффициент конфигурации k"))><span data-i18n=t("Коэффициент конфигурации k")>Коэффициент конфигурации k</span></span></span></span></span></label>
+      <label for="zuAreaK"><span data-i18n="Коэффициент конфигурации k" data-i18n="Коэффициент конфигурации k" data-i18n="Коэффициент конфигурации k"><span data-i18n="Коэффициент конфигурации k"><span data-i18n="Коэффициент конфигурации k"><span data-i18n="Коэффициент конфигурации k"><span data-i18n="Коэффициент конфигурации k">Коэффициент конфигурации k</span></span></span></span></span></label>
       <input type="number" id="zuAreaK" step="0.1" min="0.1" value="1.0" inputmode="decimal">
       <small class="text-muted">1.0 — компактный; &gt; 1 — вытянутый / сложной формы (П/0393)</small>
     </div>
     <button class="small ghost" onclick="checkZuArea()">⚖️ Проверить расхождение</button>
     <div class="calc-result hidden" id="zuAreaResult"></div>
     <h3 class="mt-3">Смежники / правообладатели</h3>
-    <button class="small" onclick="addNeighbor()"><span data-i18n=t(t(t(t(t("+ Смежник"))))) data-i18n=t(t(t(t(t("+ Смежник"))))) data-i18n=t(t(t(t(t("+ Смежник")))))><span data-i18n=t(t(t(t("+ Смежник"))))><span data-i18n=t(t(t("+ Смежник")))><span data-i18n=t(t("+ Смежник"))><span data-i18n=t("+ Смежник")>+ Смежник</span></span></span></span></span></button>
+    <button class="small" onclick="addNeighbor()"><span data-i18n="+ Смежник" data-i18n="+ Смежник" data-i18n="+ Смежник"><span data-i18n="+ Смежник"><span data-i18n="+ Смежник"><span data-i18n="+ Смежник"><span data-i18n="+ Смежник">+ Смежник</span></span></span></span></span></button>
     <div id="neighborList" class="mt-2"></div>
     <h3 class="mt-3">Сервитуты / обременения / ЗОУИТ</h3>
-    <button class="small" onclick="addServitude()"><span data-i18n=t(t(t(t(t("+ Запись"))))) data-i18n=t(t(t(t(t("+ Запись"))))) data-i18n=t(t(t(t(t("+ Запись")))))><span data-i18n=t(t(t(t("+ Запись"))))><span data-i18n=t(t(t("+ Запись")))><span data-i18n=t(t("+ Запись"))><span data-i18n=t("+ Запись")>+ Запись</span></span></span></span></span></button>
+    <button class="small" onclick="addServitude()"><span data-i18n="+ Запись" data-i18n="+ Запись" data-i18n="+ Запись"><span data-i18n="+ Запись"><span data-i18n="+ Запись"><span data-i18n="+ Запись"><span data-i18n="+ Запись">+ Запись</span></span></span></span></span></button>
     <div id="servitudeList" class="mt-2"></div>
     <h3 class="mt-3">Акт согласования</h3>
     <div class="btn-row">
@@ -1928,7 +1928,7 @@ function renderZuCustom() {
 function renderTechplanCustom() {
   return `
     <h3 class="mt-3">Проёмы</h3>
-    <button class="small" onclick="addOpening()" data-i18n=t(t(t(t("+ Проём"))))><span data-i18n=t(t(t("+ Проём")))><span data-i18n=t(t("+ Проём"))><span data-i18n=t("+ Проём")>+ Проём</span></span></span></button>
+    <button class="small" onclick="addOpening()" data-i18n="+ Проём"><span data-i18n="+ Проём"><span data-i18n="+ Проём"><span data-i18n="+ Проём">+ Проём</span></span></span></button>
     <div id="openingList" class="mt-2"></div>
     <h3 class="mt-3">Инженерные системы</h3>
     ${[['eng1',t(t('Холодное водоснабжение'))],['eng2',t(t('Горячее водоснабжение'))],['eng3',t(t('Водоотведение'))],
@@ -1941,18 +1941,18 @@ function renderTechplanCustom() {
           <label for="${id}">${label}</label>
         </div>`).join('')}
     <h3 class="mt-3">Балконы / лоджии</h3>
-    <button class="small" onclick="addBalcony()" data-i18n=t(t(t(t("+ Балкон/лоджия")))) data-i18n=t(t(t(t("+ Балкон/лоджия")))) data-i18n=t(t(t(t("+ Балкон/лоджия"))))><span data-i18n=t(t(t("+ Балкон/лоджия")))><span data-i18n=t(t("+ Балкон/лоджия"))><span data-i18n=t("+ Балкон/лоджия")><span data-i18n="+ Балкон/лоджия">+ Балкон/лоджия</span></span></span></span></button>
+    <button class="small" onclick="addBalcony()" data-i18n="+ Балкон/лоджия" data-i18n="+ Балкон/лоджия" data-i18n="+ Балкон/лоджия"><span data-i18n="+ Балкон/лоджия"><span data-i18n="+ Балкон/лоджия"><span data-i18n="+ Балкон/лоджия"><span data-i18n="+ Балкон/лоджия">+ Балкон/лоджия</span></span></span></span></button>
     <div id="balconyList" class="mt-2"></div>
     <h3 class="mt-3">🚗 Машино-места</h3>
-    <button class="small" onclick="addParking()" data-i18n=t(t(t(t("+ Машино-место")))) data-i18n=t(t(t(t("+ Машино-место")))) data-i18n=t(t(t(t("+ Машино-место"))))><span data-i18n=t(t(t("+ Машино-место")))><span data-i18n=t(t("+ Машино-место"))><span data-i18n=t("+ Машино-место")><span data-i18n="+ Машино-место">+ Машино-место</span></span></span></span></button>
+    <button class="small" onclick="addParking()" data-i18n="+ Машино-место" data-i18n="+ Машино-место" data-i18n="+ Машино-место"><span data-i18n="+ Машино-место"><span data-i18n="+ Машино-место"><span data-i18n="+ Машино-место"><span data-i18n="+ Машино-место">+ Машино-место</span></span></span></span></button>
     <div id="parkingList" class="mt-2"></div>
     <h3 class="mt-3" data-i18n="Годы">Годы</h3>
     <div class="grid-3">
-      <div class="form-group"><label for="yearBuilt" data-i18n=t(t(t(t("Постройки")))) data-i18n=t(t(t(t("Постройки"))))><span data-i18n=t(t(t("Постройки")))><span data-i18n=t(t("Постройки"))><span data-i18n=t("Постройки")>Постройки</span></span></span></label>
+      <div class="form-group"><label for="yearBuilt" data-i18n="Постройки" data-i18n="Постройки"><span data-i18n="Постройки"><span data-i18n="Постройки"><span data-i18n="Постройки">Постройки</span></span></span></label>
         <input type="number" id="yearBuilt" min="1800" max="2100" inputmode="numeric" value="${escapeHtml(State.yearBuilt)}" oninput="State.yearBuilt=this.value; saveDebounced()"></div>
-      <div class="form-group"><label for="yearRecon" data-i18n=t(t(t(t("Реконструкции")))) data-i18n=t(t(t(t("Реконструкции"))))><span data-i18n=t(t(t("Реконструкции")))><span data-i18n=t(t("Реконструкции"))><span data-i18n=t("Реконструкции")>Реконструкции</span></span></span></label>
+      <div class="form-group"><label for="yearRecon" data-i18n="Реконструкции" data-i18n="Реконструкции"><span data-i18n="Реконструкции"><span data-i18n="Реконструкции"><span data-i18n="Реконструкции">Реконструкции</span></span></span></label>
         <input type="number" id="yearRecon" min="1800" max="2100" inputmode="numeric" value="${escapeHtml(State.yearRecon)}" oninput="State.yearRecon=this.value; saveDebounced()"></div>
-      <div class="form-group"><label for="yearComplete" data-i18n=t(t(t(t("Завершения")))) data-i18n=t(t(t(t("Завершения"))))><span data-i18n=t(t(t("Завершения")))><span data-i18n=t(t("Завершения"))><span data-i18n=t("Завершения")>Завершения</span></span></span></label>
+      <div class="form-group"><label for="yearComplete" data-i18n="Завершения" data-i18n="Завершения"><span data-i18n="Завершения"><span data-i18n="Завершения"><span data-i18n="Завершения">Завершения</span></span></span></label>
         <input type="number" id="yearComplete" min="1800" max="2100" inputmode="numeric" value="${escapeHtml(State.yearComplete)}" oninput="State.yearComplete=this.value; saveDebounced()"></div>
     </div>`;
 }
@@ -1960,14 +1960,14 @@ function renderActCustom() {
   return `
     <div class="info-box mt-3">Акт обследования оформляется при <strong>прекращении существования</strong> ОКС, сносе, гибели, а также при <strong>незавершённом строительстве</strong>.</div>
     <div class="form-group">
-      <label for="actReason"><span data-i18n=t(t(t(t("Причина прекращения / обследования")))) data-i18n=t(t(t(t("Причина прекращения / обследования"))))><span data-i18n=t(t(t("Причина прекращения / обследования")))><span data-i18n=t(t("Причина прекращения / обследования"))><span data-i18n=t("Причина прекращения / обследования")><span data-i18n="Причина прекращения / обследования">Причина прекращения / обследования</span></span></span></span></span></label>
+      <label for="actReason"><span data-i18n="Причина прекращения / обследования" data-i18n="Причина прекращения / обследования"><span data-i18n="Причина прекращения / обследования"><span data-i18n="Причина прекращения / обследования"><span data-i18n="Причина прекращения / обследования"><span data-i18n="Причина прекращения / обследования">Причина прекращения / обследования</span></span></span></span></span></label>
       <select id="actReason" onchange="State.actReason=this.value; saveDebounced()">
         ${[t(t(t(t('Снос / демонтаж')))),'Гибель / уничтожение','Прекращение существования','Незавершённое строительство','Иное']
           .map(o=>`<option ${State.actReason===o?'selected':''}>${o}</option>`).join('')}
       </select>
     </div>
     <div class="form-group">
-      <label for="actDescription"><span data-i18n=t(t(t(t("Описание состояния / заключение")))) data-i18n=t(t(t(t("Описание состояния / заключение"))))><span data-i18n=t(t(t("Описание состояния / заключение")))><span data-i18n=t(t("Описание состояния / заключение"))><span data-i18n=t("Описание состояния / заключение")><span data-i18n="Описание состояния / заключение">Описание состояния / заключение</span></span></span></span></span></label>
+      <label for="actDescription"><span data-i18n="Описание состояния / заключение" data-i18n="Описание состояния / заключение"><span data-i18n="Описание состояния / заключение"><span data-i18n="Описание состояния / заключение"><span data-i18n="Описание состояния / заключение"><span data-i18n="Описание состояния / заключение">Описание состояния / заключение</span></span></span></span></span></label>
       <textarea id="actDescription" rows="4" oninput="State.actDescription=this.value; saveDebounced()">${escapeHtml(State.actDescription)}</textarea>
     </div>`;
 }
@@ -1975,19 +1975,19 @@ function renderActCustom() {
 function renderSignatureCustom() {
   return `
     <div class="form-group mt-3">
-      <label for="docsList" data-i18n=t(t(t(t(t("Перечень полученных документов"))))) data-i18n=t(t(t(t(t("Перечень полученных документов")))))><span data-i18n=t(t(t(t("Перечень полученных документов"))))><span data-i18n=t(t(t("Перечень полученных документов")))><span data-i18n=t(t("Перечень полученных документов"))><span data-i18n=t("Перечень полученных документов")>Перечень полученных документов</span></span></span></span></label>
+      <label for="docsList" data-i18n="Перечень полученных документов" data-i18n="Перечень полученных документов"><span data-i18n="Перечень полученных документов"><span data-i18n="Перечень полученных документов"><span data-i18n="Перечень полученных документов"><span data-i18n="Перечень полученных документов">Перечень полученных документов</span></span></span></span></label>
       <textarea id="docsList" rows="3" oninput="State.docsList=this.value; saveDebounced()">${escapeHtml(State.docsList)}</textarea>
     </div>
     <div class="form-group">
-      <label data-i18n=t(t(t(t(t("Подпись заказчика"))))) data-i18n=t(t(t(t(t("Подпись заказчика")))))><span data-i18n=t(t(t(t("Подпись заказчика"))))><span data-i18n=t(t(t("Подпись заказчика")))><span data-i18n=t(t("Подпись заказчика"))><span data-i18n=t("Подпись заказчика")>Подпись заказчика</span></span></span></span></label>
+      <label data-i18n="Подпись заказчика" data-i18n="Подпись заказчика"><span data-i18n="Подпись заказчика"><span data-i18n="Подпись заказчика"><span data-i18n="Подпись заказчика"><span data-i18n="Подпись заказчика">Подпись заказчика</span></span></span></span></label>
       <div class="sig-wrap">
         <canvas id="sigCustomer" class="sig-canvas"></canvas>
-        <button type="button" class="sig-clear ghost" onclick="clearSig('sigCustomer')" data-i18n=t(t(t(t(t(t(t(t(t("Очистить"))))))))) data-i18n=t(t(t(t(t(t(t(t(t("Очистить"))))))))) data-i18n=t(t(t(t(t(t(t(t(t("Очистить"))))))))) data-i18n=t(t(t(t(t(t(t(t("Очистить"))))))))><span data-i18n=t(t(t(t(t(t(t("Очистить")))))))><span data-i18n=t(t(t(t(t(t("Очистить"))))))><span data-i18n=t(t(t(t(t("Очистить")))))><span data-i18n=t(t(t(t("Очистить"))))><span data-i18n=t(t(t("Очистить")))><span data-i18n=t(t("Очистить"))><span data-i18n=t("Очистить")>Очистить</span></span></span></span></span></span></span></button>
+        <button type="button" class="sig-clear ghost" onclick="clearSig('sigCustomer')" data-i18n="Очистить" data-i18n="Очистить" data-i18n="Очистить" data-i18n="Очистить"><span data-i18n="Очистить"><span data-i18n="Очистить"><span data-i18n="Очистить"><span data-i18n="Очистить"><span data-i18n="Очистить"><span data-i18n="Очистить"><span data-i18n="Очистить">Очистить</span></span></span></span></span></span></span></button>
       </div>
-      <small class="text-muted"><span data-i18n=t(t(t(t(t("Распишитесь пальцем или стилусом"))))) data-i18n=t(t(t(t(t("Распишитесь пальцем или стилусом")))))><span data-i18n=t(t(t(t("Распишитесь пальцем или стилусом"))))><span data-i18n=t(t(t("Распишитесь пальцем или стилусом")))><span data-i18n=t(t("Распишитесь пальцем или стилусом"))><span data-i18n=t("Распишитесь пальцем или стилусом")>Распишитесь пальцем или стилусом</span></span></span></span></span></small>
+      <small class="text-muted"><span data-i18n="Распишитесь пальцем или стилусом" data-i18n="Распишитесь пальцем или стилусом"><span data-i18n="Распишитесь пальцем или стилусом"><span data-i18n="Распишитесь пальцем или стилусом"><span data-i18n="Распишитесь пальцем или стилусом"><span data-i18n="Распишитесь пальцем или стилусом">Распишитесь пальцем или стилусом</span></span></span></span></span></small>
     </div>
     <div class="form-group mt-3">
-      <label data-i18n=t(t(t(t(t("Согласие на обработку персональных данных"))))) data-i18n=t(t(t(t(t("Согласие на обработку персональных данных")))))><span data-i18n=t(t(t(t("Согласие на обработку персональных данных"))))><span data-i18n=t(t(t("Согласие на обработку персональных данных")))><span data-i18n=t(t("Согласие на обработку персональных данных"))><span data-i18n=t("Согласие на обработку персональных данных")>Согласие на обработку персональных данных</span></span></span></span></label>
+      <label data-i18n="Согласие на обработку персональных данных" data-i18n="Согласие на обработку персональных данных"><span data-i18n="Согласие на обработку персональных данных"><span data-i18n="Согласие на обработку персональных данных"><span data-i18n="Согласие на обработку персональных данных"><span data-i18n="Согласие на обработку персональных данных">Согласие на обработку персональных данных</span></span></span></span></label>
       <div class="info-box" style="font-size:.82rem;">
         Согласие заказчика-физлица <strong>обязательно включается в Приложение</strong> межевого плана / техплана (152-ФЗ от 27.07.2006, ст. 9).
       </div>
@@ -2002,26 +2002,26 @@ function renderNormsCustom() {
   const p = State.p0393 || { above:0, under:0, roof:0 };
   return `
     <div class="info-box">
-      <strong data-i18n=t(t(t(t(t("Актуальные XML-схемы:"))))) data-i18n=t(t(t(t(t("Актуальные XML-схемы:")))))><span data-i18n=t(t(t(t("Актуальные XML-схемы:"))))><span data-i18n=t(t(t("Актуальные XML-схемы:")))><span data-i18n=t(t("Актуальные XML-схемы:"))><span data-i18n=t("Актуальные XML-схемы:")>Актуальные XML-схемы:</span></span></span></span></strong>
+      <strong data-i18n="Актуальные XML-схемы:" data-i18n="Актуальные XML-схемы:"><span data-i18n="Актуальные XML-схемы:"><span data-i18n="Актуальные XML-схемы:"><span data-i18n="Актуальные XML-схемы:"><span data-i18n="Актуальные XML-схемы:">Актуальные XML-схемы:</span></span></span></span></strong>
       <ul>
-        <li><strong data-i18n=t(t(t(t(t("Техплан ОКС:")))))><span data-i18n=t(t(t(t("Техплан ОКС:"))))><span data-i18n=t(t(t("Техплан ОКС:")))><span data-i18n=t(t("Техплан ОКС:"))><span data-i18n=t("Техплан ОКС:")>Техплан ОКС:</span></span></span></span></strong> TP_v07_R03</li>
-        <li><strong data-i18n=t(t(t(t(t("Акт обследования:")))))><span data-i18n=t(t(t(t("Акт обследования:"))))><span data-i18n=t(t(t("Акт обследования:")))><span data-i18n=t(t("Акт обследования:"))><span data-i18n=t("Акт обследования:")>Акт обследования:</span></span></span></span></strong> InspectionAct_v03.xsd</li>
-        <li><strong data-i18n=t(t(t(t(t("Межевой план:")))))><span data-i18n=t(t(t(t("Межевой план:"))))><span data-i18n=t(t(t("Межевой план:")))><span data-i18n=t(t("Межевой план:"))><span data-i18n=t("Межевой план:")>Межевой план:</span></span></span></span></strong> MP_v09_R04 (актуальная ревизия)</li>
+        <li><strong data-i18n="Техплан ОКС:"><span data-i18n="Техплан ОКС:"><span data-i18n="Техплан ОКС:"><span data-i18n="Техплан ОКС:"><span data-i18n="Техплан ОКС:">Техплан ОКС:</span></span></span></span></strong> TP_v07_R03</li>
+        <li><strong data-i18n="Акт обследования:"><span data-i18n="Акт обследования:"><span data-i18n="Акт обследования:"><span data-i18n="Акт обследования:"><span data-i18n="Акт обследования:">Акт обследования:</span></span></span></span></strong> InspectionAct_v03.xsd</li>
+        <li><strong data-i18n="Межевой план:"><span data-i18n="Межевой план:"><span data-i18n="Межевой план:"><span data-i18n="Межевой план:"><span data-i18n="Межевой план:">Межевой план:</span></span></span></span></strong> MP_v09_R04 (актуальная ревизия)</li>
       </ul>
     </div>
     <h3 class="mt-3">Проверка площади по П/0393</h3>
     <div class="grid-3">
-      <div class="form-group"><label for="p0393Above" data-i18n=t(t(t(t(t("Надземные, м²"))))) data-i18n=t(t(t(t(t("Надземные, м²")))))><span data-i18n=t(t(t(t("Надземные, м²"))))><span data-i18n=t(t(t("Надземные, м²")))><span data-i18n=t(t("Надземные, м²"))><span data-i18n=t("Надземные, м²")>Надземные, м²</span></span></span></span></label>
+      <div class="form-group"><label for="p0393Above" data-i18n="Надземные, м²" data-i18n="Надземные, м²"><span data-i18n="Надземные, м²"><span data-i18n="Надземные, м²"><span data-i18n="Надземные, м²"><span data-i18n="Надземные, м²">Надземные, м²</span></span></span></span></label>
         <input type="number" id="p0393Above" step="0.01" min="0" inputmode="decimal" value="${p.above ?? 0}"
           oninput="State.p0393=State.p0393||{above:0,under:0,roof:0}; State.p0393.above=parseFloat(this.value)||0; saveDebounced()"></div>
-      <div class="form-group"><label for="p0393Under" data-i18n=t(t(t(t(t("Подземные, м²"))))) data-i18n=t(t(t(t(t("Подземные, м²")))))><span data-i18n=t(t(t(t("Подземные, м²"))))><span data-i18n=t(t(t("Подземные, м²")))><span data-i18n=t(t("Подземные, м²"))><span data-i18n=t("Подземные, м²")>Подземные, м²</span></span></span></span></label>
+      <div class="form-group"><label for="p0393Under" data-i18n="Подземные, м²" data-i18n="Подземные, м²"><span data-i18n="Подземные, м²"><span data-i18n="Подземные, м²"><span data-i18n="Подземные, м²"><span data-i18n="Подземные, м²">Подземные, м²</span></span></span></span></label>
         <input type="number" id="p0393Under" step="0.01" min="0" inputmode="decimal" value="${p.under ?? 0}"
           oninput="State.p0393=State.p0393||{above:0,under:0,roof:0}; State.p0393.under=parseFloat(this.value)||0; saveDebounced()"></div>
-      <div class="form-group"><label for="p0393Roof" data-i18n=t(t(t(t(t("Кровля, м²"))))) data-i18n=t(t(t(t(t("Кровля, м²")))))><span data-i18n=t(t(t(t("Кровля, м²"))))><span data-i18n=t(t(t("Кровля, м²")))><span data-i18n=t(t("Кровля, м²"))><span data-i18n=t("Кровля, м²")>Кровля, м²</span></span></span></span></label>
+      <div class="form-group"><label for="p0393Roof" data-i18n="Кровля, м²" data-i18n="Кровля, м²"><span data-i18n="Кровля, м²"><span data-i18n="Кровля, м²"><span data-i18n="Кровля, м²"><span data-i18n="Кровля, м²">Кровля, м²</span></span></span></span></label>
         <input type="number" id="p0393Roof" step="0.01" min="0" inputmode="decimal" value="${p.roof ?? 0}"
           oninput="State.p0393=State.p0393||{above:0,under:0,roof:0}; State.p0393.roof=parseFloat(this.value)||0; saveDebounced()"></div>
     </div>
-    <button onclick="checkP0393Area()" data-i18n=t(t(t(t(t("Проверить"))))) data-i18n=t(t(t(t(t("Проверить")))))><span data-i18n=t(t(t(t("Проверить"))))><span data-i18n=t(t(t("Проверить")))><span data-i18n=t(t("Проверить"))><span data-i18n=t("Проверить")>Проверить</span></span></span></span></button>
+    <button onclick="checkP0393Area()" data-i18n="Проверить" data-i18n="Проверить"><span data-i18n="Проверить"><span data-i18n="Проверить"><span data-i18n="Проверить"><span data-i18n="Проверить">Проверить</span></span></span></span></button>
     <div class="calc-result hidden" id="p0393Result"></div>`;
 }
 
@@ -2621,11 +2621,11 @@ function renderNeighbors() {
     const d = document.createElement('div');
     d.className = 'neighbor-row';
     d.innerHTML = `
-      <input placeholder=ФИО / организация value="${escapeHtml(n.fio)}" oninput="State.neighbors[${i}].fio=this.value; saveDebounced()">
-      <input placeholder=КН value="${escapeHtml(n.cadnum)}" oninput="State.neighbors[${i}].cadnum=this.value; saveDebounced()">
+      <input placeholder="ФИО" / организация value="${escapeHtml(n.fio)}" oninput="State.neighbors[${i}].fio=this.value; saveDebounced()">
+      <input placeholder="КН" value="${escapeHtml(n.cadnum)}" oninput="State.neighbors[${i}].cadnum=this.value; saveDebounced()">
       <select onchange="State.neighbors[${i}].agree=this.value; saveDebounced()">
         <option ${n.agree==='согласовано'?'selected':''}>согласовано</option>
-        <option ${n.agree===t(t(t(t(t('не согласовано')))))?'selected':''} data-i18n=t(t(t(t(t("не согласовано")))))><span data-i18n=t(t(t(t("не согласовано"))))><span data-i18n=t(t(t("не согласовано")))><span data-i18n=t(t("не согласовано"))><span data-i18n=t("не согласовано")>не согласовано</span></span></span></span></option>
+        <option ${n.agree===t(t(t(t(t('не согласовано')))))?'selected':''} data-i18n="не согласовано"><span data-i18n="не согласовано"><span data-i18n="не согласовано"><span data-i18n="не согласовано"><span data-i18n="не согласовано">не согласовано</span></span></span></span></option>
         <option ${n.agree==='возражение'?'selected':''}>возражение</option>
       </select>
       <button class="small danger" onclick="State.neighbors.splice(${i},1);renderNeighbors();saveDebounced()">✕</button>`;
@@ -2642,13 +2642,13 @@ function renderServitudes() {
     d.className = 'serv-row';
     d.innerHTML = `
       <select onchange="State.servitudes[${i}].type=this.value; saveDebounced()">
-        <option ${s.type===t(t(t(t(t('сервитут')))))?'selected':''} data-i18n=t(t(t(t(t("сервитут")))))><span data-i18n=t(t(t(t("сервитут"))))><span data-i18n=t(t(t("сервитут")))><span data-i18n=t(t("сервитут"))><span data-i18n=t("сервитут")>сервитут</span></span></span></span></option>
+        <option ${s.type===t(t(t(t(t('сервитут')))))?'selected':''} data-i18n="сервитут"><span data-i18n="сервитут"><span data-i18n="сервитут"><span data-i18n="сервитут"><span data-i18n="сервитут">сервитут</span></span></span></span></option>
         <option ${s.type==='аренда'?'selected':''}>аренда</option>
         <option ${s.type==='ЗОУИТ'?'selected':''}>ЗОУИТ</option>
         <option ${s.type==='иное'?'selected':''}>иное</option>
       </select>
-      <input placeholder=КН value="${escapeHtml(s.cadnum)}" oninput="State.servitudes[${i}].cadnum=this.value; saveDebounced()">
-      <input placeholder=Описание value="${escapeHtml(s.note)}" oninput="State.servitudes[${i}].note=this.value; saveDebounced()">
+      <input placeholder="КН" value="${escapeHtml(s.cadnum)}" oninput="State.servitudes[${i}].cadnum=this.value; saveDebounced()">
+      <input placeholder="Описание" value="${escapeHtml(s.note)}" oninput="State.servitudes[${i}].note=this.value; saveDebounced()">
       <button class="small danger" onclick="State.servitudes.splice(${i},1);renderServitudes();saveDebounced()">✕</button>`;
     c.appendChild(d);
   });
@@ -2662,7 +2662,7 @@ function generateAgreementAct() {
       <p><strong>Кадастровый инженер:</strong> ${escapeHtml(State.engineerName||'—')}</p>
       <p><strong>Дата:</strong> ${escapeHtml(State.visitDate||'—')}</p>
       <table style="width:100%;border-collapse:collapse;margin-top:10px;font-size:0.9rem;">
-        <tr style="background:#eee;"><th style="border:1px solid #000;padding:6px;">Смежник</th><th style="border:1px solid #000;padding:6px;" data-i18n=КН><span data-i18n=t(t(t(t("КН"))))><span data-i18n=t(t(t("КН")))><span data-i18n=t(t("КН"))><span data-i18n=t("КН")>КН</span></span></span></span></th><th style="border:1px solid #000;padding:6px;">Результат</th></tr>
+        <tr style="background:#eee;"><th style="border:1px solid #000;padding:6px;">Смежник</th><th style="border:1px solid #000;padding:6px;" data-i18n=КН><span data-i18n="КН"><span data-i18n="КН"><span data-i18n="КН"><span data-i18n="КН">КН</span></span></span></span></th><th style="border:1px solid #000;padding:6px;">Результат</th></tr>
         ${State.neighbors.map(n=>`<tr><td style="border:1px solid #000;padding:6px;">${escapeHtml(n.fio||'—')}</td><td style="border:1px solid #000;padding:6px;">${escapeHtml(n.cadnum||'—')}</td><td style="border:1px solid #000;padding:6px;">${escapeHtml(n.agree)}</td></tr>`).join('')}
       </table>
       <p style="margin-top:20px;">Кадастровый инженер: ________________ / ${escapeHtml(State.engineerName||'')}</p>
@@ -2717,7 +2717,7 @@ function renderOpenings() {
       <input placeholder="Ш, м" value="${escapeHtml(o.width)}" oninput="State.openings[${i}].width=this.value; saveDebounced()">
       <input placeholder="В, м" value="${escapeHtml(o.height)}" oninput="State.openings[${i}].height=this.value; saveDebounced()">
       <input type="number" placeholder="Кол-во" value="${escapeHtml(String(o.count))}" oninput="State.openings[${i}].count=this.value; saveDebounced()">
-      <input placeholder=Материал value="${escapeHtml(o.material||'')}" oninput="State.openings[${i}].material=this.value; saveDebounced()">
+      <input placeholder="Материал" value="${escapeHtml(o.material||'')}" oninput="State.openings[${i}].material=this.value; saveDebounced()">
       <button class="small danger" onclick="State.openings.splice(${i},1);renderOpenings();saveDebounced()">✕</button>`;
     c.appendChild(d);
   });
@@ -2732,10 +2732,10 @@ function renderBalconies() {
     d.className = 'neighbor-row';
     d.innerHTML = `
       <select onchange="State.balconies[${i}].type=this.value; saveDebounced()">
-        <option ${b.type===t(t(t(t('балкон'))))?'selected':''} data-i18n=t(t(t(t("балкон"))))><span data-i18n=t(t(t("балкон")))><span data-i18n=t(t("балкон"))><span data-i18n=t("балкон")><span data-i18n="балкон">балкон</span></span></span></span></option><option ${b.type==='лоджия'?'selected':''}>лоджия</option>
+        <option ${b.type===t(t(t(t('балкон'))))?'selected':''} data-i18n="балкон"><span data-i18n="балкон"><span data-i18n="балкон"><span data-i18n="балкон"><span data-i18n="балкон">балкон</span></span></span></span></option><option ${b.type==='лоджия'?'selected':''}>лоджия</option>
         <option ${b.type==='терраса'?'selected':''}>терраса</option>
       </select>
-      <input placeholder=Площадь, м² value="${escapeHtml(b.area)}" oninput="State.balconies[${i}].area=this.value; saveDebounced()">
+      <input data-i18n-placeholder="Площадь, м²" placeholder="Площадь, м²" м² value="${escapeHtml(b.area)}" oninput="State.balconies[${i}].area=this.value; saveDebounced()">
       <input placeholder="Коэф." value="${escapeHtml(b.coef)}" oninput="State.balconies[${i}].coef=this.value; saveDebounced()">
       <button class="small danger" onclick="State.balconies.splice(${i},1);renderBalconies();saveDebounced()">✕</button>`;
     c.appendChild(d);
@@ -2750,13 +2750,13 @@ function renderParkings() {
     const d = document.createElement('div');
     d.className = 'parking-row';
     d.innerHTML = `
-      <input placeholder=№ value="${escapeHtml(p.number)}" oninput="State.parkings[${i}].number=this.value; saveDebounced()">
+      <input placeholder="№" value="${escapeHtml(p.number)}" oninput="State.parkings[${i}].number=this.value; saveDebounced()">
       <select onchange="State.parkings[${i}].type=this.value; saveDebounced()">
-        <option ${p.type===t(t(t(t('подземное'))))?'selected':''} data-i18n=t(t(t(t("подземное"))))><span data-i18n=t(t(t("подземное")))><span data-i18n=t(t("подземное"))><span data-i18n=t("подземное")><span data-i18n="подземное">подземное</span></span></span></span></option><option ${p.type==='наземное'?'selected':''}>наземное</option>
+        <option ${p.type===t(t(t(t('подземное'))))?'selected':''} data-i18n="подземное"><span data-i18n="подземное"><span data-i18n="подземное"><span data-i18n="подземное"><span data-i18n="подземное">подземное</span></span></span></span></option><option ${p.type==='наземное'?'selected':''}>наземное</option>
         <option ${p.type==='многоуровневое'?'selected':''}>многоуровневое</option>
       </select>
-      <input placeholder=Площадь, м² value="${escapeHtml(p.area)}" oninput="State.parkings[${i}].area=this.value; saveDebounced()">
-      <input placeholder=Уровень value="${escapeHtml(p.level)}" oninput="State.parkings[${i}].level=this.value; saveDebounced()">
+      <input data-i18n-placeholder="Площадь, м²" placeholder="Площадь, м²" м² value="${escapeHtml(p.area)}" oninput="State.parkings[${i}].area=this.value; saveDebounced()">
+      <input placeholder="Уровень" value="${escapeHtml(p.level)}" oninput="State.parkings[${i}].level=this.value; saveDebounced()">
       <button class="small danger" onclick="State.parkings.splice(${i},1);renderParkings();saveDebounced()">✕</button>`;
     c.appendChild(d);
   });
@@ -3240,7 +3240,7 @@ function generateReport() {
 function printReport() {
   const d = collectAllData();
   const w = window.open('', '_blank');
-  w.document.write(`<html><head><meta charset="UTF-8"><title><span data-i18n=t(t(t("Отчёт"))) data-i18n=t(t(t("Отчёт")))><span data-i18n=t(t("Отчёт"))><span data-i18n=t("Отчёт")><span data-i18n="Отчёт">Отчёт</span></span></span></span></title><style>body{font-family:sans-serif;padding:20px;max-width:800px;margin:auto;}table{width:100%;border-collapse:collapse;margin:10px 0;}th,td{border:1px solid #ccc;padding:6px;text-align:left;font-size:12px;}
+  w.document.write(`<html><head><meta charset="UTF-8"><title><span data-i18n="Отчёт" data-i18n="Отчёт"><span data-i18n="Отчёт"><span data-i18n="Отчёт"><span data-i18n="Отчёт">Отчёт</span></span></span></span></title><style>body{font-family:sans-serif;padding:20px;max-width:800px;margin:auto;}table{width:100%;border-collapse:collapse;margin:10px 0;}th,td{border:1px solid #ccc;padding:6px;text-align:left;font-size:12px;}
 /* === АКТИВНОЕ ВЫДЕЛЕНИЕ ЭЛЕМЕНТОВ === */
 .nav-btn.active, .tab.active {
   background: #e0f2fe !important;
@@ -3370,7 +3370,7 @@ input[type="checkbox"]:checked + label {
     <b>КН:</b> ${escapeHtml(d.cadastralNumber||'—')}<br>
     <b>Инженер:</b> ${escapeHtml(d.engineerName||'—')}<br>
     <b>Дата:</b> ${escapeHtml(d.visitDate||'—')}</p>
-    ${d.geoPoints?.length ? `<h3>Геодезические точки</h3><table><tr><th data-i18n=№><span data-i18n=№><span data-i18n=t(t("№"))><span data-i18n=t("№")><span data-i18n="№">№</span></span></span></span></th><th>Имя</th><th>X</th><th>Y</th><th>H</th><th>СКП</th></tr>${d.geoPoints.map((p,i)=>`<tr><td>${i+1}</td><td>${escapeHtml(p.name||'')}</td><td>${escapeHtml(String(p.x))}</td><td>${escapeHtml(String(p.y))}</td><td>${escapeHtml(String(p.h))}</td><td>${escapeHtml(String(p.skp))}</td></tr>`).join('')}</table>` : ''}
+    ${d.geoPoints?.length ? `<h3>Геодезические точки</h3><table><tr><th data-i18n=№><span data-i18n=№><span data-i18n="№"><span data-i18n="№"><span data-i18n="№">№</span></span></span></span></th><th>Имя</th><th>X</th><th>Y</th><th>H</th><th>СКП</th></tr>${d.geoPoints.map((p,i)=>`<tr><td>${i+1}</td><td>${escapeHtml(p.name||'')}</td><td>${escapeHtml(String(p.x))}</td><td>${escapeHtml(String(p.y))}</td><td>${escapeHtml(String(p.h))}</td><td>${escapeHtml(String(p.skp))}</td></tr>`).join('')}</table>` : ''}
     <p style="margin-top:24px;color:#666;font-size:11px;">Сформировано в КИ-Поле · PRO MAX 3.4.9 · @Kotohod</p>
     </body></html>`);
   w.document.close();
@@ -5032,7 +5032,7 @@ function renderLevelingStations() {
   const c = document.getElementById('levelingStations');
   if (!c) return;
   if (!Leveling.stations.length) { c.innerHTML = '<p class="text-muted" style="font-size:.85rem;">Нет станций.</p>'; return; }
-  let html = '<div class="table-scroll"><table class="level-table"><thead><tr><th data-i18n=№><span data-i18n=№><span data-i18n=t(t("№"))><span data-i18n=t("№")><span data-i18n="№">№</span></span></span></span></th><th>Станция</th><th>Задний, м</th><th>Передний, м</th><th>Превышение, мм</th><th></th></tr></thead><tbody>';
+  let html = '<div class="table-scroll"><table class="level-table"><thead><tr><th data-i18n=№><span data-i18n=№><span data-i18n="№"><span data-i18n="№"><span data-i18n="№">№</span></span></span></span></th><th>Станция</th><th>Задний, м</th><th>Передний, м</th><th>Превышение, мм</th><th></th></tr></thead><tbody>';
   Leveling.stations.forEach((s, i) => {
     const d = ((s.back||0) - (s.fore||0)) * 1000;
     html += `<tr data-idx="${i}"><td>${i+1}</td>
@@ -5541,7 +5541,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (exportCard) {
         const hint = document.createElement('div');
         hint.className = 'ios-notice';
-        hint.innerHTML = '📲 <strong>Установите как приложение:</strong> нажмите <b><span data-i18n=t(t(t(t("Поделиться")))) data-i18n=t(t(t(t("Поделиться")))) data-i18n=t(t(t(t("Поделиться"))))><span data-i18n=t(t(t("Поделиться")))><span data-i18n=t(t("Поделиться"))><span data-i18n=t("Поделиться")><span data-i18n="Поделиться">Поделиться</span></span></span></span></span></b> → <b>На экран «Домой»</b>';
+        hint.innerHTML = '📲 <strong>Установите как приложение:</strong> нажмите <b><span data-i18n="Поделиться" data-i18n="Поделиться" data-i18n="Поделиться"><span data-i18n="Поделиться"><span data-i18n="Поделиться"><span data-i18n="Поделиться"><span data-i18n="Поделиться">Поделиться</span></span></span></span></span></b> → <b>На экран «Домой»</b>';
         exportCard.prepend(hint);
       }
     }
