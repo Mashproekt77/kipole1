@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-
 <html lang="ru">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
-<meta content="#2563eb" media="(prefers-color-scheme: light)" name="theme-color"/>
-<meta content="#0f172a" media="(prefers-color-scheme: dark)" name="theme-color"/>
-<meta content="yes" name="apple-mobile-web-app-capable"/>
-<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
-<meta content="КИ-Поле" name="apple-mobile-web-app-title"/>
-<meta content="КИ-Поле — полевые работы кадастрового инженера. Разработчик: @Kotohod" name="description"/>
-<meta content="@Kotohod" name="author"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2563eb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="КИ-Поле">
+<meta name="description" content="КИ-Поле — полевые работы кадастрового инженера. Разработчик: @Kotohod">
+<meta name="author" content="@Kotohod">
 <title>КИ-Поле — PRO MAX 3.4.9 · @Kotohod</title>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -439,782 +438,812 @@ input[type="checkbox"]:checked + label {
 </head>
 <body>
 <div class="app">
-<aside class="sidebar no-print" id="sidebar">
-<div class="sidebar__brand">
-<div class="sidebar__brand-mark">КИ</div>
-<div class="sidebar__brand-text">
-<strong>КИ-Поле</strong>
-<small>PRO MAX 3.4.9 · <a href="https://t.me/Kotohod" rel="noopener" target="_blank">@Kotohod</a></small>
-</div>
-</div>
-<div class="sidebar__progress">
-<div class="progress-ring" id="ringDesktop">
-<svg viewbox="0 0 44 44"><circle class="bg" cx="22" cy="22" r="19"></circle><circle class="fg" cx="22" cy="22" r="19" stroke-dasharray="119.4" stroke-dashoffset="119.4"></circle></svg>
-<div class="progress-ring__text" id="ringDesktopText">0%</div>
-</div>
-<div><strong id="sidebarProgressText" style="font-size:0.88rem;">0 из 0</strong><small style="display:block;">задач выполнено</small></div>
-</div>
-<div class="sidebar__section">Разделы</div>
-<nav class="sidebar__view-nav" id="sidebarViewNav">
-<button class="sidebar__nav-item active" data-view="overview" onclick="switchView('overview')">📋 <span class="label" data-i18n="nav.overview">Обзор</span></button>
-<button class="sidebar__nav-item" data-view="steps" onclick="switchView('steps')">📝 <span class="label" data-i18n="nav.steps">Шаги</span></button>
-<button class="sidebar__nav-item" data-view="tools" onclick="switchView('tools')">🔧 <span class="label" data-i18n="nav.tools">Инструменты</span></button>
-<button class="sidebar__nav-item" data-view="export" onclick="switchView('export')">📤 <span class="label" data-i18n="nav.export"><span data-i18n="Экспорт">Экспорт</span></span></button>
-</nav>
-<div class="sidebar__section">Этапы работ</div>
-<nav class="sidebar__nav" id="sidebarNav"></nav>
-</aside>
-<main class="main" id="mainContent">
-<header class="topbar no-print">
-<div class="progress-ring" id="ringMobile">
-<svg viewbox="0 0 44 44"><circle class="bg" cx="22" cy="22" r="19"></circle><circle class="fg" cx="22" cy="22" r="19" stroke-dasharray="119.4" stroke-dashoffset="119.4"></circle></svg>
-<div class="progress-ring__text" id="ringMobileText">0%</div>
-</div>
-<div class="topbar__title">
-<strong id="topTitle">КИ-Поле</strong>
-<small id="topSubtitle">Новый объект</small>
-</div>
-<span class="topbar__timer" id="topTimer">00:00</span>
-<span aria-live="polite" class="topbar__save" id="saveIndicator" title="Сохранено">✓</span>
-<div class="topbar__actions">
-<button aria-label="Переключить тему" class="icon-btn" id="themeBtn" onclick="toggleTheme()" title="Тема">
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-</button>
-<button aria-label="Высокий контраст" class="icon-btn" onclick="toggleHighContrast()" title="Контраст">
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 3v18"></path></svg>
-</button>
-<button aria-label='t(t(t(t(t("Карта")))))' class="icon-btn" onclick="openMapModal()" title='t(t(t(t(t("Карта")))))'>
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-</button>
-<button aria-label="Запуск через localhost" class="icon-btn" id="localhostBtn" onclick="openLocalhostModal()" title="Запуск через localhost">
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"></path></svg>
-<span class="localhost-dot" id="localhostDot"></span>
-</button>
-<button aria-label="Проекты" class="icon-btn" onclick="openProjects()" title="Проекты">
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
-</button>
-</div>
-<button aria-label="Дополнительные действия" class="icon-btn topbar__more" id="topbarMoreBtn" onclick="openMoreMenu()" title="Ещё">
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.4" viewbox="0 0 24 24">
-<circle cx="12" cy="5" r="1.4"></circle><circle cx="12" cy="12" r="1.4"></circle><circle cx="12" cy="19" r="1.4"></circle>
-</svg>
-<span class="localhost-dot" id="localhostDotMobile"></span>
-</button>
-</header>
-<div class="hidden" id="httpsBanner"></div>
-<section class="view active" id="view-overview">
-<div class="card">
-<h2><span>📌</span> <span data-i18n="overview.title">Общие сведения об объекте</span></h2>
-<div class="form-group">
-<label data-i18n="overview.workType" for="workType">Тип работ</label>
-<select id="workType" onchange="onWorkTypeChange()">
-<option value="techplan">Технический план (ОКС/помещение)</option>
-<option value="survey">Межевой план (ЗУ)</option>
-<option value="act">Акт обследования (снос/прекращение)</option>
-<option value="combined">Комплексные (ЗУ + ОКС)</option>
-</select>
-</div>
-<div class="form-group">
-<label data-i18n="overview.object" for="objectAddress">Объект (адрес / описание)</label>
-<input autocomplete="street-address" id="objectAddress" placeholder="г. Москва, ул. Примерная, д. 1" type="text"/>
-</div>
-<div class="grid-2">
-<div class="form-group"><label data-i18n="overview.date" for="visitDate">Дата выезда</label><input id="visitDate" type="date"/></div>
-<div class="form-group">
-<label data-i18n="overview.cadnum" for="cadastralNumber">Кадастровый номер</label>
-<input autocomplete="off" id="cadastralNumber" inputmode="numeric" placeholder="77:01:0001234:567" type="text"/>
-<div class="field-error">Формат: XX:XX:XXXXXXX:XX</div>
-</div>
-</div>
-<div class="form-group"><label data-i18n="overview.engineer" for="engineerName">Инженер (ФИО, аттестат, СРО)</label><input autocomplete="name" data-i18n-data-i18n-placeholder="Иванов И.И., аттестат №12345" data-i18n-placeholder="Иванов И.И., аттестат №12345" id="engineerName" placeholder="Иванов И.И., аттестат №12345" type="text"/></div>
-<div class="form-group"><label data-i18n="overview.customer" for="customerInfo">Заказчик</label><textarea id="customerInfo" rows="3"></textarea></div>
-<div class="form-group">
-<label data-i18n="overview.geo">📍 Геолокация</label>
-<div class="btn-row">
-<button class="small ghost" onclick="getLocation()">📍 GPS</button>
-<button class="small ghost" onclick="openOnPKK()">🗺️ ПКК</button>
-<button class="small ghost" onclick="openMapModal()">👁️ Карта</button>
-<button class="small ghost" onclick="shareLocation()">📤 Поделиться</button>
-</div>
-<div class="info-box" data-i18n="Координаты не определены" id="locationResult" style="margin-top:8px;font-size:0.85rem;">Координаты не определены</div>
-</div>
-</div>
-<div class="card">
-<h2 data-i18n="qr.title">📱 QR-код кадастрового номера</h2>
-<button class="ghost" data-i18n="qr.btn" onclick="generateQR()"><span data-i18n="Сформировать QR">Сформировать QR</span></button>
-<div class="qr-container" id="qrContainer">—</div>
-</div>
-<div class="card">
-<h2 data-i18n="hist.title">📋 История выездов</h2>
-<div id="historyList"><p class="text-muted" data-i18n="История пуста." style="font-size:0.9rem;">История пуста.</p></div>
-</div>
-<div class="card">
-<div class="card-head"><h2 data-i18n="tmr.title">⏱ Таймер выезда</h2></div>
-<div class="timer-display" id="timerDisplay">00:00:00</div>
-<div class="timer-controls">
-<button data-i18n="timer.start" id="startBtn" onclick="startTimer()">▶ Старт</button>
-<button class="warning hidden" data-i18n="timer.pause" id="pauseBtn" onclick="pauseTimer()">⏸ Пауза</button>
-<button class="ghost" data-i18n="timer.reset" onclick="resetTimer()">↺ Сброс</button>
-</div>
-</div>
-<div class="card">
-<h2 data-i18n="qa.title">🧮 Быстрые действия</h2>
-<div class="btn-row">
-<button class="ghost" data-i18n="qa.save" onclick="saveToHistory()">💾 Сохранить</button>
-<button class="ghost" data-i18n="exp.json" onclick="exportJSON()">📤 JSON</button>
-<button class="ghost" data-i18n="qa.share" onclick="shareProject()">🔗 Поделиться</button>
-<button class="ghost" data-i18n="exp.report" onclick="generateReport()">📄 Отчёт</button>
-<button class="ghost" onclick="printReport()">🖨️ Печать отчёта</button>
-<button class="ghost" data-i18n="exp.zip" onclick="exportZip()">🗜 ZIP-архив</button>
-</div>
-</div>
-</section>
-<section class="view" id="view-steps">
-<div id="stepsContainer"></div>
-<div class="card hidden" id="completionCard">
-<div class="text-center" style="padding:16px;">
-<h2 style="color:var(--success);">✅ Все этапы выполнены!</h2>
-<p class="text-muted">Можно переходить к камеральной обработке.</p>
-<button class="success" onclick="switchView('tools')" style="margin-top:12px;">→ К инструментам</button>
-</div>
-</div>
-</section>
-<section class="view" id="view-tools">
-<div class="tabs-wrap">
-<div class="tabs" id="toolsTabs">
-<div class="tab active" data-i18n="tools.area" data-tab="area" onclick="switchTab('area')">📐 Площадь</div>
-<div class="tab" data-i18n="tools.mansard" data-tab="mansard" onclick="switchTab('mansard')">🏠 Мансарда</div>
-<div class="tab" data-i18n="tools.check" data-tab="check" onclick="switchTab('check')">✅ Контроль</div>
-<div class="tab" data-i18n="tools.extra" data-tab="tools2" onclick="switchTab('tools2')">🔧 Доп.</div>
-<div class="tab" data-i18n="tools.geo" data-tab="geo" onclick="switchTab('geo')">🛰️ Геодезия</div>
-<div class="tab" data-i18n="tools.crs" data-tab="crs" onclick="switchTab('crs')">🌐 CRS / МСК</div>
-<div class="tab" data-i18n="tools.zu" data-tab="zu" onclick="switchTab('zu')">🌍 ЗУ</div>
-<div class="tab" data-i18n="tools.nspd" data-tab="nspd" onclick="switchTab('nspd')">🌐 НСПД</div>
-<div class="tab" data-i18n="tools.cad" data-tab="cad" onclick="switchTab('cad')">📐 CAD/GIS</div>
-<div class="tab" data-i18n="tools.gnss" data-tab="quality" onclick="switchTab('quality')">📡 GNSS</div>
-<div class="tab" data-i18n="tools.voice" data-tab="voice" onclick="switchTab('voice')">🎤 Заметки</div>
-<div class="tab" data-i18n="tools.devices" data-tab="devices" onclick="switchTab('devices')">📡 Приборы</div>
-</div>
-</div>
-<div class="tab-content active" id="tab-area">
-<div class="card">
-<h3 data-i18n="area.title">📐 Калькулятор площади</h3>
-<div class="form-group">
-<label data-i18n="area.figure" for="figureType">Фигура</label>
-<select id="figureType" onchange="updateFigureInputs()">
-<option value="rectangle">Прямоугольник</option>
-<option value="triangle">Треугольник</option>
-<option value="trapezoid">Трапеция</option>
-</select>
-</div>
-<div id="figureInputs"></div>
-<div class="form-group"><label data-i18n="area.name" for="figName">Название</label><input data-i18n-placeholder="area.ph" id="figName" placeholder="Гостиная" type="text"/></div>
-<div class="btn-row">
-<button data-i18n="area.add" onclick="addFigure()">+ Фигура</button>
-<button class="ghost" data-i18n="area.toNotes" onclick="insertAreaToNotes()">📋 В заметки</button>
-</div>
-<div id="figureList"></div>
-<div class="calc-result"><span data-i18n="area.total">Итого</span>: <span id="totalArea">0.00</span> м²</div>
-</div>
-</div>
-<div class="tab-content" id="tab-mansard">
-<div class="card">
-<h3 data-i18n="mans.title">🏠 Мансарда</h3>
-<div class="form-group">
-<label data-i18n="mans.roof" for="roofType">Тип крыши</label>
-<select id="roofType"><option value="gable">Двускатная</option><option value="single">Односкатная</option></select>
-</div>
-<div class="grid-2">
-<div class="form-group"><label data-i18n="mans.w" for="mansardWidth">Ширина, м</label><input id="mansardWidth" inputmode="decimal" min="0" step="0.01" type="number" value="0"/></div>
-<div class="form-group"><label data-i18n="mans.l" for="mansardLength">Длина, м</label><input id="mansardLength" inputmode="decimal" min="0" step="0.01" type="number" value="0"/></div>
-</div>
-<div class="grid-2">
-<div class="form-group"><label data-i18n="mans.h" for="mansardWallHeight">Высота стены, м</label><input id="mansardWallHeight" inputmode="decimal" min="0" step="0.01" type="number" value="0"/></div>
-<div class="form-group"><label data-i18n="mans.angle" for="mansardAngle">Угол, °</label><input id="mansardAngle" inputmode="decimal" min="0" step="0.1" type="number" value="0"/></div>
-</div>
-<button data-i18n="mans.calc" onclick="calculateMansard()">Рассчитать</button>
-<div class="calc-result hidden" id="mansardResult"></div>
-</div>
-</div>
-<div class="tab-content" id="tab-check">
-<div class="card">
-<h3 data-i18n="chk.diff">⚖️ Расхождение площадей</h3>
-<div class="grid-2">
-<div class="form-group"><label data-i18n="chk.actual" for="actualArea">Фактическая, м²</label><input id="actualArea" inputmode="decimal" min="0" step="0.01" type="number" value="0"/></div>
-<div class="form-group"><label data-i18n="chk.doc" for="docArea">По документам, м²</label><input id="docArea" inputmode="decimal" min="0" step="0.01" type="number" value="0"/></div>
-</div>
-<button data-i18n="Проверить" onclick="checkAreaDifference()">Проверить</button>
-<div class="calc-result hidden" id="areaCheckResult"></div>
-</div>
-<div class="card">
-<h3 data-i18n="chk.contour">🔄 Замкнутый контур</h3>
-<div class="form-group"><label data-i18n="chk.wallTotal" for="wallTotal">Контрольная длина, м</label><input id="wallTotal" inputmode="decimal" min="0" step="0.01" type="number" value="0"/></div>
-<div id="wallSegments"></div>
-<div class="btn-row">
-<button data-i18n="chk.addSeg" onclick="addWallSegment()">+ Отрезок</button>
-<button class="ghost" data-i18n="Проверить" onclick="checkWallContour()">Проверить</button>
-</div>
-<div class="calc-result hidden" id="wallCheckResult"></div>
-</div>
-<div class="card">
-<h3 data-i18n="chk.err">🎯 Погрешность измерений</h3>
-<div class="info-box" style="font-size:.82rem;">
+  <aside class="sidebar no-print" id="sidebar">
+    <div class="sidebar__brand">
+      <div class="sidebar__brand-mark">КИ</div>
+      <div class="sidebar__brand-text">
+        <strong>КИ-Поле</strong>
+        <small>PRO MAX 3.4.9 · <a href="https://t.me/Kotohod" target="_blank" rel="noopener">@Kotohod</a></small>
+      </div>
+    </div>
+    <div class="sidebar__progress">
+      <div class="progress-ring" id="ringDesktop">
+        <svg viewBox="0 0 44 44"><circle class="bg" cx="22" cy="22" r="19"/><circle class="fg" cx="22" cy="22" r="19" stroke-dasharray="119.4" stroke-dashoffset="119.4"/></svg>
+        <div class="progress-ring__text" id="ringDesktopText">0%</div>
+      </div>
+      <div><strong id="sidebarProgressText" style="font-size:0.88rem;">0 из 0</strong><small style="display:block;">задач выполнено</small></div>
+    </div>
+    <div class="sidebar__section">Разделы</div>
+    <nav class="sidebar__view-nav" id="sidebarViewNav">
+      <button class="sidebar__nav-item active" data-view="overview" onclick="switchView('overview')">📋 <span class="label" data-i18n="nav.overview">Обзор</span></button>
+      <button class="sidebar__nav-item" data-view="steps" onclick="switchView('steps')">📝 <span class="label" data-i18n="nav.steps">Шаги</span></button>
+      <button class="sidebar__nav-item" data-view="tools" onclick="switchView('tools')">🔧 <span class="label" data-i18n="nav.tools">Инструменты</span></button>
+      <button class="sidebar__nav-item" data-view="export" onclick="switchView('export')">📤 <span class="label" data-i18n="nav.export"><span data-i18n="Экспорт">Экспорт</span></span></button>
+    </nav>
+    <div class="sidebar__section">Этапы работ</div>
+    <nav class="sidebar__nav" id="sidebarNav"></nav>
+  </aside>
+
+  <main class="main" id="mainContent">
+    <header class="topbar no-print">
+      <div class="progress-ring" id="ringMobile">
+        <svg viewBox="0 0 44 44"><circle class="bg" cx="22" cy="22" r="19"/><circle class="fg" cx="22" cy="22" r="19" stroke-dasharray="119.4" stroke-dashoffset="119.4"/></svg>
+        <div class="progress-ring__text" id="ringMobileText">0%</div>
+      </div>
+      <div class="topbar__title">
+        <strong id="topTitle">КИ-Поле</strong>
+        <small id="topSubtitle">Новый объект</small>
+      </div>
+      <span class="topbar__timer" id="topTimer">00:00</span>
+      <span class="topbar__save" id="saveIndicator" aria-live="polite" title="Сохранено">✓</span>
+      <div class="topbar__actions">
+        <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" title="Тема" aria-label="Переключить тему">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="icon-btn" onclick="toggleHighContrast()" title="Контраст" aria-label="Высокий контраст">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/></svg>
+        </button>
+        <button class="icon-btn" onclick="openMapModal()" title=t(t(t(t(t("Карта"))))) aria-label=t(t(t(t(t("Карта")))))>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </button>
+        <button class="icon-btn" id="localhostBtn" onclick="openLocalhostModal()" title="Запуск через localhost" aria-label="Запуск через localhost">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg>
+          <span class="localhost-dot" id="localhostDot"></span>
+        </button>
+        <button class="icon-btn" onclick="openProjects()" title="Проекты" aria-label="Проекты">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        </button>
+      </div>
+      <button class="icon-btn topbar__more" id="topbarMoreBtn" onclick="openMoreMenu()" title="Ещё" aria-label="Дополнительные действия">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="5" r="1.4"/><circle cx="12" cy="12" r="1.4"/><circle cx="12" cy="19" r="1.4"/>
+        </svg>
+        <span class="localhost-dot" id="localhostDotMobile"></span>
+      </button>
+    </header>
+
+    <div id="httpsBanner" class="hidden"></div>
+
+    <section class="view active" id="view-overview">
+      <div class="card">
+        <h2><span>📌</span> <span data-i18n="overview.title">Общие сведения об объекте</span></h2>
+        <div class="form-group">
+          <label for="workType" data-i18n="overview.workType">Тип работ</label>
+          <select id="workType" onchange="onWorkTypeChange()">
+            <option value="techplan">Технический план (ОКС/помещение)</option>
+            <option value="survey">Межевой план (ЗУ)</option>
+            <option value="act">Акт обследования (снос/прекращение)</option>
+            <option value="combined">Комплексные (ЗУ + ОКС)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="objectAddress" data-i18n="overview.object">Объект (адрес / описание)</label>
+          <input type="text" id="objectAddress" placeholder="г. Москва, ул. Примерная, д. 1" autocomplete="street-address">
+        </div>
+        <div class="grid-2">
+          <div class="form-group"><label for="visitDate" data-i18n="overview.date">Дата выезда</label><input type="date" id="visitDate"></div>
+          <div class="form-group">
+            <label for="cadastralNumber" data-i18n="overview.cadnum">Кадастровый номер</label>
+            <input type="text" id="cadastralNumber" placeholder="77:01:0001234:567" inputmode="numeric" autocomplete="off">
+            <div class="field-error">Формат: XX:XX:XXXXXXX:XX</div>
+          </div>
+        </div>
+        <div class="form-group"><label for="engineerName" data-i18n="overview.engineer">Инженер (ФИО, аттестат, СРО)</label><input type="text" id="engineerName"  data-i18n-data-i18n-placeholder="Иванов И.И., аттестат №12345" placeholder="Иванов И.И., аттестат №12345" data-i18n-placeholder="Иванов И.И., аттестат №12345" placeholder="Иванов И.И., аттестат №12345" autocomplete="name"></div>
+        <div class="form-group"><label for="customerInfo" data-i18n="overview.customer">Заказчик</label><textarea id="customerInfo" rows="3"></textarea></div>
+        <div class="form-group">
+          <label data-i18n="overview.geo">📍 Геолокация</label>
+          <div class="btn-row">
+            <button class="small ghost" onclick="getLocation()">📍 GPS</button>
+            <button class="small ghost" onclick="openOnPKK()">🗺️ ПКК</button>
+            <button class="small ghost" onclick="openMapModal()">👁️ Карта</button>
+            <button class="small ghost" onclick="shareLocation()">📤 Поделиться</button>
+          </div>
+          <div id="locationResult" class="info-box" style="margin-top:8px;font-size:0.85rem;" data-i18n="Координаты не определены">Координаты не определены</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 data-i18n="qr.title">📱 QR-код кадастрового номера</h2>
+        <button class="ghost" onclick="generateQR()" data-i18n="qr.btn"><span data-i18n=t("Сформировать QR")>Сформировать QR</span></button>
+        <div class="qr-container" id="qrContainer">—</div>
+      </div>
+
+      <div class="card">
+        <h2 data-i18n="hist.title">📋 История выездов</h2>
+        <div id="historyList"><p class="text-muted" style="font-size:0.9rem;" data-i18n="История пуста.">История пуста.</p></div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><h2 data-i18n="tmr.title">⏱ Таймер выезда</h2></div>
+        <div class="timer-display" id="timerDisplay">00:00:00</div>
+        <div class="timer-controls">
+          <button onclick="startTimer()" id="startBtn" data-i18n="timer.start">▶ Старт</button>
+          <button onclick="pauseTimer()" id="pauseBtn" class="warning hidden" data-i18n="timer.pause">⏸ Пауза</button>
+          <button onclick="resetTimer()" class="ghost" data-i18n="timer.reset">↺ Сброс</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 data-i18n="qa.title">🧮 Быстрые действия</h2>
+        <div class="btn-row">
+          <button class="ghost" onclick="saveToHistory()" data-i18n="qa.save">💾 Сохранить</button>
+          <button class="ghost" onclick="exportJSON()" data-i18n="exp.json">📤 JSON</button>
+          <button class="ghost" onclick="shareProject()" data-i18n="qa.share">🔗 Поделиться</button>
+          <button class="ghost" onclick="generateReport()" data-i18n="exp.report">📄 Отчёт</button>
+          <button class="ghost" onclick="printReport()">🖨️ Печать отчёта</button>
+          <button class="ghost" onclick="exportZip()" data-i18n="exp.zip">🗜 ZIP-архив</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" id="view-steps">
+      <div id="stepsContainer"></div>
+      <div class="card hidden" id="completionCard">
+        <div class="text-center" style="padding:16px;">
+          <h2 style="color:var(--success);">✅ Все этапы выполнены!</h2>
+          <p class="text-muted">Можно переходить к камеральной обработке.</p>
+          <button class="success" onclick="switchView('tools')" style="margin-top:12px;">→ К инструментам</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" id="view-tools">
+      <div class="tabs-wrap">
+        <div class="tabs" id="toolsTabs">
+          <div class="tab active" data-tab="area" onclick="switchTab('area')" data-i18n="tools.area">📐 Площадь</div>
+          <div class="tab" data-tab="mansard" onclick="switchTab('mansard')" data-i18n="tools.mansard">🏠 Мансарда</div>
+          <div class="tab" data-tab="check" onclick="switchTab('check')" data-i18n="tools.check">✅ Контроль</div>
+          <div class="tab" data-tab="tools2" onclick="switchTab('tools2')" data-i18n="tools.extra">🔧 Доп.</div>
+          <div class="tab" data-tab="geo" onclick="switchTab('geo')" data-i18n="tools.geo">🛰️ Геодезия</div>
+          <div class="tab" data-tab="crs" onclick="switchTab('crs')" data-i18n="tools.crs">🌐 CRS / МСК</div>
+          <div class="tab" data-tab="zu" onclick="switchTab('zu')" data-i18n="tools.zu">🌍 ЗУ</div>
+          <div class="tab" data-tab="nspd" onclick="switchTab('nspd')" data-i18n="tools.nspd">🌐 НСПД</div>
+          <div class="tab" data-tab="cad" onclick="switchTab('cad')" data-i18n="tools.cad">📐 CAD/GIS</div>
+          <div class="tab" data-tab="quality" onclick="switchTab('quality')" data-i18n="tools.gnss">📡 GNSS</div>
+          <div class="tab" data-tab="voice" onclick="switchTab('voice')" data-i18n="tools.voice">🎤 Заметки</div>
+          <div class="tab" data-tab="devices" onclick="switchTab('devices')" data-i18n="tools.devices">📡 Приборы</div>
+        </div>
+      </div>
+
+      <div class="tab-content active" id="tab-area">
+        <div class="card">
+          <h3 data-i18n="area.title">📐 Калькулятор площади</h3>
+          <div class="form-group">
+            <label for="figureType" data-i18n="area.figure">Фигура</label>
+            <select id="figureType" onchange="updateFigureInputs()">
+              <option value="rectangle">Прямоугольник</option>
+              <option value="triangle">Треугольник</option>
+              <option value="trapezoid">Трапеция</option>
+            </select>
+          </div>
+          <div id="figureInputs"></div>
+          <div class="form-group"><label for="figName" data-i18n="area.name">Название</label><input type="text" id="figName" data-i18n-placeholder="area.ph" placeholder="Гостиная"></div>
+          <div class="btn-row">
+            <button onclick="addFigure()" data-i18n="area.add">+ Фигура</button>
+            <button class="ghost" onclick="insertAreaToNotes()" data-i18n="area.toNotes">📋 В заметки</button>
+          </div>
+          <div id="figureList"></div>
+          <div class="calc-result"><span data-i18n="area.total">Итого</span>: <span id="totalArea">0.00</span> м²</div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-mansard">
+        <div class="card">
+          <h3 data-i18n="mans.title">🏠 Мансарда</h3>
+          <div class="form-group">
+            <label for="roofType" data-i18n="mans.roof">Тип крыши</label>
+            <select id="roofType"><option value="gable">Двускатная</option><option value="single">Односкатная</option></select>
+          </div>
+          <div class="grid-2">
+            <div class="form-group"><label for="mansardWidth" data-i18n="mans.w">Ширина, м</label><input type="number" id="mansardWidth" step="0.01" min="0" value="0" inputmode="decimal"></div>
+            <div class="form-group"><label for="mansardLength" data-i18n="mans.l">Длина, м</label><input type="number" id="mansardLength" step="0.01" min="0" value="0" inputmode="decimal"></div>
+          </div>
+          <div class="grid-2">
+            <div class="form-group"><label for="mansardWallHeight" data-i18n="mans.h">Высота стены, м</label><input type="number" id="mansardWallHeight" step="0.01" min="0" value="0" inputmode="decimal"></div>
+            <div class="form-group"><label for="mansardAngle" data-i18n="mans.angle">Угол, °</label><input type="number" id="mansardAngle" step="0.1" min="0" value="0" inputmode="decimal"></div>
+          </div>
+          <button onclick="calculateMansard()" data-i18n="mans.calc">Рассчитать</button>
+          <div class="calc-result hidden" id="mansardResult"></div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-check">
+        <div class="card">
+          <h3 data-i18n="chk.diff">⚖️ Расхождение площадей</h3>
+          <div class="grid-2">
+            <div class="form-group"><label for="actualArea" data-i18n="chk.actual">Фактическая, м²</label><input type="number" id="actualArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
+            <div class="form-group"><label for="docArea" data-i18n="chk.doc">По документам, м²</label><input type="number" id="docArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
+          </div>
+          <button onclick="checkAreaDifference()" data-i18n="chk.check" data-i18n=t(t(t(t(t("Проверить")))))><span data-i18n=t(t(t(t("Проверить"))))><span data-i18n=t(t(t("Проверить")))><span data-i18n=t(t("Проверить"))><span data-i18n=t("Проверить")>Проверить</span></span></span></span></button>
+          <div class="calc-result hidden" id="areaCheckResult"></div>
+        </div>
+        <div class="card">
+          <h3 data-i18n="chk.contour">🔄 Замкнутый контур</h3>
+          <div class="form-group"><label for="wallTotal" data-i18n="chk.wallTotal">Контрольная длина, м</label><input type="number" id="wallTotal" step="0.01" min="0" value="0" inputmode="decimal"></div>
+          <div id="wallSegments"></div>
+          <div class="btn-row">
+            <button onclick="addWallSegment()" data-i18n="chk.addSeg">+ Отрезок</button>
+            <button class="ghost" onclick="checkWallContour()" data-i18n=t(t(t(t(t("Проверить"))))) data-i18n=t(t(t(t(t("Проверить")))))><span data-i18n=t(t(t(t("Проверить"))))><span data-i18n=t(t(t("Проверить")))><span data-i18n=t(t("Проверить"))><span data-i18n=t("Проверить")>Проверить</span></span></span></span></button>
+          </div>
+          <div class="calc-result hidden" id="wallCheckResult"></div>
+        </div>
+        <div class="card">
+          <h3 data-i18n="chk.err">🎯 Погрешность измерений</h3>
+          <div class="info-box" style="font-size:.82rem;">
             Согласно п.18 П/0393, допустимое расхождение первоначальных и контрольных определений не должно превышать <strong>удвоенного значения СКП</strong>.
           </div>
-<div class="form-group">
-<label data-i18n="chk.device" for="deviceType">Прибор</label>
-<select id="deviceType">
-<option value="laser">Дальномер ±1.5 мм</option>
-<option value="tape">Рулетка ±2 мм</option>
-<option value="tachymeter">Тахеометр ±3 мм</option>
-<option value="gnss">GNSS RTK ±15 мм</option>
-</select>
-</div>
-<div class="grid-2">
-<div class="form-group"><label data-i18n="chk.devErr" for="deviceError">Погрешность, мм</label><input id="deviceError" inputmode="decimal" min="0" step="0.1" type="number" value="1.5"/></div>
-<div class="form-group"><label data-i18n="chk.nMeas" for="measureCount">Кол-во измерений</label><input id="measureCount" inputmode="numeric" min="1" type="number" value="2"/></div>
-</div>
-<div class="form-group">
-<label data-i18n="chk.cat" for="landCategory"><span data-i18n="Категория земель">Категория земель</span></label>
-<select id="landCategory">
-<option value="0.10">Населённые пункты (0,10 м)</option>
-<option value="0.20">СХ / ЛПХ (0,20 м)</option>
-<option value="0.50">Промышленность (0,50 м)</option>
-</select>
-</div>
-<button data-i18n="chk.calc" onclick="calculateError()">Рассчитать</button>
-<div class="calc-result hidden" id="errorResult"></div>
-</div>
-</div>
-<div class="tab-content" id="tab-tools2">
-<div class="card">
-<h3 data-i18n="ext.rooms">🏠 Помещения</h3>
-<div class="grid-3">
-<div class="form-group"><label data-i18n="ext.roomName" for="roomName">Название</label><input id="roomName" placeholder="Гостиная" type="text"/></div>
-<div class="form-group"><label data-i18n="ext.w" for="roomWidth">Ширина, м</label><input id="roomWidth" inputmode="decimal" min="0" step="0.01" type="number" value="0"/></div>
-<div class="form-group"><label data-i18n="ext.l" for="roomLength">Длина, м</label><input id="roomLength" inputmode="decimal" min="0" step="0.01" type="number" value="0"/></div>
-</div>
-<button data-i18n="ext.addRoom" onclick="addRoom()">+ Комната</button>
-<div class="room-plan" id="roomPlan"></div>
-<div class="calc-result">Итого: <span id="roomTotalArea">0.00</span> м²</div>
-</div>
-<div class="card">
-<h3 data-i18n="ext.ceil">📏 Высота потолков</h3>
-<div class="info-box" style="font-size:.82rem;">
+          <div class="form-group">
+            <label for="deviceType" data-i18n="chk.device">Прибор</label>
+            <select id="deviceType">
+              <option value="laser">Дальномер ±1.5 мм</option>
+              <option value="tape">Рулетка ±2 мм</option>
+              <option value="tachymeter">Тахеометр ±3 мм</option>
+              <option value="gnss">GNSS RTK ±15 мм</option>
+            </select>
+          </div>
+          <div class="grid-2">
+            <div class="form-group"><label for="deviceError" data-i18n="chk.devErr">Погрешность, мм</label><input type="number" id="deviceError" step="0.1" min="0" value="1.5" inputmode="decimal"></div>
+            <div class="form-group"><label for="measureCount" data-i18n="chk.nMeas">Кол-во измерений</label><input type="number" id="measureCount" min="1" value="2" inputmode="numeric"></div>
+          </div>
+          <div class="form-group">
+            <label for="landCategory" data-i18n="chk.cat"><span data-i18n=t(t(t(t(t("Категория земель"))))) data-i18n=t(t(t(t(t("Категория земель"))))) data-i18n=t(t(t(t(t("Категория земель")))))><span data-i18n=t(t(t(t("Категория земель"))))><span data-i18n=t(t(t("Категория земель")))><span data-i18n=t(t("Категория земель"))><span data-i18n=t("Категория земель")>Категория земель</span></span></span></span></span></label>
+            <select id="landCategory">
+              <option value="0.10">Населённые пункты (0,10 м)</option>
+              <option value="0.20">СХ / ЛПХ (0,20 м)</option>
+              <option value="0.50">Промышленность (0,50 м)</option>
+            </select>
+          </div>
+          <button onclick="calculateError()" data-i18n="chk.calc">Рассчитать</button>
+          <div class="calc-result hidden" id="errorResult"></div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-tools2">
+        <div class="card">
+          <h3 data-i18n="ext.rooms">🏠 Помещения</h3>
+          <div class="grid-3">
+            <div class="form-group"><label for="roomName" data-i18n="ext.roomName">Название</label><input type="text" id="roomName" placeholder="Гостиная"></div>
+            <div class="form-group"><label for="roomWidth" data-i18n="ext.w">Ширина, м</label><input type="number" id="roomWidth" step="0.01" min="0" value="0" inputmode="decimal"></div>
+            <div class="form-group"><label for="roomLength" data-i18n="ext.l">Длина, м</label><input type="number" id="roomLength" step="0.01" min="0" value="0" inputmode="decimal"></div>
+          </div>
+          <button onclick="addRoom()" data-i18n="ext.addRoom">+ Комната</button>
+          <div class="room-plan" id="roomPlan"></div>
+          <div class="calc-result">Итого: <span id="roomTotalArea">0.00</span> м²</div>
+        </div>
+        <div class="card">
+          <h3 data-i18n="ext.ceil">📏 Высота потолков</h3>
+          <div class="info-box" style="font-size:.82rem;">
             ⚠️ <span data-i18n="Нормативы могут отличаться в зависимости от региона и типа объекта. Уточняйте действующие СП 54.13330.2022, СП 55.13330.2016 и региональные нормативы градостроительного проектирования.">Нормативы могут отличаться в зависимости от региона и типа объекта. Уточняйте действующие СП 54.13330.2022, СП 55.13330.2016 и региональные нормативы градостроительного проектирования.</span>
-</div>
-<div class="form-group"><label data-i18n="ext.h" for="ceilingHeight">Высота, м</label><input id="ceilingHeight" inputmode="decimal" min="0" step="0.01" type="number" value="0"/></div>
-<div class="form-group">
-<label data-i18n="ext.roomType" for="roomType">Тип помещения</label>
-<select id="roomType">
-<option value="living">Жилая</option><option value="kitchen">Кухня</option>
-<option value="corridor">Коридор</option><option value="bathroom">Санузел</option>
-<option value="mansard">Мансарда</option><option value="nonresidential">Нежилое</option>
-</select>
-</div>
-<div class="form-group">
-<label data-i18n="ext.region" for="region">Регион</label>
-<select id="region"><option value="normal">Обычный</option><option value="north">Северный</option></select>
-</div>
-<button data-i18n="Проверить" onclick="checkCeilingHeight()">Проверить</button>
-<div class="calc-result hidden" id="ceilingResult"></div>
-</div>
-<div class="card">
-<h3 data-i18n="ext.minArea">🛏️ Минимальные площади</h3>
-<div class="info-box" style="font-size:.82rem;">
+          </div>
+          <div class="form-group"><label for="ceilingHeight" data-i18n="ext.h">Высота, м</label><input type="number" id="ceilingHeight" step="0.01" min="0" value="0" inputmode="decimal"></div>
+          <div class="form-group">
+            <label for="roomType" data-i18n="ext.roomType">Тип помещения</label>
+            <select id="roomType">
+              <option value="living">Жилая</option><option value="kitchen">Кухня</option>
+              <option value="corridor">Коридор</option><option value="bathroom">Санузел</option>
+              <option value="mansard">Мансарда</option><option value="nonresidential">Нежилое</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="region" data-i18n="ext.region">Регион</label>
+            <select id="region"><option value="normal">Обычный</option><option value="north">Северный</option></select>
+          </div>
+          <button onclick="checkCeilingHeight()" data-i18n="chk.check" data-i18n=t(t(t(t(t("Проверить")))))><span data-i18n=t(t(t(t("Проверить"))))><span data-i18n=t(t(t("Проверить")))><span data-i18n=t(t("Проверить"))><span data-i18n=t("Проверить")>Проверить</span></span></span></span></button>
+          <div class="calc-result hidden" id="ceilingResult"></div>
+        </div>
+        <div class="card">
+          <h3 data-i18n="ext.minArea">🛏️ Минимальные площади</h3>
+          <div class="info-box" style="font-size:.82rem;">
             ⚠️ <span data-i18n="Нормативы могут отличаться в зависимости от региона и типа объекта. Уточняйте действующие СП 54.13330.2022, СП 55.13330.2016 и региональные нормативы.">Нормативы могут отличаться в зависимости от региона и типа объекта. Уточняйте действующие СП 54.13330.2022, СП 55.13330.2016 и региональные нормативы.</span>
-</div>
-<div class="form-group"><label data-i18n="Площадь," for="minArea" м²=""><span data-i18n="Площадь, м²">Площадь, м²</span></label><input id="minArea" inputmode="decimal" min="0" step="0.01" type="number" value="0"/></div>
-<div class="form-group">
-<label data-i18n="ext.type" for="minRoomType">Тип</label>
-<select id="minRoomType">
-<option value="living_apt">Жилая (кв.)</option><option value="bedroom_apt">Спальня</option>
-<option value="living_house">Жилая (дом)</option><option value="kitchen">Кухня</option>
-<option value="bathroom">Ванная</option><option value="toilet">Туалет</option>
-</select>
-</div>
-<button data-i18n="Проверить" onclick="checkMinArea()">Проверить</button>
-<div class="calc-result hidden" id="minAreaResult"></div>
-</div>
-<div class="card">
-<h3 data-i18n="ext.volume">📦 Объём помещения</h3>
-<div class="grid-2">
-<div class="form-group"><label data-i18n="Площадь," for="volumeArea" м²=""><span data-i18n="Площадь, м²">Площадь, м²</span></label><input id="volumeArea" inputmode="decimal" min="0" step="0.01" type="number" value="0"/></div>
-<div class="form-group"><label data-i18n="ext.volH" for="volumeHeight">Высота, м</label><input id="volumeHeight" inputmode="decimal" min="0" step="0.01" type="number" value="0"/></div>
-</div>
-<button data-i18n="ext.volCalc" onclick="calculateVolume()">Рассчитать</button>
-<div class="calc-result hidden" id="volumeResult"></div>
-</div>
-<div class="card">
-<h3 data-i18n="ext.conv">🔄 Конвертер</h3>
-<div class="form-group"><label data-i18n="ext.val" for="convertValue">Значение</label><input id="convertValue" inputmode="decimal" step="0.01" type="number" value="0"/></div>
-<div class="grid-2">
-<div class="form-group"><label data-i18n="ext.from" for="convertFrom">Из</label>
-<select id="convertFrom"><option value="m">м</option><option value="cm">см</option><option value="mm">мм</option><option value="m2">м²</option><option value="cm2">см²</option><option value="ha">га</option></select>
-</div>
-<div class="form-group"><label data-i18n="ext.to" for="convertTo"><span data-i18n="В">В</span></label>
-<select id="convertTo"><option value="cm">см</option><option value="m">м</option><option value="mm">мм</option><option value="m2">м²</option><option value="cm2">см²</option><option value="ha">га</option></select>
-</div>
-</div>
-<button data-i18n="ext.convert" onclick="convertUnits()">Перевести</button>
-<div class="calc-result hidden" id="convertResult"></div>
-</div>
-</div>
-<div class="tab-content" id="tab-geo">
-<div class="card">
-<h3>🛰️ Расстояние и дирекционный угол</h3>
-<div class="grid-2">
-<div class="form-group"><label for="p1x">X1</label><input id="p1x" inputmode="decimal" step="0.001" type="number"/></div>
-<div class="form-group"><label for="p1y">Y1</label><input id="p1y" inputmode="decimal" step="0.001" type="number"/></div>
-<div class="form-group"><label for="p2x">X2</label><input id="p2x" inputmode="decimal" step="0.001" type="number"/></div>
-<div class="form-group"><label for="p2y">Y2</label><input id="p2y" inputmode="decimal" step="0.001" type="number"/></div>
-</div>
-<div class="btn-row">
-<button data-i18n="geo.dist" onclick="calcDistance()">Расстояние</button>
-<button class="ghost" data-i18n="geo.bearing" onclick="calcBearing()">Дирекционный угол</button>
-</div>
-<div class="calc-result hidden" id="distResult"></div>
-<div class="calc-result hidden" id="bearingResult"></div>
-</div>
-<div class="card">
-<h3 data-i18n="geo.areaCoord">📐 Площадь по координатам</h3>
-<div class="form-group">
-<label data-i18n="geo.points" for="polygonCoords">Точки (X Y, по одной в строке)</label>
-<textarea id="polygonCoords" placeholder="1000.000 2000.000
-1010.000 2000.000
-1010.000 2010.000
-1000.000 2010.000" rows="6"></textarea>
-</div>
-<button data-i18n="geo.calc" onclick="calcPolygonArea()">Рассчитать</button>
-<div class="calc-result hidden" id="polyResult"></div>
-</div>
-<div class="card">
-<h3 data-i18n="geo.skp">📊 Оценка СКП</h3>
-<div class="form-group">
-<label data-i18n="geo.skpPoints" for="skpList">СКП точек (по одной в строке)</label>
-<textarea id="skpList" placeholder="0.008
-0.011
-0.009" rows="4"></textarea>
-</div>
-<button data-i18n="geo.calc" onclick="calcSKP()">Рассчитать</button>
-<div class="calc-result hidden" id="skpResult"></div>
-</div>
-</div>
-<div class="tab-content" id="tab-crs">
-<div class="card">
-<h3 data-i18n="crs.title">🌐 Пересчёт координат (proj4js)</h3>
-<div class="warning-box">${t("crs.warn")}</div>
-<div class="info-box" id="proj4Status">Загрузка proj4js…</div>
-<div class="grid-2">
-<div class="form-group"><label data-i18n="crs.src" for="crsFrom">Исходная СК</label><select id="crsFrom"></select></div>
-<div class="form-group"><label data-i18n="crs.dst" for="crsTo">Целевая СК</label><select id="crsTo"></select></div>
-</div>
-<div class="form-group">
-<label data-i18n="crs.input" for="crsInput">Входные координаты (по одной точке в строке)</label>
-<textarea id="crsInput" placeholder="55.7558 37.6173" rows="4"></textarea>
-</div>
-<div class="btn-row">
-<button data-i18n="crs.recalc" onclick="convertBatch()">🔄 Пересчитать</button>
-<button class="ghost" data-i18n="crs.fromGps" onclick="useCurrentLocation()">📍 Из GPS</button>
-<button class="ghost" data-i18n="crs.fromPts" onclick="useGeoPoints()">🛰️ Из точек</button>
-<button class="ghost" data-i18n="crs.swap" onclick="swapCrs()">⇄ Поменять</button>
-</div>
-<div class="form-group"><label>Результат</label><div class="crs-output" id="crsOutput">—</div></div>
-<div class="btn-row">
-<button class="small ghost" data-i18n="crs.copy" onclick="copyCrsOutput()">📋 Копировать</button>
-<button class="small ghost" data-i18n="crs.csv" onclick="downloadCrsOutput()">💾 CSV</button>
-<button class="small ghost" data-i18n="crs.toPts" onclick="crsToGeoPoints()">🛰️ В точки</button>
-</div>
-<details class="mt-3"><summary style="cursor:pointer;font-weight:600;">📖 Параметры выбранных СК</summary><div class="crs-output mt-2" id="crsDetails" style="font-size:.75rem;">—</div></details>
-</div>
-</div>
-<div class="tab-content" id="tab-zu">
-<div class="card">
-<h3 data-i18n="zu.areaTitle">🌍 Проверка площади ЗУ</h3>
-<div class="info-box">
-            Допустимое расхождение — по Приказу Росреестра № П/0393 (ред. от 13.10.2025).<br/>
+          </div>
+          <div class="form-group"><label for="minArea" data-i18n="ext.areaL" data-i18n=Площадь, м²><span data-i18n=Площадь, м²")><span data-i18n=t(t("Площадь, м²"))><span data-i18n=t("Площадь, м²")><span data-i18n="Площадь, м²">Площадь, м²</span></span></span></span></label><input type="number" id="minArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
+          <div class="form-group">
+            <label for="minRoomType" data-i18n="ext.type">Тип</label>
+            <select id="minRoomType">
+              <option value="living_apt">Жилая (кв.)</option><option value="bedroom_apt">Спальня</option>
+              <option value="living_house">Жилая (дом)</option><option value="kitchen">Кухня</option>
+              <option value="bathroom">Ванная</option><option value="toilet">Туалет</option>
+            </select>
+          </div>
+          <button onclick="checkMinArea()" data-i18n="chk.check" data-i18n=t(t(t(t(t("Проверить")))))><span data-i18n=t(t(t(t("Проверить"))))><span data-i18n=t(t(t("Проверить")))><span data-i18n=t(t("Проверить"))><span data-i18n=t("Проверить")>Проверить</span></span></span></span></button>
+          <div class="calc-result hidden" id="minAreaResult"></div>
+        </div>
+        <div class="card">
+          <h3 data-i18n="ext.volume">📦 Объём помещения</h3>
+          <div class="grid-2">
+            <div class="form-group"><label for="volumeArea" data-i18n="ext.volArea" data-i18n=Площадь, м²><span data-i18n=Площадь, м²")><span data-i18n=t(t("Площадь, м²"))><span data-i18n=t("Площадь, м²")><span data-i18n="Площадь, м²">Площадь, м²</span></span></span></span></label><input type="number" id="volumeArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
+            <div class="form-group"><label for="volumeHeight" data-i18n="ext.volH">Высота, м</label><input type="number" id="volumeHeight" step="0.01" min="0" value="0" inputmode="decimal"></div>
+          </div>
+          <button onclick="calculateVolume()" data-i18n="ext.volCalc">Рассчитать</button>
+          <div class="calc-result hidden" id="volumeResult"></div>
+        </div>
+        <div class="card">
+          <h3 data-i18n="ext.conv">🔄 Конвертер</h3>
+          <div class="form-group"><label for="convertValue" data-i18n="ext.val">Значение</label><input type="number" id="convertValue" step="0.01" value="0" inputmode="decimal"></div>
+          <div class="grid-2">
+            <div class="form-group"><label for="convertFrom" data-i18n="ext.from">Из</label>
+              <select id="convertFrom"><option value="m">м</option><option value="cm">см</option><option value="mm">мм</option><option value="m2">м²</option><option value="cm2">см²</option><option value="ha">га</option></select>
+            </div>
+            <div class="form-group"><label for="convertTo" data-i18n="ext.to"><span data-i18n=t(t(t(t("В"))))><span data-i18n=t(t(t("В")))><span data-i18n=t(t("В"))><span data-i18n=t("В")>В</span></span></span></span></label>
+              <select id="convertTo"><option value="cm">см</option><option value="m">м</option><option value="mm">мм</option><option value="m2">м²</option><option value="cm2">см²</option><option value="ha">га</option></select>
+            </div>
+          </div>
+          <button onclick="convertUnits()" data-i18n="ext.convert">Перевести</button>
+          <div class="calc-result hidden" id="convertResult"></div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-geo">
+        <div class="card">
+          <h3>🛰️ Расстояние и дирекционный угол</h3>
+          <div class="grid-2">
+            <div class="form-group"><label for="p1x">X1</label><input type="number" id="p1x" step="0.001" inputmode="decimal"></div>
+            <div class="form-group"><label for="p1y">Y1</label><input type="number" id="p1y" step="0.001" inputmode="decimal"></div>
+            <div class="form-group"><label for="p2x">X2</label><input type="number" id="p2x" step="0.001" inputmode="decimal"></div>
+            <div class="form-group"><label for="p2y">Y2</label><input type="number" id="p2y" step="0.001" inputmode="decimal"></div>
+          </div>
+          <div class="btn-row">
+            <button onclick="calcDistance()" data-i18n="geo.dist">Расстояние</button>
+            <button class="ghost" onclick="calcBearing()" data-i18n="geo.bearing">Дирекционный угол</button>
+          </div>
+          <div class="calc-result hidden" id="distResult"></div>
+          <div class="calc-result hidden" id="bearingResult"></div>
+        </div>
+        <div class="card">
+          <h3 data-i18n="geo.areaCoord">📐 Площадь по координатам</h3>
+          <div class="form-group">
+            <label for="polygonCoords" data-i18n="geo.points">Точки (X Y, по одной в строке)</label>
+            <textarea id="polygonCoords" rows="6" placeholder="1000.000 2000.000&#10;1010.000 2000.000&#10;1010.000 2010.000&#10;1000.000 2010.000"></textarea>
+          </div>
+          <button onclick="calcPolygonArea()" data-i18n="geo.calc">Рассчитать</button>
+          <div class="calc-result hidden" id="polyResult"></div>
+        </div>
+        <div class="card">
+          <h3 data-i18n="geo.skp">📊 Оценка СКП</h3>
+          <div class="form-group">
+            <label for="skpList" data-i18n="geo.skpPoints">СКП точек (по одной в строке)</label>
+            <textarea id="skpList" rows="4" placeholder="0.008&#10;0.011&#10;0.009"></textarea>
+          </div>
+          <button onclick="calcSKP()" data-i18n="geo.calc">Рассчитать</button>
+          <div class="calc-result hidden" id="skpResult"></div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-crs">
+        <div class="card">
+          <h3 data-i18n="crs.title">🌐 Пересчёт координат (proj4js)</h3>
+          <div class="warning-box">${t("crs.warn")}</div>
+          <div id="proj4Status" class="info-box">Загрузка proj4js…</div>
+          <div class="grid-2">
+            <div class="form-group"><label for="crsFrom" data-i18n="crs.src">Исходная СК</label><select id="crsFrom"></select></div>
+            <div class="form-group"><label for="crsTo" data-i18n="crs.dst">Целевая СК</label><select id="crsTo"></select></div>
+          </div>
+          <div class="form-group">
+            <label for="crsInput" data-i18n="crs.input">Входные координаты (по одной точке в строке)</label>
+            <textarea id="crsInput" rows="4" placeholder="55.7558 37.6173"></textarea>
+          </div>
+          <div class="btn-row">
+            <button onclick="convertBatch()" data-i18n="crs.recalc">🔄 Пересчитать</button>
+            <button class="ghost" onclick="useCurrentLocation()" data-i18n="crs.fromGps">📍 Из GPS</button>
+            <button class="ghost" onclick="useGeoPoints()" data-i18n="crs.fromPts">🛰️ Из точек</button>
+            <button class="ghost" onclick="swapCrs()" data-i18n="crs.swap">⇄ Поменять</button>
+          </div>
+          <div class="form-group"><label>Результат</label><div class="crs-output" id="crsOutput">—</div></div>
+          <div class="btn-row">
+            <button class="small ghost" onclick="copyCrsOutput()" data-i18n="crs.copy">📋 Копировать</button>
+            <button class="small ghost" onclick="downloadCrsOutput()" data-i18n="crs.csv">💾 CSV</button>
+            <button class="small ghost" onclick="crsToGeoPoints()" data-i18n="crs.toPts">🛰️ В точки</button>
+          </div>
+          <details class="mt-3"><summary style="cursor:pointer;font-weight:600;">📖 Параметры выбранных СК</summary><div id="crsDetails" class="crs-output mt-2" style="font-size:.75rem;">—</div></details>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-zu">
+        <div class="card">
+          <h3 data-i18n="zu.areaTitle">🌍 Проверка площади ЗУ</h3>
+          <div class="info-box">
+            Допустимое расхождение — по Приказу Росреестра № П/0393 (ред. от 13.10.2025).<br>
             Формула: <strong>ΔP = 2 · mₜ · √P · √((1 + k²) / (2k))</strong>
-</div>
-<div class="grid-2">
-<div class="form-group"><label data-i18n="zu.docArea" for="zuCalcDoc">По документам, м²</label><input id="zuCalcDoc" inputmode="decimal" min="0" step="0.01" type="number" value="0"/></div>
-<div class="form-group"><label data-i18n="zu.factArea" for="zuCalcFact">Фактическая, м²</label><input id="zuCalcFact" inputmode="decimal" min="0" step="0.01" type="number" value="0"/></div>
-</div>
-<div class="form-group">
-<label data-i18n="zu.cat" for="zuCalcCat">Категория</label>
-<select id="zuCalcCat"><option value="0.10">Населённые пункты (0,10 м)</option><option value="0.20">СХ (0,20 м)</option><option value="0.50">Промышленность (0,50 м)</option></select>
-</div>
-<div class="form-group">
-<label data-i18n="zu.k" for="zuCalcK"><span data-i18n="Коэффициент конфигурации k">Коэффициент конфигурации k</span></label>
-<input id="zuCalcK" inputmode="decimal" min="0.1" step="0.1" type="number" value="1.0"/>
-<small class="text-muted">1.0 — компактный участок; &gt; 1 — вытянутый / сложной формы (П/0393)</small>
-</div>
-<button data-i18n="zu.calc" onclick="calcZuDelta()">Рассчитать</button>
-<div class="calc-result hidden" id="zuCalcResult"></div>
-</div>
-<div class="card">
-<h3 data-i18n="zu.tolTitle">📏 Допуск площади по П/0393</h3>
-<div class="form-group"><label data-i18n="Площадь," for="zuTolArea" м²=""><span data-i18n="Площадь, м²">Площадь, м²</span></label><input id="zuTolArea" inputmode="decimal" min="0" step="0.01" type="number" value="0"/></div>
-<div class="form-group">
-<label data-i18n="zu.tolCat" for="zuTolCat">Категория</label>
-<select id="zuTolCat"><option value="0.10">Населённые пункты</option><option value="0.20">СХ</option><option value="0.50">Промышленность</option></select>
-</div>
-<div class="form-group">
-<label data-i18n="zu.tolK" for="zuTolK"><span data-i18n="Коэффициент конфигурации k">Коэффициент конфигурации k</span></label>
-<input id="zuTolK" inputmode="decimal" min="0.1" step="0.1" type="number" value="1.0"/>
-</div>
-<button data-i18n="zu.calc" onclick="calcZuTolerance()">Рассчитать</button>
-<div class="calc-result hidden" id="zuTolResult"></div>
-</div>
-</div>
-<div class="tab-content" id="tab-nspd">
-<div class="card">
-<h3 data-i18n="nspd.title">🌐 Сервисы НСПД</h3>
-<div class="info-box"><strong>Национальная система пространственных данных</strong> — единая цифровая платформа Росреестра.</div>
-<div class="form-group"><label data-i18n="nspd.query" for="nspdQuery">Кадастровый номер / адрес</label><input id="nspdQuery" placeholder="77:01:0001234:567" type="text"/></div>
-<div class="btn-row">
-<button onclick="openNSPD('earth')">🗺️ Земля просто</button>
-<button class="ghost" onclick="openNSPD('surveyor')">📡 Помощник изыскателя</button>
-<button class="ghost" onclick="openNSPD('construction')">🏗️ Градпроработка</button>
-<button class="ghost" onclick="openNSPD('visual')">👁️ Визуализация</button>
-</div>
-</div>
-</div>
-<div class="tab-content" id="tab-cad">
-<div class="card">
-<h3 data-i18n="cad.title">📐 Экспорт в CAD/GIS</h3>
-<div class="info-box">DXF · GeoJSON · KML · MIF/MID</div>
-<div class="form-group"><label data-i18n="cad.src" for="cadSrcCRS">Система координат источника</label><input id="cadSrcCRS" type="text" value="МСК-77"/></div>
-<div class="form-group">
-<label data-i18n="cad.source" for="cadSource">Источник координат</label>
-<select id="cadSource"><option value="geoPoints">Геодезические точки</option><option value="rooms">Помещения</option></select>
-</div>
-<div class="btn-row">
-<button onclick="exportDXF()">💾 DXF</button>
-<button class="ghost" onclick="exportSHP()">💾 GeoJSON</button>
-<button class="ghost" onclick="exportKML()">💾 KML</button>
-<button class="ghost" onclick="exportMIF()">💾 MIF</button>
-</div>
-</div>
-</div>
-<div class="tab-content" id="tab-quality">
-<div class="card">
-<h3 data-i18n="gnss.title">📡 Оценка качества GNSS</h3>
-<div class="form-group"><label data-i18n="gnss.fix" for="gnssFixType">Тип решения</label>
-<select id="gnssFixType"><option value="FIX">FIX (фиксированное)</option><option value="Float">Float (плавающее)</option></select>
-</div>
-<div class="grid-2">
-<div class="form-group"><label data-i18n="gnss.hdop" for="gnssHDOP">HDOP</label><input id="gnssHDOP" inputmode="decimal" min="0" step="0.1" type="number" value="1.0"/></div>
-<div class="form-group"><label data-i18n="gnss.pdop" for="gnssPDOP">PDOP</label><input id="gnssPDOP" inputmode="decimal" min="0" step="0.1" type="number" value="1.5"/></div>
-</div>
-<div class="grid-2">
-<div class="form-group"><label data-i18n="gnss.sats" for="gnssSats">Спутников</label><input id="gnssSats" inputmode="numeric" min="0" type="number" value="12"/></div>
-<div class="form-group"><label data-i18n="gnss.rtcm" for="gnssRtcm">Формат поправок</label>
-<select id="gnssRtcm"><option>RTCM3.2</option><option>RTCM3.1</option><option>CMR</option></select>
-</div>
-</div>
-<button data-i18n="gnss.check" onclick="checkGNSSQuality()">Оценить</button>
-<div class="calc-result hidden" id="gnssQualityResult"></div>
-</div>
-<div class="card">
-<h3 data-i18n="gnss.rep">📋 Повторные измерения</h3>
-<div class="info-box">Допуск согласно П/0393 — <strong>удвоенное значение СКП</strong> (например, 0,20 м для земель населённых пунктов при СКП 0,10 м).</div>
-<div class="form-group">
-<label data-i18n="gnss.repCat" for="repeatCategory">Категория земель (допуск СКП)</label>
-<select id="repeatCategory">
-<option value="0.10">Населённые пункты (СКП 0,10 м → контроль 0,20 м)</option>
-<option value="0.20">СХ / ЛПХ (СКП 0,20 м → контроль 0,40 м)</option>
-<option value="0.50">Промышленность (СКП 0,50 м → контроль 1,00 м)</option>
-</select>
-</div>
-<button class="small" data-i18n="gnss.repAdd" onclick="addRepeatMeasure()">+ Набор</button>
-<div class="mt-3" id="repeatMeasuresList"></div>
-<button class="ghost mt-3" data-i18n="gnss.repCheck" onclick="checkRepeatMeasures()">Проверить расхождения</button>
-<div class="calc-result hidden" id="repeatResult"></div>
-</div>
-</div>
-<div class="tab-content" id="tab-voice">
-<div class="card">
-<h3 data-i18n="vc.title">🎤 Голосовые заметки</h3>
-<p class="text-muted" data-i18n="vc.hint" style="font-size:0.9rem;margin-bottom:12px;">Chrome/Edge, HTTPS или localhost.</p>
-<div class="btn-row" style="justify-content:center;">
-<button aria-label="Запись голоса" class="voice-btn" id="voiceBtn" onclick="toggleVoiceRecording()" title="Распознавание речи">🎙</button>
-</div>
-<div aria-live="polite" class="text-center" data-i18n="vc.ready" id="voiceStatus" role="status" style="margin-bottom:10px;">Готов к записи</div>
-<div class="btn-row" style="justify-content:center;">
-<button class="ghost small" data-i18n="vc.record" id="audioBtn" onclick="toggleAudioRecording()">🎵 Записать аудио</button>
-</div>
-<div id="voiceNotes" style="background:var(--bg);padding:12px;border-radius:var(--radius-sm);min-height:60px;margin-bottom:10px;"></div>
-<div id="audioNotes" style="background:var(--bg);padding:12px;border-radius:var(--radius-sm);min-height:60px;"></div>
-</div>
-</div>
-<div class="tab-content" id="tab-devices">
-<div class="ios-notice hidden" id="iosNoticeDevices">⚠️ Web Bluetooth и Web Serial недоступны в iOS/iPadOS Safari. Для работы с приборами используйте Android или Windows с Chrome/Edge.</div>
-<div class="card">
-<h3 data-i18n="dv.laser">📶 Лазерный дальномер (Bluetooth LE)</h3>
-<div class="info-box" style="font-size:.85rem;">
+          </div>
+          <div class="grid-2">
+            <div class="form-group"><label for="zuCalcDoc" data-i18n="zu.docArea">По документам, м²</label><input type="number" id="zuCalcDoc" step="0.01" min="0" value="0" inputmode="decimal"></div>
+            <div class="form-group"><label for="zuCalcFact" data-i18n="zu.factArea">Фактическая, м²</label><input type="number" id="zuCalcFact" step="0.01" min="0" value="0" inputmode="decimal"></div>
+          </div>
+          <div class="form-group">
+            <label for="zuCalcCat" data-i18n="zu.cat">Категория</label>
+            <select id="zuCalcCat"><option value="0.10">Населённые пункты (0,10 м)</option><option value="0.20">СХ (0,20 м)</option><option value="0.50">Промышленность (0,50 м)</option></select>
+          </div>
+          <div class="form-group">
+            <label for="zuCalcK" data-i18n="zu.k"><span data-i18n=t(t(t(t(t("Коэффициент конфигурации k"))))) data-i18n=t(t(t(t(t("Коэффициент конфигурации k"))))) data-i18n=t(t(t(t(t("Коэффициент конфигурации k")))))><span data-i18n=t(t(t(t("Коэффициент конфигурации k"))))><span data-i18n=t(t(t("Коэффициент конфигурации k")))><span data-i18n=t(t("Коэффициент конфигурации k"))><span data-i18n=t("Коэффициент конфигурации k")>Коэффициент конфигурации k</span></span></span></span></span></label>
+            <input type="number" id="zuCalcK" step="0.1" min="0.1" value="1.0" inputmode="decimal">
+            <small class="text-muted">1.0 — компактный участок; &gt; 1 — вытянутый / сложной формы (П/0393)</small>
+          </div>
+          <button onclick="calcZuDelta()" data-i18n="zu.calc">Рассчитать</button>
+          <div class="calc-result hidden" id="zuCalcResult"></div>
+        </div>
+        <div class="card">
+          <h3 data-i18n="zu.tolTitle">📏 Допуск площади по П/0393</h3>
+          <div class="form-group"><label for="zuTolArea" data-i18n="zu.tolArea" data-i18n=Площадь, м²><span data-i18n=Площадь, м²")><span data-i18n=t(t("Площадь, м²"))><span data-i18n=t("Площадь, м²")><span data-i18n="Площадь, м²">Площадь, м²</span></span></span></span></label><input type="number" id="zuTolArea" step="0.01" min="0" value="0" inputmode="decimal"></div>
+          <div class="form-group">
+            <label for="zuTolCat" data-i18n="zu.tolCat">Категория</label>
+            <select id="zuTolCat"><option value="0.10">Населённые пункты</option><option value="0.20">СХ</option><option value="0.50">Промышленность</option></select>
+          </div>
+          <div class="form-group">
+            <label for="zuTolK" data-i18n="zu.tolK"><span data-i18n=t(t(t(t(t("Коэффициент конфигурации k"))))) data-i18n=t(t(t(t(t("Коэффициент конфигурации k"))))) data-i18n=t(t(t(t(t("Коэффициент конфигурации k")))))><span data-i18n=t(t(t(t("Коэффициент конфигурации k"))))><span data-i18n=t(t(t("Коэффициент конфигурации k")))><span data-i18n=t(t("Коэффициент конфигурации k"))><span data-i18n=t("Коэффициент конфигурации k")>Коэффициент конфигурации k</span></span></span></span></span></label>
+            <input type="number" id="zuTolK" step="0.1" min="0.1" value="1.0" inputmode="decimal">
+          </div>
+          <button onclick="calcZuTolerance()" data-i18n="zu.calc">Рассчитать</button>
+          <div class="calc-result hidden" id="zuTolResult"></div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-nspd">
+        <div class="card">
+          <h3 data-i18n="nspd.title">🌐 Сервисы НСПД</h3>
+          <div class="info-box"><strong>Национальная система пространственных данных</strong> — единая цифровая платформа Росреестра.</div>
+          <div class="form-group"><label for="nspdQuery" data-i18n="nspd.query">Кадастровый номер / адрес</label><input type="text" id="nspdQuery" placeholder="77:01:0001234:567"></div>
+          <div class="btn-row">
+            <button onclick="openNSPD('earth')">🗺️ Земля просто</button>
+            <button class="ghost" onclick="openNSPD('surveyor')">📡 Помощник изыскателя</button>
+            <button class="ghost" onclick="openNSPD('construction')">🏗️ Градпроработка</button>
+            <button class="ghost" onclick="openNSPD('visual')">👁️ Визуализация</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-cad">
+        <div class="card">
+          <h3 data-i18n="cad.title">📐 Экспорт в CAD/GIS</h3>
+          <div class="info-box">DXF · GeoJSON · KML · MIF/MID</div>
+          <div class="form-group"><label for="cadSrcCRS" data-i18n="cad.src">Система координат источника</label><input type="text" id="cadSrcCRS" value="МСК-77"></div>
+          <div class="form-group">
+            <label for="cadSource" data-i18n="cad.source">Источник координат</label>
+            <select id="cadSource"><option value="geoPoints">Геодезические точки</option><option value="rooms">Помещения</option></select>
+          </div>
+          <div class="btn-row">
+            <button onclick="exportDXF()">💾 DXF</button>
+            <button class="ghost" onclick="exportSHP()">💾 GeoJSON</button>
+            <button class="ghost" onclick="exportKML()">💾 KML</button>
+            <button class="ghost" onclick="exportMIF()">💾 MIF</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-quality">
+        <div class="card">
+          <h3 data-i18n="gnss.title">📡 Оценка качества GNSS</h3>
+          <div class="form-group"><label for="gnssFixType" data-i18n="gnss.fix">Тип решения</label>
+            <select id="gnssFixType"><option value="FIX">FIX (фиксированное)</option><option value="Float">Float (плавающее)</option></select>
+          </div>
+          <div class="grid-2">
+            <div class="form-group"><label for="gnssHDOP" data-i18n="gnss.hdop">HDOP</label><input type="number" id="gnssHDOP" step="0.1" min="0" value="1.0" inputmode="decimal"></div>
+            <div class="form-group"><label for="gnssPDOP" data-i18n="gnss.pdop">PDOP</label><input type="number" id="gnssPDOP" step="0.1" min="0" value="1.5" inputmode="decimal"></div>
+          </div>
+          <div class="grid-2">
+            <div class="form-group"><label for="gnssSats" data-i18n="gnss.sats">Спутников</label><input type="number" id="gnssSats" min="0" value="12" inputmode="numeric"></div>
+            <div class="form-group"><label for="gnssRtcm" data-i18n="gnss.rtcm">Формат поправок</label>
+              <select id="gnssRtcm"><option>RTCM3.2</option><option>RTCM3.1</option><option>CMR</option></select>
+            </div>
+          </div>
+          <button onclick="checkGNSSQuality()" data-i18n="gnss.check">Оценить</button>
+          <div class="calc-result hidden" id="gnssQualityResult"></div>
+        </div>
+        <div class="card">
+          <h3 data-i18n="gnss.rep">📋 Повторные измерения</h3>
+          <div class="info-box">Допуск согласно П/0393 — <strong>удвоенное значение СКП</strong> (например, 0,20 м для земель населённых пунктов при СКП 0,10 м).</div>
+          <div class="form-group">
+            <label for="repeatCategory" data-i18n="gnss.repCat">Категория земель (допуск СКП)</label>
+            <select id="repeatCategory">
+              <option value="0.10">Населённые пункты (СКП 0,10 м → контроль 0,20 м)</option>
+              <option value="0.20">СХ / ЛПХ (СКП 0,20 м → контроль 0,40 м)</option>
+              <option value="0.50">Промышленность (СКП 0,50 м → контроль 1,00 м)</option>
+            </select>
+          </div>
+          <button class="small" onclick="addRepeatMeasure()" data-i18n="gnss.repAdd">+ Набор</button>
+          <div id="repeatMeasuresList" class="mt-3"></div>
+          <button class="ghost mt-3" onclick="checkRepeatMeasures()" data-i18n="gnss.repCheck">Проверить расхождения</button>
+          <div class="calc-result hidden" id="repeatResult"></div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-voice">
+        <div class="card">
+          <h3 data-i18n="vc.title">🎤 Голосовые заметки</h3>
+          <p class="text-muted" style="font-size:0.9rem;margin-bottom:12px;" data-i18n="vc.hint">Chrome/Edge, HTTPS или localhost.</p>
+          <div class="btn-row" style="justify-content:center;">
+            <button class="voice-btn" id="voiceBtn" onclick="toggleVoiceRecording()" title="Распознавание речи" aria-label="Запись голоса">🎙</button>
+          </div>
+          <div id="voiceStatus" class="text-center" style="margin-bottom:10px;" role="status" aria-live="polite" data-i18n="vc.ready">Готов к записи</div>
+          <div class="btn-row" style="justify-content:center;">
+            <button class="ghost small" id="audioBtn" onclick="toggleAudioRecording()" data-i18n="vc.record">🎵 Записать аудио</button>
+          </div>
+          <div id="voiceNotes" style="background:var(--bg);padding:12px;border-radius:var(--radius-sm);min-height:60px;margin-bottom:10px;"></div>
+          <div id="audioNotes" style="background:var(--bg);padding:12px;border-radius:var(--radius-sm);min-height:60px;"></div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-devices">
+        <div id="iosNoticeDevices" class="ios-notice hidden">⚠️ Web Bluetooth и Web Serial недоступны в iOS/iPadOS Safari. Для работы с приборами используйте Android или Windows с Chrome/Edge.</div>
+
+        <div class="card">
+          <h3 data-i18n="dv.laser">📶 Лазерный дальномер (Bluetooth LE)</h3>
+          <div class="info-box" style="font-size:.85rem;">
             Поддерживаются: <strong>Leica DISTO</strong>, <strong>Bosch GLM</strong>, <strong>ADA</strong>, <strong>Stanley</strong> и другие BLE-дальномеры (UART-сервисы 0xFFE0 / 0xFFF0 / 0x18F0). Нужен <strong>HTTPS</strong> или <strong>localhost</strong>, браузер Chrome / Edge / Opera.
           </div>
-<div class="dev-card">
-<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-<span class="dev-status" id="laserStatus">⭕ не подключён</span>
-<button class="small" data-requires-ble="" onclick="connectLaserBLE()">🔗<span data-i18n="Подключить">Подключить</span></button>
-<button class="small ghost" onclick="disconnectLaserBLE()">⏏ Отключить</button>
-</div>
-<div class="hint" data-i18n="dv.laserMeasure" style="margin-top:10px;">Принятое измерение (м):</div>
-<input id="laserValue" inputmode="decimal" min="0" placeholder="0.000" step="0.001" type="number"/>
-<div class="btn-row" style="margin-top:8px;">
-<button class="small ghost" onclick="laserToArea()">→ в площадь</button>
-<button class="small ghost" onclick="laserToSegment()">→ в контур</button>
-<button class="small ghost" onclick="laserToGeo()">→ в гео-точку</button>
-<button class="small ghost" onclick="clearLaserLog()">🗑 Лог</button>
-</div>
-<div class="dev-log" id="laserLog"><span data-i18n="Ожидание данных…">Ожидание данных…</span></div>
-</div>
-</div>
-<div class="card">
-<h3 data-i18n="dv.gnssT">🛰️ GNSS-приёмник (Bluetooth LE, NMEA)</h3>
-<div class="info-box" style="font-size:.85rem;">
+          <div class="dev-card">
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+              <span class="dev-status" id="laserStatus">⭕ не подключён</span>
+              <button class="small" onclick="connectLaserBLE()" data-requires-ble>🔗<span data-i18n="Подключить">Подключить</span></button>
+              <button class="small ghost" onclick="disconnectLaserBLE()">⏏ Отключить</button>
+            </div>
+            <div class="hint" style="margin-top:10px;" data-i18n="dv.laserMeasure">Принятое измерение (м):</div>
+            <input type="number" id="laserValue" step="0.001" min="0" placeholder="0.000" inputmode="decimal">
+            <div class="btn-row" style="margin-top:8px;">
+              <button class="small ghost" onclick="laserToArea()">→ в площадь</button>
+              <button class="small ghost" onclick="laserToSegment()">→ в контур</button>
+              <button class="small ghost" onclick="laserToGeo()">→ в гео-точку</button>
+              <button class="small ghost" onclick="clearLaserLog()">🗑 Лог</button>
+            </div>
+            <div class="dev-log" id="laserLog"><span data-i18n="Ожидание данных…">Ожидание данных…</span></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 data-i18n="dv.gnssT">🛰️ GNSS-приёмник (Bluetooth LE, NMEA)</h3>
+          <div class="info-box" style="font-size:.85rem;">
             Приёмники и контроллеры с NMEA 0183 по BLE: <strong>Trimble</strong>, <strong>Leica</strong>, <strong>Topcon</strong>, <strong>South</strong>, <strong>PrinCe</strong>, <strong>EFT</strong>, <strong>ComNav</strong>.
           </div>
-<div class="dev-card">
-<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-<span class="dev-status" id="gnssStatus">⭕ не подключён</span>
-<button class="small" data-requires-ble="" onclick="connectGnssBLE()">🔗<span data-i18n="Подключить">Подключить</span></button>
-<button class="small ghost" onclick="disconnectGnssBLE()">⏏ Отключить</button>
-</div>
-<div class="hint" data-i18n="dv.gnssCoords" style="margin-top:10px;">Текущие координаты (WGS-84):</div>
-<div class="crs-output" id="gnssCoords" style="min-height:60px;">—</div>
-<div class="btn-row" style="margin-top:8px;">
-<button class="small ghost" onclick="gnssToLocation()">📍 В координаты</button>
-<button class="small ghost" onclick="gnssToGeoPoint()">🛰️ В точку</button>
-<button class="small ghost" onclick="clearGnssLog()">🗑 Лог</button>
-</div>
-<div class="dev-log" id="gnssLog">Ожидание NMEA…</div>
-</div>
-<h3 class="mt-3" data-i18n="dv.nmeaPaste">📋 Вставить NMEA из буфера</h3>
-<div class="form-group">
-<textarea class="nmea-input" id="nmeaPaste" placeholder="$GPGGA,123519,4807.038,N,01131.000,E,1,08,0.9,545.4,M,46.9,M,,*47
-$GPRMC,123519,A,4807.038,N,01131.000,E,022.4,084.4,230394,003.1,W*6A" rows="4"></textarea>
-</div>
-<div class="btn-row">
-<button class="small" onclick="parseNmeaPaste()">🔄 Разобрать NMEA</button>
-<button class="small ghost" onclick="pasteFromClipboard()">📋 Из буфера</button>
-</div>
-<div class="crs-output" id="nmeaResult" style="min-height:50px;">—</div>
-</div>
-<div class="card">
-<h3 data-i18n="dv.import">📥 Универсальный импорт измерений</h3>
-<div class="info-box" style="font-size:.85rem;">
-            Форматы: <strong data-i18n="CSV">CSV</strong>, <strong data-i18n="TXT">TXT</strong>, <strong>GSI</strong> (Leica), <strong>DAT/T00</strong> (Trimble), <strong>M5</strong> (Topcon), <strong>XYZ</strong>.
+          <div class="dev-card">
+            <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+              <span class="dev-status" id="gnssStatus">⭕ не подключён</span>
+              <button class="small" onclick="connectGnssBLE()" data-requires-ble>🔗<span data-i18n="Подключить">Подключить</span></button>
+              <button class="small ghost" onclick="disconnectGnssBLE()">⏏ Отключить</button>
+            </div>
+            <div class="hint" style="margin-top:10px;" data-i18n="dv.gnssCoords">Текущие координаты (WGS-84):</div>
+            <div class="crs-output" id="gnssCoords" style="min-height:60px;">—</div>
+            <div class="btn-row" style="margin-top:8px;">
+              <button class="small ghost" onclick="gnssToLocation()">📍 В координаты</button>
+              <button class="small ghost" onclick="gnssToGeoPoint()">🛰️ В точку</button>
+              <button class="small ghost" onclick="clearGnssLog()">🗑 Лог</button>
+            </div>
+            <div class="dev-log" id="gnssLog">Ожидание NMEA…</div>
           </div>
-<div class="btn-row">
-<button onclick="document.getElementById('measFileInput').click()">📂 Выбрать файл</button>
-<button class="ghost" onclick="downloadCsvTemplate()">📥 Шаблон CSV</button>
-</div>
-<input accept=".csv,.txt,.gsi,.dat,.t00,.m5,.xyz" id="measFileInput" onchange="importMeasFile(event)" style="display:none;" type="file"/>
-<div class="crs-output mt-3" id="measImportLog" style="min-height:60px;">Файл не загружен</div>
-<div class="btn-row" style="margin-top:8px;">
-<button class="small ghost" onclick="importedToGeoPoints()">🛰️ В гео-точки</button>
-<button class="small ghost" onclick="clearMeasImport()">🗑 Очистить</button>
-</div>
-</div>
-<div class="card">
-<h3 data-i18n="dv.level">📊 Нивелирный ход</h3>
-<div class="info-box" style="font-size:.85rem;">Импорт GSI / DAT / M5 / CSV. Расчёт превышений, высот, невязки.</div>
-<div class="grid-2">
-<div class="form-group"><label data-i18n="dv.levelH1" for="levelHstart">H нач., м</label><input id="levelHstart" inputmode="decimal" step="0.0001" type="number"/></div>
-<div class="form-group"><label data-i18n="dv.levelH2" for="levelHend">H кон., м</label><input id="levelHend" inputmode="decimal" step="0.0001" type="number"/></div>
-</div>
-<div class="form-group">
-<label for="levelClass">Класс / допуск невязки</label>
-<select id="levelClass">
-<option value="3">IV класс (3 мм·√n)</option>
-<option selected="" value="5">Техническое (5 мм·√n)</option>
-<option value="10">Топографическое (10 мм·√n)</option>
-</select>
-</div>
-<div class="btn-row">
-<button onclick="document.getElementById('levelFileInput').click()">📂 Файл нивелира</button>
-<button class="ghost" onclick="manualLevelingAdd()">+ Станция</button>
-<button class="ghost" onclick="computeLeveling()">🧮 Рассчитать</button>
-</div>
-<input accept=".csv,.txt,.gsi,.dat,.m5" id="levelFileInput" onchange="importLevelingFile(event)" style="display:none;" type="file"/>
-<div class="mt-3" id="levelingStations"></div>
-<div class="calc-result hidden" id="levelingResult"></div>
-</div>
-<div class="card">
-<h3 data-i18n="dv.pc">☁️ Облако точек (сканер / БПЛА)</h3>
-<div class="info-box" style="font-size:.85rem;">Форматы XYZ, CSV, PLY (ASCII). До 50 МБ. Для LAS/LAZ используйте конвертер.</div>
-<div class="btn-row">
-<button onclick="document.getElementById('pcFileInput').click()">📂 Загрузить</button>
-<button class="ghost" onclick="clearPointCloud()">🗑 Очистить</button>
-<button class="ghost" onclick="pcFitView()">🔍 Вписать</button>
-</div>
-<input accept=".xyz,.csv,.ply,.txt" id="pcFileInput" onchange="importPointCloud(event)" style="display:none;" type="file"/>
-<div class="crs-output" id="pcInfo" style="min-height:50px;">Облако не загружено</div>
-<canvas class="pc-canvas mt-3" id="pcCanvas"></canvas>
-</div>
-<div class="card">
-<h3 data-i18n="dv.ortho">🗺️ Ортофотоплан (БПЛА)</h3>
-<div class="info-box" style="font-size:.85rem;">PNG/JPG + границы WGS-84 → слой на карте Leaflet.</div>
-<div class="btn-row">
-<button onclick="document.getElementById('orthoFileInput').click()">🖼 Загрузить</button>
-<button class="ghost" onclick="toggleOrthoOnMap()">👁 На карте</button>
-<button class="ghost" onclick="clearOrtho()">🗑 Удалить</button>
-</div>
-<input accept="image/*" id="orthoFileInput" onchange="importOrthophoto(event)" style="display:none;" type="file"/>
-<div class="grid-2 mt-3">
-<div class="form-group"><label>ЮЗ широта</label><input id="orthoSWLat" inputmode="decimal" step="0.000001" type="number"/></div>
-<div class="form-group"><label>ЮЗ долгота</label><input id="orthoSWLon" inputmode="decimal" step="0.000001" type="number"/></div>
-<div class="form-group"><label>СВ широта</label><input id="orthoNELat" inputmode="decimal" step="0.000001" type="number"/></div>
-<div class="form-group"><label>СВ долгота</label><input id="orthoNELon" inputmode="decimal" step="0.000001" type="number"/></div>
-</div>
-<div class="crs-output" id="orthoInfo" style="min-height:40px;">Снимок не загружен</div>
-</div>
-<div class="card">
-<h3>🛣️ Трассоискатель / кабелеискатель</h3>
-<div class="info-box" style="font-size:.85rem;">CSV: <code>широта,долгота[,глубина]</code> или <code>X,Y[,H]</code>.</div>
-<div class="btn-row">
-<button onclick="document.getElementById('traceFileInput').click()">📂 Загрузить</button>
-<button class="ghost" onclick="clearTrace()">🗑 Очистить</button>
-<button class="ghost" onclick="traceToGeoPoints()">🛰️ В точки</button>
-</div>
-<input accept=".csv,.txt" id="traceFileInput" onchange="importTraceFile(event)" style="display:none;" type="file"/>
-<div class="crs-output" id="traceInfo" style="min-height:40px;">Трасса не загружена</div>
-</div>
-<div class="card">
-<h3 data-i18n="dv.serial">🔌 Web Serial (COM-порт)</h3>
-<div class="info-box" style="font-size:.85rem;">Для старых тахеометров / нивелиров / GNSS через USB-RS232. Chrome/Edge, HTTPS или localhost.</div>
-<div class="grid-2">
-<div class="form-group">
-<label for="serialBaud">Скорость (baud)</label>
-<select id="serialBaud"><option>4800</option><option>9600</option><option selected="">19200</option><option>38400</option><option>57600</option><option>115200</option></select>
-</div>
-<div class="form-group">
-<label for="serialProto">Протокол</label>
-<select id="serialProto"><option value="nmea">NMEA 0183</option><option value="gsi">GSI (Leica)</option><option value="raw">Сырой текст</option></select>
-</div>
-</div>
-<div class="btn-row">
-<button data-requires-serial="" onclick="serialConnect()">🔌<span data-i18n="Подключить">Подключить</span></button>
-<button class="ghost" onclick="serialDisconnect()">⏏ Отключить</button>
-</div>
-<div style="display:flex;align-items:center;gap:10px;margin-top:8px;">
-<span class="dev-status" id="serialStatus">⭕ не подключён</span>
-</div>
-<div class="dev-log" id="serialLog">Журнал пуст</div>
-</div>
-<div class="card">
-<h3 data-i18n="dv.email">📧 Отправить данные на e-mail</h3>
-<div class="info-box" style="font-size:.85rem;">Быстрая отправка через почтовый клиент. Вложения — через системное «Поделиться» на мобильных.</div>
-<div class="email-form">
-<div class="row-email"><label style="min-width:80px;">Кому:</label><input id="emailTo" placeholder="engineer@example.com" type="email"/></div>
-<div class="row-email"><label style="min-width:80px;">Тема:</label><input id="emailSubject" placeholder="Полевые работы — объект" type="text"/></div>
-<div class="form-group"><label for="emailBody">Текст письма</label><textarea id="emailBody" placeholder="Автоматически подставится отчёт" rows="4"></textarea></div>
-<div class="btn-row">
-<button onclick="fillEmailReport()">📄 Заполнить отчётом</button>
-<button class="ghost" onclick="sendEmailSimple()">📧 Открыть клиент</button>
-<button class="ghost" onclick="shareFilesViaEmail()">📎 Поделиться файлами</button>
-</div>
-<div class="form-group mt-3">
-<label>Что приложить:</label>
-<div class="checklist-item"><input checked="" id="attJson" type="checkbox"/><label for="attJson">JSON проекта</label></div>
-<div class="checklist-item"><input checked="" id="attCsv" type="checkbox"/><label for="attCsv">CSV (помещения + точки)</label></div>
-<div class="checklist-item"><input checked="" id="attReport" type="checkbox"/><label for="attReport">TXT-отчёт</label></div>
-<div class="checklist-item"><input id="attGeo" type="checkbox"/><label for="attGeo">GeoJSON</label></div>
-<div class="checklist-item"><input id="attPhotos" type="checkbox"/><label for="attPhotos">Фото (первые 10)</label></div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="view" id="view-export">
-<div class="card">
-<h2 data-i18n="exp.title">📤 Экспорт</h2>
-<div class="btn-row">
-<button onclick="exportJSON()">📤 JSON</button>
-<button class="ghost" data-i18n="exp.excel" onclick="exportExcel()">📊 Excel (CSV)</button>
-<button class="ghost" onclick="generateReport()">📄 Отчёт</button>
-<button class="ghost" data-i18n="exp.geoCSV" onclick="exportGeoCSV()">🛰️ Точки CSV</button>
-<button class="ghost" data-i18n="exp.xml" onclick="downloadXMLTemplate()">📥 Шаблон XML</button>
-<button class="ghost" onclick="exportZip()">🗜 ZIP-архив</button>
-</div>
-</div>
-<div class="card">
-<h2 data-i18n="imp.title">📥 Импорт</h2>
-<button class="ghost" data-i18n="imp.json" onclick="document.getElementById('importFile').click()">📥 Загрузить JSON</button>
-<input accept=".json" id="importFile" onchange="importJSON(event)" style="display:none;" type="file"/>
-</div>
-<div class="card">
-<h2 data-i18n="prn.title">📄 Печать / PDF</h2>
-<div class="info-box"><span data-i18n="prn.hint">Используйте системную печать → «Сохранить как PDF».</span></div>
-<div class="btn-row">
-<button data-i18n="prn.btn" onclick="window.print()">🖨️ Печать / PDF</button>
-<button class="ghost" data-i18n="prn.report" onclick="printReport()">📋 Печать отчёта</button>
-</div>
-</div>
-<div class="card">
-<h2 data-i18n="lhs.title">🌐 Запуск через localhost</h2>
-<div class="info-box" style="font-size:.85rem;">
+          <h3 class="mt-3" data-i18n="dv.nmeaPaste">📋 Вставить NMEA из буфера</h3>
+          <div class="form-group">
+            <textarea id="nmeaPaste" class="nmea-input" rows="4" placeholder="$GPGGA,123519,4807.038,N,01131.000,E,1,08,0.9,545.4,M,46.9,M,,*47&#10;$GPRMC,123519,A,4807.038,N,01131.000,E,022.4,084.4,230394,003.1,W*6A"></textarea>
+          </div>
+          <div class="btn-row">
+            <button class="small" onclick="parseNmeaPaste()">🔄 Разобрать NMEA</button>
+            <button class="small ghost" onclick="pasteFromClipboard()">📋 Из буфера</button>
+          </div>
+          <div class="crs-output" id="nmeaResult" style="min-height:50px;">—</div>
+        </div>
+
+        <div class="card">
+          <h3 data-i18n="dv.import">📥 Универсальный импорт измерений</h3>
+          <div class="info-box" style="font-size:.85rem;">
+            Форматы: <strong data-i18n=t(t(t(t("CSV"))))><span data-i18n=t(t(t("CSV")))><span data-i18n=t(t("CSV"))><span data-i18n=t("CSV")><span data-i18n="CSV">CSV</span></span></span></span></strong>, <strong data-i18n=t(t(t(t("TXT"))))><span data-i18n=t(t(t("TXT")))><span data-i18n=t(t("TXT"))><span data-i18n=t("TXT")><span data-i18n="TXT">TXT</span></span></span></span></strong>, <strong>GSI</strong> (Leica), <strong>DAT/T00</strong> (Trimble), <strong>M5</strong> (Topcon), <strong>XYZ</strong>.
+          </div>
+          <div class="btn-row">
+            <button onclick="document.getElementById('measFileInput').click()">📂 Выбрать файл</button>
+            <button class="ghost" onclick="downloadCsvTemplate()">📥 Шаблон CSV</button>
+          </div>
+          <input type="file" id="measFileInput" accept=".csv,.txt,.gsi,.dat,.t00,.m5,.xyz" style="display:none;" onchange="importMeasFile(event)">
+          <div class="crs-output mt-3" id="measImportLog" style="min-height:60px;">Файл не загружен</div>
+          <div class="btn-row" style="margin-top:8px;">
+            <button class="small ghost" onclick="importedToGeoPoints()">🛰️ В гео-точки</button>
+            <button class="small ghost" onclick="clearMeasImport()">🗑 Очистить</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 data-i18n="dv.level">📊 Нивелирный ход</h3>
+          <div class="info-box" style="font-size:.85rem;">Импорт GSI / DAT / M5 / CSV. Расчёт превышений, высот, невязки.</div>
+          <div class="grid-2">
+            <div class="form-group"><label for="levelHstart" data-i18n="dv.levelH1">H нач., м</label><input type="number" id="levelHstart" step="0.0001" inputmode="decimal"></div>
+            <div class="form-group"><label for="levelHend" data-i18n="dv.levelH2">H кон., м</label><input type="number" id="levelHend" step="0.0001" inputmode="decimal"></div>
+          </div>
+          <div class="form-group">
+            <label for="levelClass">Класс / допуск невязки</label>
+            <select id="levelClass">
+              <option value="3">IV класс (3 мм·√n)</option>
+              <option value="5" selected>Техническое (5 мм·√n)</option>
+              <option value="10">Топографическое (10 мм·√n)</option>
+            </select>
+          </div>
+          <div class="btn-row">
+            <button onclick="document.getElementById('levelFileInput').click()">📂 Файл нивелира</button>
+            <button class="ghost" onclick="manualLevelingAdd()">+ Станция</button>
+            <button class="ghost" onclick="computeLeveling()">🧮 Рассчитать</button>
+          </div>
+          <input type="file" id="levelFileInput" accept=".csv,.txt,.gsi,.dat,.m5" style="display:none;" onchange="importLevelingFile(event)">
+          <div id="levelingStations" class="mt-3"></div>
+          <div id="levelingResult" class="calc-result hidden"></div>
+        </div>
+
+        <div class="card">
+          <h3 data-i18n="dv.pc">☁️ Облако точек (сканер / БПЛА)</h3>
+          <div class="info-box" style="font-size:.85rem;">Форматы XYZ, CSV, PLY (ASCII). До 50 МБ. Для LAS/LAZ используйте конвертер.</div>
+          <div class="btn-row">
+            <button onclick="document.getElementById('pcFileInput').click()">📂 Загрузить</button>
+            <button class="ghost" onclick="clearPointCloud()">🗑 Очистить</button>
+            <button class="ghost" onclick="pcFitView()">🔍 Вписать</button>
+          </div>
+          <input type="file" id="pcFileInput" accept=".xyz,.csv,.ply,.txt" style="display:none;" onchange="importPointCloud(event)">
+          <div class="crs-output" id="pcInfo" style="min-height:50px;">Облако не загружено</div>
+          <canvas id="pcCanvas" class="pc-canvas mt-3"></canvas>
+        </div>
+
+        <div class="card">
+          <h3 data-i18n="dv.ortho">🗺️ Ортофотоплан (БПЛА)</h3>
+          <div class="info-box" style="font-size:.85rem;">PNG/JPG + границы WGS-84 → слой на карте Leaflet.</div>
+          <div class="btn-row">
+            <button onclick="document.getElementById('orthoFileInput').click()">🖼 Загрузить</button>
+            <button class="ghost" onclick="toggleOrthoOnMap()">👁 На карте</button>
+            <button class="ghost" onclick="clearOrtho()">🗑 Удалить</button>
+          </div>
+          <input type="file" id="orthoFileInput" accept="image/*" style="display:none;" onchange="importOrthophoto(event)">
+          <div class="grid-2 mt-3">
+            <div class="form-group"><label>ЮЗ широта</label><input type="number" id="orthoSWLat" step="0.000001" inputmode="decimal"></div>
+            <div class="form-group"><label>ЮЗ долгота</label><input type="number" id="orthoSWLon" step="0.000001" inputmode="decimal"></div>
+            <div class="form-group"><label>СВ широта</label><input type="number" id="orthoNELat" step="0.000001" inputmode="decimal"></div>
+            <div class="form-group"><label>СВ долгота</label><input type="number" id="orthoNELon" step="0.000001" inputmode="decimal"></div>
+          </div>
+          <div class="crs-output" id="orthoInfo" style="min-height:40px;">Снимок не загружен</div>
+        </div>
+
+        <div class="card">
+          <h3>🛣️ Трассоискатель / кабелеискатель</h3>
+          <div class="info-box" style="font-size:.85rem;">CSV: <code>широта,долгота[,глубина]</code> или <code>X,Y[,H]</code>.</div>
+          <div class="btn-row">
+            <button onclick="document.getElementById('traceFileInput').click()">📂 Загрузить</button>
+            <button class="ghost" onclick="clearTrace()">🗑 Очистить</button>
+            <button class="ghost" onclick="traceToGeoPoints()">🛰️ В точки</button>
+          </div>
+          <input type="file" id="traceFileInput" accept=".csv,.txt" style="display:none;" onchange="importTraceFile(event)">
+          <div class="crs-output" id="traceInfo" style="min-height:40px;">Трасса не загружена</div>
+        </div>
+
+        <div class="card">
+          <h3 data-i18n="dv.serial">🔌 Web Serial (COM-порт)</h3>
+          <div class="info-box" style="font-size:.85rem;">Для старых тахеометров / нивелиров / GNSS через USB-RS232. Chrome/Edge, HTTPS или localhost.</div>
+          <div class="grid-2">
+            <div class="form-group">
+              <label for="serialBaud">Скорость (baud)</label>
+              <select id="serialBaud"><option>4800</option><option>9600</option><option selected>19200</option><option>38400</option><option>57600</option><option>115200</option></select>
+            </div>
+            <div class="form-group">
+              <label for="serialProto">Протокол</label>
+              <select id="serialProto"><option value="nmea">NMEA 0183</option><option value="gsi">GSI (Leica)</option><option value="raw">Сырой текст</option></select>
+            </div>
+          </div>
+          <div class="btn-row">
+            <button onclick="serialConnect()" data-requires-serial>🔌<span data-i18n="Подключить">Подключить</span></button>
+            <button class="ghost" onclick="serialDisconnect()">⏏ Отключить</button>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;margin-top:8px;">
+            <span class="dev-status" id="serialStatus">⭕ не подключён</span>
+          </div>
+          <div class="dev-log" id="serialLog">Журнал пуст</div>
+        </div>
+
+        <div class="card">
+          <h3 data-i18n="dv.email">📧 Отправить данные на e-mail</h3>
+          <div class="info-box" style="font-size:.85rem;">Быстрая отправка через почтовый клиент. Вложения — через системное «Поделиться» на мобильных.</div>
+          <div class="email-form">
+            <div class="row-email"><label style="min-width:80px;">Кому:</label><input type="email" id="emailTo" placeholder="engineer@example.com"></div>
+            <div class="row-email"><label style="min-width:80px;">Тема:</label><input type="text" id="emailSubject" placeholder="Полевые работы — объект"></div>
+            <div class="form-group"><label for="emailBody">Текст письма</label><textarea id="emailBody" rows="4" placeholder="Автоматически подставится отчёт"></textarea></div>
+            <div class="btn-row">
+              <button onclick="fillEmailReport()">📄 Заполнить отчётом</button>
+              <button class="ghost" onclick="sendEmailSimple()">📧 Открыть клиент</button>
+              <button class="ghost" onclick="shareFilesViaEmail()">📎 Поделиться файлами</button>
+            </div>
+            <div class="form-group mt-3">
+              <label>Что приложить:</label>
+              <div class="checklist-item"><input type="checkbox" id="attJson" checked><label for="attJson">JSON проекта</label></div>
+              <div class="checklist-item"><input type="checkbox" id="attCsv" checked><label for="attCsv">CSV (помещения + точки)</label></div>
+              <div class="checklist-item"><input type="checkbox" id="attReport" checked><label for="attReport">TXT-отчёт</label></div>
+              <div class="checklist-item"><input type="checkbox" id="attGeo"><label for="attGeo">GeoJSON</label></div>
+              <div class="checklist-item"><input type="checkbox" id="attPhotos"><label for="attPhotos">Фото (первые 10)</label></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="view" id="view-export">
+      <div class="card">
+        <h2 data-i18n="exp.title">📤 Экспорт</h2>
+        <div class="btn-row">
+          <button onclick="exportJSON()">📤 JSON</button>
+          <button class="ghost" onclick="exportExcel()" data-i18n="exp.excel">📊 Excel (CSV)</button>
+          <button class="ghost" onclick="generateReport()">📄 Отчёт</button>
+          <button class="ghost" onclick="exportGeoCSV()" data-i18n="exp.geoCSV">🛰️ Точки CSV</button>
+          <button class="ghost" onclick="downloadXMLTemplate()" data-i18n="exp.xml">📥 Шаблон XML</button>
+          <button class="ghost" onclick="exportZip()">🗜 ZIP-архив</button>
+        </div>
+      </div>
+      <div class="card">
+        <h2 data-i18n="imp.title">📥 Импорт</h2>
+        <button class="ghost" onclick="document.getElementById('importFile').click()" data-i18n="imp.json">📥 Загрузить JSON</button>
+        <input type="file" id="importFile" accept=".json" style="display:none;" onchange="importJSON(event)">
+      </div>
+      <div class="card">
+        <h2 data-i18n="prn.title">📄 Печать / PDF</h2>
+        <div class="info-box"><span data-i18n="prn.hint">Используйте системную печать → «Сохранить как PDF».</span></div>
+        <div class="btn-row">
+          <button onclick="window.print()" data-i18n="prn.btn">🖨️ Печать / PDF</button>
+          <button class="ghost" onclick="printReport()" data-i18n="prn.report">📋 Печать отчёта</button>
+        </div>
+      </div>
+      <div class="card">
+        <h2 data-i18n="lhs.title">🌐 Запуск через localhost</h2>
+        <div class="info-box" style="font-size:.85rem;">
           Полноценная работа <strong>Web Bluetooth</strong>, <strong>Web Serial</strong>, <strong>Service Worker</strong> и <strong>PWA</strong> возможна только на <code>localhost</code> или <code>HTTPS</code>. Кнопка ниже скачает готовый набор для запуска.
         </div>
-<div class="info-box" id="localhostStatusBox" style="font-size:.85rem;">Проверка окружения…</div>
-<div class="btn-row">
-<button class="success" data-i18n="lhs.dl" onclick="downloadLocalhostKit()">📦 Скачать набор для localhost (ZIP)</button>
-<button class="ghost" data-i18n="lhs.cmd" onclick="copyLocalhostCommand()">📋 Копировать команду запуска</button>
-<button class="ghost" data-i18n="lhs.instr" onclick="openLocalhostModal()">📖 Инструкция</button>
-</div>
-</div>
-<div class="card">
-<h2 data-i18n="pwa.title">📲 Установка как приложение (PWA)</h2>
-<div class="info-box"><span data-i18n="pwa.hint">Для офлайн-режима скачайте sw.js и положите рядом с HTML, разместите на HTTPS или localhost.</span></div>
-<div class="btn-row">
-<button onclick="downloadSW()">📥 sw.js</button>
-<button class="ghost" onclick="downloadManifest()">📥 manifest.json</button>
-<button class="success" id="installPwaBtn" onclick="installPwa()" style="display:none;">📲 Установить</button>
-<button class="ghost" onclick="checkSwStatus()">🔄<span data-i18n="Проверить SW">Проверить SW</span></button>
-</div>
-<div class="info-box mt-3" id="pwaStatus" style="font-size:.85rem;"><span data-i18n="Service Worker: не зарегистрирован">Service Worker: не зарегистрирован</span></div>
-</div>
-<div class="card">
-<h2 data-i18n="sys.title">⚙️ Система</h2>
-<div class="btn-row">
-<button class="ghost" onclick="openProjects()">📁 Проекты</button>
-<button class="danger" onclick="resetAll()">🗑️ Сброс текущего</button>
-</div>
-<p class="text-muted mt-3" style="font-size:0.85rem;">
-<strong>КИ-Поле</strong> · версия 3.4.9 · IndexedDB · PWA · Leaflet · proj4js · Web Bluetooth · Web Serial · Localhost Kit<br/>
-          Разработчик: <a href="https://t.me/Kotohod" rel="noopener" target="_blank">@Kotohod</a>
-</p>
-<div class="info-box mt-3" style="font-size:.82rem;">
-<strong>🔐 Приватность:</strong> данные (ФИО инженера, заказчик, подпись, координаты GPS, фото) хранятся <strong>локально</strong> в IndexedDB и localStorage вашего браузера и <strong>никуда не передаются</strong>. При использовании чужого устройства очищайте данные кнопкой «Сброс».
+        <div id="localhostStatusBox" class="info-box" style="font-size:.85rem;">Проверка окружения…</div>
+        <div class="btn-row">
+          <button class="success" onclick="downloadLocalhostKit()" data-i18n="lhs.dl">📦 Скачать набор для localhost (ZIP)</button>
+          <button class="ghost" onclick="copyLocalhostCommand()" data-i18n="lhs.cmd">📋 Копировать команду запуска</button>
+          <button class="ghost" onclick="openLocalhostModal()" data-i18n="lhs.instr">📖 Инструкция</button>
         </div>
+      </div>
+      <div class="card">
+        <h2 data-i18n="pwa.title">📲 Установка как приложение (PWA)</h2>
+        <div class="info-box"><span data-i18n="pwa.hint">Для офлайн-режима скачайте sw.js и положите рядом с HTML, разместите на HTTPS или localhost.</span></div>
+        <div class="btn-row">
+          <button onclick="downloadSW()">📥 sw.js</button>
+          <button class="ghost" onclick="downloadManifest()">📥 manifest.json</button>
+          <button class="success" id="installPwaBtn" onclick="installPwa()" style="display:none;">📲 Установить</button>
+          <button class="ghost" onclick="checkSwStatus()">🔄<span data-i18n="Проверить SW">Проверить SW</span></button>
+        </div>
+        <div id="pwaStatus" class="info-box mt-3" style="font-size:.85rem;"><span data-i18n="Service Worker: не зарегистрирован">Service Worker: не зарегистрирован</span></div>
+      </div>
+      <div class="card">
+        <h2 data-i18n="sys.title">⚙️ Система</h2>
+        <div class="btn-row">
+          <button class="ghost" onclick="openProjects()">📁 Проекты</button>
+          <button class="danger" onclick="resetAll()">🗑️ Сброс текущего</button>
+        </div>
+        <p class="text-muted mt-3" style="font-size:0.85rem;">
+          <strong>КИ-Поле</strong> · версия 3.4.9 · IndexedDB · PWA · Leaflet · proj4js · Web Bluetooth · Web Serial · Localhost Kit<br>
+          Разработчик: <a href="https://t.me/Kotohod" target="_blank" rel="noopener">@Kotohod</a>
+        </p>
+        <div class="info-box mt-3" style="font-size:.82rem;">
+          <strong>🔐 Приватность:</strong> данные (ФИО инженера, заказчик, подпись, координаты GPS, фото) хранятся <strong>локально</strong> в IndexedDB и localStorage вашего браузера и <strong>никуда не передаются</strong>. При использовании чужого устройства очищайте данные кнопкой «Сброс».
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav no-print">
+    <button class="bottom-nav__btn active" data-view="overview" onclick="switchView('overview')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span data-i18n="nav.overview">Обзор</span>
+    </button>
+    <button class="bottom-nav__btn" data-view="steps" onclick="switchView('steps')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+      <span data-i18n="nav.steps">Шаги</span>
+    </button>
+    <button class="bottom-nav__btn" data-view="tools" onclick="switchView('tools')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      <span data-i18n="nav.tools">Инструменты</span>
+    </button>
+    <button class="bottom-nav__btn" data-view="export" onclick="switchView('export')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <span data-i18n="nav.export"><span data-i18n="Экспорт">Экспорт</span></span>
+    </button>
+  </nav>
 </div>
-</section>
-</main>
-<nav class="bottom-nav no-print">
-<button class="bottom-nav__btn active" data-view="overview" onclick="switchView('overview')">
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-<span data-i18n="nav.overview">Обзор</span>
+
+<button class="fab no-print" id="fabCamera" onclick="openCamera()" title="Фотофиксация" aria-label="Открыть камеру">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
 </button>
-<button class="bottom-nav__btn" data-view="steps" onclick="switchView('steps')">
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><line x1="8" x2="21" y1="6" y2="6"></line><line x1="8" x2="21" y1="12" y2="12"></line><line x1="8" x2="21" y1="18" y2="18"></line><line x1="3" x2="3.01" y1="6" y2="6"></line><line x1="3" x2="3.01" y1="12" y2="12"></line><line x1="3" x2="3.01" y1="18" y2="18"></line></svg>
-<span data-i18n="nav.steps">Шаги</span>
-</button>
-<button class="bottom-nav__btn" data-view="tools" onclick="switchView('tools')">
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
-<span data-i18n="nav.tools">Инструменты</span>
-</button>
-<button class="bottom-nav__btn" data-view="export" onclick="switchView('export')">
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
-<span data-i18n="nav.export"><span data-i18n="Экспорт">Экспорт</span></span>
-</button>
-</nav>
-</div>
-<button aria-label="Открыть камеру" class="fab no-print" id="fabCamera" onclick="openCamera()" title="Фотофиксация">
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
-</button>
-<div aria-live="polite" class="toast-container" id="toastContainer"></div>
+
+<div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
 <script>
 'use strict';
 if (typeof window.t !== 'function') window.t = (k) => k;
@@ -1831,63 +1860,63 @@ function toggleStep(n) {
 function renderGeoCustom() {
   return `
     <div class="form-group mt-3">
-      <label for="geoMethod" data-i18n="Метод измерений" data-i18n="Метод измерений" data-i18n="Метод измерений"><span data-i18n="Метод измерений"><span data-i18n="Метод измерений"><span data-i18n="Метод измерений"><span data-i18n="Метод измерений">Метод измерений</span></span></span></span></label>
+      <label for="geoMethod" data-i18n=t(t(t(t(t("Метод измерений"))))) data-i18n=t(t(t(t(t("Метод измерений"))))) data-i18n=t(t(t(t(t("Метод измерений")))))><span data-i18n=t(t(t(t("Метод измерений"))))><span data-i18n=t(t(t("Метод измерений")))><span data-i18n=t(t("Метод измерений"))><span data-i18n=t("Метод измерений")>Метод измерений</span></span></span></span></label>
       <select id="geoMethod" onchange="State.geoMethod=this.value; saveDebounced()">
         ${['RTK','PPK','Static','Total'].map(v=>`<option value="${v}" ${State.geoMethod===v?'selected':''}>${v}</option>`).join('')}
       </select>
     </div>
     <div class="grid-2">
-      <div class="form-group"><label for="geoCRS" data-i18n="Система координат / зона МСК" data-i18n="Система координат / зона МСК" data-i18n="Система координат / зона МСК"><span data-i18n="Система координат / зона МСК"><span data-i18n="Система координат / зона МСК"><span data-i18n="Система координат / зона МСК"><span data-i18n="Система координат / зона МСК">Система координат / зона МСК</span></span></span></span></label>
+      <div class="form-group"><label for="geoCRS" data-i18n=t(t(t(t(t("Система координат / зона МСК"))))) data-i18n=t(t(t(t(t("Система координат / зона МСК"))))) data-i18n=t(t(t(t(t("Система координат / зона МСК")))))><span data-i18n=t(t(t(t("Система координат / зона МСК"))))><span data-i18n=t(t(t("Система координат / зона МСК")))><span data-i18n=t(t("Система координат / зона МСК"))><span data-i18n=t("Система координат / зона МСК")>Система координат / зона МСК</span></span></span></span></label>
         <input type="text" id="geoCRS" placeholder="МСК-77, зона 1" value="${escapeHtml(State.geoCRS)}" oninput="State.geoCRS=this.value; saveDebounced()"></div>
-      <div class="form-group"><label for="geoBase" data-i18n="Базовая станция / сеть" data-i18n="Базовая станция / сеть" data-i18n="Базовая станция / сеть"><span data-i18n="Базовая станция / сеть"><span data-i18n="Базовая станция / сеть"><span data-i18n="Базовая станция / сеть"><span data-i18n="Базовая станция / сеть">Базовая станция / сеть</span></span></span></span></label>
+      <div class="form-group"><label for="geoBase" data-i18n=t(t(t(t(t("Базовая станция / сеть"))))) data-i18n=t(t(t(t(t("Базовая станция / сеть"))))) data-i18n=t(t(t(t(t("Базовая станция / сеть")))))><span data-i18n=t(t(t(t("Базовая станция / сеть"))))><span data-i18n=t(t(t("Базовая станция / сеть")))><span data-i18n=t(t("Базовая станция / сеть"))><span data-i18n=t("Базовая станция / сеть")>Базовая станция / сеть</span></span></span></span></label>
         <input type="text" id="geoBase" placeholder="BASE1 / RTK-сеть" value="${escapeHtml(State.geoBase)}" oninput="State.geoBase=this.value; saveDebounced()"></div>
     </div>
     <h3>Каталог точек</h3>
     <div class="btn-row">
-      <button class="small" onclick="addGeoPoint()"><span data-i18n="+ Точка" data-i18n="+ Точка" data-i18n="+ Точка"><span data-i18n="+ Точка"><span data-i18n="+ Точка"><span data-i18n="+ Точка"><span data-i18n="+ Точка">+ Точка</span></span></span></span></span></button>
-      <button class="small ghost" onclick="clearGeoPoints()" data-i18n="Очистить" data-i18n="Очистить" data-i18n="Очистить" data-i18n="Очистить"><span data-i18n="Очистить"><span data-i18n="Очистить"><span data-i18n="Очистить"><span data-i18n="Очистить"><span data-i18n="Очистить"><span data-i18n="Очистить"><span data-i18n="Очистить">Очистить</span></span></span></span></span></span></span></button>
+      <button class="small" onclick="addGeoPoint()"><span data-i18n=t(t(t(t(t("+ Точка"))))) data-i18n=t(t(t(t(t("+ Точка"))))) data-i18n=t(t(t(t(t("+ Точка")))))><span data-i18n=t(t(t(t("+ Точка"))))><span data-i18n=t(t(t("+ Точка")))><span data-i18n=t(t("+ Точка"))><span data-i18n=t("+ Точка")>+ Точка</span></span></span></span></span></button>
+      <button class="small ghost" onclick="clearGeoPoints()" data-i18n=t(t(t(t(t(t(t(t(t("Очистить"))))))))) data-i18n=t(t(t(t(t(t(t(t(t("Очистить"))))))))) data-i18n=t(t(t(t(t(t(t(t(t("Очистить"))))))))) data-i18n=t(t(t(t(t(t(t(t("Очистить"))))))))><span data-i18n=t(t(t(t(t(t(t("Очистить")))))))><span data-i18n=t(t(t(t(t(t("Очистить"))))))><span data-i18n=t(t(t(t(t("Очистить")))))><span data-i18n=t(t(t(t("Очистить"))))><span data-i18n=t(t(t("Очистить")))><span data-i18n=t(t("Очистить"))><span data-i18n=t("Очистить")>Очистить</span></span></span></span></span></span></span></button>
       <button class="small ghost" onclick="exportGeoCSV()">💾 CSV</button>
       <button class="small ghost" onclick="exportGeoTXT()">💾 TXT</button>
       <button class="small ghost" onclick="openMapModal()">🗺️ Карта</button>
     </div>
     <div class="geo-table-wrap table-scroll">
       <table class="data-table"><thead><tr>
-        <th data-i18n=№><span data-i18n=№><span data-i18n="№"><span data-i18n="№"><span data-i18n="№">№</span></span></span></span></th><th>Имя</th><th>X, м</th><th>Y, м</th><th>H, м</th><th>СКП, м</th><th>Метод</th><th></th>
+        <th data-i18n=№><span data-i18n=№><span data-i18n=t(t("№"))><span data-i18n=t("№")><span data-i18n="№">№</span></span></span></span></th><th>Имя</th><th>X, м</th><th>Y, м</th><th>H, м</th><th>СКП, м</th><th>Метод</th><th></th>
       </tr></thead><tbody id="geoTableBody"></tbody></table>
     </div>
     <div class="geo-cards" id="geoCardList"></div>
-    <div class="info-box"><strong><span data-i18n="СКП по точкам:" data-i18n="СКП по точкам:" data-i18n="СКП по точкам:"><span data-i18n="СКП по точкам:"><span data-i18n="СКП по точкам:"><span data-i18n="СКП по точкам:"><span data-i18n="СКП по точкам:">СКП по точкам:</span></span></span></span></span></strong><div id="geoStats"><span data-i18n="нет точек" data-i18n="нет точек" data-i18n="нет точек"><span data-i18n="нет точек"><span data-i18n="нет точек"><span data-i18n="нет точек"><span data-i18n="нет точек">нет точек</span></span></span></span></span></div></div>`;
+    <div class="info-box"><strong><span data-i18n=t(t(t(t(t("СКП по точкам:"))))) data-i18n=t(t(t(t(t("СКП по точкам:"))))) data-i18n=t(t(t(t(t("СКП по точкам:")))))><span data-i18n=t(t(t(t("СКП по точкам:"))))><span data-i18n=t(t(t("СКП по точкам:")))><span data-i18n=t(t("СКП по точкам:"))><span data-i18n=t("СКП по точкам:")>СКП по точкам:</span></span></span></span></span></strong><div id="geoStats"><span data-i18n=t(t(t(t(t("нет точек"))))) data-i18n=t(t(t(t(t("нет точек"))))) data-i18n=t(t(t(t(t("нет точек")))))><span data-i18n=t(t(t(t("нет точек"))))><span data-i18n=t(t(t("нет точек")))><span data-i18n=t(t("нет точек"))><span data-i18n=t("нет точек")>нет точек</span></span></span></span></span></div></div>`;
 }
 function renderZuCustom() {
   return `
     <div class="grid-2 mt-3">
-      <div class="form-group"><label for="zuDocArea"><span data-i18n="Площадь ЗУ по документам, м²" data-i18n="Площадь ЗУ по документам, м²" data-i18n="Площадь ЗУ по документам, м²"><span data-i18n="Площадь ЗУ по документам, м²"><span data-i18n="Площадь ЗУ по документам, м²"><span data-i18n="Площадь ЗУ по документам, м²"><span data-i18n="Площадь ЗУ по документам, м²">Площадь ЗУ по документам, м²</span></span></span></span></span></label>
+      <div class="form-group"><label for="zuDocArea"><span data-i18n=t(t(t(t(t("Площадь ЗУ по документам, м²"))))) data-i18n=t(t(t(t(t("Площадь ЗУ по документам, м²"))))) data-i18n=t(t(t(t(t("Площадь ЗУ по документам, м²")))))><span data-i18n=t(t(t(t("Площадь ЗУ по документам, м²"))))><span data-i18n=t(t(t("Площадь ЗУ по документам, м²")))><span data-i18n=t(t("Площадь ЗУ по документам, м²"))><span data-i18n=t("Площадь ЗУ по документам, м²")>Площадь ЗУ по документам, м²</span></span></span></span></span></label>
         <input type="number" id="zuDocArea" step="0.01" min="0" inputmode="decimal" value="${State.zuDocArea||0}" oninput="State.zuDocArea=parseFloat(this.value)||0; saveDebounced()"></div>
-      <div class="form-group"><label for="zuFactArea"><span data-i18n="Площадь фактическая, м²" data-i18n="Площадь фактическая, м²" data-i18n="Площадь фактическая, м²"><span data-i18n="Площадь фактическая, м²"><span data-i18n="Площадь фактическая, м²"><span data-i18n="Площадь фактическая, м²"><span data-i18n="Площадь фактическая, м²">Площадь фактическая, м²</span></span></span></span></span></label>
+      <div class="form-group"><label for="zuFactArea"><span data-i18n=t(t(t(t(t("Площадь фактическая, м²"))))) data-i18n=t(t(t(t(t("Площадь фактическая, м²"))))) data-i18n=t(t(t(t(t("Площадь фактическая, м²")))))><span data-i18n=t(t(t(t("Площадь фактическая, м²"))))><span data-i18n=t(t(t("Площадь фактическая, м²")))><span data-i18n=t(t("Площадь фактическая, м²"))><span data-i18n=t("Площадь фактическая, м²")>Площадь фактическая, м²</span></span></span></span></span></label>
         <input type="number" id="zuFactArea" step="0.01" min="0" inputmode="decimal" value="${State.zuFactArea||0}" oninput="State.zuFactArea=parseFloat(this.value)||0; saveDebounced()"></div>
     </div>
     <div class="form-group">
-      <label for="zuCategory"><span data-i18n="Категория земель" data-i18n="Категория земель" data-i18n="Категория земель"><span data-i18n="Категория земель"><span data-i18n="Категория земель"><span data-i18n="Категория земель"><span data-i18n="Категория земель">Категория земель</span></span></span></span></span></label>
+      <label for="zuCategory"><span data-i18n=t(t(t(t(t("Категория земель"))))) data-i18n=t(t(t(t(t("Категория земель"))))) data-i18n=t(t(t(t(t("Категория земель")))))><span data-i18n=t(t(t(t("Категория земель"))))><span data-i18n=t(t(t("Категория земель")))><span data-i18n=t(t("Категория земель"))><span data-i18n=t("Категория земель")>Категория земель</span></span></span></span></span></label>
       <select id="zuCategory" onchange="State.zuCategory=this.value; saveDebounced()">
-        <option value=""><span data-i18n="— выберите —" data-i18n="— выберите —" data-i18n="— выберите —"><span data-i18n="— выберите —"><span data-i18n="— выберите —"><span data-i18n="— выберите —"><span data-i18n="— выберите —">— выберите —</span></span></span></span></span></option>
+        <option value=""><span data-i18n=t(t(t(t(t("— выберите —"))))) data-i18n=t(t(t(t(t("— выберите —"))))) data-i18n=t(t(t(t(t("— выберите —")))))><span data-i18n=t(t(t(t("— выберите —"))))><span data-i18n=t(t(t("— выберите —")))><span data-i18n=t(t("— выберите —"))><span data-i18n=t("— выберите —")>— выберите —</span></span></span></span></span></option>
         ${['Земли населённых пунктов','Земли сельхозназначения','Земли промышленности','Земли лесного фонда','Земли водного фонда','Земли особо охраняемых территорий','Земли запаса']
           .map(o=>`<option ${State.zuCategory===o?'selected':''}>${o}</option>`).join('')}
       </select>
     </div>
-    <div class="form-group"><label for="zuVRI"><span data-i18n="ВРИ" data-i18n="ВРИ" data-i18n="ВРИ"><span data-i18n="ВРИ"><span data-i18n="ВРИ"><span data-i18n="ВРИ"><span data-i18n="ВРИ">ВРИ</span></span></span></span></span></label>
-      <input type="text" id="zuVRI" placeholder="ИЖС" / ЛПХ / садоводство value="${escapeHtml(State.zuVRI)}" oninput="State.zuVRI=this.value; saveDebounced()"></div>
+    <div class="form-group"><label for="zuVRI"><span data-i18n=t(t(t(t(t("ВРИ"))))) data-i18n=t(t(t(t(t("ВРИ"))))) data-i18n=t(t(t(t(t("ВРИ")))))><span data-i18n=t(t(t(t("ВРИ"))))><span data-i18n=t(t(t("ВРИ")))><span data-i18n=t(t("ВРИ"))><span data-i18n=t("ВРИ")>ВРИ</span></span></span></span></span></label>
+      <input type="text" id="zuVRI" placeholder=ИЖС / ЛПХ / садоводство value="${escapeHtml(State.zuVRI)}" oninput="State.zuVRI=this.value; saveDebounced()"></div>
     <div class="form-group">
-      <label for="zuAreaK"><span data-i18n="Коэффициент конфигурации k" data-i18n="Коэффициент конфигурации k" data-i18n="Коэффициент конфигурации k"><span data-i18n="Коэффициент конфигурации k"><span data-i18n="Коэффициент конфигурации k"><span data-i18n="Коэффициент конфигурации k"><span data-i18n="Коэффициент конфигурации k">Коэффициент конфигурации k</span></span></span></span></span></label>
+      <label for="zuAreaK"><span data-i18n=t(t(t(t(t("Коэффициент конфигурации k"))))) data-i18n=t(t(t(t(t("Коэффициент конфигурации k"))))) data-i18n=t(t(t(t(t("Коэффициент конфигурации k")))))><span data-i18n=t(t(t(t("Коэффициент конфигурации k"))))><span data-i18n=t(t(t("Коэффициент конфигурации k")))><span data-i18n=t(t("Коэффициент конфигурации k"))><span data-i18n=t("Коэффициент конфигурации k")>Коэффициент конфигурации k</span></span></span></span></span></label>
       <input type="number" id="zuAreaK" step="0.1" min="0.1" value="1.0" inputmode="decimal">
       <small class="text-muted">1.0 — компактный; &gt; 1 — вытянутый / сложной формы (П/0393)</small>
     </div>
     <button class="small ghost" onclick="checkZuArea()">⚖️ Проверить расхождение</button>
     <div class="calc-result hidden" id="zuAreaResult"></div>
     <h3 class="mt-3">Смежники / правообладатели</h3>
-    <button class="small" onclick="addNeighbor()"><span data-i18n="+ Смежник" data-i18n="+ Смежник" data-i18n="+ Смежник"><span data-i18n="+ Смежник"><span data-i18n="+ Смежник"><span data-i18n="+ Смежник"><span data-i18n="+ Смежник">+ Смежник</span></span></span></span></span></button>
+    <button class="small" onclick="addNeighbor()"><span data-i18n=t(t(t(t(t("+ Смежник"))))) data-i18n=t(t(t(t(t("+ Смежник"))))) data-i18n=t(t(t(t(t("+ Смежник")))))><span data-i18n=t(t(t(t("+ Смежник"))))><span data-i18n=t(t(t("+ Смежник")))><span data-i18n=t(t("+ Смежник"))><span data-i18n=t("+ Смежник")>+ Смежник</span></span></span></span></span></button>
     <div id="neighborList" class="mt-2"></div>
     <h3 class="mt-3">Сервитуты / обременения / ЗОУИТ</h3>
-    <button class="small" onclick="addServitude()"><span data-i18n="+ Запись" data-i18n="+ Запись" data-i18n="+ Запись"><span data-i18n="+ Запись"><span data-i18n="+ Запись"><span data-i18n="+ Запись"><span data-i18n="+ Запись">+ Запись</span></span></span></span></span></button>
+    <button class="small" onclick="addServitude()"><span data-i18n=t(t(t(t(t("+ Запись"))))) data-i18n=t(t(t(t(t("+ Запись"))))) data-i18n=t(t(t(t(t("+ Запись")))))><span data-i18n=t(t(t(t("+ Запись"))))><span data-i18n=t(t(t("+ Запись")))><span data-i18n=t(t("+ Запись"))><span data-i18n=t("+ Запись")>+ Запись</span></span></span></span></span></button>
     <div id="servitudeList" class="mt-2"></div>
     <h3 class="mt-3">Акт согласования</h3>
     <div class="btn-row">
@@ -1899,7 +1928,7 @@ function renderZuCustom() {
 function renderTechplanCustom() {
   return `
     <h3 class="mt-3">Проёмы</h3>
-    <button class="small" onclick="addOpening()" data-i18n="+ Проём"><span data-i18n="+ Проём"><span data-i18n="+ Проём"><span data-i18n="+ Проём">+ Проём</span></span></span></button>
+    <button class="small" onclick="addOpening()" data-i18n=t(t(t(t("+ Проём"))))><span data-i18n=t(t(t("+ Проём")))><span data-i18n=t(t("+ Проём"))><span data-i18n=t("+ Проём")>+ Проём</span></span></span></button>
     <div id="openingList" class="mt-2"></div>
     <h3 class="mt-3">Инженерные системы</h3>
     ${[['eng1',t(t('Холодное водоснабжение'))],['eng2',t(t('Горячее водоснабжение'))],['eng3',t(t('Водоотведение'))],
@@ -1912,18 +1941,18 @@ function renderTechplanCustom() {
           <label for="${id}">${label}</label>
         </div>`).join('')}
     <h3 class="mt-3">Балконы / лоджии</h3>
-    <button class="small" onclick="addBalcony()" data-i18n="+ Балкон/лоджия" data-i18n="+ Балкон/лоджия" data-i18n="+ Балкон/лоджия"><span data-i18n="+ Балкон/лоджия"><span data-i18n="+ Балкон/лоджия"><span data-i18n="+ Балкон/лоджия"><span data-i18n="+ Балкон/лоджия">+ Балкон/лоджия</span></span></span></span></button>
+    <button class="small" onclick="addBalcony()" data-i18n=t(t(t(t("+ Балкон/лоджия")))) data-i18n=t(t(t(t("+ Балкон/лоджия")))) data-i18n=t(t(t(t("+ Балкон/лоджия"))))><span data-i18n=t(t(t("+ Балкон/лоджия")))><span data-i18n=t(t("+ Балкон/лоджия"))><span data-i18n=t("+ Балкон/лоджия")><span data-i18n="+ Балкон/лоджия">+ Балкон/лоджия</span></span></span></span></button>
     <div id="balconyList" class="mt-2"></div>
     <h3 class="mt-3">🚗 Машино-места</h3>
-    <button class="small" onclick="addParking()" data-i18n="+ Машино-место" data-i18n="+ Машино-место" data-i18n="+ Машино-место"><span data-i18n="+ Машино-место"><span data-i18n="+ Машино-место"><span data-i18n="+ Машино-место"><span data-i18n="+ Машино-место">+ Машино-место</span></span></span></span></button>
+    <button class="small" onclick="addParking()" data-i18n=t(t(t(t("+ Машино-место")))) data-i18n=t(t(t(t("+ Машино-место")))) data-i18n=t(t(t(t("+ Машино-место"))))><span data-i18n=t(t(t("+ Машино-место")))><span data-i18n=t(t("+ Машино-место"))><span data-i18n=t("+ Машино-место")><span data-i18n="+ Машино-место">+ Машино-место</span></span></span></span></button>
     <div id="parkingList" class="mt-2"></div>
-    <h3 class="mt-3" data-i18n="Годы" data-i18n="Годы">Годы</h3>
+    <h3 class="mt-3" data-i18n="Годы">Годы</h3>
     <div class="grid-3">
-      <div class="form-group"><label for="yearBuilt" data-i18n="Постройки" data-i18n="Постройки"><span data-i18n="Постройки"><span data-i18n="Постройки"><span data-i18n="Постройки">Постройки</span></span></span></label>
+      <div class="form-group"><label for="yearBuilt" data-i18n=t(t(t(t("Постройки")))) data-i18n=t(t(t(t("Постройки"))))><span data-i18n=t(t(t("Постройки")))><span data-i18n=t(t("Постройки"))><span data-i18n=t("Постройки")>Постройки</span></span></span></label>
         <input type="number" id="yearBuilt" min="1800" max="2100" inputmode="numeric" value="${escapeHtml(State.yearBuilt)}" oninput="State.yearBuilt=this.value; saveDebounced()"></div>
-      <div class="form-group"><label for="yearRecon" data-i18n="Реконструкции" data-i18n="Реконструкции"><span data-i18n="Реконструкции"><span data-i18n="Реконструкции"><span data-i18n="Реконструкции">Реконструкции</span></span></span></label>
+      <div class="form-group"><label for="yearRecon" data-i18n=t(t(t(t("Реконструкции")))) data-i18n=t(t(t(t("Реконструкции"))))><span data-i18n=t(t(t("Реконструкции")))><span data-i18n=t(t("Реконструкции"))><span data-i18n=t("Реконструкции")>Реконструкции</span></span></span></label>
         <input type="number" id="yearRecon" min="1800" max="2100" inputmode="numeric" value="${escapeHtml(State.yearRecon)}" oninput="State.yearRecon=this.value; saveDebounced()"></div>
-      <div class="form-group"><label for="yearComplete" data-i18n="Завершения" data-i18n="Завершения"><span data-i18n="Завершения"><span data-i18n="Завершения"><span data-i18n="Завершения">Завершения</span></span></span></label>
+      <div class="form-group"><label for="yearComplete" data-i18n=t(t(t(t("Завершения")))) data-i18n=t(t(t(t("Завершения"))))><span data-i18n=t(t(t("Завершения")))><span data-i18n=t(t("Завершения"))><span data-i18n=t("Завершения")>Завершения</span></span></span></label>
         <input type="number" id="yearComplete" min="1800" max="2100" inputmode="numeric" value="${escapeHtml(State.yearComplete)}" oninput="State.yearComplete=this.value; saveDebounced()"></div>
     </div>`;
 }
@@ -1931,14 +1960,14 @@ function renderActCustom() {
   return `
     <div class="info-box mt-3">Акт обследования оформляется при <strong>прекращении существования</strong> ОКС, сносе, гибели, а также при <strong>незавершённом строительстве</strong>.</div>
     <div class="form-group">
-      <label for="actReason"><span data-i18n="Причина прекращения / обследования" data-i18n="Причина прекращения / обследования"><span data-i18n="Причина прекращения / обследования"><span data-i18n="Причина прекращения / обследования"><span data-i18n="Причина прекращения / обследования"><span data-i18n="Причина прекращения / обследования">Причина прекращения / обследования</span></span></span></span></span></label>
+      <label for="actReason"><span data-i18n=t(t(t(t("Причина прекращения / обследования")))) data-i18n=t(t(t(t("Причина прекращения / обследования"))))><span data-i18n=t(t(t("Причина прекращения / обследования")))><span data-i18n=t(t("Причина прекращения / обследования"))><span data-i18n=t("Причина прекращения / обследования")><span data-i18n="Причина прекращения / обследования">Причина прекращения / обследования</span></span></span></span></span></label>
       <select id="actReason" onchange="State.actReason=this.value; saveDebounced()">
         ${[t(t(t(t('Снос / демонтаж')))),'Гибель / уничтожение','Прекращение существования','Незавершённое строительство','Иное']
           .map(o=>`<option ${State.actReason===o?'selected':''}>${o}</option>`).join('')}
       </select>
     </div>
     <div class="form-group">
-      <label for="actDescription"><span data-i18n="Описание состояния / заключение" data-i18n="Описание состояния / заключение"><span data-i18n="Описание состояния / заключение"><span data-i18n="Описание состояния / заключение"><span data-i18n="Описание состояния / заключение"><span data-i18n="Описание состояния / заключение">Описание состояния / заключение</span></span></span></span></span></label>
+      <label for="actDescription"><span data-i18n=t(t(t(t("Описание состояния / заключение")))) data-i18n=t(t(t(t("Описание состояния / заключение"))))><span data-i18n=t(t(t("Описание состояния / заключение")))><span data-i18n=t(t("Описание состояния / заключение"))><span data-i18n=t("Описание состояния / заключение")><span data-i18n="Описание состояния / заключение">Описание состояния / заключение</span></span></span></span></span></label>
       <textarea id="actDescription" rows="4" oninput="State.actDescription=this.value; saveDebounced()">${escapeHtml(State.actDescription)}</textarea>
     </div>`;
 }
@@ -1946,19 +1975,19 @@ function renderActCustom() {
 function renderSignatureCustom() {
   return `
     <div class="form-group mt-3">
-      <label for="docsList" data-i18n="Перечень полученных документов" data-i18n="Перечень полученных документов"><span data-i18n="Перечень полученных документов"><span data-i18n="Перечень полученных документов"><span data-i18n="Перечень полученных документов"><span data-i18n="Перечень полученных документов">Перечень полученных документов</span></span></span></span></label>
+      <label for="docsList" data-i18n=t(t(t(t(t("Перечень полученных документов"))))) data-i18n=t(t(t(t(t("Перечень полученных документов")))))><span data-i18n=t(t(t(t("Перечень полученных документов"))))><span data-i18n=t(t(t("Перечень полученных документов")))><span data-i18n=t(t("Перечень полученных документов"))><span data-i18n=t("Перечень полученных документов")>Перечень полученных документов</span></span></span></span></label>
       <textarea id="docsList" rows="3" oninput="State.docsList=this.value; saveDebounced()">${escapeHtml(State.docsList)}</textarea>
     </div>
     <div class="form-group">
-      <label data-i18n="Подпись заказчика" data-i18n="Подпись заказчика"><span data-i18n="Подпись заказчика"><span data-i18n="Подпись заказчика"><span data-i18n="Подпись заказчика"><span data-i18n="Подпись заказчика">Подпись заказчика</span></span></span></span></label>
+      <label data-i18n=t(t(t(t(t("Подпись заказчика"))))) data-i18n=t(t(t(t(t("Подпись заказчика")))))><span data-i18n=t(t(t(t("Подпись заказчика"))))><span data-i18n=t(t(t("Подпись заказчика")))><span data-i18n=t(t("Подпись заказчика"))><span data-i18n=t("Подпись заказчика")>Подпись заказчика</span></span></span></span></label>
       <div class="sig-wrap">
         <canvas id="sigCustomer" class="sig-canvas"></canvas>
-        <button type="button" class="sig-clear ghost" onclick="clearSig('sigCustomer')" data-i18n="Очистить" data-i18n="Очистить" data-i18n="Очистить" data-i18n="Очистить"><span data-i18n="Очистить"><span data-i18n="Очистить"><span data-i18n="Очистить"><span data-i18n="Очистить"><span data-i18n="Очистить"><span data-i18n="Очистить"><span data-i18n="Очистить">Очистить</span></span></span></span></span></span></span></button>
+        <button type="button" class="sig-clear ghost" onclick="clearSig('sigCustomer')" data-i18n=t(t(t(t(t(t(t(t(t("Очистить"))))))))) data-i18n=t(t(t(t(t(t(t(t(t("Очистить"))))))))) data-i18n=t(t(t(t(t(t(t(t(t("Очистить"))))))))) data-i18n=t(t(t(t(t(t(t(t("Очистить"))))))))><span data-i18n=t(t(t(t(t(t(t("Очистить")))))))><span data-i18n=t(t(t(t(t(t("Очистить"))))))><span data-i18n=t(t(t(t(t("Очистить")))))><span data-i18n=t(t(t(t("Очистить"))))><span data-i18n=t(t(t("Очистить")))><span data-i18n=t(t("Очистить"))><span data-i18n=t("Очистить")>Очистить</span></span></span></span></span></span></span></button>
       </div>
-      <small class="text-muted"><span data-i18n="Распишитесь пальцем или стилусом" data-i18n="Распишитесь пальцем или стилусом"><span data-i18n="Распишитесь пальцем или стилусом"><span data-i18n="Распишитесь пальцем или стилусом"><span data-i18n="Распишитесь пальцем или стилусом"><span data-i18n="Распишитесь пальцем или стилусом">Распишитесь пальцем или стилусом</span></span></span></span></span></small>
+      <small class="text-muted"><span data-i18n=t(t(t(t(t("Распишитесь пальцем или стилусом"))))) data-i18n=t(t(t(t(t("Распишитесь пальцем или стилусом")))))><span data-i18n=t(t(t(t("Распишитесь пальцем или стилусом"))))><span data-i18n=t(t(t("Распишитесь пальцем или стилусом")))><span data-i18n=t(t("Распишитесь пальцем или стилусом"))><span data-i18n=t("Распишитесь пальцем или стилусом")>Распишитесь пальцем или стилусом</span></span></span></span></span></small>
     </div>
     <div class="form-group mt-3">
-      <label data-i18n="Согласие на обработку персональных данных" data-i18n="Согласие на обработку персональных данных"><span data-i18n="Согласие на обработку персональных данных"><span data-i18n="Согласие на обработку персональных данных"><span data-i18n="Согласие на обработку персональных данных"><span data-i18n="Согласие на обработку персональных данных">Согласие на обработку персональных данных</span></span></span></span></label>
+      <label data-i18n=t(t(t(t(t("Согласие на обработку персональных данных"))))) data-i18n=t(t(t(t(t("Согласие на обработку персональных данных")))))><span data-i18n=t(t(t(t("Согласие на обработку персональных данных"))))><span data-i18n=t(t(t("Согласие на обработку персональных данных")))><span data-i18n=t(t("Согласие на обработку персональных данных"))><span data-i18n=t("Согласие на обработку персональных данных")>Согласие на обработку персональных данных</span></span></span></span></label>
       <div class="info-box" style="font-size:.82rem;">
         Согласие заказчика-физлица <strong>обязательно включается в Приложение</strong> межевого плана / техплана (152-ФЗ от 27.07.2006, ст. 9).
       </div>
@@ -1973,26 +2002,26 @@ function renderNormsCustom() {
   const p = State.p0393 || { above:0, under:0, roof:0 };
   return `
     <div class="info-box">
-      <strong data-i18n="Актуальные XML-схемы:" data-i18n="Актуальные XML-схемы:"><span data-i18n="Актуальные XML-схемы:"><span data-i18n="Актуальные XML-схемы:"><span data-i18n="Актуальные XML-схемы:"><span data-i18n="Актуальные XML-схемы:">Актуальные XML-схемы:</span></span></span></span></strong>
+      <strong data-i18n=t(t(t(t(t("Актуальные XML-схемы:"))))) data-i18n=t(t(t(t(t("Актуальные XML-схемы:")))))><span data-i18n=t(t(t(t("Актуальные XML-схемы:"))))><span data-i18n=t(t(t("Актуальные XML-схемы:")))><span data-i18n=t(t("Актуальные XML-схемы:"))><span data-i18n=t("Актуальные XML-схемы:")>Актуальные XML-схемы:</span></span></span></span></strong>
       <ul>
-        <li><strong data-i18n="Техплан ОКС:"><span data-i18n="Техплан ОКС:"><span data-i18n="Техплан ОКС:"><span data-i18n="Техплан ОКС:"><span data-i18n="Техплан ОКС:">Техплан ОКС:</span></span></span></span></strong> TP_v07_R03</li>
-        <li><strong data-i18n="Акт обследования:"><span data-i18n="Акт обследования:"><span data-i18n="Акт обследования:"><span data-i18n="Акт обследования:"><span data-i18n="Акт обследования:">Акт обследования:</span></span></span></span></strong> InspectionAct_v03.xsd</li>
-        <li><strong data-i18n="Межевой план:"><span data-i18n="Межевой план:"><span data-i18n="Межевой план:"><span data-i18n="Межевой план:"><span data-i18n="Межевой план:">Межевой план:</span></span></span></span></strong> MP_v09_R04 (актуальная ревизия)</li>
+        <li><strong data-i18n=t(t(t(t(t("Техплан ОКС:")))))><span data-i18n=t(t(t(t("Техплан ОКС:"))))><span data-i18n=t(t(t("Техплан ОКС:")))><span data-i18n=t(t("Техплан ОКС:"))><span data-i18n=t("Техплан ОКС:")>Техплан ОКС:</span></span></span></span></strong> TP_v07_R03</li>
+        <li><strong data-i18n=t(t(t(t(t("Акт обследования:")))))><span data-i18n=t(t(t(t("Акт обследования:"))))><span data-i18n=t(t(t("Акт обследования:")))><span data-i18n=t(t("Акт обследования:"))><span data-i18n=t("Акт обследования:")>Акт обследования:</span></span></span></span></strong> InspectionAct_v03.xsd</li>
+        <li><strong data-i18n=t(t(t(t(t("Межевой план:")))))><span data-i18n=t(t(t(t("Межевой план:"))))><span data-i18n=t(t(t("Межевой план:")))><span data-i18n=t(t("Межевой план:"))><span data-i18n=t("Межевой план:")>Межевой план:</span></span></span></span></strong> MP_v09_R04 (актуальная ревизия)</li>
       </ul>
     </div>
     <h3 class="mt-3">Проверка площади по П/0393</h3>
     <div class="grid-3">
-      <div class="form-group"><label for="p0393Above" data-i18n="Надземные, м²" data-i18n="Надземные, м²"><span data-i18n="Надземные, м²"><span data-i18n="Надземные, м²"><span data-i18n="Надземные, м²"><span data-i18n="Надземные, м²">Надземные, м²</span></span></span></span></label>
+      <div class="form-group"><label for="p0393Above" data-i18n=t(t(t(t(t("Надземные, м²"))))) data-i18n=t(t(t(t(t("Надземные, м²")))))><span data-i18n=t(t(t(t("Надземные, м²"))))><span data-i18n=t(t(t("Надземные, м²")))><span data-i18n=t(t("Надземные, м²"))><span data-i18n=t("Надземные, м²")>Надземные, м²</span></span></span></span></label>
         <input type="number" id="p0393Above" step="0.01" min="0" inputmode="decimal" value="${p.above ?? 0}"
           oninput="State.p0393=State.p0393||{above:0,under:0,roof:0}; State.p0393.above=parseFloat(this.value)||0; saveDebounced()"></div>
-      <div class="form-group"><label for="p0393Under" data-i18n="Подземные, м²" data-i18n="Подземные, м²"><span data-i18n="Подземные, м²"><span data-i18n="Подземные, м²"><span data-i18n="Подземные, м²"><span data-i18n="Подземные, м²">Подземные, м²</span></span></span></span></label>
+      <div class="form-group"><label for="p0393Under" data-i18n=t(t(t(t(t("Подземные, м²"))))) data-i18n=t(t(t(t(t("Подземные, м²")))))><span data-i18n=t(t(t(t("Подземные, м²"))))><span data-i18n=t(t(t("Подземные, м²")))><span data-i18n=t(t("Подземные, м²"))><span data-i18n=t("Подземные, м²")>Подземные, м²</span></span></span></span></label>
         <input type="number" id="p0393Under" step="0.01" min="0" inputmode="decimal" value="${p.under ?? 0}"
           oninput="State.p0393=State.p0393||{above:0,under:0,roof:0}; State.p0393.under=parseFloat(this.value)||0; saveDebounced()"></div>
-      <div class="form-group"><label for="p0393Roof" data-i18n="Кровля, м²" data-i18n="Кровля, м²"><span data-i18n="Кровля, м²"><span data-i18n="Кровля, м²"><span data-i18n="Кровля, м²"><span data-i18n="Кровля, м²">Кровля, м²</span></span></span></span></label>
+      <div class="form-group"><label for="p0393Roof" data-i18n=t(t(t(t(t("Кровля, м²"))))) data-i18n=t(t(t(t(t("Кровля, м²")))))><span data-i18n=t(t(t(t("Кровля, м²"))))><span data-i18n=t(t(t("Кровля, м²")))><span data-i18n=t(t("Кровля, м²"))><span data-i18n=t("Кровля, м²")>Кровля, м²</span></span></span></span></label>
         <input type="number" id="p0393Roof" step="0.01" min="0" inputmode="decimal" value="${p.roof ?? 0}"
           oninput="State.p0393=State.p0393||{above:0,under:0,roof:0}; State.p0393.roof=parseFloat(this.value)||0; saveDebounced()"></div>
     </div>
-    <button onclick="checkP0393Area()" data-i18n="Проверить" data-i18n="Проверить"><span data-i18n="Проверить"><span data-i18n="Проверить"><span data-i18n="Проверить"><span data-i18n="Проверить">Проверить</span></span></span></span></button>
+    <button onclick="checkP0393Area()" data-i18n=t(t(t(t(t("Проверить"))))) data-i18n=t(t(t(t(t("Проверить")))))><span data-i18n=t(t(t(t("Проверить"))))><span data-i18n=t(t(t("Проверить")))><span data-i18n=t(t("Проверить"))><span data-i18n=t("Проверить")>Проверить</span></span></span></span></button>
     <div class="calc-result hidden" id="p0393Result"></div>`;
 }
 
@@ -2592,11 +2621,11 @@ function renderNeighbors() {
     const d = document.createElement('div');
     d.className = 'neighbor-row';
     d.innerHTML = `
-      <input placeholder="ФИО" / организация value="${escapeHtml(n.fio)}" oninput="State.neighbors[${i}].fio=this.value; saveDebounced()">
-      <input placeholder="КН" value="${escapeHtml(n.cadnum)}" oninput="State.neighbors[${i}].cadnum=this.value; saveDebounced()">
+      <input placeholder=ФИО / организация value="${escapeHtml(n.fio)}" oninput="State.neighbors[${i}].fio=this.value; saveDebounced()">
+      <input placeholder=КН value="${escapeHtml(n.cadnum)}" oninput="State.neighbors[${i}].cadnum=this.value; saveDebounced()">
       <select onchange="State.neighbors[${i}].agree=this.value; saveDebounced()">
         <option ${n.agree==='согласовано'?'selected':''}>согласовано</option>
-        <option ${n.agree===t(t(t(t(t('не согласовано')))))?'selected':''} data-i18n="не согласовано"><span data-i18n="не согласовано"><span data-i18n="не согласовано"><span data-i18n="не согласовано"><span data-i18n="не согласовано">не согласовано</span></span></span></span></option>
+        <option ${n.agree===t(t(t(t(t('не согласовано')))))?'selected':''} data-i18n=t(t(t(t(t("не согласовано")))))><span data-i18n=t(t(t(t("не согласовано"))))><span data-i18n=t(t(t("не согласовано")))><span data-i18n=t(t("не согласовано"))><span data-i18n=t("не согласовано")>не согласовано</span></span></span></span></option>
         <option ${n.agree==='возражение'?'selected':''}>возражение</option>
       </select>
       <button class="small danger" onclick="State.neighbors.splice(${i},1);renderNeighbors();saveDebounced()">✕</button>`;
@@ -2613,13 +2642,13 @@ function renderServitudes() {
     d.className = 'serv-row';
     d.innerHTML = `
       <select onchange="State.servitudes[${i}].type=this.value; saveDebounced()">
-        <option ${s.type===t(t(t(t(t('сервитут')))))?'selected':''} data-i18n="сервитут"><span data-i18n="сервитут"><span data-i18n="сервитут"><span data-i18n="сервитут"><span data-i18n="сервитут">сервитут</span></span></span></span></option>
+        <option ${s.type===t(t(t(t(t('сервитут')))))?'selected':''} data-i18n=t(t(t(t(t("сервитут")))))><span data-i18n=t(t(t(t("сервитут"))))><span data-i18n=t(t(t("сервитут")))><span data-i18n=t(t("сервитут"))><span data-i18n=t("сервитут")>сервитут</span></span></span></span></option>
         <option ${s.type==='аренда'?'selected':''}>аренда</option>
         <option ${s.type==='ЗОУИТ'?'selected':''}>ЗОУИТ</option>
         <option ${s.type==='иное'?'selected':''}>иное</option>
       </select>
-      <input placeholder="КН" value="${escapeHtml(s.cadnum)}" oninput="State.servitudes[${i}].cadnum=this.value; saveDebounced()">
-      <input placeholder="Описание" value="${escapeHtml(s.note)}" oninput="State.servitudes[${i}].note=this.value; saveDebounced()">
+      <input placeholder=КН value="${escapeHtml(s.cadnum)}" oninput="State.servitudes[${i}].cadnum=this.value; saveDebounced()">
+      <input placeholder=Описание value="${escapeHtml(s.note)}" oninput="State.servitudes[${i}].note=this.value; saveDebounced()">
       <button class="small danger" onclick="State.servitudes.splice(${i},1);renderServitudes();saveDebounced()">✕</button>`;
     c.appendChild(d);
   });
@@ -2633,7 +2662,7 @@ function generateAgreementAct() {
       <p><strong>Кадастровый инженер:</strong> ${escapeHtml(State.engineerName||'—')}</p>
       <p><strong>Дата:</strong> ${escapeHtml(State.visitDate||'—')}</p>
       <table style="width:100%;border-collapse:collapse;margin-top:10px;font-size:0.9rem;">
-        <tr style="background:#eee;"><th style="border:1px solid #000;padding:6px;">Смежник</th><th style="border:1px solid #000;padding:6px;" data-i18n=КН><span data-i18n="КН"><span data-i18n="КН"><span data-i18n="КН"><span data-i18n="КН">КН</span></span></span></span></th><th style="border:1px solid #000;padding:6px;">Результат</th></tr>
+        <tr style="background:#eee;"><th style="border:1px solid #000;padding:6px;">Смежник</th><th style="border:1px solid #000;padding:6px;" data-i18n=КН><span data-i18n=t(t(t(t("КН"))))><span data-i18n=t(t(t("КН")))><span data-i18n=t(t("КН"))><span data-i18n=t("КН")>КН</span></span></span></span></th><th style="border:1px solid #000;padding:6px;">Результат</th></tr>
         ${State.neighbors.map(n=>`<tr><td style="border:1px solid #000;padding:6px;">${escapeHtml(n.fio||'—')}</td><td style="border:1px solid #000;padding:6px;">${escapeHtml(n.cadnum||'—')}</td><td style="border:1px solid #000;padding:6px;">${escapeHtml(n.agree)}</td></tr>`).join('')}
       </table>
       <p style="margin-top:20px;">Кадастровый инженер: ________________ / ${escapeHtml(State.engineerName||'')}</p>
@@ -2645,8 +2674,7 @@ function printAgreementAct() {
   const src = document.getElementById('agreementAct');
   if (!src || !src.innerHTML.trim()) return toast('Сначала сформируйте акт', 'warn');
   const w = window.open('', '_blank');
-  w.document.write(`<html><head><title>Акт согласования</title><meta charset="UTF-8"></head><body style="font-family:sans-serif;">${src.innerHTML}<script src="auto-i18n.js"></script>
-</body></html>`);
+  w.document.write(`<html><head><title>Акт согласования</title><meta charset="UTF-8"></head><body style="font-family:sans-serif;">${src.innerHTML}</body></html>`);
   w.document.close(); w.print();
 }
 /* A3: генератор согласия на ПДн */
@@ -2669,8 +2697,7 @@ function printPdConsent() {
   const src = document.getElementById('pdConsentBlock');
   if (!src || !src.innerHTML.trim()) return toast('Сначала сформируйте согласие', 'warn');
   const w = window.open('', '_blank');
-  w.document.write(`<html><head><meta charset="UTF-8"><title>Согласие на обработку ПДн</title></head><body style="font-family:sans-serif;">${src.innerHTML}<script src="auto-i18n.js"></script>
-</body></html>`);
+  w.document.write(`<html><head><meta charset="UTF-8"><title>Согласие на обработку ПДн</title></head><body style="font-family:sans-serif;">${src.innerHTML}</body></html>`);
   w.document.close(); w.print();
 }
 function addOpening() { State.openings.push({ type:'окно', width:'', height:'', count:1, material:'', fillType:'глухое' }); renderOpenings(); }
@@ -2690,7 +2717,7 @@ function renderOpenings() {
       <input placeholder="Ш, м" value="${escapeHtml(o.width)}" oninput="State.openings[${i}].width=this.value; saveDebounced()">
       <input placeholder="В, м" value="${escapeHtml(o.height)}" oninput="State.openings[${i}].height=this.value; saveDebounced()">
       <input type="number" placeholder="Кол-во" value="${escapeHtml(String(o.count))}" oninput="State.openings[${i}].count=this.value; saveDebounced()">
-      <input placeholder="Материал" value="${escapeHtml(o.material||'')}" oninput="State.openings[${i}].material=this.value; saveDebounced()">
+      <input placeholder=Материал value="${escapeHtml(o.material||'')}" oninput="State.openings[${i}].material=this.value; saveDebounced()">
       <button class="small danger" onclick="State.openings.splice(${i},1);renderOpenings();saveDebounced()">✕</button>`;
     c.appendChild(d);
   });
@@ -2705,10 +2732,10 @@ function renderBalconies() {
     d.className = 'neighbor-row';
     d.innerHTML = `
       <select onchange="State.balconies[${i}].type=this.value; saveDebounced()">
-        <option ${b.type===t(t(t(t('балкон'))))?'selected':''} data-i18n="балкон"><span data-i18n="балкон"><span data-i18n="балкон"><span data-i18n="балкон"><span data-i18n="балкон">балкон</span></span></span></span></option><option ${b.type==='лоджия'?'selected':''}>лоджия</option>
+        <option ${b.type===t(t(t(t('балкон'))))?'selected':''} data-i18n=t(t(t(t("балкон"))))><span data-i18n=t(t(t("балкон")))><span data-i18n=t(t("балкон"))><span data-i18n=t("балкон")><span data-i18n="балкон">балкон</span></span></span></span></option><option ${b.type==='лоджия'?'selected':''}>лоджия</option>
         <option ${b.type==='терраса'?'selected':''}>терраса</option>
       </select>
-      <input data-i18n-placeholder="Площадь, м²" placeholder="Площадь, м²" м² value="${escapeHtml(b.area)}" oninput="State.balconies[${i}].area=this.value; saveDebounced()">
+      <input placeholder=Площадь, м² value="${escapeHtml(b.area)}" oninput="State.balconies[${i}].area=this.value; saveDebounced()">
       <input placeholder="Коэф." value="${escapeHtml(b.coef)}" oninput="State.balconies[${i}].coef=this.value; saveDebounced()">
       <button class="small danger" onclick="State.balconies.splice(${i},1);renderBalconies();saveDebounced()">✕</button>`;
     c.appendChild(d);
@@ -2723,13 +2750,13 @@ function renderParkings() {
     const d = document.createElement('div');
     d.className = 'parking-row';
     d.innerHTML = `
-      <input placeholder="№" value="${escapeHtml(p.number)}" oninput="State.parkings[${i}].number=this.value; saveDebounced()">
+      <input placeholder=№ value="${escapeHtml(p.number)}" oninput="State.parkings[${i}].number=this.value; saveDebounced()">
       <select onchange="State.parkings[${i}].type=this.value; saveDebounced()">
-        <option ${p.type===t(t(t(t('подземное'))))?'selected':''} data-i18n="подземное"><span data-i18n="подземное"><span data-i18n="подземное"><span data-i18n="подземное"><span data-i18n="подземное">подземное</span></span></span></span></option><option ${p.type==='наземное'?'selected':''}>наземное</option>
+        <option ${p.type===t(t(t(t('подземное'))))?'selected':''} data-i18n=t(t(t(t("подземное"))))><span data-i18n=t(t(t("подземное")))><span data-i18n=t(t("подземное"))><span data-i18n=t("подземное")><span data-i18n="подземное">подземное</span></span></span></span></option><option ${p.type==='наземное'?'selected':''}>наземное</option>
         <option ${p.type==='многоуровневое'?'selected':''}>многоуровневое</option>
       </select>
-      <input data-i18n-placeholder="Площадь, м²" placeholder="Площадь, м²" м² value="${escapeHtml(p.area)}" oninput="State.parkings[${i}].area=this.value; saveDebounced()">
-      <input placeholder="Уровень" value="${escapeHtml(p.level)}" oninput="State.parkings[${i}].level=this.value; saveDebounced()">
+      <input placeholder=Площадь, м² value="${escapeHtml(p.area)}" oninput="State.parkings[${i}].area=this.value; saveDebounced()">
+      <input placeholder=Уровень value="${escapeHtml(p.level)}" oninput="State.parkings[${i}].level=this.value; saveDebounced()">
       <button class="small danger" onclick="State.parkings.splice(${i},1);renderParkings();saveDebounced()">✕</button>`;
     c.appendChild(d);
   });
@@ -3213,7 +3240,7 @@ function generateReport() {
 function printReport() {
   const d = collectAllData();
   const w = window.open('', '_blank');
-  w.document.write(`<html><head><meta charset="UTF-8"><title><span data-i18n="Отчёт" data-i18n="Отчёт"><span data-i18n="Отчёт"><span data-i18n="Отчёт"><span data-i18n="Отчёт">Отчёт</span></span></span></span></title><style>body{font-family:sans-serif;padding:20px;max-width:800px;margin:auto;}table{width:100%;border-collapse:collapse;margin:10px 0;}th,td{border:1px solid #ccc;padding:6px;text-align:left;font-size:12px;}
+  w.document.write(`<html><head><meta charset="UTF-8"><title><span data-i18n=t(t(t("Отчёт"))) data-i18n=t(t(t("Отчёт")))><span data-i18n=t(t("Отчёт"))><span data-i18n=t("Отчёт")><span data-i18n="Отчёт">Отчёт</span></span></span></span></title><style>body{font-family:sans-serif;padding:20px;max-width:800px;margin:auto;}table{width:100%;border-collapse:collapse;margin:10px 0;}th,td{border:1px solid #ccc;padding:6px;text-align:left;font-size:12px;}
 /* === АКТИВНОЕ ВЫДЕЛЕНИЕ ЭЛЕМЕНТОВ === */
 .nav-btn.active, .tab.active {
   background: #e0f2fe !important;
@@ -3343,10 +3370,9 @@ input[type="checkbox"]:checked + label {
     <b>КН:</b> ${escapeHtml(d.cadastralNumber||'—')}<br>
     <b>Инженер:</b> ${escapeHtml(d.engineerName||'—')}<br>
     <b>Дата:</b> ${escapeHtml(d.visitDate||'—')}</p>
-    ${d.geoPoints?.length ? `<h3>Геодезические точки</h3><table><tr><th data-i18n=№><span data-i18n=№><span data-i18n="№"><span data-i18n="№"><span data-i18n="№">№</span></span></span></span></th><th>Имя</th><th>X</th><th>Y</th><th>H</th><th>СКП</th></tr>${d.geoPoints.map((p,i)=>`<tr><td>${i+1}</td><td>${escapeHtml(p.name||'')}</td><td>${escapeHtml(String(p.x))}</td><td>${escapeHtml(String(p.y))}</td><td>${escapeHtml(String(p.h))}</td><td>${escapeHtml(String(p.skp))}</td></tr>`).join('')}</table>` : ''}
+    ${d.geoPoints?.length ? `<h3>Геодезические точки</h3><table><tr><th data-i18n=№><span data-i18n=№><span data-i18n=t(t("№"))><span data-i18n=t("№")><span data-i18n="№">№</span></span></span></span></th><th>Имя</th><th>X</th><th>Y</th><th>H</th><th>СКП</th></tr>${d.geoPoints.map((p,i)=>`<tr><td>${i+1}</td><td>${escapeHtml(p.name||'')}</td><td>${escapeHtml(String(p.x))}</td><td>${escapeHtml(String(p.y))}</td><td>${escapeHtml(String(p.h))}</td><td>${escapeHtml(String(p.skp))}</td></tr>`).join('')}</table>` : ''}
     <p style="margin-top:24px;color:#666;font-size:11px;">Сформировано в КИ-Поле · PRO MAX 3.4.9 · @Kotohod</p>
-    <script src="auto-i18n.js"></script>
-</body></html>`);
+    </body></html>`);
   w.document.close();
   setTimeout(() => w.print(), 300);
 }
@@ -5006,7 +5032,7 @@ function renderLevelingStations() {
   const c = document.getElementById('levelingStations');
   if (!c) return;
   if (!Leveling.stations.length) { c.innerHTML = '<p class="text-muted" style="font-size:.85rem;">Нет станций.</p>'; return; }
-  let html = '<div class="table-scroll"><table class="level-table"><thead><tr><th data-i18n=№><span data-i18n=№><span data-i18n="№"><span data-i18n="№"><span data-i18n="№">№</span></span></span></span></th><th>Станция</th><th>Задний, м</th><th>Передний, м</th><th>Превышение, мм</th><th></th></tr></thead><tbody>';
+  let html = '<div class="table-scroll"><table class="level-table"><thead><tr><th data-i18n=№><span data-i18n=№><span data-i18n=t(t("№"))><span data-i18n=t("№")><span data-i18n="№">№</span></span></span></span></th><th>Станция</th><th>Задний, м</th><th>Передний, м</th><th>Превышение, мм</th><th></th></tr></thead><tbody>';
   Leveling.stations.forEach((s, i) => {
     const d = ((s.back||0) - (s.fore||0)) * 1000;
     html += `<tr data-idx="${i}"><td>${i+1}</td>
@@ -5515,7 +5541,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (exportCard) {
         const hint = document.createElement('div');
         hint.className = 'ios-notice';
-        hint.innerHTML = '📲 <strong>Установите как приложение:</strong> нажмите <b><span data-i18n="Поделиться" data-i18n="Поделиться" data-i18n="Поделиться"><span data-i18n="Поделиться"><span data-i18n="Поделиться"><span data-i18n="Поделиться"><span data-i18n="Поделиться">Поделиться</span></span></span></span></span></b> → <b>На экран «Домой»</b>';
+        hint.innerHTML = '📲 <strong>Установите как приложение:</strong> нажмите <b><span data-i18n=t(t(t(t("Поделиться")))) data-i18n=t(t(t(t("Поделиться")))) data-i18n=t(t(t(t("Поделиться"))))><span data-i18n=t(t(t("Поделиться")))><span data-i18n=t(t("Поделиться"))><span data-i18n=t("Поделиться")><span data-i18n="Поделиться">Поделиться</span></span></span></span></span></b> → <b>На экран «Домой»</b>';
         exportCard.prepend(hint);
       }
     }
@@ -5637,6 +5663,5 @@ Object.assign(window, {
 });
 </script>
 <script src="i18n.js"></script>
-<script src="auto-i18n.js"></script>
 </body>
 </html>
