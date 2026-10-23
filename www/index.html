@@ -2952,14 +2952,14 @@ async function updateHistory() {
   const hist = await IDB.getAll('projects');
   const c = document.getElementById('historyList');
   if (!c) return;
-  if (!hist.length) { c.innerHTML = '<p class="text-muted" style="font-size:0.9rem;" data-i18n="История пуста.">История пуста.</p>'; return; }
+  if (!hist.length) { c.innerHTML = '<p class="text-muted" style="font-size:0.9rem;">' + t('History is empty.') + '</p>'; return; }
   c.innerHTML = hist.sort((a,b)=>b.date.localeCompare(a.date)).map(h => `
     <div class="history-item">
       <h4>${escapeHtml(h.name)}</h4>
       <div class="meta">${new Date(h.date).toLocaleString('ru-RU')}<br>КН: ${escapeHtml(h.data.cadastralNumber||'—')}</div>
       <div class="actions">
-        <button class="small" onclick="event.stopPropagation();loadProject(${h.id})">Открыть</button>
-        <button class="small ghost" onclick="event.stopPropagation();deleteProject(${h.id})">Удалить</button>
+        <button class="small" onclick="event.stopPropagation();loadProject(${h.id})">${t("Открыть")}</button>
+        <button class="small ghost" onclick="event.stopPropagation();deleteProject(${h.id})">${t("Удалить")}</button>
       </div>
     </div>`).join('');
 }
