@@ -1232,6 +1232,8 @@ const T = {
   },
   // ───────────────────────── УЗБЕКСКИЙ ─────────────────────────
   uz: {
+        'Проёмы': 'Teshiklar',
+        '+ Проём': '+ Teshik',
     'app.title':'KI-Dala',
     'nav.overview':'Umumiy','nav.steps':'Bosqichlar','nav.tools':'Vositalar','nav.export':'Eksport',
     'common.save':'Saqlash','common.cancel':'Bekor qilish','common.ok':'OK','common.delete':'O‘chirish',
@@ -1780,7 +1782,7 @@ const T = {
     'Control area calculation':'Control area calculation',
     'Площадь ЗУ по документам, м²':'Land area according to documents, m²',
     'Площадь фактическая, м²':'Actual area, m²',
-    'Категория земель':'Land category',
+    'Категория земель':'Yer toifasi',
     'ВРИ':'Permitted use',
     'Смежники / Правообладатели':'Neighbors / Right holders',
     'Сервитуты / Обременения / ЗОУИТ':'Servitudes / Encumbrances / ZOUIT',
