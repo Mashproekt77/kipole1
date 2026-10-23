@@ -624,6 +624,7 @@ const T = {
     'Материал':'Материал',
     'ФИО':'ФИО',
     'ИЖС':'ИЖС',
+    'Годы':'Годы',
   },
   // ───────────────────────── ENGLISH ─────────────────────────
   en: {
@@ -1227,6 +1228,7 @@ const T = {
     'Сформировать QR':'Generate QR',
     'ФИО':'Name',
     'ИЖС':'Individual housing',
+    'Годы':'Years',
   },
   // ───────────────────────── УЗБЕКСКИЙ ─────────────────────────
   uz: {
@@ -1847,6 +1849,7 @@ const T = {
     'Сформировать QR':'QR yaratish',
     'ФИО':'F.I.Sh.',
     'ИЖС':'Yakka tartibdagi uy-joy',
+    'Годы':'Yillar',
   },
   // ───────────────────────── ТАДЖИКСКИЙ ─────────────────────────
   tg: {
@@ -2466,6 +2469,7 @@ const T = {
     'Сформировать QR':'Generate QR',
     'ФИО':'Name',
     'ИЖС':'Individual housing',
+    'Годы':'Years',
   },
   // ───────────────────────── КИРГИЗСКИЙ ─────────────────────────
   ky: {
@@ -3075,6 +3079,7 @@ const T = {
     'Сформировать QR':'Generate QR',
     'ФИО':'Name',
     'ИЖС':'Individual housing',
+    'Годы':'Years',
   },
   tk: {
     'app.title':'Kİ-Meýdan',
@@ -3435,6 +3440,7 @@ const T = {
     'Сформировать QR':'Generate QR',
     'ФИО':'Name',
     'ИЖС':'Individual housing',
+    'Годы':'Years',
   },
   az: {
     'app.title':'Kİ-Sahə',
@@ -3796,6 +3802,7 @@ const T = {
     'Сформировать QR':'Generate QR',
     'ФИО':'Name',
     'ИЖС':'Individual housing',
+    'Годы':'Years',
   },
   hy: {
     'app.title':'KI-Dաշտ',
@@ -4156,6 +4163,7 @@ const T = {
     'Сформировать QR':'Generate QR',
     'ФИО':'Name',
     'ИЖС':'Individual housing',
+    'Годы':'Years',
   },
   ka: {
     'app.title':'KI-ველი',
@@ -4516,6 +4524,7 @@ const T = {
     'Сформировать QR':'Generate QR',
     'ФИО':'Name',
     'ИЖС':'Individual housing',
+    'Годы':'Years',
   },
   be: {
     'app.title':'КІ-Поле',
@@ -4876,6 +4885,7 @@ const T = {
     'Сформировать QR':'Generate QR',
     'ФИО':'Name',
     'ИЖС':'Individual housing',
+    'Годы':'Years',
   },
   mo: {
     'app.title':'KI-Câmp',
@@ -5237,6 +5247,7 @@ const T = {
     'Сформировать QR':'Generate QR',
     'ФИО':'Name',
     'ИЖС':'Individual housing',
+    'Годы':'Years',
   },
   vi: {
     'app.title':'KI-Cánh đồng',
@@ -5597,6 +5608,7 @@ const T = {
     'Сформировать QR':'Generate QR',
     'ФИО':'Name',
     'ИЖС':'Individual housing',
+    'Годы':'Years',
   },
 
 
@@ -6219,6 +6231,7 @@ const T = {
     'Сформировать QR':'Generate QR',
     'ФИО':'Name',
     'ИЖС':'Individual housing',
+    'Годы':'Years',
   },
   // ───────────────────────── ТУРКМЕНСКИЙ ─────────────────────────
   tk: {
@@ -8579,6 +8592,7 @@ const T = {
     'Сформировать QR':'Generate QR',
     'ФИО':'Name',
     'ИЖС':'Individual housing',
+    'Годы':'Years',
   },
   // ───────────────────────── ВЬЕТНАМСКИЙ ─────────────────────────
   vi: {
@@ -9247,6 +9261,7 @@ const T = {
     'Сформировать QR':'Generate QR',
     'ФИО':'Name',
     'ИЖС':'Individual housing',
+    'Годы':'Years',
   },
 };
 
