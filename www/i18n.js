@@ -5,6 +5,7 @@
 const T = {
   // ───────────────────────── РУССКИЙ ─────────────────────────
   ru: {
+        'History is empty.': 'История пуста.',
     'app.title':'КИ-Поле',
     'nav.overview':'Обзор','nav.steps':'Шаги','nav.tools':'Инструменты','nav.export':'Экспорт',
     'common.save':'Сохранить','common.cancel':'Отмена','common.ok':'ОК','common.delete':'Удалить',
