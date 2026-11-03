@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-
+<span data-i18n="html">html</span>
 <html lang="ru">
 <head>
 <meta charset="utf-8"/>
@@ -11,7 +10,7 @@
 <meta content="КИ-Поле" name="apple-mobile-web-app-title"/>
 <meta content="КИ-Поле — полевые работы кадастрового инженера. Разработчик: @Kotohod" name="description"/>
 <meta content="@Kotohod" name="author"/>
-<title>КИ-Поле — PRO MAX 3.4.9 · @Kotohod</title>
+<title data-i18n="КИ-Поле — PRO MAX 3.4.9 · @Kotohod">КИ-Поле — PRO MAX 3.4.9 · @Kotohod</title>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{--primary:#2563eb;--primary-hover:#1d4ed8;--primary-soft:#dbeafe;--success:#10b981;--success-soft:#d1fae5;--warning:#f59e0b;--warning-soft:#fef3c7;--danger:#ef4444;--danger-soft:#fee2e2;--info-soft:#dbeafe;--purple:#8b5cf6;--bg:#f1f5f9;--bg-elev:#fff;--card:#fff;--text:#0f172a;--text-muted:#5b6b82;--border:#e2e8f0;--border-strong:#cbd5e1;--shadow-sm:0 1px 2px rgba(15,23,42,.04);--shadow-md:0 4px 12px rgba(15,23,42,.06);--shadow-lg:0 12px 32px rgba(15,23,42,.12);--radius-sm:8px;--radius-md:12px;--radius-lg:16px;--radius-xl:22px;--tap:44px;--safe-top:env(safe-area-inset-top,0px);--safe-bottom:env(safe-area-inset-bottom,0px);--safe-left:env(safe-area-inset-left,0px);--safe-right:env(safe-area-inset-right,0px);--sidebar-w:288px;--topbar-h:64px;--nav-h:64px;--main-pad:12px}
@@ -444,7 +443,7 @@ input[type="checkbox"]:checked + label {
 <div class="sidebar__brand-mark" data-i18n="КИ">КИ</div>
 <div class="sidebar__brand-text">
 <strong data-i18n="КИ-Поле">КИ-Поле</strong>
-<small>PRO MAX 3.4.9 · <a data-i18n="@Kotohod" href="https://t.me/Kotohod" rel="noopener" target="_blank">@Kotohod</a></small>
+<small><span data-i18n="PRO MAX 3.4.9 ·">PRO MAX 3.4.9 ·</span> <a data-i18n="@Kotohod" href="https://t.me/Kotohod" rel="noopener" target="_blank">@Kotohod</a></small>
 </div>
 </div>
 <div class="sidebar__progress">
@@ -614,7 +613,7 @@ input[type="checkbox"]:checked + label {
 <button class="ghost" data-i18n="area.toNotes" onclick="insertAreaToNotes()">📋 В заметки</button>
 </div>
 <div id="figureList"></div>
-<div class="calc-result"><span data-i18n="area.total">Итого</span>: <span id="totalArea">0.00</span> м²</div>
+<div class="calc-result"><span data-i18n="area.total">Итого</span>: <span id="totalArea">0.00</span> <span data-i18n="м²">м²</span></div>
 </div>
 </div>
 <div class="tab-content" id="tab-mansard">
@@ -659,7 +658,7 @@ input[type="checkbox"]:checked + label {
 <div class="card">
 <h3 data-i18n="chk.err">🎯 Погрешность измерений</h3>
 <div class="info-box" style="font-size:.82rem;">
-            Согласно п.18 П/0393, допустимое расхождение первоначальных и контрольных определений не должно превышать <strong data-i18n="удвоенного значения СКП">удвоенного значения СКП</strong>.
+            <span data-i18n="Согласно п.18 П/0393, допустимое расхождение первоначальных и контрольных определений не должно превышать">Согласно п.18 П/0393, допустимое расхождение первоначальных и контрольных определений не должно превышать</span> <strong data-i18n="удвоенного значения СКП">удвоенного значения СКП</strong>.
           </div>
 <div class="form-group">
 <label data-i18n="chk.device" for="deviceType">Прибор</label>
@@ -696,7 +695,7 @@ input[type="checkbox"]:checked + label {
 </div>
 <button data-i18n="ext.addRoom" onclick="addRoom()">+ Комната</button>
 <div class="room-plan" id="roomPlan"></div>
-<div class="calc-result">Итого: <span id="roomTotalArea">0.00</span> м²</div>
+<div class="calc-result"><span data-i18n="Итого:">Итого:</span> <span id="roomTotalArea">0.00</span> <span data-i18n="м²">м²</span></div>
 </div>
 <div class="card">
 <h3 data-i18n="ext.ceil">📏 Высота потолков</h3>
@@ -750,10 +749,10 @@ input[type="checkbox"]:checked + label {
 <div class="form-group"><label data-i18n="ext.val" for="convertValue">Значение</label><input id="convertValue" inputmode="decimal" step="0.01" type="number" value="0"/></div>
 <div class="grid-2">
 <div class="form-group"><label data-i18n="ext.from" for="convertFrom">Из</label>
-<select id="convertFrom"><option value="m">м</option><option data-i18n="см" value="cm">см</option><option data-i18n="мм" value="mm">мм</option><option data-i18n="м²" value="m2">м²</option><option data-i18n="см²" value="cm2">см²</option><option data-i18n="га" value="ha">га</option></select>
+<select id="convertFrom"><option data-i18n="м" value="m">м</option><option data-i18n="см" value="cm">см</option><option data-i18n="мм" value="mm">мм</option><option data-i18n="м²" value="m2">м²</option><option data-i18n="см²" value="cm2">см²</option><option data-i18n="га" value="ha">га</option></select>
 </div>
 <div class="form-group"><label data-i18n="ext.to" for="convertTo"><span><span data-i18n='t("В")'>В</span></span></label>
-<select id="convertTo"><option data-i18n="см" value="cm">см</option><option value="m">м</option><option data-i18n="мм" value="mm">мм</option><option data-i18n="м²" value="m2">м²</option><option data-i18n="см²" value="cm2">см²</option><option data-i18n="га" value="ha">га</option></select>
+<select id="convertTo"><option data-i18n="см" value="cm">см</option><option data-i18n="м" value="m">м</option><option data-i18n="мм" value="mm">мм</option><option data-i18n="м²" value="m2">м²</option><option data-i18n="см²" value="cm2">см²</option><option data-i18n="га" value="ha">га</option></select>
 </div>
 </div>
 <button data-i18n="ext.convert" onclick="convertUnits()">Перевести</button>
@@ -803,7 +802,7 @@ input[type="checkbox"]:checked + label {
 <div class="tab-content" id="tab-crs">
 <div class="card">
 <h3 data-i18n="crs.title">🌐 Пересчёт координат (proj4js)</h3>
-<div class="warning-box">${t("crs.warn")}</div>
+<div class="warning-box" data-i18n='${t("crs.warn")}'>${t("crs.warn")}</div>
 <div class="info-box" data-i18n="Загрузка proj4js…" id="proj4Status">Загрузка proj4js…</div>
 <div class="grid-2">
 <div class="form-group"><label data-i18n="crs.src" for="crsFrom">Исходная СК</label><select id="crsFrom"></select></div>
@@ -832,8 +831,8 @@ input[type="checkbox"]:checked + label {
 <div class="card">
 <h3 data-i18n="zu.areaTitle">🌍 Проверка площади ЗУ</h3>
 <div class="info-box">
-            Допустимое расхождение — по Приказу Росреестра № П/0393 (ред. от 13.10.2025).<br/>
-            Формула: <strong data-i18n="ΔP = 2 · mₜ · √P · √((1 + k²) / (2k))">ΔP = 2 · mₜ · √P · √((1 + k²) / (2k))</strong>
+            <span data-i18n="Допустимое расхождение — по Приказу Росреестра № П/0393 (ред. от 13.10.2025).">Допустимое расхождение — по Приказу Росреестра № П/0393 (ред. от 13.10.2025).</span><br/>
+            <span data-i18n="Формула:">Формула:</span> <strong data-i18n="ΔP = 2 · mₜ · √P · √((1 + k²) / (2k))">ΔP = 2 · mₜ · √P · √((1 + k²) / (2k))</strong>
 </div>
 <div class="grid-2">
 <div class="form-group"><label data-i18n="zu.docArea" for="zuCalcDoc">По документам, м²</label><input id="zuCalcDoc" inputmode="decimal" min="0" step="0.01" type="number" value="0"/></div>
@@ -869,7 +868,7 @@ input[type="checkbox"]:checked + label {
 <div class="tab-content" id="tab-nspd">
 <div class="card">
 <h3 data-i18n="nspd.title">🌐 Сервисы НСПД</h3>
-<div class="info-box"><strong data-i18n="Национальная система пространственных данных">Национальная система пространственных данных</strong> — единая цифровая платформа Росреестра.</div>
+<div class="info-box"><strong data-i18n="Национальная система пространственных данных">Национальная система пространственных данных</strong> <span data-i18n="— единая цифровая платформа Росреестра.">— единая цифровая платформа Росреестра.</span></div>
 <div class="form-group"><label data-i18n="nspd.query" for="nspdQuery">Кадастровый номер / адрес</label><input id="nspdQuery" placeholder="77:01:0001234:567" type="text"/></div>
 <div class="btn-row">
 <button data-i18n="🗺️ Земля просто" onclick="openNSPD('earth')">🗺️ Земля просто</button>
@@ -917,7 +916,7 @@ input[type="checkbox"]:checked + label {
 </div>
 <div class="card">
 <h3 data-i18n="gnss.rep">📋 Повторные измерения</h3>
-<div class="info-box">Допуск согласно П/0393 — <strong data-i18n="удвоенное значение СКП">удвоенное значение СКП</strong> (например, 0,20 м для земель населённых пунктов при СКП 0,10 м).</div>
+<div class="info-box"><span data-i18n="Допуск согласно П/0393 —">Допуск согласно П/0393 —</span> <strong data-i18n="удвоенное значение СКП">удвоенное значение СКП</strong> <span data-i18n="(например, 0,20 м для земель населённых пунктов при СКП 0,10 м).">(например, 0,20 м для земель населённых пунктов при СКП 0,10 м).</span></div>
 <div class="form-group">
 <label data-i18n="gnss.repCat" for="repeatCategory">Категория земель (допуск СКП)</label>
 <select id="repeatCategory">
@@ -952,7 +951,7 @@ input[type="checkbox"]:checked + label {
 <div class="card">
 <h3 data-i18n="dv.laser">📶 Лазерный дальномер (Bluetooth LE)</h3>
 <div class="info-box" style="font-size:.85rem;">
-            Поддерживаются: <strong data-i18n="Leica DISTO">Leica DISTO</strong>, <strong data-i18n="Bosch GLM">Bosch GLM</strong>, <strong data-i18n="ADA">ADA</strong>, <strong data-i18n="Stanley">Stanley</strong> и другие BLE-дальномеры (UART-сервисы 0xFFE0 / 0xFFF0 / 0x18F0). Нужен <strong data-i18n="HTTPS">HTTPS</strong> или <strong data-i18n="localhost">localhost</strong>, браузер Chrome / Edge / Opera.
+            <span data-i18n="Поддерживаются:">Поддерживаются:</span> <strong data-i18n="Leica DISTO">Leica DISTO</strong>, <strong data-i18n="Bosch GLM">Bosch GLM</strong>, <strong data-i18n="ADA">ADA</strong>, <strong data-i18n="Stanley">Stanley</strong> <span data-i18n="и другие BLE-дальномеры (UART-сервисы 0xFFE0 / 0xFFF0 / 0x18F0). Нужен">и другие BLE-дальномеры (UART-сервисы 0xFFE0 / 0xFFF0 / 0x18F0). Нужен</span> <strong data-i18n="HTTPS">HTTPS</strong> <span data-i18n="или">или</span> <strong data-i18n="localhost">localhost</strong><span data-i18n=", браузер Chrome / Edge / Opera.">, браузер Chrome / Edge / Opera.</span>
           </div>
 <div class="dev-card">
 <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
@@ -974,7 +973,7 @@ input[type="checkbox"]:checked + label {
 <div class="card">
 <h3 data-i18n="dv.gnssT">🛰️ GNSS-приёмник (Bluetooth LE, NMEA)</h3>
 <div class="info-box" style="font-size:.85rem;">
-            Приёмники и контроллеры с NMEA 0183 по BLE: <strong data-i18n="Trimble">Trimble</strong>, <strong data-i18n="Leica">Leica</strong>, <strong data-i18n="Topcon">Topcon</strong>, <strong data-i18n="South">South</strong>, <strong data-i18n="PrinCe">PrinCe</strong>, <strong data-i18n="EFT">EFT</strong>, <strong data-i18n="ComNav">ComNav</strong>.
+            <span data-i18n="Приёмники и контроллеры с NMEA 0183 по BLE:">Приёмники и контроллеры с NMEA 0183 по BLE:</span> <strong data-i18n="Trimble">Trimble</strong>, <strong data-i18n="Leica">Leica</strong>, <strong data-i18n="Topcon">Topcon</strong>, <strong data-i18n="South">South</strong>, <strong data-i18n="PrinCe">PrinCe</strong>, <strong data-i18n="EFT">EFT</strong>, <strong data-i18n="ComNav">ComNav</strong>.
           </div>
 <div class="dev-card">
 <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
@@ -1005,7 +1004,7 @@ $GPRMC,123519,A,4807.038,N,01131.000,E,022.4,084.4,230394,003.1,W*6A" rows="4"><
 <div class="card">
 <h3 data-i18n="dv.import">📥 Универсальный импорт измерений</h3>
 <div class="info-box" style="font-size:.85rem;">
-            Форматы: <strong data-i18n="CSV"><span><span data-i18n='t("CSV")'><span data-i18n="CSV">CSV</span></span></span></strong>, <strong data-i18n="TXT"><span><span data-i18n='t("TXT")'><span data-i18n="TXT">TXT</span></span></span></strong>, <strong data-i18n="GSI">GSI</strong> (Leica), <strong data-i18n="DAT/T00">DAT/T00</strong> (Trimble), <strong data-i18n="M5">M5</strong> (Topcon), <strong data-i18n="XYZ">XYZ</strong>.
+            <span data-i18n="Форматы:">Форматы:</span> <strong data-i18n="CSV"><span><span data-i18n='t("CSV")'><span data-i18n="CSV">CSV</span></span></span></strong>, <strong data-i18n="TXT"><span><span data-i18n='t("TXT")'><span data-i18n="TXT">TXT</span></span></span></strong>, <strong data-i18n="GSI">GSI</strong> <span data-i18n="(Leica),">(Leica),</span> <strong data-i18n="DAT/T00">DAT/T00</strong> <span data-i18n="(Trimble),">(Trimble),</span> <strong data-i18n="M5">M5</strong> <span data-i18n="(Topcon),">(Topcon),</span> <strong data-i18n="XYZ">XYZ</strong>.
           </div>
 <div class="btn-row">
 <button data-i18n="📂 Выбрать файл" onclick="document.getElementById('measFileInput').click()">📂 Выбрать файл</button>
@@ -1073,7 +1072,7 @@ $GPRMC,123519,A,4807.038,N,01131.000,E,022.4,084.4,230394,003.1,W*6A" rows="4"><
 </div>
 <div class="card">
 <h3 data-i18n="🛣️ Трассоискатель / кабелеискатель">🛣️ Трассоискатель / кабелеискатель</h3>
-<div class="info-box" style="font-size:.85rem;">CSV: <code data-i18n="широта,долгота[,глубина]">широта,долгота[,глубина]</code> или <code data-i18n="X,Y[,H]">X,Y[,H]</code>.</div>
+<div class="info-box" style="font-size:.85rem;"><span data-i18n="CSV:">CSV:</span> <code data-i18n="широта,долгота[,глубина]">широта,долгота[,глубина]</code> <span data-i18n="или">или</span> <code data-i18n="X,Y[,H]">X,Y[,H]</code>.</div>
 <div class="btn-row">
 <button data-i18n="📂 Загрузить" onclick="document.getElementById('traceFileInput').click()">📂 Загрузить</button>
 <button class="ghost" data-i18n="🗑 Очистить" onclick="clearTrace()">🗑 Очистить</button>
@@ -1156,7 +1155,7 @@ $GPRMC,123519,A,4807.038,N,01131.000,E,022.4,084.4,230394,003.1,W*6A" rows="4"><
 <div class="card">
 <h2 data-i18n="lhs.title">🌐 Запуск через localhost</h2>
 <div class="info-box" style="font-size:.85rem;">
-          Полноценная работа <strong data-i18n="Web Bluetooth">Web Bluetooth</strong>, <strong data-i18n="Web Serial">Web Serial</strong>, <strong data-i18n="Service Worker">Service Worker</strong> и <strong data-i18n="PWA">PWA</strong> возможна только на <code data-i18n="localhost">localhost</code> или <code data-i18n="HTTPS">HTTPS</code>. Кнопка ниже скачает готовый набор для запуска.
+          <span data-i18n="Полноценная работа">Полноценная работа</span> <strong data-i18n="Web Bluetooth">Web Bluetooth</strong>, <strong data-i18n="Web Serial">Web Serial</strong>, <strong data-i18n="Service Worker">Service Worker</strong> <span data-i18n="и">и</span> <strong data-i18n="PWA">PWA</strong> <span data-i18n="возможна только на">возможна только на</span> <code data-i18n="localhost">localhost</code> <span data-i18n="или">или</span> <code data-i18n="HTTPS">HTTPS</code><span data-i18n=". Кнопка ниже скачает готовый набор для запуска.">. Кнопка ниже скачает готовый набор для запуска.</span>
         </div>
 <div class="info-box" data-i18n="Проверка окружения…" id="localhostStatusBox" style="font-size:.85rem;">Проверка окружения…</div>
 <div class="btn-row">
@@ -1183,11 +1182,11 @@ $GPRMC,123519,A,4807.038,N,01131.000,E,022.4,084.4,230394,003.1,W*6A" rows="4"><
 <button class="danger" data-i18n="🗑️ Сброс текущего" onclick="resetAll()">🗑️ Сброс текущего</button>
 </div>
 <p class="text-muted mt-3" style="font-size:0.85rem;">
-<strong data-i18n="КИ-Поле">КИ-Поле</strong> · версия 3.4.9 · IndexedDB · PWA · Leaflet · proj4js · Web Bluetooth · Web Serial · Localhost Kit<br/>
-          Разработчик: <a data-i18n="@Kotohod" href="https://t.me/Kotohod" rel="noopener" target="_blank">@Kotohod</a>
+<strong data-i18n="КИ-Поле">КИ-Поле</strong> <span data-i18n="· версия 3.4.9 · IndexedDB · PWA · Leaflet · proj4js · Web Bluetooth · Web Serial · Localhost Kit">· версия 3.4.9 · IndexedDB · PWA · Leaflet · proj4js · Web Bluetooth · Web Serial · Localhost Kit</span><br/>
+          <span data-i18n="Разработчик:">Разработчик:</span> <a data-i18n="@Kotohod" href="https://t.me/Kotohod" rel="noopener" target="_blank">@Kotohod</a>
 </p>
 <div class="info-box mt-3" style="font-size:.82rem;">
-<strong data-i18n="🔐 Приватность:">🔐 Приватность:</strong> данные (ФИО инженера, заказчик, подпись, координаты GPS, фото) хранятся <strong data-i18n="локально">локально</strong> в IndexedDB и localStorage вашего браузера и <strong data-i18n="никуда не передаются">никуда не передаются</strong>. При использовании чужого устройства очищайте данные кнопкой «Сброс».
+<strong data-i18n="🔐 Приватность:">🔐 Приватность:</strong> <span data-i18n="данные (ФИО инженера, заказчик, подпись, координаты GPS, фото) хранятся">данные (ФИО инженера, заказчик, подпись, координаты GPS, фото) хранятся</span> <strong data-i18n="локально">локально</strong> <span data-i18n="в IndexedDB и localStorage вашего браузера и">в IndexedDB и localStorage вашего браузера и</span> <strong data-i18n="никуда не передаются">никуда не передаются</strong><span data-i18n=". При использовании чужого устройства очищайте данные кнопкой «Сброс».">. При использовании чужого устройства очищайте данные кнопкой «Сброс».</span>
         </div>
 </div>
 </section>
